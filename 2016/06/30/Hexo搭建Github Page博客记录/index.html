@@ -91,7 +91,7 @@
 安装node.js简单安装方法，官网下载.ms">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo搭建Github Page博客记录">
-<meta property="og:url" content="http://yoursite.com/2016/06/30/Hello-World-0/index.html">
+<meta property="og:url" content="http://yoursite.com/2016/06/30/Hexo搭建Github Page博客记录/index.html">
 <meta property="og:site_name" content="Kongwsh">
 <meta property="og:description" content="HEXO 简介hexo出自tommy351之手，基于Node.js的静态博客程序，Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。。hexo生成的静态网页可以直接放到GitHub Pages，BAE，SAE等平台上。Hexo 官方文档
 安装前提注意：系统：win8.1
@@ -102,8 +102,7 @@
 <meta property="og:image" content="http://i1.piimg.com/567571/420c06e6efb72f6d.png">
 <meta property="og:image" content="http://i1.piimg.com/567571/e8bd1567403a0940.png">
 <meta property="og:image" content="http://i4.piimg.com/567571/8a8501d59a29c75d.png">
-<meta property="og:image" content="http://i1.piimg.com/567571/097549dcd2066599.png">
-<meta property="og:updated_time" content="2016-07-10T00:42:52.726Z">
+<meta property="og:updated_time" content="2016-07-09T15:02:49.846Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo搭建Github Page博客记录">
 <meta name="twitter:description" content="HEXO 简介hexo出自tommy351之手，基于Node.js的静态博客程序，Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。。hexo生成的静态网页可以直接放到GitHub Pages，BAE，SAE等平台上。Hexo 官方文档
@@ -132,7 +131,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/06/30/Hello-World-0/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/06/30/Hexo搭建Github Page博客记录/"/>
 
   <title> Hexo搭建Github Page博客记录 | Kongwsh </title>
 </head>
@@ -307,12 +306,11 @@
 <p>ok了。</p>
 <h2 id="运行hexo"><a href="#运行hexo" class="headerlink" title="运行hexo"></a><strong>运行hexo</strong></h2><p>现在在D:\HEXO内右键Git Bash Here 输入以下命令<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo g</div><div class="line">hexo s</div></pre></td></tr></table></figure></p>
 <p>运行成功的界面<br><img src="http://i2.piimg.com/567571/efef15c89c1f71e8.png" alt="Alt text"><br>访问 <a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a> 查看效果<br><img src="http://i1.piimg.com/567571/420c06e6efb72f6d.png" alt="效果图"></p>
-<h2 id="Github"><a href="#Github" class="headerlink" title="Github"></a><strong>Github</strong></h2><ul>
-<li>注册github账号</li>
-<li>添加SSH公钥</li>
-<li>使用GitHub Pages建立博客</li>
-</ul>
-<p>注册完github账号，如何让本地git项目与远程的github建立联系呢，使用SSH key。</p>
+<h2 id="Github"><a href="#Github" class="headerlink" title="Github"></a><strong>Github</strong></h2><ol>
+<li>注册账号</li>
+<li>建立与用户名对应的仓库</li>
+<li>添加SSH公钥<br>首先，注册github 账号，过程略，然后建立与名字一致的仓库名，格式为yourname.github.io,过程略。<br>最后，如何让本地git项目与远程的github建立联系呢，使用SSH keys。</li>
+</ol>
 <h1 id="1-检查SSH-Key"><a href="#1-检查SSH-Key" class="headerlink" title="1. 检查SSH Key"></a>1. 检查SSH Key</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ cd ~/.ssh</div></pre></td></tr></table></figure>
 <p>提示“No such file or directory”代表咱是第一回用。</p>
 <h1 id="2-生成新的SSH-Key"><a href="#2-生成新的SSH-Key" class="headerlink" title="2. 生成新的SSH Key"></a>2. 生成新的SSH Key</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ssh-keygen -t rsa -C &quot;you@youremail.com&quot;</div></pre></td></tr></table></figure>
@@ -323,24 +321,8 @@
 <p> <code>Hi Kongwsh! You&#39;ve successfully authenticated, but GitHub does not provide shell access.</code>说明已经配置成功。</p>
 <h1 id="4-设置用户信息"><a href="#4-设置用户信息" class="headerlink" title="4. 设置用户信息"></a>4. 设置用户信息</h1> <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ git config --global user.name &quot;Kongwsh&quot;//用户名</div><div class="line">$ git config --global user.email  &quot;echokws@163.com&quot;//填写自己的邮箱</div></pre></td></tr></table></figure>
 <p>本机已成功连接到github。</p>
-<h1 id="5-使用GitHub-Pages建立博客"><a href="#5-使用GitHub-Pages建立博客" class="headerlink" title="5.使用GitHub Pages建立博客"></a>5.使用GitHub Pages建立博客</h1><p>Github Pages可以被认为是用户编写的、托管在github上的静态网页。点这里官方说明<a href="https://pages.github.com/" target="_blank" rel="external">https://pages.github.com/</a></p>
-<p>GitHub Pages分两种，一种是你的GitHub用户名建立的username.github.io这样的用户&amp;组织页（站），另一种是依附项目的pages。</p>
-<p>想建立个人博客是用的第一种，形如Kongwsh.github.io这样的可访问的站，每个用户名下面只能建立一个。建立与名字一致的仓库名，格式为yourname.github.io。<br><img src="http://i1.piimg.com/567571/097549dcd2066599.png" alt="5"></p>
-<h2 id="开始使用hexo"><a href="#开始使用hexo" class="headerlink" title="开始使用hexo"></a><strong>开始使用hexo</strong></h2><h1 id="hexo-命令"><a href="#hexo-命令" class="headerlink" title="hexo 命令"></a>hexo 命令</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">hexo new &quot;postName&quot; #新建文章</div><div class="line">hexo new page &quot;pageName&quot; #新建页面</div><div class="line">hexo generate #生成静态页面至public目录</div><div class="line">hexo server #开启预览访问端口（默认端口4000，&apos;ctrl + c&apos;关闭server）</div><div class="line">hexo deploy #将.deploy目录部署到GitHub</div></pre></td></tr></table></figure>
-<p>简写为：&gt; hexo n == hexo new<br>hexo g == hexo generate<br>hexo s == hexo server<br>hexo d == hexo deploy</p>
-<p>组合命令：&gt; hexo d -g #生成加部署  hexo s -g #预览加部署</p>
-<p>#安装插件<br>进入hexo目录，右键<em>Git Bash Here</em><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-deployer-git --save ## 安装部署所需要的插件</div></pre></td></tr></table></figure></p>
-<p>添加sitemap，feed插件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-generator-sitemap</div><div class="line">$ npm install hexo-generator-feed</div></pre></td></tr></table></figure></p>
-<p>修改根目录下_config.yml，增加以下内容：</p>
-<blockquote>
-<h1 id="Extensions"><a href="#Extensions" class="headerlink" title="Extensions"></a>Extensions</h1><p>Plugins:</p>
-<ul>
-<li>hexo-generator-feed</li>
-<li>hexo-generator-sitemap</li>
-</ul>
-</blockquote>
-<p>#Feed Atom<br>feed:<br>  type: atom<br>  path: atom.xml<br>  limit: 20</p>
-<p>#sitemap<br>sitemap:<br>  path: sitemap.xml</p>
+<h1 id="5-使用GitHub-Pages建立博客"><a href="#5-使用GitHub-Pages建立博客" class="headerlink" title="5.使用GitHub Pages建立博客"></a>5.使用GitHub Pages建立博客</h1><p>github Pages可以被认为是用户编写的、托管在github上的静态网页。点这里官方说明<a href="https://pages.github.com/" target="_blank" rel="external">https://pages.github.com/</a><br>GitHub Pages分两种，一种是你的GitHub用户名建立的username.github.io这样的用户&amp;组织页（站），另一种是依附项目的pages。</p>
+<p>想建立个人博客是用的第一种，形如Kongwsh.github.io这样的可访问的站，每个用户名下面只能建立一个。</p>
 
       
     </div>
@@ -371,13 +353,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/06/30/Hexo搭建Github Page博客记录/" rel="next" title="Hexo搭建Github Page博客记录">
-                <i class="fa fa-chevron-left"></i> Hexo搭建Github Page博客记录
-              </a>
-            
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/06/30/Hello-World-0/" rel="prev" title="Hexo搭建Github Page博客记录">
+                Hexo搭建Github Page博客记录 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -484,7 +466,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#HEXO-简介"><span class="nav-number">1.</span> <span class="nav-text">HEXO 简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装前提"><span class="nav-number">2.</span> <span class="nav-text">安装前提</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Hexo"><span class="nav-number">3.</span> <span class="nav-text">安装Hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#部署Hexo"><span class="nav-number">4.</span> <span class="nav-text">部署Hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#运行hexo"><span class="nav-number">5.</span> <span class="nav-text">运行hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Github"><span class="nav-number">6.</span> <span class="nav-text">Github</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-检查SSH-Key"><span class="nav-number"></span> <span class="nav-text">1. 检查SSH Key</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-生成新的SSH-Key"><span class="nav-number"></span> <span class="nav-text">2. 生成新的SSH Key</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-添加SSH-Key到GitHub"><span class="nav-number"></span> <span class="nav-text">3. 添加SSH Key到GitHub</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-设置用户信息"><span class="nav-number"></span> <span class="nav-text">4. 设置用户信息</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-使用GitHub-Pages建立博客"><span class="nav-number"></span> <span class="nav-text">5.使用GitHub Pages建立博客</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#开始使用hexo"><span class="nav-number">1.</span> <span class="nav-text">开始使用hexo</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#hexo-命令"><span class="nav-number"></span> <span class="nav-text">hexo 命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Extensions"><span class="nav-number"></span> <span class="nav-text">Extensions</span></a></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#HEXO-简介"><span class="nav-number">1.</span> <span class="nav-text">HEXO 简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装前提"><span class="nav-number">2.</span> <span class="nav-text">安装前提</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Hexo"><span class="nav-number">3.</span> <span class="nav-text">安装Hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#部署Hexo"><span class="nav-number">4.</span> <span class="nav-text">部署Hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#运行hexo"><span class="nav-number">5.</span> <span class="nav-text">运行hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Github"><span class="nav-number">6.</span> <span class="nav-text">Github</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-检查SSH-Key"><span class="nav-number"></span> <span class="nav-text">1. 检查SSH Key</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-生成新的SSH-Key"><span class="nav-number"></span> <span class="nav-text">2. 生成新的SSH Key</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-添加SSH-Key到GitHub"><span class="nav-number"></span> <span class="nav-text">3. 添加SSH Key到GitHub</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-设置用户信息"><span class="nav-number"></span> <span class="nav-text">4. 设置用户信息</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-使用GitHub-Pages建立博客"><span class="nav-number"></span> <span class="nav-text">5.使用GitHub Pages建立博客</span></a></div>
             
           </div>
         </section>
