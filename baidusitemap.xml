@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    
+  <url>
+    <loc>http://yoursite.com/2016/07/01/hexo-1/</loc>
+    <lastmod>2016-07-10T16:05:19.185Z</lastmod>
+    <data>
+        <display>
+        <title>HEXO使用</title>
+        <pubTime>2016-07-01T04:23:08.000Z</pubTime>
+        
+        <tag>HEXO</tag>
+         
+        <tag>Github Page</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2016/06/30/hexo-0/</loc>
+    <lastmod>2016-07-10T12:04:30.617Z</lastmod>
+    <data>
+        <display>
+        <title>Hexo搭建Github Page博客记录</title>
+        <pubTime>2016-06-30T04:23:08.000Z</pubTime>
+        
+        <tag>HEXO</tag>
+         
+        <tag>Github Page</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+</urlset>

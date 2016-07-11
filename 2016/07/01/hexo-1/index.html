@@ -68,10 +68,12 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="HEXO,Github Page," />
 
 
 
+
+  
 
 
   <link rel="alternate" href="/atom.xml" title="Kongwsh" type="application/atom+xml" />
@@ -86,15 +88,25 @@
 
 
 
-<meta name="description" content="Front-End">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Kongwsh">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="目录结构默认目录结构如下：1234567891011.├── .deploy├── public├── scaffolds├── scripts├── source|   ├── _drafts|   └── _posts├── themes├── _config.yml└── package.json
+
+deploy：执行hexo deploy命令部署到GitHub上的内容目录
+public：执">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HEXO使用">
+<meta property="og:url" content="http://yoursite.com/2016/07/01/hexo-1/index.html">
 <meta property="og:site_name" content="Kongwsh">
-<meta property="og:description" content="Front-End">
+<meta property="og:description" content="目录结构默认目录结构如下：1234567891011.├── .deploy├── public├── scaffolds├── scripts├── source|   ├── _drafts|   └── _posts├── themes├── _config.yml└── package.json
+
+deploy：执行hexo deploy命令部署到GitHub上的内容目录
+public：执">
+<meta property="og:updated_time" content="2016-07-10T16:05:19.185Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Kongwsh">
-<meta name="twitter:description" content="Front-End">
+<meta name="twitter:title" content="HEXO使用">
+<meta name="twitter:description" content="目录结构默认目录结构如下：1234567891011.├── .deploy├── public├── scaffolds├── scripts├── source|   ├── _drafts|   └── _posts├── themes├── _config.yml└── package.json
+
+deploy：执行hexo deploy命令部署到GitHub上的内容目录
+public：执">
 
 
 
@@ -115,9 +127,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/07/01/hexo-1/"/>
 
-  <title> Kongwsh </title>
+  <title> HEXO使用 | Kongwsh </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -138,9 +150,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -217,9 +227,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
   
@@ -239,10 +249,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2016/07/01/hexo-1/" itemprop="url">
-                  HEXO使用
-                </a>
+                HEXO使用
               
             
           </h1>
@@ -289,9 +296,7 @@
       
 
       
-        
-          
-            <h1 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h1><p>默认目录结构如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">.</div><div class="line">├── .deploy</div><div class="line">├── public</div><div class="line">├── scaffolds</div><div class="line">├── scripts</div><div class="line">├── source</div><div class="line">|   ├── _drafts</div><div class="line">|   └── _posts</div><div class="line">├── themes</div><div class="line">├── _config.yml</div><div class="line">└── package.json</div></pre></td></tr></table></figure></p>
+        <h1 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h1><p>默认目录结构如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">.</div><div class="line">├── .deploy</div><div class="line">├── public</div><div class="line">├── scaffolds</div><div class="line">├── scripts</div><div class="line">├── source</div><div class="line">|   ├── _drafts</div><div class="line">|   └── _posts</div><div class="line">├── themes</div><div class="line">├── _config.yml</div><div class="line">└── package.json</div></pre></td></tr></table></figure></p>
 <ul>
 <li>deploy：执行hexo deploy命令部署到GitHub上的内容目录</li>
 <li>public：执行hexo generate命令，输出的静态网页内容目录</li>
@@ -323,139 +328,60 @@
 <h1 id="统计"><a href="#统计" class="headerlink" title="统计"></a>统计</h1><p>简单易使用<a href="http://ibruce.info/2015/04/04/busuanzi/" target="_blank" rel="external">不蒜子</a></p>
 <h1 id="评论"><a href="#评论" class="headerlink" title="评论"></a>评论</h1><p>在Hexo中，默认使用的评论是国外的Disqus,不过因为国内的”网络环境”问题，我们改为国内的<a href="http://duoshuo.com/" target="_blank" rel="external">多说</a>评论系统。</p>
 <h1 id="404页面"><a href="#404页面" class="headerlink" title="404页面"></a>404页面</h1><h1 id="hexo更新"><a href="#hexo更新" class="headerlink" title="hexo更新"></a>hexo更新</h1><h1 id="图床"><a href="#图床" class="headerlink" title="图床"></a>图床</h1><h1 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h1><h1 id="分享"><a href="#分享" class="headerlink" title="分享"></a>分享</h1>
-          
+      
+    </div>
+
+    <div>
+      
         
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
     <footer class="post-footer">
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/06/30/hexo-0/" itemprop="url">
-                  Hexo搭建Github Page博客记录
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-30T12:23:08+08:00" content="2016-06-30">
-              2016-06-30
-            </time>
-          </span>
-
+        <div class="post-tags">
           
-
+            <a href="/tags/HEXO/" rel="tag">#HEXO</a>
           
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/06/30/hexo-0/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/30/hexo-0/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
+            <a href="/tags/Github-Page/" rel="tag">#Github Page</a>
           
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          <h1 id="HEXO-简介"><a href="#HEXO-简介" class="headerlink" title="HEXO 简介"></a><strong>HEXO 简介</strong></h1><p>Hexo出自<em><a href="https://github.com/tommy351">tommy351</a></em>之手，基于Node.js的静态博客程序，Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。hexo生成的静态网页可以直接放到GitHub Pages，BAE，SAE等平台上。<br>Hexo <a href="https://hexo.io/zh-cn/docs/">官方文档</a></p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/06/30/hexo-0/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/06/30/hexo-0/" rel="next" title="Hexo搭建Github Page博客记录">
+                <i class="fa fa-chevron-left"></i> Hexo搭建Github Page博客记录
+              </a>
+            
           </div>
-        
-      
-    </div>
 
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -483,6 +409,14 @@
   </section>
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/07/01/hexo-1/"
+           data-title="HEXO使用" data-url="http://yoursite.com/2016/07/01/hexo-1/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -502,8 +436,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
@@ -553,6 +496,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#目录结构"><span class="nav-number">1.</span> <span class="nav-text">目录结构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Hexo上传README文件"><span class="nav-number">2.</span> <span class="nav-text">Hexo上传README文件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装插件"><span class="nav-number">3.</span> <span class="nav-text">安装插件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#RSS订阅插件"><span class="nav-number">3.1.</span> <span class="nav-text">RSS订阅插件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sitemap插件"><span class="nav-number">3.2.</span> <span class="nav-text">Sitemap插件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#统计"><span class="nav-number">4.</span> <span class="nav-text">统计</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#评论"><span class="nav-number">5.</span> <span class="nav-text">评论</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#404页面"><span class="nav-number">6.</span> <span class="nav-text">404页面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#hexo更新"><span class="nav-number">7.</span> <span class="nav-text">hexo更新</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#图床"><span class="nav-number">8.</span> <span class="nav-text">图床</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#搜索"><span class="nav-number">9.</span> <span class="nav-text">搜索</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#分享"><span class="nav-number">10.</span> <span class="nav-text">分享</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -650,6 +604,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
