@@ -290,40 +290,12 @@
 
       
         
-          
-            <h1 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h1><p>默认目录结构如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">.</div><div class="line">├── .deploy</div><div class="line">├── public</div><div class="line">├── scaffolds</div><div class="line">├── scripts</div><div class="line">├── source</div><div class="line">|   ├── _drafts</div><div class="line">|   └── _posts</div><div class="line">├── themes</div><div class="line">├── _config.yml</div><div class="line">└── package.json</div></pre></td></tr></table></figure></p>
-<ul>
-<li>deploy：执行hexo deploy命令部署到GitHub上的内容目录</li>
-<li>public：执行hexo generate命令，输出的静态网页内容目录</li>
-<li>scaffolds：layout模板文件目录，其中的md文件可以添加编辑</li>
-<li>scripts：扩展脚本目录，这里可以自定义一些javascript脚本</li>
-<li>source：文章源码目录，该目录下的markdown和html文件均会被hexo处理。该页面对应repo的根目录，404文件、favicon.ico文件，CNAME文件等都应该放这 里，该目录下可新建页面目录。<ul>
-<li>_drafts：草稿文章</li>
-<li>_posts：发布文章</li>
-</ul>
-</li>
-<li>themes：主题文件目录</li>
-<li>_config.yml：全局配置文件，大多数的设置都在这里</li>
-<li>package.json：应用程序数据，指明hexo的版本等信息，类似于一般软件中的关于按钮</li>
-</ul>
-<h1 id="Hexo上传README文件"><a href="#Hexo上传README文件" class="headerlink" title="Hexo上传README文件"></a>Hexo上传README文件</h1><p>Hexo原理就是hexo在执行hexo generate时会在本地先把博客生成的一套静态站点放到public文件夹中，在执行hexo deploy时将其复制到.deploy文件夹中。</p>
-<p>Github的版本库通常建议同时附上README.md说明文件，但是hexo默认情况下会把所有md文件解析成html文件，所以即使你在线生成了README.md，它也会在你下一次部署时被删去。怎么解决呢？</p>
-<p>在执行hexo deploy前把在本地写好的README.md文件复制到.deploy文件夹中，再去执行hexo deploy。</p>
-<h1 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">npm install &lt;plugin-name&gt; --save # 安装插件</div><div class="line">npm update                       # 升级插件</div><div class="line">npm uninstall &lt;plugin-name&gt;      # 卸载插件</div></pre></td></tr></table></figure>
-<p>hexo插件<a href="https://github.com/hexojs/hexo/wiki/Plugins" target="_blank" rel="external">Plugins · hexojs/hexo</a></p>
-<h2 id="RSS订阅插件"><a href="#RSS订阅插件" class="headerlink" title="RSS订阅插件"></a>RSS订阅插件</h2><p>以管理员运行命令行，进入hexo目录下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-generator-feed --save</div></pre></td></tr></table></figure></p>
-<p>这个命令来自<a href="https://www.npmjs.com/package/hexo-generator-feed" target="_blank" rel="external">hexo-generator-feed</a><br>修改 Hexo 根目录下的 _config.yml<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">feed:</div><div class="line">       type: atom</div><div class="line">       path: atom.xml</div><div class="line">       limit: 20</div></pre></td></tr></table></figure></p>
-<blockquote>
-<p>注意格式，‘feed’不能缩进</p>
-</blockquote>
-<h2 id="Sitemap插件"><a href="#Sitemap插件" class="headerlink" title="Sitemap插件"></a>Sitemap插件</h2><blockquote>
-<p>Sitemap 的提交主要的目的，是要避免搜索引擎的爬虫没有完整的收录整个网页的内容，所以提交 Sitemap<br>是能够补足搜索引擎的不足，进而加速网页的收录速度，达到搜寻引擎友好的目的。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm install hexo-generator-sitemap --save</div><div class="line">npm install hexo-generator-baidu-sitemap --save</div></pre></td></tr></table></figure></p>
-</blockquote>
-<p><a href="https://www.npmjs.com/package/hexo-generator-sitemap" target="_blank" rel="external">hexo-generator-sitemap</a><br>对于国内用户还需要安装插件 hexo-generator-baidu-sitemap<br>修改配置文件：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">sitemap:</div><div class="line">       path: sitemap.xml</div><div class="line">baidusitemap:</div><div class="line">            path: baidusitemap.xml</div></pre></td></tr></table></figure></p>
-<h1 id="统计"><a href="#统计" class="headerlink" title="统计"></a>统计</h1><p>简单易使用<a href="http://ibruce.info/2015/04/04/busuanzi/" target="_blank" rel="external">不蒜子</a></p>
-<h1 id="评论"><a href="#评论" class="headerlink" title="评论"></a>评论</h1><p>在Hexo中，默认使用的评论是国外的Disqus,不过因为国内的”网络环境”问题，我们改为国内的<a href="http://duoshuo.com/" target="_blank" rel="external">多说</a>评论系统。</p>
-<h1 id="404页面"><a href="#404页面" class="headerlink" title="404页面"></a>404页面</h1><h1 id="hexo更新"><a href="#hexo更新" class="headerlink" title="hexo更新"></a>hexo更新</h1><h1 id="图床"><a href="#图床" class="headerlink" title="图床"></a>图床</h1><h1 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h1><h1 id="分享"><a href="#分享" class="headerlink" title="分享"></a>分享</h1>
-          
+          <h1 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h1><p>默认目录结构如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">.</div><div class="line">├── .deploy</div><div class="line">├── public</div><div class="line">├── scaffolds</div><div class="line">├── scripts</div><div class="line">├── source</div><div class="line">|   ├── _drafts</div><div class="line">|   └── _posts</div><div class="line">├── themes</div><div class="line">├── _config.yml</div><div class="line">└── package.json</div></pre></td></tr></table></figure></p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/07/01/hexo-1/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -463,25 +435,7 @@
 
 
 
-  <section id="comments">
-    <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="<%= post.layout %>-<%= post.slug %>" data-title="<%= post.title %>" data-url="<%= page.permalink %>"></div>
-    <!-- 多说评论框 end -->
-    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-    <script type="text/javascript">
-    var duoshuoQuery = {short_name:'<%= config.duoshuo_shortname %>'};
-      (function() {
-        var ds = document.createElement('script');
-        ds.type = 'text/javascript';ds.async = true;
-        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-        ds.charset = 'UTF-8';
-        (document.getElementsByTagName('head')[0] 
-         || document.getElementsByTagName('body')[0]).appendChild(ds);
-      })();
-      </script>
-    <!-- 多说公共JS代码 end -->
-  </section>
-
+  
           
 
         </div>

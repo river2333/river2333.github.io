@@ -88,25 +88,16 @@
 
 
 
-<meta name="description" content="目录结构默认目录结构如下：1234567891011.├── .deploy├── public├── scaffolds├── scripts├── source|   ├── _drafts|   └── _posts├── themes├── _config.yml└── package.json
-
-deploy：执行hexo deploy命令部署到GitHub上的内容目录
-public：执">
+<meta name="description" content="目录结构默认目录结构如下：1234567891011.├── .deploy├── public├── scaffolds├── scripts├── source|   ├── _drafts|   └── _posts├── themes├── _config.yml└── package.json">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HEXO使用">
 <meta property="og:url" content="http://yoursite.com/2016/07/01/hexo-1/index.html">
 <meta property="og:site_name" content="Kongwsh">
-<meta property="og:description" content="目录结构默认目录结构如下：1234567891011.├── .deploy├── public├── scaffolds├── scripts├── source|   ├── _drafts|   └── _posts├── themes├── _config.yml└── package.json
-
-deploy：执行hexo deploy命令部署到GitHub上的内容目录
-public：执">
-<meta property="og:updated_time" content="2016-07-10T16:05:19.185Z">
+<meta property="og:description" content="目录结构默认目录结构如下：1234567891011.├── .deploy├── public├── scaffolds├── scripts├── source|   ├── _drafts|   └── _posts├── themes├── _config.yml└── package.json">
+<meta property="og:updated_time" content="2016-07-11T11:51:38.739Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HEXO使用">
-<meta name="twitter:description" content="目录结构默认目录结构如下：1234567891011.├── .deploy├── public├── scaffolds├── scripts├── source|   ├── _drafts|   └── _posts├── themes├── _config.yml└── package.json
-
-deploy：执行hexo deploy命令部署到GitHub上的内容目录
-public：执">
+<meta name="twitter:description" content="目录结构默认目录结构如下：1234567891011.├── .deploy├── public├── scaffolds├── scripts├── source|   ├── _drafts|   └── _posts├── themes├── _config.yml└── package.json">
 
 
 
@@ -297,6 +288,7 @@ public：执">
 
       
         <h1 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h1><p>默认目录结构如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">.</div><div class="line">├── .deploy</div><div class="line">├── public</div><div class="line">├── scaffolds</div><div class="line">├── scripts</div><div class="line">├── source</div><div class="line">|   ├── _drafts</div><div class="line">|   └── _posts</div><div class="line">├── themes</div><div class="line">├── _config.yml</div><div class="line">└── package.json</div></pre></td></tr></table></figure></p>
+<a id="more"></a>
 <ul>
 <li>deploy：执行hexo deploy命令部署到GitHub上的内容目录</li>
 <li>public：执行hexo generate命令，输出的静态网页内容目录</li>
@@ -322,12 +314,42 @@ public：执">
 <p>注意格式，‘feed’不能缩进</p>
 </blockquote>
 <h2 id="Sitemap插件"><a href="#Sitemap插件" class="headerlink" title="Sitemap插件"></a>Sitemap插件</h2><blockquote>
-<p>Sitemap 的提交主要的目的，是要避免搜索引擎的爬虫没有完整的收录整个网页的内容，所以提交 Sitemap<br>是能够补足搜索引擎的不足，进而加速网页的收录速度，达到搜寻引擎友好的目的。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm install hexo-generator-sitemap --save</div><div class="line">npm install hexo-generator-baidu-sitemap --save</div></pre></td></tr></table></figure></p>
+<p>Sitemap 的提交主要的目的，是要避免搜索引擎的爬虫没有完整的收录整个网页的内容，所以提交 Sitemap<br>是能够补足搜索引擎的不足，进而加速网页的收录速度，达到搜寻引擎友好的目的。</p>
 </blockquote>
-<p><a href="https://www.npmjs.com/package/hexo-generator-sitemap" target="_blank" rel="external">hexo-generator-sitemap</a><br>对于国内用户还需要安装插件 hexo-generator-baidu-sitemap<br>修改配置文件：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">sitemap:</div><div class="line">       path: sitemap.xml</div><div class="line">baidusitemap:</div><div class="line">            path: baidusitemap.xml</div></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm install hexo-generator-sitemap --save</div><div class="line">npm install hexo-generator-baidu-sitemap --save</div></pre></td></tr></table></figure>
+<p>这个命令来自<a href="https://www.npmjs.com/package/hexo-generator-sitemap" target="_blank" rel="external">hexo-generator-sitemap</a><br>对于国内用户还需要安装插件 hexo-generator-baidu-sitemap<br>修改配置文件：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">sitemap:</div><div class="line">       path: sitemap.xml</div><div class="line">baidusitemap:</div><div class="line">            path: baidusitemap.xml</div></pre></td></tr></table></figure></p>
 <h1 id="统计"><a href="#统计" class="headerlink" title="统计"></a>统计</h1><p>简单易使用<a href="http://ibruce.info/2015/04/04/busuanzi/" target="_blank" rel="external">不蒜子</a></p>
-<h1 id="评论"><a href="#评论" class="headerlink" title="评论"></a>评论</h1><p>在Hexo中，默认使用的评论是国外的Disqus,不过因为国内的”网络环境”问题，我们改为国内的<a href="http://duoshuo.com/" target="_blank" rel="external">多说</a>评论系统。</p>
-<h1 id="404页面"><a href="#404页面" class="headerlink" title="404页面"></a>404页面</h1><h1 id="hexo更新"><a href="#hexo更新" class="headerlink" title="hexo更新"></a>hexo更新</h1><h1 id="图床"><a href="#图床" class="headerlink" title="图床"></a>图床</h1><h1 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h1><h1 id="分享"><a href="#分享" class="headerlink" title="分享"></a>分享</h1>
+<h1 id="评论"><a href="#评论" class="headerlink" title="评论"></a>评论</h1><p>在Hexo中，默认使用的评论是国外的Disqus,但是Disqus只支持G+ twitter等登陆，我改为国内的<a href="http://duoshuo.com/" target="_blank" rel="external">多说</a>评论系统。<br>我使用next主题，hexo 版本为3.2.2，在<code>\hexo\themes\next\layout\_partial\comment.ejs</code>中自动配置多说评论框代码，只需在hexo根目录下的配置文件中加上<code>duoshuo_shortname: Kongwsh</code></p>
+<h1 id="404页面"><a href="#404页面" class="headerlink" title="404页面"></a>404页面</h1><p>Github Pages提供制作404页面的教程：<a href="https://help.github.com/articles/creating-a-custom-404-page-for-your-github-pages-site/" target="_blank" rel="external">Creating a custom 404 page for your GitHub Pages site</a> 。不过 </p>
+<blockquote>
+<p>If you want your Project Pages site to have a custom 404 page, you must use a custom domain.</p>
+</blockquote>
+<p>直接在根目录下创建自己的404.html或者404.md就可以。但是自定义404页面仅对绑定顶级域名的项目才起作用，GitHub默认分配的二级域名是不起作用的，使用hexo server在本机调试也是不起作用的。<br>404公益是个特别好的想法，目前有以下几个：</p>
+<ul>
+<li><a href="http://www.qq.com/404/" target="_blank" rel="external">腾讯公益404</a></li>
+<li><a href="http://yibo.iyiyun.com/Index/web404" target="_blank" rel="external">404公益_益云(公益互联网)社会创新中心</a></li>
+<li><a href="http://404page.missingkids.org.tw/" target="_blank" rel="external">失蹤兒童少年資料管理中心404</a></li>
+</ul>
+<h1 id="hexo更新"><a href="#hexo更新" class="headerlink" title="hexo更新"></a>hexo更新</h1><p>更新hexo:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm update -g hexo</div></pre></td></tr></table></figure></p>
+<p>更新主题：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd themes/你的主题</div><div class="line">git pull</div></pre></td></tr></table></figure></p>
+<p>更新插件：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm update</div></pre></td></tr></table></figure></p>
+<h1 id="图床"><a href="#图床" class="headerlink" title="图床"></a>图床</h1><p>图床专门用来存放图片，同时允许把图片对外连接。</p>
+<ul>
+<li><a href="https://portal.qiniu.com/" target="_blank" rel="external">七牛</a></li>
+<li><a href="https://maxiang.io/" target="_blank" rel="external">马克飞象</a></li>
+<li><a href="http://yotuku.cn/" target="_blank" rel="external">yotuku</a> 我用的这个，免费的。</li>
+<li><a href="http://www.tietuku.com/" target="_blank" rel="external">贴图库</a></li>
+</ul>
+<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><p>以下还没做</p>
+<ul>
+<li>分享</li>
+<li>搜索</li>
+<li>同步 Dropbox </li>
+<li>将独立域名与GitHub Pages的空间绑定，官方教程：<a href="https://help.github.com/articles/using-a-custom-domain-with-github-pages/" target="_blank" rel="external">Using a custom domain with GitHub Pages</a></li>
+<li>迁移</li>
+<li>CDN加速</li>
+</ul>
+
       
     </div>
 
@@ -389,25 +411,7 @@ public：执">
 
 
 
-  <section id="comments">
-    <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="<%= post.layout %>-<%= post.slug %>" data-title="<%= post.title %>" data-url="<%= page.permalink %>"></div>
-    <!-- 多说评论框 end -->
-    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-    <script type="text/javascript">
-    var duoshuoQuery = {short_name:'<%= config.duoshuo_shortname %>'};
-      (function() {
-        var ds = document.createElement('script');
-        ds.type = 'text/javascript';ds.async = true;
-        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-        ds.charset = 'UTF-8';
-        (document.getElementsByTagName('head')[0] 
-         || document.getElementsByTagName('body')[0]).appendChild(ds);
-      })();
-      </script>
-    <!-- 多说公共JS代码 end -->
-  </section>
-
+  
           
   <div class="comments" id="comments">
     
@@ -503,7 +507,7 @@ public：执">
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#目录结构"><span class="nav-number">1.</span> <span class="nav-text">目录结构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Hexo上传README文件"><span class="nav-number">2.</span> <span class="nav-text">Hexo上传README文件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装插件"><span class="nav-number">3.</span> <span class="nav-text">安装插件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#RSS订阅插件"><span class="nav-number">3.1.</span> <span class="nav-text">RSS订阅插件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sitemap插件"><span class="nav-number">3.2.</span> <span class="nav-text">Sitemap插件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#统计"><span class="nav-number">4.</span> <span class="nav-text">统计</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#评论"><span class="nav-number">5.</span> <span class="nav-text">评论</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#404页面"><span class="nav-number">6.</span> <span class="nav-text">404页面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#hexo更新"><span class="nav-number">7.</span> <span class="nav-text">hexo更新</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#图床"><span class="nav-number">8.</span> <span class="nav-text">图床</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#搜索"><span class="nav-number">9.</span> <span class="nav-text">搜索</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#分享"><span class="nav-number">10.</span> <span class="nav-text">分享</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#目录结构"><span class="nav-number">1.</span> <span class="nav-text">目录结构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Hexo上传README文件"><span class="nav-number">2.</span> <span class="nav-text">Hexo上传README文件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装插件"><span class="nav-number">3.</span> <span class="nav-text">安装插件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#RSS订阅插件"><span class="nav-number">3.1.</span> <span class="nav-text">RSS订阅插件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sitemap插件"><span class="nav-number">3.2.</span> <span class="nav-text">Sitemap插件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#统计"><span class="nav-number">4.</span> <span class="nav-text">统计</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#评论"><span class="nav-number">5.</span> <span class="nav-text">评论</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#404页面"><span class="nav-number">6.</span> <span class="nav-text">404页面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#hexo更新"><span class="nav-number">7.</span> <span class="nav-text">hexo更新</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#图床"><span class="nav-number">8.</span> <span class="nav-text">图床</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#其他"><span class="nav-number">9.</span> <span class="nav-text">其他</span></a></li></ol></div>
             
           </div>
         </section>

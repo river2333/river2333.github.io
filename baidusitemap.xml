@@ -4,12 +4,12 @@
 
     
   <url>
-    <loc>http://yoursite.com/2016/07/01/hexo-1/</loc>
-    <lastmod>2016-07-10T16:05:19.185Z</lastmod>
+    <loc>http://yoursite.com/2016/06/30/hexo-0/</loc>
+    <lastmod>2016-07-11T11:54:28.840Z</lastmod>
     <data>
         <display>
-        <title>HEXO使用</title>
-        <pubTime>2016-07-01T04:23:08.000Z</pubTime>
+        <title>Hexo搭建Github Page博客记录</title>
+        <pubTime>2016-06-30T04:23:08.000Z</pubTime>
         
         <tag>HEXO</tag>
          
@@ -23,12 +23,12 @@
 
     
   <url>
-    <loc>http://yoursite.com/2016/06/30/hexo-0/</loc>
-    <lastmod>2016-07-10T12:04:30.617Z</lastmod>
+    <loc>http://yoursite.com/2016/07/01/hexo-1/</loc>
+    <lastmod>2016-07-11T11:51:38.739Z</lastmod>
     <data>
         <display>
-        <title>Hexo搭建Github Page博客记录</title>
-        <pubTime>2016-06-30T04:23:08.000Z</pubTime>
+        <title>HEXO使用</title>
+        <pubTime>2016-07-01T04:23:08.000Z</pubTime>
         
         <tag>HEXO</tag>
          
