@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+    
+    <entry>
+      <title><![CDATA[HEXO使用]]></title>
+      <url>http://yoursite.com/2016/07/01/hexo-1/</url>
+      <content type="html"><![CDATA[<h1 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h1><p>默认目录结构如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">.</div><div class="line">├── .deploy</div><div class="line">├── public</div><div class="line">├── scaffolds</div><div class="line">├── scripts</div><div class="line">├── source</div><div class="line">|   ├── _drafts</div><div class="line">|   └── _posts</div><div class="line">├── themes</div><div class="line">├── _config.yml</div><div class="line">└── package.json</div></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<ul>
+<li>deploy：执行hexo deploy命令部署到GitHub上的内容目录</li>
+<li>public：执行hexo generate命令，输出的静态网页内容目录</li>
+<li>scaffolds：layout模板文件目录，其中的md文件可以添加编辑</li>
+<li>scripts：扩展脚本目录，这里可以自定义一些javascript脚本</li>
+<li>source：文章源码目录，该目录下的markdown和html文件均会被hexo处理。该页面对应repo的根目录，404文件、favicon.ico文件，CNAME文件等都应该放这 里，该目录下可新建页面目录。<ul>
+<li>_drafts：草稿文章</li>
+<li>_posts：发布文章</li>
+</ul>
+</li>
+<li>themes：主题文件目录</li>
+<li>_config.yml：全局配置文件，大多数的设置都在这里</li>
+<li>package.json：应用程序数据，指明hexo的版本等信息，类似于一般软件中的关于按钮</li>
+</ul>
+<h1 id="Hexo上传README文件"><a href="#Hexo上传README文件" class="headerlink" title="Hexo上传README文件"></a>Hexo上传README文件</h1><p>Hexo原理就是hexo在执行hexo generate时会在本地先把博客生成的一套静态站点放到public文件夹中，在执行hexo deploy时将其复制到.deploy文件夹中。</p>
+<p>Github的版本库通常建议同时附上README.md说明文件，但是hexo默认情况下会把所有md文件解析成html文件，所以即使你在线生成了README.md，它也会在你下一次部署时被删去。怎么解决呢？</p>
+<p>在执行hexo deploy前把在本地写好的README.md文件复制到.deploy文件夹中，再去执行hexo deploy。</p>
+<h1 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">npm install &lt;plugin-name&gt; --save # 安装插件</div><div class="line">npm update                       # 升级插件</div><div class="line">npm uninstall &lt;plugin-name&gt;      # 卸载插件</div></pre></td></tr></table></figure>
+<p>hexo插件<a href="https://github.com/hexojs/hexo/wiki/Plugins" target="_blank" rel="external">Plugins · hexojs/hexo</a></p>
+<h2 id="RSS订阅插件"><a href="#RSS订阅插件" class="headerlink" title="RSS订阅插件"></a>RSS订阅插件</h2><p>以管理员运行命令行，进入hexo目录下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-generator-feed --save</div></pre></td></tr></table></figure></p>
+<p>这个命令来自<a href="https://www.npmjs.com/package/hexo-generator-feed" target="_blank" rel="external">hexo-generator-feed</a><br>修改 Hexo 根目录下的 _config.yml<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">feed:</div><div class="line">       type: atom</div><div class="line">       path: atom.xml</div><div class="line">       limit: 20</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>注意格式，‘feed’不能缩进</p>
+</blockquote>
+<h2 id="Sitemap插件"><a href="#Sitemap插件" class="headerlink" title="Sitemap插件"></a>Sitemap插件</h2><blockquote>
+<p>Sitemap 的提交主要的目的，是要避免搜索引擎的爬虫没有完整的收录整个网页的内容，所以提交 Sitemap<br>是能够补足搜索引擎的不足，进而加速网页的收录速度，达到搜寻引擎友好的目的。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm install hexo-generator-sitemap --save</div><div class="line">npm install hexo-generator-baidu-sitemap --save</div></pre></td></tr></table></figure>
+<p>这个命令来自<a href="https://www.npmjs.com/package/hexo-generator-sitemap" target="_blank" rel="external">hexo-generator-sitemap</a><br>对于国内用户还需要安装插件 hexo-generator-baidu-sitemap<br>修改配置文件：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">sitemap:</div><div class="line">       path: sitemap.xml</div><div class="line">baidusitemap:</div><div class="line">            path: baidusitemap.xml</div></pre></td></tr></table></figure></p>
+<h1 id="统计"><a href="#统计" class="headerlink" title="统计"></a>统计</h1><p>简单易使用<a href="http://ibruce.info/2015/04/04/busuanzi/" target="_blank" rel="external">不蒜子</a></p>
+<h1 id="评论"><a href="#评论" class="headerlink" title="评论"></a>评论</h1><p>在Hexo中，默认使用的评论是国外的Disqus,但是Disqus只支持G+ twitter等登陆，我改为国内的<a href="http://duoshuo.com/" target="_blank" rel="external">多说</a>评论系统。<br>我使用next主题，hexo 版本为3.2.2，在<code>\hexo\themes\next\layout\_partial\comment.ejs</code>中自动配置多说评论框代码，只需在hexo根目录下的配置文件中加上<code>duoshuo_shortname: Kongwsh</code></p>
+<h1 id="404页面"><a href="#404页面" class="headerlink" title="404页面"></a>404页面</h1><p>Github Pages提供制作404页面的教程：<a href="https://help.github.com/articles/creating-a-custom-404-page-for-your-github-pages-site/" target="_blank" rel="external">Creating a custom 404 page for your GitHub Pages site</a> 。不过 </p>
+<blockquote>
+<p>If you want your Project Pages site to have a custom 404 page, you must use a custom domain.</p>
+</blockquote>
+<p>直接在根目录下创建自己的404.html或者404.md就可以。但是自定义404页面仅对绑定顶级域名的项目才起作用，GitHub默认分配的二级域名是不起作用的，使用hexo server在本机调试也是不起作用的。<br>404公益是个特别好的想法，目前有以下几个：</p>
+<ul>
+<li><a href="http://www.qq.com/404/" target="_blank" rel="external">腾讯公益404</a></li>
+<li><a href="http://yibo.iyiyun.com/Index/web404" target="_blank" rel="external">404公益_益云(公益互联网)社会创新中心</a></li>
+<li><a href="http://404page.missingkids.org.tw/" target="_blank" rel="external">失蹤兒童少年資料管理中心404</a></li>
+</ul>
+<h1 id="hexo更新"><a href="#hexo更新" class="headerlink" title="hexo更新"></a>hexo更新</h1><p>更新hexo:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm update -g hexo</div></pre></td></tr></table></figure></p>
+<p>更新主题：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd themes/你的主题</div><div class="line">git pull</div></pre></td></tr></table></figure></p>
+<p>更新插件：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm update</div></pre></td></tr></table></figure></p>
+<h1 id="图床"><a href="#图床" class="headerlink" title="图床"></a>图床</h1><p>图床专门用来存放图片，同时允许把图片对外连接。</p>
+<ul>
+<li><a href="https://portal.qiniu.com/" target="_blank" rel="external">七牛</a></li>
+<li><a href="https://maxiang.io/" target="_blank" rel="external">马克飞象</a></li>
+<li><a href="http://yotuku.cn/" target="_blank" rel="external">yotuku</a> 我用的这个，免费的。</li>
+<li><a href="http://www.tietuku.com/" target="_blank" rel="external">贴图库</a></li>
+</ul>
+<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><p>以下还没做</p>
+<ul>
+<li>分享</li>
+<li>搜索</li>
+<li>同步 Dropbox </li>
+<li>将独立域名与GitHub Pages的空间绑定，官方教程：<a href="https://help.github.com/articles/using-a-custom-domain-with-github-pages/" target="_blank" rel="external">Using a custom domain with GitHub Pages</a></li>
+<li>迁移</li>
+<li>CDN加速</li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Hexo搭建Github Page博客记录]]></title>
+      <url>http://yoursite.com/2016/06/30/hexo-0/</url>
+      <content type="html"><![CDATA[<h1 id="HEXO-简介"><a href="#HEXO-简介" class="headerlink" title="HEXO 简介"></a><strong>HEXO 简介</strong></h1><p>Hexo出自<em><a href="https://github.com/tommy351" target="_blank" rel="external">tommy351</a></em>之手，基于Node.js的静态博客程序，Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。hexo生成的静态网页可以直接放到GitHub Pages，BAE，SAE等平台上。<br>Hexo <a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="external">官方文档</a></p>
+<a id="more"></a>
+<h1 id="安装前提"><a href="#安装前提" class="headerlink" title="安装前提"></a><strong>安装前提</strong></h1><p>注意：系统：win8.1</p>
+<ul>
+<li>安装git<br>下载安装<em> <a href="https://git-scm.com/download/win" target="_blank" rel="external">git</a></em></li>
+<li>安装node.js<br>简单安装方法，<em><a href="https://nodejs.org/en/" target="_blank" rel="external">官网</a></em>下载.msi格式，默认安装会自动配置环境变量。</li>
+</ul>
+<h1 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a><strong>安装Hexo</strong></h1><p>使用npm命令即可直接安装 (可以直接在屏幕任意地方直接右键: Git Bash Here)<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo -g</div></pre></td></tr></table></figure></p>
+<p>“g”表示全局安装,静候几分钟安装完成。</p>
+<blockquote>
+<p>注意要在管理员下运行命令行</p>
+</blockquote>
+<h1 id="部署Hexo"><a href="#部署Hexo" class="headerlink" title="部署Hexo"></a><strong>部署Hexo</strong></h1><p>现在本地创建hexo文件夹（例如我的D:\HEXO），在哪都行，然后进入hexo目录，右键 Git Bash Here<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo init</div></pre></td></tr></table></figure></p>
+<p>Hexo 自动创建所需的文件<br>npm 安装依赖环境<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install</div></pre></td></tr></table></figure></p>
+<p>ok了。</p>
+<h1 id="运行Hexo"><a href="#运行Hexo" class="headerlink" title="运行Hexo"></a><strong>运行Hexo</strong></h1><p>现在在D:\HEXO内右键Git Bash Here 输入以下命令<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo g</div><div class="line">hexo s</div></pre></td></tr></table></figure></p>
+<p>运行成功的界面<br><img src="http://i2.piimg.com/567571/efef15c89c1f71e8.png" alt="Alt text"><br>访问 <a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a> 查看效果<br><img src="http://i1.piimg.com/567571/420c06e6efb72f6d.png" alt="效果图"></p>
+<h1 id="Github"><a href="#Github" class="headerlink" title="Github"></a><strong>Github</strong></h1><ul>
+<li>注册github账号</li>
+<li>添加SSH公钥</li>
+<li>使用GitHub Pages建立博客</li>
+</ul>
+<p>注册完github账号，如何让本地git项目与远程的github建立联系呢，使用SSH key。</p>
+<h2 id="检查SSH-Key"><a href="#检查SSH-Key" class="headerlink" title="检查SSH Key"></a>检查SSH Key</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ cd ~/.ssh</div></pre></td></tr></table></figure>
+<p>提示“No such file or directory”代表咱是第一回用。</p>
+<h2 id="生成新的SSH-Key"><a href="#生成新的SSH-Key" class="headerlink" title="生成新的SSH Key"></a>生成新的SSH Key</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ssh-keygen -t rsa -C &quot;you@youremail.com&quot;</div></pre></td></tr></table></figure>
+<p>屏幕提示：Enter file in which to save the key (/Users/your_user_directory/.ssh/id_rsa):（回车）<br>Enter passphrase (empty for no passphrase):（回车）<br>Enter same passphrase again:（回车）<br>hexo 自动部署如果有密码就会失败。</p>
+<h2 id="添加SSH-Key到GitHub"><a href="#添加SSH-Key到GitHub" class="headerlink" title="添加SSH Key到GitHub"></a>添加SSH Key到GitHub</h2><p>在本机设置SSH Key之后，需要添加到GitHub上，以完成SSH链接的设置。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ cd ~/.ssh/ &amp;&amp; ls</div></pre></td></tr></table></figure></p>
+<p>可以看到此目录下的文件：<code>id_rsa</code> <code>id_rsa.pub</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ cat id_rsa.pub</div></pre></td></tr></table></figure></p>
+<p>把SSH key 复制下来<br><img src="http://i1.piimg.com/567571/e8bd1567403a0940.png" alt="3"><br>哈，登录自己的github账号 Settings —&gt; SSH and GPG keys—&gt; Add SSH keys <a href="https://github.com/settings/keys" target="_blank" rel="external">https://github.com/settings/keys</a><br><img src="http://i4.piimg.com/567571/8a8501d59a29c75d.png" alt="4"><br>测试一下有没有添加成功<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh -T git@github.com</div></pre></td></tr></table></figure></p>
+<p> <code>Hi Kongwsh! You&#39;ve successfully authenticated, but GitHub does not provide shell access.</code>说明已经配置成功。</p>
+<h2 id="设置用户信息"><a href="#设置用户信息" class="headerlink" title="设置用户信息"></a>设置用户信息</h2> <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ git config --global user.name &quot;Kongwsh&quot;//用户名</div><div class="line">$ git config --global user.email  &quot;echokws@163.com&quot;//填写自己的邮箱</div></pre></td></tr></table></figure>
+<p>本机已成功连接到github。</p>
+<h2 id="使用GitHub-Pages建立博客"><a href="#使用GitHub-Pages建立博客" class="headerlink" title="使用GitHub Pages建立博客"></a>使用GitHub Pages建立博客</h2><p>Github Pages可以被认为是用户编写的、托管在github上的静态网页。点这里官方说明<a href="https://pages.github.com/" target="_blank" rel="external">https://pages.github.com/</a></p>
+<p>GitHub Pages分两种，一种是你的GitHub用户名建立的username.github.io这样的用户&amp;组织页（站），另一种是依附项目的pages。</p>
+<p>想建立个人博客是用的第一种，形如Kongwsh.github.io这样的可访问的站，每个用户名下面只能建立一个。建立与名字一致的仓库名，格式为yourname.github.io。<br><img src="http://i1.piimg.com/567571/097549dcd2066599.png" alt="5"></p>
+<h1 id="开始使用hexo"><a href="#开始使用hexo" class="headerlink" title="开始使用hexo"></a><strong>开始使用hexo</strong></h1><h2 id="hexo-命令"><a href="#hexo-命令" class="headerlink" title="hexo 命令"></a>hexo 命令</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">hexo new &quot;postName&quot; #新建文章</div><div class="line">hexo new page &quot;pageName&quot; #新建页面</div><div class="line">hexo generate #生成静态页面至public目录</div><div class="line">hexo server #开启预览访问端口（默认端口4000，&apos;ctrl + c&apos;关闭server）</div><div class="line">hexo deploy #将.deploy目录部署到GitHub</div><div class="line">hexo clean # 清理 database 和 /public目录， /public 目录里是生成的静态文件数据</div></pre></td></tr></table></figure>
+<p>简写为：</p>
+<blockquote>
+<p>hexo n == hexo new<br>hexo g == hexo generate<br>hexo s == hexo server<br>hexo d == hexo deploy</p>
+</blockquote>
+<p>组合命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hexo d -g #生成加部署 </div><div class="line">hexo s -g #预览加部署</div><div class="line">hexo s -debug #开启调试模式，观察命令行输出是否有异常，这些信息有助于定位错误</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>注意：当本地调试出现诡异现象时候，请先使用 hexo clean 清理已经生成的静态文件后重试。</p>
+</blockquote>
+<h2 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h2><p>进入hexo目录，右键<em>Git Bash Here</em><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-deployer-git --save ## 安装部署所需要的插件</div></pre></td></tr></table></figure></p>
+<h2 id="克隆hexo主题"><a href="#克隆hexo主题" class="headerlink" title="克隆hexo主题"></a>克隆hexo主题</h2><p>初始化hexo时也会自动生成一个主题, Hexo还支持个性定制主题, 可以根据自己的喜好对主题进行修改, <a href="https://github.com/hexojs/hexo/wiki/Themes" target="_blank" rel="external">更多主题</a> 可以在官网中找到。<br>以<a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">next</a> 主题为例，Next主题<a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="external">使用文档</a></p>
+<h3 id="克隆主题"><a href="#克隆主题" class="headerlink" title="克隆主题"></a>克隆主题</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ cd your-hexo-site</div><div class="line">$ git clone https://github.com/iissnan/hexo-theme-next themes/next</div></pre></td></tr></table></figure>
+<h3 id="启用主题"><a href="#启用主题" class="headerlink" title="启用主题"></a>启用主题</h3><p>打开站点根目录下配置文件_config.yml， 找到 theme 字段，并将其值更改为 next。</p>
+<blockquote>
+<p> theme: next</p>
+</blockquote>
+<p><strong>注意：</strong> 修改配置文件冒号后一定空一格，否则不起作用。<br>在切换主题之后、验证之前， 我们最好使用 hexo clean 来清除 Hexo 的缓存。 </p>
+<h3 id="验证主题"><a href="#验证主题" class="headerlink" title="验证主题"></a>验证主题</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo s -debug</div></pre></td></tr></table></figure>
+<p>用浏览器访问<a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a>，检查站点是否正确运行。</p>
+<h2 id="Hexo配置"><a href="#Hexo配置" class="headerlink" title="Hexo配置"></a>Hexo配置</h2><p>配置 Hexo目录 下的 _config.yml<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div></pre></td><td class="code"><pre><div class="line"># Hexo Configuration</div><div class="line">## Docs: https://hexo.io/docs/configuration.html</div><div class="line">## Source: https://github.com/hexojs/hexo/</div><div class="line"></div><div class="line"># Site</div><div class="line">title: Kongwsh           # 网站标题</div><div class="line">subtitle:                # 副标题</div><div class="line">description: Front-End   # 描述，给搜索引擎用的，在生成html中的head-&gt;meta中可看到</div><div class="line">author: Kong             # 网站作者</div><div class="line">language: zh-Hans        # 语言</div><div class="line">email: echokws@163.com   # 邮箱</div><div class="line">timezone: Asia/Hong_Kong # 时区</div><div class="line">avatar: /images/avatar.jpg # 头像</div><div class="line"></div><div class="line"></div><div class="line"># URL #域名和文件结构</div><div class="line">## If your site is put in a subdirectory, set url as &apos;http://yoursite.com/child&apos; and root as &apos;/child/&apos;</div><div class="line">url: http://ibruce.info #你的域名</div><div class="line">root: /</div><div class="line">permalink: :year/:month/:day/:title/</div><div class="line">tag_dir: tags</div><div class="line">archive_dir: archives</div><div class="line">category_dir: categories</div><div class="line">code_dir: downloads/code</div><div class="line"></div><div class="line"># Writing #写文章选项</div><div class="line">new_post_name: :title.md # File name of new posts</div><div class="line">default_layout: post #默认layout方式</div><div class="line">auto_spacing: false # Add spaces between asian characters and western characters</div><div class="line">titlecase: false # Transform title into titlecase</div><div class="line">external_link: true # Open external links in new tab</div><div class="line">max_open_file: 100</div><div class="line">multi_thread: true</div><div class="line">filename_case: 0</div><div class="line">render_drafts: false</div><div class="line">highlight: #代码高亮</div><div class="line">  enable: true #是否启用</div><div class="line">  line_number: false #是否显示行号</div><div class="line">  tab_replace:</div><div class="line"></div><div class="line"># Category &amp; Tag #分类与标签</div><div class="line">default_category: uncategorized # default</div><div class="line">category_map:</div><div class="line">tag_map:</div><div class="line"></div><div class="line"># Archives #存档，这里的说明好像不对。全部选择1，这个选项与主题中的选项有时候会有冲突</div><div class="line">## 2: Enable pagination</div><div class="line">## 1: Disable pagination</div><div class="line">## 0: Fully Disable</div><div class="line">archive: 1</div><div class="line">category: 1</div><div class="line">tag: 1</div><div class="line"></div><div class="line"># Server #本地服务参数</div><div class="line">## Hexo uses Connect as a server</div><div class="line">## You can customize the logger format as defined in</div><div class="line">## http://www.senchalabs.org/connect/logger.html</div><div class="line">port: 4000</div><div class="line">logger: true</div><div class="line">logger_format:</div><div class="line"></div><div class="line"># Date / Time format #日期显示格式</div><div class="line">## Hexo uses Moment.js to parse and display date</div><div class="line">## You can customize the date format as defined in</div><div class="line">## http://momentjs.com/docs/#/displaying/format/</div><div class="line">date_format: MMM D YYYY</div><div class="line">time_format: H:mm:ss</div><div class="line"></div><div class="line"># Pagination #分页设置</div><div class="line">## Set per_page to 0 to disable pagination</div><div class="line">per_page: 10 #每页10篇文章</div><div class="line">pagination_dir: page</div><div class="line"></div><div class="line"># Disqus #社会化评论disqus</div><div class="line">disqus_shortname:</div><div class="line"></div><div class="line"># Extensions #插件，暂时未安装插件</div><div class="line">## Plugins: https://github.com/tommy351/hexo/wiki/Plugins</div><div class="line">## Themes: https://github.com/tommy351/hexo/wiki/Themes</div><div class="line">## 主题</div><div class="line">theme: modernist # raytaylorism # pacman # modernist # light</div><div class="line">exclude_generator:</div><div class="line"></div><div class="line"></div><div class="line"># Deployment</div><div class="line">## Docs: https://hexo.io/docs/deployment.html</div><div class="line">deploy: </div><div class="line">  type: git   # 部署位置</div><div class="line">  repository: git@github.com:Kongwsh/Kongwsh.github.io.git</div><div class="line">  # 这里填写项目的地址 git@github.com:Git用户名/Git用户名.github.io.git 参照上面</div><div class="line">  branch: master</div></pre></td></tr></table></figure></p>
+<h2 id="写文章"><a href="#写文章" class="headerlink" title="写文章"></a>写文章</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new &quot;postName&quot;  #新建博文,其中postName是博文题目</div></pre></td></tr></table></figure>
+<p>执行命令后，会在项目\source_posts中生成postName.md文件，用编辑器打开编写即可。<a href="http://wowubuntu.com/markdown/index.html#blockquote" target="_blank" rel="external">Markdown语法说明</a><br>当然，也可以直接在\source_posts中新建一个md文件。<br>如果不想博文在首页全部显示, 并能出现 <code>阅读全文</code>按钮效果, 需要在你想在首页显示的部分下添加  <code>&lt;!--more--&gt;</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">此处及以上的内容会在首页显示</div><div class="line">&lt;!--more--&gt;</div><div class="line">一下是在首页隐藏的部分</div></pre></td></tr></table></figure></p>
+]]></content>
+    </entry>
+    
+  
+  
+</search>
