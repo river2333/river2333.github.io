@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-07-11T11:51:38.739Z</updated>
+  <updated>2016-07-25T01:13:03.495Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,11 +16,358 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>HEXO使用</title>
+    <title></title>
+    <link href="http://yoursite.com/2016/07/25/git-0/"/>
+    <id>http://yoursite.com/2016/07/25/git-0/</id>
+    <published>2016-07-25T01:13:03.495Z</published>
+    <updated>2016-07-25T01:13:03.495Z</updated>
+    
+    <content type="html"></content>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Sublime Text3 基础篇</title>
+    <link href="http://yoursite.com/2016/07/24/sublime-1/"/>
+    <id>http://yoursite.com/2016/07/24/sublime-1/</id>
+    <published>2016-07-24T08:19:08.000Z</published>
+    <updated>2016-07-24T16:22:47.498Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;安装Sublime-Text3&quot;&gt;&lt;a href=&quot;#安装Sublime-Text3&quot; class=&quot;headerlink&quot; title=&quot;安装Sublime Text3&quot;&gt;&lt;/a&gt;安装Sublime Text3&lt;/h1&gt;&lt;p&gt;Sublime Text&lt;a href=&quot;http://www.sublimetext.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;官方网站&lt;/a&gt;提供了Sublime Text各系统各版本的下载，目前Sublime Text的最新版本是&lt;a href=&quot;http://www.sublimetext.com/3&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Sublime Text3&lt;/a&gt;。这里以Windows版本的SublimeText3安装为例。注意在安装时勾选Add to explorer context menu，这样在右键单击文件时就可以直接使用Sublime Text打开。&lt;/p&gt;
+&lt;h1 id=&quot;配置环境变量&quot;&gt;&lt;a href=&quot;#配置环境变量&quot; class=&quot;headerlink&quot; title=&quot;配置环境变量&quot;&gt;&lt;/a&gt;配置环境变量&lt;/h1&gt;&lt;p&gt;使用&lt;code&gt;Win + R&lt;/code&gt;运行&lt;code&gt;sysdm.cpl&lt;/code&gt;打开“系统属性”。然后在“高级”选项卡里选择“环境变量”，编辑“Path”，增加Sublime Text的安装目录（例如D:\Sublime Text 3）。&lt;br&gt;接下来就可以在命令行里面利用subl命令直接使用Sublime Text了：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;subl file    :: 使用Sublime Text打开file文件&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;subl folder  :: 使用Sublime Text打开folder文件夹&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;subl .       :: 使用Sublime Text当前文件夹&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h1 id=&quot;快捷键&quot;&gt;&lt;a href=&quot;#快捷键&quot; class=&quot;headerlink&quot; title=&quot;快捷键&quot;&gt;&lt;/a&gt;快捷键&lt;/h1&gt;&lt;p&gt;按功能快捷键列表如下&lt;br&gt;通用（General）&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Ctrl+Z: 撤销
+Ctrl+Y: 恢复撤销
+Ctrl+T：词互换
+Ctrl + U:回退，软撤销
+↑↓←→：上下左右移动光标，注意不是不是KJHL！
+Alt：调出菜单
+Ctrl + Shift + P：调出命令板（Command Palette）
+Ctrl + `：调出控制台
+Ctrl+K+B 开启/关闭侧边栏
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;缩进&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;ctrl+] 增加缩进
+ctrl+[ 减少缩进
+Tab：自动缩进四个空格
+Shift+Tab： 去除缩进
+ctrl+shift+v ：粘贴时缩进
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;编辑（Editing）&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Ctrl + Enter：在当前行下面新增一行然后跳至该行
+Ctrl + Shift + Enter：在当前行上面增加一行并跳至该行
+Ctrl + ←/→：进行逐词移动
+Ctrl + Shift + ←/→:进行逐词选择
+Ctrl + ↑/↓:移动当前显示区域
+Ctrl + Shift + ↑/↓:移动当前行，与上下行互换
+Ctrl+鼠标左键：可以同时选择要编辑的多处文本
+Ctrl+Shift+D ：复制光标所在整行，插入在该行之前
+Ctrl+Shift+K ：删除整行
+Ctrl+KK ：从光标处删除至行尾
+Ctrl+K Backspace ：从光标处删除至行首
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;选择（Selecting）&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Ctrl + D：选择当前光标所在的词并高亮该词所有出现的位置，再次Ctrl + D选择该词出现的下一个位置，在多重选词的过程中，使用Ctrl + K进行跳过，使用Ctrl + U进行回退，使用Esc退出多重编辑
+Ctrl + Shift + L：将当前选中区域打散
+Ctrl+L：选择整行（按住-继续选择下行）
+Ctrl + J：把当前选中区域合并为一行
+Ctrl + M：在起始括号和结尾括号间切换，光标移动至括号内开始或结束的位置
+Ctrl + Shift + M：快速选择括号间的内容
+Ctrl + Shift + J：快速选择同缩进的内容
+Ctrl + Shift + Space：快速选择当前作用域（Scope）的内容
+Ctrl+Shift+A ：选择光标位置父标签对儿
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;查找&amp;amp;替换（Finding&amp;amp;Replacing）&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;F3：跳至当前关键字下一个位置
+Shift+F3：跳到当前关键字上一个位置，可一次性选择全部的相同文本进行同时编辑
+Alt + F3：选中当前关键字出现的所有位置
+Ctrl + F/H：进行标准查找/替换，之后：
+    - Alt + C：切换大小写敏感（Case-sensitive）模式
+    - Alt + W：切换整字匹配（Whole matching）模式
+    - Alt + R：切换正则匹配（Regex matching）模式
+    - Ctrl + Shift + H：替换当前关键字
+    - Ctrl + Alt + Enter：替换所有关键字匹配
+Ctrl + Shift + F：多文件搜索&amp;amp;替换
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;格式&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Ctrl+Shift+[ ： 折叠代码
+Ctrl+Shift+] ：展开代码
+Ctrl+K+U ：改为大写
+Ctrl+K+L ：改为小写
+ Alt+. ：闭合当前标签
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;注释&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Ctrl+Shift+/ ：注释已选择内容
+Ctrl+/ ：注释整行（如已选择内容，同“Ctrl+Shift+/”效果）
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;跳转（Jumping）&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Ctrl + P：跳转到指定文件，输入文件名后可以：
+    @ 符号跳转：输入@symbol跳转到symbol符号所在的位置
+    # 关键字跳转：输入#keyword跳转到keyword所在的位置
+    : 行号跳转：输入:12跳转到文件的第12行。
+Ctrl + R：跳转到指定符号 快速列出/跳转到某个函数，对于Markdown，会列出其大纲
+Ctrl + G：跳转到指定行号
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;窗口（Window）&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Ctrl + Shift + N：创建一个新窗口
+Ctrl + N：在当前窗口创建一个新标签
+Ctrl + W：关闭当前标签，当窗口内没有标签时会关闭该窗口
+Ctrl + Shift + T：恢复刚刚关闭的标签
+Ctrl+Tab： 当前窗口中的标签页切换
+Ctrl+F2 ：设置/取消书签
+Shift+F2 ：上一个书签
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;屏幕（Screen）&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;F11：切换普通全屏
+Shift + F11：切换无干扰全屏
+Alt+Shift+1（非小键盘）窗口分屏，恢复默认1屏
+Alt+Shift+2 左右分屏-2列
+Alt+Shift+3 左右分屏-3列
+Alt+Shift+4 左右分屏-4列
+Alt+Shift+5 等分4屏
+Alt+Shift+8 垂直分屏-2屏
+Alt+Shift+9 垂直分屏-3屏
+分屏之后，使用Ctrl + 数字键跳转到指定屏，使用Ctrl + Shift + 数字键将当前屏移动到指定屏
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&quot;快捷键配置&quot;&gt;&lt;a href=&quot;#快捷键配置&quot; class=&quot;headerlink&quot; title=&quot;快捷键配置&quot;&gt;&lt;/a&gt;快捷键配置&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;http://sublime-text-unofficial-documentation.readthedocs.io/en/latest/reference/settings.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;系统快捷键的默认配置&lt;/a&gt;&lt;br&gt;自定义快捷键配置：&lt;br&gt;打开&lt;code&gt;Preferences -&amp;gt; Key Bindings - User&lt;/code&gt;&lt;/p&gt;
+&lt;h1 id=&quot;Sublime-Text内运行javascript-ES6&quot;&gt;&lt;a href=&quot;#Sublime-Text内运行javascript-ES6&quot; class=&quot;headerlink&quot; title=&quot;Sublime Text内运行javascript(ES6)&quot;&gt;&lt;/a&gt;Sublime Text内运行javascript(ES6)&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;首先安装nodejs&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;当然你可以使用其它诸如jsc之类的环境来运行js, 本文使用的是nodejs. 首先确保你的电脑已经安装好nodejs, 并已将其添加到环境变量中 (一般安装时自动添加或者询问是否添加)&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;添加build system&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;在sublime text中依次打开Tools -&amp;gt; Build System -&amp;gt; New Build System… 粘贴以下代码后保存(如Node.sublime-build), 然后把Build System设成Automatic&lt;br&gt;{ “cmd”: [“node”, “—use-strict”, “—harmony”, “$file”], “selector”: “source.js”}&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;附加说明&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;在以上的build文件中(Node.sublime-build), node是执行命令, —harmony和—use-strict是执行参数, $file是当前文件名, 所以一次build操作实际上相当于在命令行中执行了node —use-strict —harmony filename&lt;br&gt;. —harmony表示启用ES Harmony features, 而这些features目前只能在strict模式下运行, 所以需要同时添加use-strict参数(详见what-is-extended-mode).&lt;br&gt;如果不想启用es6的特性,把build文件更改成以下代码保存即可.&lt;br&gt;{ “cmd”: [“node”, “$file”], “selector”: “source.js”}&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;具体使用&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;在sublime test中新建一个test.js文件, 然后输入你的测试代码, 比如:&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;for (let i = 0; i &amp;lt; 3; i++) &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    console.log(&amp;apos;i:&amp;apos;, i);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;使用快捷键 &lt;code&gt;ctrl + b&lt;/code&gt;, 将得到以下执行结果:&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;i: 0i: 1i: 2[Finished in 0.1s]&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;温馨注解:&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code&gt;(1)文件必须是存在于磁盘中的, 而不是untitled的, 否则sublime无法找到相应的文件.
+(2)Nodejs安装目录需要加入path环境变量中，否则Ctrl+B运行 会出现：[WinError 2] 系统找不到指定的文件。
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&quot;正则表达式（学习中）·&quot;&gt;&lt;a href=&quot;#正则表达式（学习中）·&quot; class=&quot;headerlink&quot; title=&quot;正则表达式（学习中）·&quot;&gt;&lt;/a&gt;正则表达式（学习中）·&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Regular_expression&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;正则表达式&lt;/a&gt;是非常强大的文本查找&amp;amp;替换工具，Sublime Text中使用Alt + R切换正则匹配模式的开启/关闭。Sublime Text的使用&lt;a href=&quot;http://www.boost.org/doc/libs/1_44_0/libs/regex/doc/html/boost_regex/syntax/perl_syntax.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Boost里的Perl正则表达式风格&lt;/a&gt;。&lt;br&gt;出于篇幅原因，本文不会对正则表达式进行详细介绍，&lt;a href=&quot;http://regex.info/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Mastering Regex&lt;/a&gt;（中译本：&lt;a href=&quot;http://book.douban.com/subject/2154713/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;精通正则表达式&lt;/a&gt;）对正则表达式的原理和各语言下的使用进行了详细介绍。此外网上有大量正则表达式的优秀教程（&lt;a href=&quot;http://deerchao.net/tutorials/regex/regex.htm&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;“正则表达式30分钟入门教程”&lt;/a&gt;和&lt;a href=&quot;http://msdn.microsoft.com/zh-cn/library/ae5bf541(v=vs.90&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;MSDN正则表达式教程&lt;/a&gt;)，&lt;a href=&quot;http://www.williamlong.info/archives/433.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;月光博客～常用正则表达式&lt;/a&gt;），以及在线测试工具（&lt;a href=&quot;http://regexpal.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;regexpal&lt;/a&gt;和&lt;a href=&quot;http://www.regexr.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;regexer&lt;/a&gt;）。&lt;/p&gt;
+&lt;h1 id=&quot;链接&quot;&gt;&lt;a href=&quot;#链接&quot; class=&quot;headerlink&quot; title=&quot;链接&quot;&gt;&lt;/a&gt;链接&lt;/h1&gt;&lt;p&gt;非官方文档：&lt;a href=&quot;http://sublime-text-unofficial-documentation.readthedocs.org/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://sublime-text-unofficial-documentation.readthedocs.org/&lt;/a&gt;&lt;br&gt;官方文档：&lt;a href=&quot;http://www.sublimetext.com/docs/3/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.sublimetext.com/docs/3/&lt;/a&gt;&lt;br&gt;Package Control：&lt;a href=&quot;https://sublime.wbond.net/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://sublime.wbond.net/&lt;/a&gt; 大量的Sublime Text插件和主题。&lt;br&gt;Sublime Text 全程指南:&lt;a href=&quot;http://zh.lucida.me/blog/sublime-text-complete-guide/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://zh.lucida.me/blog/sublime-text-complete-guide/&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://www.jeffjade.com/2015/12/15/2015-04-17-toss-sublime-text/#three&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;如何优雅地使用Sublime Text&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;安装Sublime-Text3&quot;&gt;&lt;a href=&quot;#安装Sublime-Text3&quot; class=&quot;headerlink&quot; title=&quot;安装Sublime Text3&quot;&gt;&lt;/a&gt;安装Sublime Text3&lt;/h1&gt;&lt;p&gt;Sublime Text&lt;a hre
+    
+    </summary>
+    
+    
+      <category term="sublime text3" scheme="http://yoursite.com/tags/sublime-text3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JSHint</title>
+    <link href="http://yoursite.com/2016/07/23/nodejs-1/"/>
+    <id>http://yoursite.com/2016/07/23/nodejs-1/</id>
+    <published>2016-07-23T04:23:08.000Z</published>
+    <updated>2016-07-25T11:27:18.490Z</updated>
+    
+    <content type="html">&lt;p&gt;JSHint是一款在线的js代码验证工具，它能帮助你找出在开发中不经意犯下错误和可能存在的潜在问题。强烈建议尽可能的使用检查工具来确认你的编码风格以及设计模式的正确性。JSHint 提供在线和本地使用(基于 Node.js)。同时，还有很多插件支持VS，Eclipse，Notepad++，Sublime Text等。&lt;br&gt;JSHint主页：&lt;a href=&quot;http://jshint.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://jshint.com/&lt;/a&gt;&lt;br&gt;JSHint下载安装：&lt;a href=&quot;http://jshint.com/install/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://jshint.com/install/&lt;/a&gt;&lt;br&gt;JSHint官方文档：&lt;a href=&quot;http://jshint.com/docs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://jshint.com/docs/&lt;/a&gt;&lt;br&gt;Github：&lt;a href=&quot;https://github.com/jshint/jshint/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/jshint/jshint/&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://www.hyjiacan.com/javascript-jshint/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Javascript代码验证工具 JSHint&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;安装jshint&quot;&gt;&lt;a href=&quot;#安装jshint&quot; class=&quot;headerlink&quot; title=&quot;安装jshint&quot;&gt;&lt;/a&gt;安装jshint&lt;/h1&gt;&lt;p&gt;在Node.js上全局安装jshint&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;npm install jshint -g&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;在对应目录下运行&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;$ jshint move.js&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;move.js: line 41, col 10, Missing semicolon.&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;1 error&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;一个错误，少一个分号。&lt;br&gt;如果路径是短横线 (-)，那么JSHint会从标准输入读取数据&lt;/p&gt;
+&lt;h1 id=&quot;配置JSHint&quot;&gt;&lt;a href=&quot;#配置JSHint&quot; class=&quot;headerlink&quot; title=&quot;配置JSHint&quot;&gt;&lt;/a&gt;配置JSHint&lt;/h1&gt;&lt;p&gt;有三种配置方式：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;使用指定的配置文件 .jshintrc&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这个设置允许您每个项目有不同的配置文件。把你的文件放到项目根目录,只要你运行&lt;br&gt;JSHint从任何地方在你的项目目录树,将使用相同的配置文件。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;JSHint默认使用用户home目录下的.jshintrc文件（json格式）作为配置文件,也可以在你的项目目录下添加一个.jshintrc文件，JSHint会在检测文件时从文件所在目录往上找，直到找到jshintrc文件为止。&lt;br&gt;&lt;a href=&quot;https://github.com/jshint/jshint/blob/master/examples/.jshintrc&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;jshintrc文件示例&lt;/a&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;通过 –config标记手动配置&lt;br&gt;如果你并没有将规则文件命名为符合规则的名字（即用.jshintrc），那么可以在运行JSHint的时候手动指定规则文件，例如你将规则文件命名为jshint.json。那么可以使用一下命令来运行JSHint并应用你的规则：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;jshint my_app.js --config /root/application/jshint.json  //指定规则文件路径&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;把配置写在 jshintConfig 目录下的 package.json 文件中&lt;br&gt;配置文件是指定了JSHint配置选项开头的json数据格式，例如：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&amp;#123;  &amp;quot;undef&amp;quot;: true,  &amp;quot;unused&amp;quot;: true,  &amp;quot;globals&amp;quot;: &amp;#123; &amp;quot;MY_GLOBAL&amp;quot;: false &amp;#125;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;上面的配置中，JSHint 会对未定义(undefined)和未使用(unused) 的变量发出警告，globals是指定全局变量。&lt;/p&gt;
+&lt;h1 id=&quot;内置配置&quot;&gt;&lt;a href=&quot;#内置配置&quot; class=&quot;headerlink&quot; title=&quot;内置配置&quot;&gt;&lt;/a&gt;内置配置&lt;/h1&gt;&lt;p&gt;对于需要对单个文件进行特定设置的需求，我们可以在文件最上方使用注释行来设定JSHint:&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;/* jshint undef: true, unused: true */&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;/* globals MY_GLOBAL */&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;上面代码片段将启用警告未定义的和未使用的变量和告诉JSHint全局变量命名MY_GLOBAL。&lt;br&gt;类似对于文件的设定，对于函数的设定方式需要把相应的注释行移到函数内：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;// From another file&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;function b() &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &amp;quot;use strict&amp;quot;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  /* ... */&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&quot;屏蔽警告&quot;&gt;&lt;a href=&quot;#屏蔽警告&quot; class=&quot;headerlink&quot; title=&quot;屏蔽警告&quot;&gt;&lt;/a&gt;屏蔽警告&lt;/h2&gt;&lt;p&gt;某些警告是无法通过错误来进行屏蔽的，这时候你首先需要知道你要屏蔽错误的错误代码，通过添加&lt;code&gt;--verbose&lt;/code&gt;参数来获得：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;jshint --verbose myfile.js&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;myfile.js: line 6, col 3, Unnecessary directive &amp;quot;use strict&amp;quot;. (W034)&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;如果需要屏蔽这个错误，可在文件中加入：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;/* jshint -W034 */&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;这样，代码为 W034的警告就会被隐藏。有两点需要注意:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;这种语法只对警告(W开头的代码)有效，而对错误 (E开头的代码)是无效的。&lt;/li&gt;
+&lt;li&gt;这种语法会隐藏所有指定代码的警告。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;要重新显示上面隐藏的警告，使用下面的语法:&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;/* jshint +W034 */&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h1 id=&quot;JSHint-指令&quot;&gt;&lt;a href=&quot;#JSHint-指令&quot; class=&quot;headerlink&quot; title=&quot;JSHint 指令&quot;&gt;&lt;/a&gt;JSHint 指令&lt;/h1&gt;&lt;p&gt;jshint: 设置JSHint选项指令&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;/* jshint strict: true */&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;jslint：设置是否兼容 JSLint&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;/* jslint vars: true */&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;globals: 告诉 JSHint 全局变量是在其它地方定义的。当值(value)为false(默认)时，JSHint会认为变量是只读的。通常和 undef 选项一起使用&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;/* global MY_LIB: false */&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;在globals配置中，也可以把全局变量加到黑名单中，以使得变量在当前文件中禁用&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;/* global -BAD_LIB */&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;exported: 告诉 JSHint 变量在当前文件定义但是会在其它文件中使用的指令，通常和 unused 指令一起使用&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;/* exported EXPORTED_LIB */&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;ignore: 告诉 JSHint 要跳过的代码块&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;// Code here will be linted with JSHint.&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;/* jshint ignore:start */&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;// Code here will be linted with ignored by JSHint.&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;/* jshint ignore:end */&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;JSHint会跳过检查所有位于/&lt;em&gt; jshint ignore:start &lt;/em&gt;/ 和/&lt;em&gt; jshint ignore:end &lt;/em&gt;/ 间的代码。&lt;br&gt;也可以在行的尾部添加行注释以跳过当前行：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;ignoreThis(); // jshint ignore:line&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h1 id=&quot;JSHint-选项&quot;&gt;&lt;a href=&quot;#JSHint-选项&quot; class=&quot;headerlink&quot; title=&quot;JSHint 选项&quot;&gt;&lt;/a&gt;JSHint 选项&lt;/h1&gt;&lt;p&gt;JSHint本身是个命令行工具，它提供了灵活了的选项设置方式。&lt;br&gt;JSHint 有两种选项: &lt;code&gt;enforcing&lt;/code&gt; 和&lt;code&gt;relaxing&lt;/code&gt;&lt;br&gt;&lt;code&gt;enforcing&lt;/code&gt; 用于使JSHint的检查更加严格，而&lt;code&gt;relaxing&lt;/code&gt;用于阻止一些警告。&lt;br&gt;&lt;a href=&quot;https://github.com/jshint/jshint/blob/master/examples/.jshintrc&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;更多选项在jshintrc文件示例&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://jshint.com/docs/options/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;更多选项的含义见官方文档&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;hacker的方式&quot;&gt;&lt;a href=&quot;#hacker的方式&quot; class=&quot;headerlink&quot; title=&quot;hacker的方式&quot;&gt;&lt;/a&gt;hacker的方式&lt;/h1&gt;&lt;p&gt;上面说的方式官方的文档都有更加详细的说明，可如果你总是想禁用掉特定的警告该怎么办呢?比方说对于以下代码：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;if (err) return next(err);&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;JSHint会警告&lt;code&gt;Expected &amp;#39;{&amp;#39; and instead saw &amp;#39;return&amp;#39;.&lt;/code&gt;，因为我（node社区很多人也是）不喜欢在单行的返回代码前后添加大括号，但是我也不想总是在文件最上面添加注释添加一块专门的注释来禁用它。一种可行的办法是修改编辑器的代码检测插件，不过难度有点高，另一种方法就是修改JSHint 的代码，我们只需要对一个reporter文件稍做修改即可。打开文件&lt;code&gt;jshint/src/reporters/default.js&lt;/code&gt;，在&lt;code&gt;var error = result.error;&lt;/code&gt;下面加入两行代码：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;var code = error.code;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;if (code === &amp;apos;W116&amp;apos;) return;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;大功告成，保存以后再用JSHint就再也看不到那样的警告了。（当然，如果你的JSHint使用别的reporter那就另当别论了）&lt;/p&gt;
+&lt;p&gt;相信通过以上方式可以帮你免除99%以上无用警告的困扰了，对于代码有洁癖同时有比较懒的人来说，这很重要。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;JSHint是一款在线的js代码验证工具，它能帮助你找出在开发中不经意犯下错误和可能存在的潜在问题。强烈建议尽可能的使用检查工具来确认你的编码风格以及设计模式的正确性。JSHint 提供在线和本地使用(基于 Node.js)。同时，还有很多插件支持VS，Eclipse，No
+    
+    </summary>
+    
+    
+      <category term="jshint" scheme="http://yoursite.com/tags/jshint/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Winsows上Nodejs的安装配置</title>
+    <link href="http://yoursite.com/2016/07/23/nodejs-0/"/>
+    <id>http://yoursite.com/2016/07/23/nodejs-0/</id>
+    <published>2016-07-23T04:23:08.000Z</published>
+    <updated>2016-07-23T16:18:03.691Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;安装nodejs&quot;&gt;&lt;a href=&quot;#安装nodejs&quot; class=&quot;headerlink&quot; title=&quot;安装nodejs&quot;&gt;&lt;/a&gt;安装nodejs&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;系统：windows8.1&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;最简单安装的方法，在&lt;a href=&quot;https://nodejs.org/en/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;官网&lt;/a&gt;下载.msi格式，或者从我的百度云盘链接: &lt;a href=&quot;http://pan.baidu.com/s/1mim4hvU&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://pan.baidu.com/s/1mim4hvU&lt;/a&gt; 密码: scaf，默认安装会自动配置环境变量，也可以更改安装目录。我的安装目录&lt;code&gt;C:\Program Files\nodejs&lt;/code&gt;。npm已经集成在nodejs，不用单独安装。在该目录下新建两个文件夹node_cache和node_global.&lt;br&gt;&lt;img src=&quot;http://i1.piimg.com/567571/62c1c72771c19ca2.png&quot; alt=&quot;nodejs目录结构&quot;&gt;&lt;br&gt;node_cache是npm缓存目录，避免相同的包每次都下载。&lt;br&gt;node_global是全局安装的目录。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;-g 表示全局安装，全局安装指&lt;br&gt;&lt;code&gt;npm install xxx -g&lt;/code&gt;时， 模块将被下载安装到”全局目录”中。”全局目录”通过&lt;br&gt;&lt;code&gt;npm config set prefix&lt;/code&gt;“目录路径” 来设置。&lt;br&gt;通过 &lt;code&gt;npm config get prefix&lt;/code&gt; 来获取当前设置的目录。使用全局安装方式统一安装的&lt;br&gt;一个目录中去,这样既方便管理、结构清晰还可以重复利用。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在管理员身份下运行cmd&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;npm config set cache &amp;quot;C:\Program Files\nodejs\node_cache&amp;quot;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;#&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;npm config set prefix &amp;quot;C:\Program Files\nodejs\node_global&amp;quot;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;#&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h1 id=&quot;环境变量配置&quot;&gt;&lt;a href=&quot;#环境变量配置&quot; class=&quot;headerlink&quot; title=&quot;环境变量配置&quot;&gt;&lt;/a&gt;环境变量配置&lt;/h1&gt;&lt;p&gt;由于改变了node_modules的默认安装目录,需要重新配置环境变量,计算机&gt;系统属性&gt;高级&gt;环境变量&lt;br&gt;编辑PATH:C:\Program Files\nodejs\node_modules\npm;C:\Program Files\nodejs\node_global&lt;br&gt;添加NODE_PATH:C:\Program Files\nodejs\node_global\node_modules&lt;br&gt;编辑path：C:\Program Files\nodejs\&lt;/p&gt;
+&lt;h1 id=&quot;Windows-系统下设置Nodejs-NPM全局路径&quot;&gt;&lt;a href=&quot;#Windows-系统下设置Nodejs-NPM全局路径&quot; class=&quot;headerlink&quot; title=&quot;Windows 系统下设置Nodejs NPM全局路径&quot;&gt;&lt;/a&gt;Windows 系统下设置Nodejs NPM全局路径&lt;/h1&gt;&lt;p&gt;在cmd下执行以下命令无效情况下&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;npm config set cache &amp;quot;C:\Program Files\nodejs\node_cache&amp;quot;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;#&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;npm config set prefix &amp;quot;C:\Program Files\nodejs\node_global&amp;quot;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;#&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;最后在nodejs的安装目录中找到node_modules\npm.npmrc文件（C:\Program Files\nodejs\node_modules\npm）&lt;/p&gt;
+&lt;p&gt;修改如下即可：&lt;/p&gt;
+&lt;p&gt;prefix=C:\Program Files\nodejs\node_global&lt;br&gt;cache=C:\Program Files\nodejs\node_cache&lt;/p&gt;
+&lt;h1 id=&quot;安装成功&quot;&gt;&lt;a href=&quot;#安装成功&quot; class=&quot;headerlink&quot; title=&quot;安装成功&quot;&gt;&lt;/a&gt;安装成功&lt;/h1&gt;&lt;p&gt;安装完成后管理员运行cmd&lt;br&gt;&lt;img src=&quot;http://7xrn7f.com1.z0.glb.clouddn.com/16-7-23/79224504.jpg&quot; alt=&quot;安装nodejs版本号&quot;&gt;&lt;br&gt;如上图所示则安装成功&lt;/p&gt;
+&lt;h1 id=&quot;安装相关环境&quot;&gt;&lt;a href=&quot;#安装相关环境&quot; class=&quot;headerlink&quot; title=&quot;安装相关环境&quot;&gt;&lt;/a&gt;安装相关环境&lt;/h1&gt;&lt;p&gt;切记在管理员下运行cmd&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;npm install -g jshint&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h1 id=&quot;全局安装与本地安装&quot;&gt;&lt;a href=&quot;#全局安装与本地安装&quot; class=&quot;headerlink&quot; title=&quot;全局安装与本地安装&quot;&gt;&lt;/a&gt;全局安装与本地安装&lt;/h1&gt;&lt;p&gt;&lt;code&gt;npm install -g ***&lt;/code&gt;表示全局安装，这样安装的安装包都在当前用户下，在磁盘的所有其他地方都可以访问到，比较方面。否则&lt;code&gt;npm install ***&lt;/code&gt;表示本地安装，安装在当前目录下，只能在当前目录下使用。&lt;br&gt;如果一个包是要当做命令一样的来使用，就推荐进行全局安装，而如果一个包是使用在项目里面的话，则使用本地安装，这样避免了不同项目对不同版本的包之间的相互依赖的问题。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;安装nodejs&quot;&gt;&lt;a href=&quot;#安装nodejs&quot; class=&quot;headerlink&quot; title=&quot;安装nodejs&quot;&gt;&lt;/a&gt;安装nodejs&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;系统：windows8.1&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;
+    
+    </summary>
+    
+    
+      <category term="NODE" scheme="http://yoursite.com/tags/NODE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Sublime Text3 前端插件安装与使用</title>
+    <link href="http://yoursite.com/2016/07/05/sublime-0/"/>
+    <id>http://yoursite.com/2016/07/05/sublime-0/</id>
+    <published>2016-07-05T04:23:08.000Z</published>
+    <updated>2016-07-25T10:12:18.815Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;安装package-control&quot;&gt;&lt;a href=&quot;#安装package-control&quot; class=&quot;headerlink&quot; title=&quot;安装package control&quot;&gt;&lt;/a&gt;安装package control&lt;/h1&gt;&lt;p&gt;安装插件需要先安装package control，有两种安装package control的方法，&lt;a href=&quot;https://packagecontrol.io/installation&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;官方安装方法&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;控制台安装&lt;br&gt;在sublime text3&lt;code&gt;ctrl+~&lt;/code&gt;呼出控制台或者&lt;code&gt;View &amp;gt; Show Console&lt;/code&gt;,然后在控制台粘贴以下Python code：&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;import urllib.request,os,hashlib; h = &amp;apos;2915d1851351e5ee549c20394736b442&amp;apos; + &amp;apos;8bc59f460fa1548d1514676163dafc88&amp;apos;; pf = &amp;apos;Package Control.sublime-package&amp;apos;; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( &amp;apos;http://packagecontrol.io/&amp;apos; + pf.replace(&amp;apos; &amp;apos;, &amp;apos;%20&amp;apos;)).read(); dh = hashlib.sha256(by).hexdigest(); print(&amp;apos;Error validating download (got %s instead of %s), please try manual install&amp;apos; % (dh, h)) if dh != h else open(os.path.join( ipp, pf), &amp;apos;wb&amp;apos; ).write(by)&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;上面的代码根据版本不同会更新，所以每次使用都链接上方的地址获取&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;上面的代码会创建安装&lt;code&gt;Installed Packages&lt;/code&gt;的文件夹，自动下载&lt;code&gt;Package Control.sublime-package&lt;/code&gt;到这个文件夹。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;手动安装&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;进入 Preferences &amp;gt; Browse Packages…&lt;/li&gt;
+&lt;li&gt;进入 &lt;code&gt;Installed Packages/&lt;/code&gt; 目录下&lt;/li&gt;
+&lt;li&gt;下载 &lt;code&gt;[Package Control.sublime-package](https://packagecontrol.io/Package%20Control.sublime-package)&lt;/code&gt;到 &lt;code&gt;Installed  Packages/&lt;/code&gt;目录下。&lt;/li&gt;
+&lt;li&gt;重启 Sublime Text3&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;安装插件的常用方法&quot;&gt;&lt;a href=&quot;#安装插件的常用方法&quot; class=&quot;headerlink&quot; title=&quot;安装插件的常用方法&quot;&gt;&lt;/a&gt;安装插件的常用方法&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;ctrl+shift+p&lt;/code&gt;进入Command Palette，输入&lt;code&gt;install&lt;/code&gt;进入 Package Control: Install Package，输入要安装的插件的名称回车安装。&lt;/li&gt;
+&lt;li&gt;如果在在列表中没有要安装的插件，可以在github上下载插件安装包，然后打开菜单栏里的“Preferences”—&amp;gt;”Browse Packages”，打开包的位置，然后将下载的Zip包“解压”后复制到该文件夹内即可，重启Sublime Text3 插件就会安装成功了。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;Emmet&quot;&gt;&lt;a href=&quot;#Emmet&quot; class=&quot;headerlink&quot; title=&quot;Emmet&quot;&gt;&lt;/a&gt;Emmet&lt;/h1&gt;&lt;p&gt; &lt;a href=&quot;http://docs.emmet.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Emmet官方使用文档&lt;/a&gt;&lt;br&gt; &lt;a href=&quot;http://yanxyz.github.io/emmet-docs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;EMMET中文文档参考 yanxyz@github&lt;/a&gt;&lt;br&gt; &lt;a href=&quot;http://docs.emmet.io/cheat-sheet/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;速查表&lt;/a&gt;&lt;br&gt; Emmet使用仿CSS选择器的语法来生成代码，大大提高了HTML/CSS代码编写的速度。&lt;br&gt; 直接在编辑器中输入HTML或CSS的代码的缩写，然后按tab键就可以拓展为完整的代码片。&lt;/p&gt;
+&lt;h2 id=&quot;功能：&quot;&gt;&lt;a href=&quot;#功能：&quot; class=&quot;headerlink&quot; title=&quot;功能：&quot;&gt;&lt;/a&gt;功能：&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;1. 展开缩写
+2. 匹配标签
+3. 跳转到配对标签
+4. 包裹缩写
+5. 跳转到编辑点
+6. 选择
+7. 切换注释
+8. 分割合并标签
+9. 删除标签
+10. 合并行
+11. 更新图片尺寸
+12. 计算数学表达式
+13. 增减数字
+14. 重构 CSS 值
+15. 编码/解码图像为 data:URL
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;缩写是 Emmet&lt;br&gt;的核心：这些特殊的表达式被实时的解析转化为代码块。缩写的语法类似于 CSS 选择器.&lt;/p&gt;
+&lt;h2 id=&quot;语法&quot;&gt;&lt;a href=&quot;#语法&quot; class=&quot;headerlink&quot; title=&quot;语法&quot;&gt;&lt;/a&gt;语法&lt;/h2&gt;&lt;p&gt;所有未知的缩写都会转换成标签，例如，foo → &lt;foo&gt;&lt;/foo&gt;&lt;br&gt;后代：&amp;gt;&lt;br&gt;兄弟：+&lt;br&gt;上级：^&lt;br&gt;分组：()&lt;br&gt;乘法：*&lt;br&gt;自增符号：$&lt;br&gt;ID：#&lt;br&gt;类属性：.&lt;br&gt;自定义属性：[title=”Hello world”]&lt;br&gt;文本：{}&lt;br&gt;隐式标签：当展开缩写时，Emmet 尝试获取缩写所处位置的父元素上下文，比如 HTML 元素。如果获取成功，Emmet 使用它的名字来解析隐式标签名。&lt;/p&gt;
+&lt;h2 id=&quot;元素类型&quot;&gt;&lt;a href=&quot;#元素类型&quot; class=&quot;headerlink&quot; title=&quot;元素类型&quot;&gt;&lt;/a&gt;元素类型&lt;/h2&gt;&lt;p&gt;当编辑 HTML/XML 文档时，缩写展开为 HTML/XML 标签。不过一些元素，比如 a 或 img， 缩写展开后带有属性：&lt;a href=&quot;&quot;&gt;&lt;/a&gt; 或 &lt;img src=&quot;&quot; alt=&quot;&quot;&gt;。Emmet 所有元素的定义放在 snippets.json 文件里，&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;15&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;16&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;17&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;quot;html&amp;quot;: &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &amp;quot;abbreviations&amp;quot;: &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            &amp;quot;a&amp;quot;: &amp;quot;&amp;lt;a href=\&amp;quot;\&amp;quot;&amp;gt;&amp;quot;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            &amp;quot;link&amp;quot;: &amp;quot;&amp;lt;link rel=\&amp;quot;stylesheet\&amp;quot; href=\&amp;quot;\&amp;quot; /&amp;gt;&amp;quot;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            ...&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &amp;#125;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &amp;quot;snippets&amp;quot;: &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            &amp;quot;cc:ie6&amp;quot;: &amp;quot;&amp;lt;!--[if lte IE 6]&amp;gt;\n\t$&amp;#123;child&amp;#125;|\n&amp;lt;![endif]--&amp;gt;&amp;quot;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            ...&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;quot;css&amp;quot;: &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        ...&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&quot;css缩写&quot;&gt;&lt;a href=&quot;#css缩写&quot; class=&quot;headerlink&quot; title=&quot;css缩写&quot;&gt;&lt;/a&gt;css缩写&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;在属性前或缩写前放一个连字符，Emmet 会自动给这个属性添加厂商前缀。&lt;/li&gt;
+&lt;li&gt;渐变&lt;br&gt;可以输入函数 lg(…) (或 linear-gradient(…)) 函数，并且像缩写一样展开。如果用做属性值，Emmet 将使用属性名来生成新的属性。&lt;br&gt;&lt;a href=&quot;https://developer.mozilla.org/zh-CN/docs/Web/CSS/linear-gradient&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;linear-gradient&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ol&gt;
+&lt;li&gt;模糊匹配&lt;br&gt;为了让书写 CSS 更容易， Emmet 实现了模糊查找。每次输入未知的缩写时，Emmet 尝试查找最相近的代码片断。&lt;br&gt;例如，缩写不是 ov:h(overflow: hidden;) ，而是 ov-h, ovh 甚至 oh。&lt;/li&gt;
+&lt;li&gt;值&lt;br&gt;比如我们在写 width：100px的时候，只需要 w100 即可&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;p 表示%&lt;br&gt;e 表示 em&lt;br&gt;x 表示 ex&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;附加属性&lt;br&gt;@f可以生成：&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;@font-face &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;font-family:;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;src:url();&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;html-缩写&quot;&gt;&lt;a href=&quot;#html-缩写&quot; class=&quot;headerlink&quot; title=&quot;html 缩写&quot;&gt;&lt;/a&gt;html 缩写&lt;/h2&gt;&lt;p&gt;所有未知的缩写都会转换成标签，例如，foo → &lt;foo&gt;&lt;/foo&gt;&lt;br&gt;! ：生成后h5文档&lt;br&gt;a ：&lt;a href=&quot;&quot;&gt;&lt;/a&gt;&lt;br&gt;更多查&lt;a href=&quot;http://docs.emmet.io/cheat-sheet/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;速查表&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;SublimeLinter插件&quot;&gt;&lt;a href=&quot;#SublimeLinter插件&quot; class=&quot;headerlink&quot; title=&quot;SublimeLinter插件&quot;&gt;&lt;/a&gt;SublimeLinter插件&lt;/h1&gt;&lt;p&gt;SublimeLinter 是前端编码利器——Sublime Text 的一款插件，用于高亮提示用户编写的代码中存在的不规范和错误的写法，支持 JavaScript、CSS、HTML、Java、PHP、Python、Ruby 等十多种开发语言。如何在 Windows 中配置 SublimeLinter 进行 JS &amp;amp; CSS 校验?&lt;br&gt;SublimeLinter-jshint&lt;br&gt;安装此插件之前需要确保本机安装jshint,在安装nodejs(&lt;em&gt;Winsows上Nodejs的安装配置&lt;/em&gt;)下安装jshint（**）&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;npm install -g jshint&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;npm install -g csslint&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://packagecontrol.io/packages/SublimeLinter&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;主页&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;SideBarEnhancements&quot;&gt;&lt;a href=&quot;#SideBarEnhancements&quot; class=&quot;headerlink&quot; title=&quot;SideBarEnhancements&quot;&gt;&lt;/a&gt;SideBarEnhancements&lt;/h1&gt;&lt;p&gt;侧边栏加强软件:CTRL+K,CTRL+B&lt;br&gt;可配置打开方式,使html文件直接通过快捷键以浏览器打开&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;15&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;16&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;17&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;18&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;19&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;20&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;21&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;22&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;23&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;24&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;25&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;26&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;27&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;28&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;29&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;30&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;31&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;32&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;//chrome&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &amp;#123; &amp;quot;keys&amp;quot;: [&amp;quot;ctrl+1&amp;quot;], &amp;quot;command&amp;quot;: &amp;quot;side_bar_files_open_with&amp;quot;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;          &amp;quot;args&amp;quot;: &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;              &amp;quot;paths&amp;quot;: [],&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;              &amp;quot;application&amp;quot;: &amp;quot;C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe&amp;quot;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;              &amp;quot;extensions&amp;quot;:&amp;quot;.*&amp;quot;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;          &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;   &amp;#125;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;   //Firefox&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;   &amp;#123; &amp;quot;keys&amp;quot;: [&amp;quot;ctrl+2&amp;quot;], &amp;quot;command&amp;quot;: &amp;quot;side_bar_files_open_with&amp;quot;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;          &amp;quot;args&amp;quot;: &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;              &amp;quot;paths&amp;quot;: [],&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;              &amp;quot;application&amp;quot;: &amp;quot;E:\\firefox\\firefox.exe&amp;quot;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;              &amp;quot;extensions&amp;quot;:&amp;quot;.*&amp;quot;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;          &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;   &amp;#125;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;   //opera&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#123; &amp;quot;keys&amp;quot;: [&amp;quot;ctrl+3&amp;quot;], &amp;quot;command&amp;quot;: &amp;quot;side_bar_files_open_with&amp;quot;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;          &amp;quot;args&amp;quot;: &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;              &amp;quot;paths&amp;quot;: [],&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;              &amp;quot;application&amp;quot;: &amp;quot;C:\\Program Files\\Opera developer\\launcher.exe&amp;quot;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;              &amp;quot;extensions&amp;quot;:&amp;quot;.*&amp;quot;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;          &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;   &amp;#125;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;   //ie&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#123; &amp;quot;keys&amp;quot;: [&amp;quot;ctrl+4&amp;quot;], &amp;quot;command&amp;quot;: &amp;quot;side_bar_files_open_with&amp;quot;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;          &amp;quot;args&amp;quot;: &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;              &amp;quot;paths&amp;quot;: [],&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;              &amp;quot;application&amp;quot;: &amp;quot;C:\\Program Files (x86)\\Internet Explorer\\iexplore.exe&amp;quot;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;              &amp;quot;extensions&amp;quot;:&amp;quot;.*&amp;quot;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;          &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;   &amp;#125;,&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://packagecontrol.io/packages/SideBarEnhancements&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;更多&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/titoBouzout/SideBarEnhancements&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;github主页&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;SideBarFolders&quot;&gt;&lt;a href=&quot;#SideBarFolders&quot; class=&quot;headerlink&quot; title=&quot;SideBarFolders&quot;&gt;&lt;/a&gt;SideBarFolders&lt;/h1&gt;&lt;p&gt;打开的文件夹都太多了，再用这个来管理文件夹&lt;br&gt;&lt;a href=&quot;https://packagecontrol.io/packages/SideBarFolders&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;更多&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/titoBouzout/SideBarFolders&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;github&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;BracketHighlighter&quot;&gt;&lt;a href=&quot;#BracketHighlighter&quot; class=&quot;headerlink&quot; title=&quot;BracketHighlighter&quot;&gt;&lt;/a&gt;BracketHighlighter&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://sublime.wbond.net/packages/BracketHighlighter&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;BracketHighlighter&lt;/a&gt;插件以高亮显示配对括号以及当前光标所在区域&lt;/p&gt;
+&lt;h1 id=&quot;JSFormat&quot;&gt;&lt;a href=&quot;#JSFormat&quot; class=&quot;headerlink&quot; title=&quot;JSFormat&quot;&gt;&lt;/a&gt;JSFormat&lt;/h1&gt;&lt;p&gt;功能：Javascript的代码格式化插件&lt;br&gt;简介：很多网站的JS代码都进行了压缩，一行式的甚至混淆压缩，这让我们看起来很吃力。而这个插件能帮我们把原始代码进行格式的整理，包括换行和缩进等等，是代码一目了然，更快读懂~&lt;br&gt;使用：在已压缩的JS文件中，右键选择jsFormat或者使用默认快捷键（Ctrl+Alt+F）&lt;br&gt;&lt;a href=&quot;https://packagecontrol.io/packages/JsFormat&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;更多&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/jdc0589/JsFormat&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;github&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;TrailingSpaces&quot;&gt;&lt;a href=&quot;#TrailingSpaces&quot; class=&quot;headerlink&quot; title=&quot;TrailingSpaces&quot;&gt;&lt;/a&gt;TrailingSpaces&lt;/h1&gt;&lt;p&gt;有时候，在代码结尾打多了几个空格或Tab并没有任何显示效果TrailingSpaces这款插件能高亮显示多余的空格和Tab.&lt;br&gt;&lt;a href=&quot;https://packagecontrol.io/packages/TrailingSpaces&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;更多&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/SublimeText/TrailingSpaces&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;github&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;Alignment&quot;&gt;&lt;a href=&quot;#Alignment&quot; class=&quot;headerlink&quot; title=&quot;Alignment&quot;&gt;&lt;/a&gt;Alignment&lt;/h1&gt;&lt;p&gt;功能：”=”号对齐&lt;br&gt;简介：变量定义太多，长短不一，可一键对齐&lt;br&gt;使用：默认快捷键Ctrl+Alt+A和QQ截屏冲突，可设置其他快捷键如：Ctrl+Shift+Alt+A；先选择要对齐的文本&lt;br&gt;&lt;a href=&quot;https://packagecontrol.io/packages/Alignment&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;更多&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;ColorPicker&quot;&gt;&lt;a href=&quot;#ColorPicker&quot; class=&quot;headerlink&quot; title=&quot;ColorPicker&quot;&gt;&lt;/a&gt;ColorPicker&lt;/h1&gt;&lt;p&gt;一款取色器:CTRL+ALT+C&lt;/p&gt;
+&lt;h1 id=&quot;sublimeREPL&quot;&gt;&lt;a href=&quot;#sublimeREPL&quot; class=&quot;headerlink&quot; title=&quot;sublimeREPL&quot;&gt;&lt;/a&gt;sublimeREPL&lt;/h1&gt;&lt;p&gt;SublimeREPL 允许你在 Sublime Text 中运行各种语言（NodeJS ， Python，Ruby， Scala 和 Haskell 等）。Sublime Text的Python控制台仅支持单行输入，十分不方便，所以Sublime​REPL以进行一些编码实验（Experiments）。&lt;/p&gt;
+&lt;h1 id=&quot;DocBlocker&quot;&gt;&lt;a href=&quot;#DocBlocker&quot; class=&quot;headerlink&quot; title=&quot;DocBlocker&quot;&gt;&lt;/a&gt;DocBlocker&lt;/h1&gt;&lt;p&gt;对方法等进行注释,一个真正简单的方式来轻松地创建许多语言包括JavaScript，PHP和CoffeeScript的文档块。只要在函数的上面输入/**，按Tab就可以了。DocBlockr会观察函数需要的变量名和类型，并创建文档块。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/spadgos/sublime-jsdocs&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;github&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;CSScomb&quot;&gt;&lt;a href=&quot;#CSScomb&quot; class=&quot;headerlink&quot; title=&quot;CSScomb&quot;&gt;&lt;/a&gt;CSScomb&lt;/h1&gt;&lt;p&gt;CssComb是为CSS属性进行排序和格式化插件,&lt;a href=&quot;http://csscomb.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;官网&lt;/a&gt;&lt;br&gt;它依赖于Node.js，安装NodeJS后，即可使用CssComb插件，nodejs安装见此（**）&lt;br&gt;使用：菜单&lt;code&gt;Tools-&amp;gt;Run CSScomb&lt;/code&gt;或在CSS文件中按快捷键&lt;code&gt;Ctrl+Shift+C&lt;/code&gt;&lt;/p&gt;
+&lt;h1 id=&quot;Terminal&quot;&gt;&lt;a href=&quot;#Terminal&quot; class=&quot;headerlink&quot; title=&quot;Terminal&quot;&gt;&lt;/a&gt;Terminal&lt;/h1&gt;&lt;p&gt;在编程过程中，我们经常需要使用到命令行窗口,Terminal插件可以允许在Sublime Text 3中打开cmd命令窗口,安装好该插件后,即可使用快捷键&lt;code&gt;Ctrl+Shift+T&lt;/code&gt;呼出命令行窗口。&lt;/p&gt;
+&lt;h1 id=&quot;MarkDown-Editing&quot;&gt;&lt;a href=&quot;#MarkDown-Editing&quot; class=&quot;headerlink&quot; title=&quot;MarkDown Editing&quot;&gt;&lt;/a&gt;MarkDown Editing&lt;/h1&gt;&lt;p&gt;支持Markdown语法高亮,支持Github Favored Markdown语法,自带3个主题。&lt;/p&gt;
+&lt;h1 id=&quot;MarkdownPreview&quot;&gt;&lt;a href=&quot;#MarkdownPreview&quot; class=&quot;headerlink&quot; title=&quot;MarkdownPreview&quot;&gt;&lt;/a&gt;MarkdownPreview&lt;/h1&gt;&lt;p&gt;MarkdownPreview：按&lt;code&gt;CTRL + B&lt;/code&gt;生成网页HTML，在最前面添加&lt;code&gt;[TOC]&lt;/code&gt;自动生成目录。&lt;/p&gt;
+&lt;h1 id=&quot;Autoprefixer&quot;&gt;&lt;a href=&quot;#Autoprefixer&quot; class=&quot;headerlink&quot; title=&quot;Autoprefixer&quot;&gt;&lt;/a&gt;Autoprefixer&lt;/h1&gt;&lt;p&gt;这是一款CSS3私有前缀自动补全插件，该插件使用CanIUse资料库，能精准判断哪些属性需要什么前缀，与CssComb插件一样，该插件也需要系统已安装Node.js环境。&lt;br&gt;使用方法：在输入CSS3属性后（冒号前）按Tab键。&lt;/p&gt;
+&lt;h1 id=&quot;Git&quot;&gt;&lt;a href=&quot;#Git&quot; class=&quot;headerlink&quot; title=&quot;Git&quot;&gt;&lt;/a&gt;Git&lt;/h1&gt;&lt;p&gt;在工作中，版本控制软件最常用的软件之一，而最流行的VCS是Git。你是否厌倦了保存文本文件，并切换回终端运行一些 Git 命令。如果你能从文本编辑器本身执行Git命令，岂不是很好？&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;安装package-control&quot;&gt;&lt;a href=&quot;#安装package-control&quot; class=&quot;headerlink&quot; title=&quot;安装package control&quot;&gt;&lt;/a&gt;安装package control&lt;/h1&gt;&lt;p&gt;安装插件需要先安装p
+    
+    </summary>
+    
+    
+      <category term="sublime text3" scheme="http://yoursite.com/tags/sublime-text3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo使用</title>
     <link href="http://yoursite.com/2016/07/01/hexo-1/"/>
     <id>http://yoursite.com/2016/07/01/hexo-1/</id>
     <published>2016-07-01T04:23:08.000Z</published>
-    <updated>2016-07-11T11:51:38.739Z</updated>
+    <updated>2016-07-13T00:48:24.495Z</updated>
     
     <content type="html">&lt;h1 id=&quot;目录结构&quot;&gt;&lt;a href=&quot;#目录结构&quot; class=&quot;headerlink&quot; title=&quot;目录结构&quot;&gt;&lt;/a&gt;目录结构&lt;/h1&gt;&lt;p&gt;默认目录结构如下：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;.&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;├── .deploy&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;├── public&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;├── scaffolds&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;├── scripts&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;├── source&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;|   ├── _drafts&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;|   └── _posts&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;├── themes&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;├── _config.yml&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;└── package.json&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -65,6 +412,7 @@
 &lt;li&gt;&lt;a href=&quot;http://yibo.iyiyun.com/Index/web404&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;404公益_益云(公益互联网)社会创新中心&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://404page.missingkids.org.tw/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;失蹤兒童少年資料管理中心404&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h1 id=&quot;网站图标&quot;&gt;&lt;a href=&quot;#网站图标&quot; class=&quot;headerlink&quot; title=&quot;网站图标&quot;&gt;&lt;/a&gt;网站图标&lt;/h1&gt;&lt;p&gt;将favicon.ico放到工程根目录下即可，也就是hexo\source目录。可以在Faviconer制作你的ico图标，国内有&lt;a href=&quot;http://www.bitbug.net/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;比特虫&lt;/a&gt;。&lt;/p&gt;
 &lt;h1 id=&quot;hexo更新&quot;&gt;&lt;a href=&quot;#hexo更新&quot; class=&quot;headerlink&quot; title=&quot;hexo更新&quot;&gt;&lt;/a&gt;hexo更新&lt;/h1&gt;&lt;p&gt;更新hexo:&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;npm update -g hexo&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;更新主题：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;cd themes/你的主题&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;git pull&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;更新插件：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;npm update&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
@@ -100,13 +448,13 @@
   </entry>
   
   <entry>
-    <title>Hexo搭建Github Page博客记录</title>
+    <title>Hexo搭建Github Pages博客记录</title>
     <link href="http://yoursite.com/2016/06/30/hexo-0/"/>
     <id>http://yoursite.com/2016/06/30/hexo-0/</id>
     <published>2016-06-30T04:23:08.000Z</published>
-    <updated>2016-07-11T11:54:28.840Z</updated>
+    <updated>2016-07-24T12:43:13.289Z</updated>
     
-    <content type="html">&lt;h1 id=&quot;HEXO-简介&quot;&gt;&lt;a href=&quot;#HEXO-简介&quot; class=&quot;headerlink&quot; title=&quot;HEXO 简介&quot;&gt;&lt;/a&gt;&lt;strong&gt;HEXO 简介&lt;/strong&gt;&lt;/h1&gt;&lt;p&gt;Hexo出自&lt;em&gt;&lt;a href=&quot;https://github.com/tommy351&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;tommy351&lt;/a&gt;&lt;/em&gt;之手，基于Node.js的静态博客程序，Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。hexo生成的静态网页可以直接放到GitHub Pages，BAE，SAE等平台上。&lt;br&gt;Hexo &lt;a href=&quot;https://hexo.io/zh-cn/docs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;官方文档&lt;/a&gt;&lt;/p&gt;
+    <content type="html">&lt;h1 id=&quot;HEXO-简介&quot;&gt;&lt;a href=&quot;#HEXO-简介&quot; class=&quot;headerlink&quot; title=&quot;HEXO 简介&quot;&gt;&lt;/a&gt;&lt;strong&gt;HEXO 简介&lt;/strong&gt;&lt;/h1&gt;&lt;p&gt;Hexo出自&lt;em&gt;&lt;a href=&quot;https://github.com/tommy351&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;tommy351&lt;/a&gt;&lt;/em&gt;之手，基于Node.js的静态博客程序，Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。hexo生成的静态网页可以直接放到GitHub Pages，BAE，SAE等平台上。&lt;br&gt;Hexo &lt;em&gt;&lt;a href=&quot;https://hexo.io/zh-cn/docs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;官方文档&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;h1 id=&quot;安装前提&quot;&gt;&lt;a href=&quot;#安装前提&quot; class=&quot;headerlink&quot; title=&quot;安装前提&quot;&gt;&lt;/a&gt;&lt;strong&gt;安装前提&lt;/strong&gt;&lt;/h1&gt;&lt;p&gt;注意：系统：win8.1&lt;/p&gt;
 &lt;ul&gt;
@@ -121,7 +469,7 @@
 &lt;h1 id=&quot;部署Hexo&quot;&gt;&lt;a href=&quot;#部署Hexo&quot; class=&quot;headerlink&quot; title=&quot;部署Hexo&quot;&gt;&lt;/a&gt;&lt;strong&gt;部署Hexo&lt;/strong&gt;&lt;/h1&gt;&lt;p&gt;现在本地创建hexo文件夹（例如我的D:\HEXO），在哪都行，然后进入hexo目录，右键 Git Bash Here&lt;br&gt;    &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;hexo init&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;Hexo 自动创建所需的文件&lt;br&gt;npm 安装依赖环境&lt;br&gt;    &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;npm install&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;ok了。&lt;/p&gt;
-&lt;h1 id=&quot;运行Hexo&quot;&gt;&lt;a href=&quot;#运行Hexo&quot; class=&quot;headerlink&quot; title=&quot;运行Hexo&quot;&gt;&lt;/a&gt;&lt;strong&gt;运行Hexo&lt;/strong&gt;&lt;/h1&gt;&lt;p&gt;现在在D:\HEXO内右键Git Bash Here 输入以下命令&lt;br&gt;    &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;hexo g&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;hexo s&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h1 id=&quot;运行Hexo&quot;&gt;&lt;a href=&quot;#运行Hexo&quot; class=&quot;headerlink&quot; title=&quot;运行Hexo&quot;&gt;&lt;/a&gt;&lt;strong&gt;运行Hexo&lt;/strong&gt;&lt;/h1&gt;&lt;p&gt;现在在D:\HEXO内右键&lt;em&gt;Git Bash Here&lt;/em&gt; 输入以下命令&lt;br&gt;    &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;hexo g&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;hexo s&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;运行成功的界面&lt;br&gt;&lt;img src=&quot;http://i2.piimg.com/567571/efef15c89c1f71e8.png&quot; alt=&quot;Alt text&quot;&gt;&lt;br&gt;访问 &lt;a href=&quot;http://localhost:4000&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://localhost:4000&lt;/a&gt; 查看效果&lt;br&gt;&lt;img src=&quot;http://i1.piimg.com/567571/420c06e6efb72f6d.png&quot; alt=&quot;效果图&quot;&gt;&lt;/p&gt;
 &lt;h1 id=&quot;Github&quot;&gt;&lt;a href=&quot;#Github&quot; class=&quot;headerlink&quot; title=&quot;Github&quot;&gt;&lt;/a&gt;&lt;strong&gt;Github&lt;/strong&gt;&lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;注册github账号&lt;/li&gt;
@@ -168,7 +516,7 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;HEXO-简介&quot;&gt;&lt;a href=&quot;#HEXO-简介&quot; class=&quot;headerlink&quot; title=&quot;HEXO 简介&quot;&gt;&lt;/a&gt;&lt;strong&gt;HEXO 简介&lt;/strong&gt;&lt;/h1&gt;&lt;p&gt;Hexo出自&lt;em&gt;&lt;a href=&quot;https://github.com/tommy351&quot;&gt;tommy351&lt;/a&gt;&lt;/em&gt;之手，基于Node.js的静态博客程序，Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。hexo生成的静态网页可以直接放到GitHub Pages，BAE，SAE等平台上。&lt;br&gt;Hexo &lt;a href=&quot;https://hexo.io/zh-cn/docs/&quot;&gt;官方文档&lt;/a&gt;&lt;/p&gt;
+      &lt;h1 id=&quot;HEXO-简介&quot;&gt;&lt;a href=&quot;#HEXO-简介&quot; class=&quot;headerlink&quot; title=&quot;HEXO 简介&quot;&gt;&lt;/a&gt;&lt;strong&gt;HEXO 简介&lt;/strong&gt;&lt;/h1&gt;&lt;p&gt;Hexo出自&lt;em&gt;&lt;a href=&quot;https://github.com/tommy351&quot;&gt;tommy351&lt;/a&gt;&lt;/em&gt;之手，基于Node.js的静态博客程序，Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。hexo生成的静态网页可以直接放到GitHub Pages，BAE，SAE等平台上。&lt;br&gt;Hexo &lt;em&gt;&lt;a href=&quot;https://hexo.io/zh-cn/docs/&quot;&gt;官方文档&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
     
     </summary>
     

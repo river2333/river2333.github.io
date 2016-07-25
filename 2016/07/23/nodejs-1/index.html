@@ -80,7 +80,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="HEXO,Github Page," />
+  <meta name="keywords" content="jshint," />
 
 
 
@@ -98,16 +98,16 @@
 
 
 
-<meta name="description" content="目录结构默认目录结构如下：1234567891011.├── .deploy├── public├── scaffolds├── scripts├── source|   ├── _drafts|   └── _posts├── themes├── _config.yml└── package.json">
+<meta name="description" content="JSHint是一款在线的js代码验证工具，它能帮助你找出在开发中不经意犯下错误和可能存在的潜在问题。强烈建议尽可能的使用检查工具来确认你的编码风格以及设计模式的正确性。JSHint 提供在线和本地使用(基于 Node.js)。同时，还有很多插件支持VS，Eclipse，Notepad++，Sublime Text等。JSHint主页：http://jshint.com/JSHint下载安装：htt">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo使用">
-<meta property="og:url" content="http://yoursite.com/2016/07/01/hexo-1/index.html">
+<meta property="og:title" content="JSHint">
+<meta property="og:url" content="http://yoursite.com/2016/07/23/nodejs-1/index.html">
 <meta property="og:site_name" content="Kongwsh">
-<meta property="og:description" content="目录结构默认目录结构如下：1234567891011.├── .deploy├── public├── scaffolds├── scripts├── source|   ├── _drafts|   └── _posts├── themes├── _config.yml└── package.json">
-<meta property="og:updated_time" content="2016-07-13T00:48:24.495Z">
+<meta property="og:description" content="JSHint是一款在线的js代码验证工具，它能帮助你找出在开发中不经意犯下错误和可能存在的潜在问题。强烈建议尽可能的使用检查工具来确认你的编码风格以及设计模式的正确性。JSHint 提供在线和本地使用(基于 Node.js)。同时，还有很多插件支持VS，Eclipse，Notepad++，Sublime Text等。JSHint主页：http://jshint.com/JSHint下载安装：htt">
+<meta property="og:updated_time" content="2016-07-25T11:27:18.490Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo使用">
-<meta name="twitter:description" content="目录结构默认目录结构如下：1234567891011.├── .deploy├── public├── scaffolds├── scripts├── source|   ├── _drafts|   └── _posts├── themes├── _config.yml└── package.json">
+<meta name="twitter:title" content="JSHint">
+<meta name="twitter:description" content="JSHint是一款在线的js代码验证工具，它能帮助你找出在开发中不经意犯下错误和可能存在的潜在问题。强烈建议尽可能的使用检查工具来确认你的编码风格以及设计模式的正确性。JSHint 提供在线和本地使用(基于 Node.js)。同时，还有很多插件支持VS，Eclipse，Notepad++，Sublime Text等。JSHint主页：http://jshint.com/JSHint下载安装：htt">
 
 
 
@@ -128,9 +128,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/07/01/hexo-1/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/07/23/nodejs-1/"/>
 
-  <title> Hexo使用 | Kongwsh </title>
+  <title> JSHint | Kongwsh </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -273,7 +273,7 @@
             
             
               
-                Hexo使用
+                JSHint
               
             
           </h1>
@@ -285,8 +285,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-01T12:23:08+08:00" content="2016-07-01">
-              2016-07-01
+            <time itemprop="dateCreated" datetime="2016-07-23T12:23:08+08:00" content="2016-07-23">
+              2016-07-23
             </time>
           </span>
 
@@ -296,8 +296,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/07/01/hexo-1/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/01/hexo-1/" itemprop="commentsCount"></span>
+                <a href="/2016/07/23/nodejs-1/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/23/nodejs-1/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -325,69 +325,51 @@
       
 
       
-        <h1 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h1><p>默认目录结构如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">.</div><div class="line">├── .deploy</div><div class="line">├── public</div><div class="line">├── scaffolds</div><div class="line">├── scripts</div><div class="line">├── source</div><div class="line">|   ├── _drafts</div><div class="line">|   └── _posts</div><div class="line">├── themes</div><div class="line">├── _config.yml</div><div class="line">└── package.json</div></pre></td></tr></table></figure></p>
-<a id="more"></a>
-<ul>
-<li>deploy：执行hexo deploy命令部署到GitHub上的内容目录</li>
-<li>public：执行hexo generate命令，输出的静态网页内容目录</li>
-<li>scaffolds：layout模板文件目录，其中的md文件可以添加编辑</li>
-<li>scripts：扩展脚本目录，这里可以自定义一些javascript脚本</li>
-<li>source：文章源码目录，该目录下的markdown和html文件均会被hexo处理。该页面对应repo的根目录，404文件、favicon.ico文件，CNAME文件等都应该放这 里，该目录下可新建页面目录。<ul>
-<li>_drafts：草稿文章</li>
-<li>_posts：发布文章</li>
-</ul>
+        <p>JSHint是一款在线的js代码验证工具，它能帮助你找出在开发中不经意犯下错误和可能存在的潜在问题。强烈建议尽可能的使用检查工具来确认你的编码风格以及设计模式的正确性。JSHint 提供在线和本地使用(基于 Node.js)。同时，还有很多插件支持VS，Eclipse，Notepad++，Sublime Text等。<br>JSHint主页：<a href="http://jshint.com/" target="_blank" rel="external">http://jshint.com/</a><br>JSHint下载安装：<a href="http://jshint.com/install/" target="_blank" rel="external">http://jshint.com/install/</a><br>JSHint官方文档：<a href="http://jshint.com/docs/" target="_blank" rel="external">http://jshint.com/docs/</a><br>Github：<a href="https://github.com/jshint/jshint/" target="_blank" rel="external">https://github.com/jshint/jshint/</a><br><a href="http://www.hyjiacan.com/javascript-jshint/" target="_blank" rel="external">Javascript代码验证工具 JSHint</a></p>
+<h1 id="安装jshint"><a href="#安装jshint" class="headerlink" title="安装jshint"></a>安装jshint</h1><p>在Node.js上全局安装jshint<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install jshint -g</div></pre></td></tr></table></figure></p>
+<p>在对应目录下运行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ jshint move.js</div><div class="line">move.js: line 41, col 10, Missing semicolon.</div><div class="line"></div><div class="line">1 error</div></pre></td></tr></table></figure></p>
+<p>一个错误，少一个分号。<br>如果路径是短横线 (-)，那么JSHint会从标准输入读取数据</p>
+<h1 id="配置JSHint"><a href="#配置JSHint" class="headerlink" title="配置JSHint"></a>配置JSHint</h1><p>有三种配置方式：</p>
+<ol>
+<li>使用指定的配置文件 .jshintrc</li>
+</ol>
+<blockquote>
+<p>这个设置允许您每个项目有不同的配置文件。把你的文件放到项目根目录,只要你运行<br>JSHint从任何地方在你的项目目录树,将使用相同的配置文件。</p>
+</blockquote>
+<p>JSHint默认使用用户home目录下的.jshintrc文件（json格式）作为配置文件,也可以在你的项目目录下添加一个.jshintrc文件，JSHint会在检测文件时从文件所在目录往上找，直到找到jshintrc文件为止。<br><a href="https://github.com/jshint/jshint/blob/master/examples/.jshintrc" target="_blank" rel="external">jshintrc文件示例</a></p>
+<ol>
+<li><p>通过 –config标记手动配置<br>如果你并没有将规则文件命名为符合规则的名字（即用.jshintrc），那么可以在运行JSHint的时候手动指定规则文件，例如你将规则文件命名为jshint.json。那么可以使用一下命令来运行JSHint并应用你的规则：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">jshint my_app.js --config /root/application/jshint.json  //指定规则文件路径</div></pre></td></tr></table></figure>
 </li>
-<li>themes：主题文件目录</li>
-<li>_config.yml：全局配置文件，大多数的设置都在这里</li>
-<li>package.json：应用程序数据，指明hexo的版本等信息，类似于一般软件中的关于按钮</li>
-</ul>
-<h1 id="Hexo上传README文件"><a href="#Hexo上传README文件" class="headerlink" title="Hexo上传README文件"></a>Hexo上传README文件</h1><p>Hexo原理就是hexo在执行hexo generate时会在本地先把博客生成的一套静态站点放到public文件夹中，在执行hexo deploy时将其复制到.deploy文件夹中。</p>
-<p>Github的版本库通常建议同时附上README.md说明文件，但是hexo默认情况下会把所有md文件解析成html文件，所以即使你在线生成了README.md，它也会在你下一次部署时被删去。怎么解决呢？</p>
-<p>在执行hexo deploy前把在本地写好的README.md文件复制到.deploy文件夹中，再去执行hexo deploy。</p>
-<h1 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">npm install &lt;plugin-name&gt; --save # 安装插件</div><div class="line">npm update                       # 升级插件</div><div class="line">npm uninstall &lt;plugin-name&gt;      # 卸载插件</div></pre></td></tr></table></figure>
-<p>hexo插件<a href="https://github.com/hexojs/hexo/wiki/Plugins" target="_blank" rel="external">Plugins · hexojs/hexo</a></p>
-<h2 id="RSS订阅插件"><a href="#RSS订阅插件" class="headerlink" title="RSS订阅插件"></a>RSS订阅插件</h2><p>以管理员运行命令行，进入hexo目录下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-generator-feed --save</div></pre></td></tr></table></figure></p>
-<p>这个命令来自<a href="https://www.npmjs.com/package/hexo-generator-feed" target="_blank" rel="external">hexo-generator-feed</a><br>修改 Hexo 根目录下的 _config.yml<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">feed:</div><div class="line">       type: atom</div><div class="line">       path: atom.xml</div><div class="line">       limit: 20</div></pre></td></tr></table></figure></p>
+<li><p>把配置写在 jshintConfig 目录下的 package.json 文件中<br>配置文件是指定了JSHint配置选项开头的json数据格式，例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;  &quot;undef&quot;: true,  &quot;unused&quot;: true,  &quot;globals&quot;: &#123; &quot;MY_GLOBAL&quot;: false &#125;&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>上面的配置中，JSHint 会对未定义(undefined)和未使用(unused) 的变量发出警告，globals是指定全局变量。</p>
+<h1 id="内置配置"><a href="#内置配置" class="headerlink" title="内置配置"></a>内置配置</h1><p>对于需要对单个文件进行特定设置的需求，我们可以在文件最上方使用注释行来设定JSHint:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">/* jshint undef: true, unused: true */</div><div class="line">/* globals MY_GLOBAL */</div></pre></td></tr></table></figure></p>
+<p>上面代码片段将启用警告未定义的和未使用的变量和告诉JSHint全局变量命名MY_GLOBAL。<br>类似对于文件的设定，对于函数的设定方式需要把相应的注释行移到函数内：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">// From another file</div><div class="line">function b() &#123;</div><div class="line">  &quot;use strict&quot;;</div><div class="line">  /* ... */</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="屏蔽警告"><a href="#屏蔽警告" class="headerlink" title="屏蔽警告"></a>屏蔽警告</h2><p>某些警告是无法通过错误来进行屏蔽的，这时候你首先需要知道你要屏蔽错误的错误代码，通过添加<code>--verbose</code>参数来获得：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">jshint --verbose myfile.js</div><div class="line">myfile.js: line 6, col 3, Unnecessary directive &quot;use strict&quot;. (W034)</div></pre></td></tr></table></figure></p>
+<p>如果需要屏蔽这个错误，可在文件中加入：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/* jshint -W034 */</div></pre></td></tr></table></figure></p>
+<p>这样，代码为 W034的警告就会被隐藏。有两点需要注意:</p>
 <blockquote>
-<p>注意格式，‘feed’不能缩进</p>
+<ol>
+<li>这种语法只对警告(W开头的代码)有效，而对错误 (E开头的代码)是无效的。</li>
+<li>这种语法会隐藏所有指定代码的警告。</li>
+</ol>
 </blockquote>
-<h2 id="Sitemap插件"><a href="#Sitemap插件" class="headerlink" title="Sitemap插件"></a>Sitemap插件</h2><blockquote>
-<p>Sitemap 的提交主要的目的，是要避免搜索引擎的爬虫没有完整的收录整个网页的内容，所以提交 Sitemap<br>是能够补足搜索引擎的不足，进而加速网页的收录速度，达到搜寻引擎友好的目的。</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm install hexo-generator-sitemap --save</div><div class="line">npm install hexo-generator-baidu-sitemap --save</div></pre></td></tr></table></figure>
-<p>这个命令来自<a href="https://www.npmjs.com/package/hexo-generator-sitemap" target="_blank" rel="external">hexo-generator-sitemap</a><br>对于国内用户还需要安装插件 hexo-generator-baidu-sitemap<br>修改配置文件：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">sitemap:</div><div class="line">       path: sitemap.xml</div><div class="line">baidusitemap:</div><div class="line">            path: baidusitemap.xml</div></pre></td></tr></table></figure></p>
-<h1 id="统计"><a href="#统计" class="headerlink" title="统计"></a>统计</h1><p>简单易使用<a href="http://ibruce.info/2015/04/04/busuanzi/" target="_blank" rel="external">不蒜子</a></p>
-<h1 id="评论"><a href="#评论" class="headerlink" title="评论"></a>评论</h1><p>在Hexo中，默认使用的评论是国外的Disqus,但是Disqus只支持G+ twitter等登陆，我改为国内的<a href="http://duoshuo.com/" target="_blank" rel="external">多说</a>评论系统。<br>我使用next主题，hexo 版本为3.2.2，在<code>\hexo\themes\next\layout\_partial\comment.ejs</code>中自动配置多说评论框代码，只需在hexo根目录下的配置文件中加上<code>duoshuo_shortname: Kongwsh</code></p>
-<h1 id="404页面"><a href="#404页面" class="headerlink" title="404页面"></a>404页面</h1><p>Github Pages提供制作404页面的教程：<a href="https://help.github.com/articles/creating-a-custom-404-page-for-your-github-pages-site/" target="_blank" rel="external">Creating a custom 404 page for your GitHub Pages site</a> 。不过 </p>
-<blockquote>
-<p>If you want your Project Pages site to have a custom 404 page, you must use a custom domain.</p>
-</blockquote>
-<p>直接在根目录下创建自己的404.html或者404.md就可以。但是自定义404页面仅对绑定顶级域名的项目才起作用，GitHub默认分配的二级域名是不起作用的，使用hexo server在本机调试也是不起作用的。<br>404公益是个特别好的想法，目前有以下几个：</p>
-<ul>
-<li><a href="http://www.qq.com/404/" target="_blank" rel="external">腾讯公益404</a></li>
-<li><a href="http://yibo.iyiyun.com/Index/web404" target="_blank" rel="external">404公益_益云(公益互联网)社会创新中心</a></li>
-<li><a href="http://404page.missingkids.org.tw/" target="_blank" rel="external">失蹤兒童少年資料管理中心404</a></li>
-</ul>
-<h1 id="网站图标"><a href="#网站图标" class="headerlink" title="网站图标"></a>网站图标</h1><p>将favicon.ico放到工程根目录下即可，也就是hexo\source目录。可以在Faviconer制作你的ico图标，国内有<a href="http://www.bitbug.net/" target="_blank" rel="external">比特虫</a>。</p>
-<h1 id="hexo更新"><a href="#hexo更新" class="headerlink" title="hexo更新"></a>hexo更新</h1><p>更新hexo:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm update -g hexo</div></pre></td></tr></table></figure></p>
-<p>更新主题：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd themes/你的主题</div><div class="line">git pull</div></pre></td></tr></table></figure></p>
-<p>更新插件：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm update</div></pre></td></tr></table></figure></p>
-<h1 id="图床"><a href="#图床" class="headerlink" title="图床"></a>图床</h1><p>图床专门用来存放图片，同时允许把图片对外连接。</p>
-<ul>
-<li><a href="https://portal.qiniu.com/" target="_blank" rel="external">七牛</a></li>
-<li><a href="https://maxiang.io/" target="_blank" rel="external">马克飞象</a></li>
-<li><a href="http://yotuku.cn/" target="_blank" rel="external">yotuku</a> 我用的这个，免费的。</li>
-<li><a href="http://www.tietuku.com/" target="_blank" rel="external">贴图库</a></li>
-</ul>
-<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><p>以下还没做</p>
-<ul>
-<li>分享</li>
-<li>搜索</li>
-<li>同步 Dropbox </li>
-<li>将独立域名与GitHub Pages的空间绑定，官方教程：<a href="https://help.github.com/articles/using-a-custom-domain-with-github-pages/" target="_blank" rel="external">Using a custom domain with GitHub Pages</a></li>
-<li>迁移</li>
-<li>CDN加速</li>
-</ul>
+<p>要重新显示上面隐藏的警告，使用下面的语法:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/* jshint +W034 */</div></pre></td></tr></table></figure></p>
+<h1 id="JSHint-指令"><a href="#JSHint-指令" class="headerlink" title="JSHint 指令"></a>JSHint 指令</h1><p>jshint: 设置JSHint选项指令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/* jshint strict: true */</div></pre></td></tr></table></figure></p>
+<p>jslint：设置是否兼容 JSLint<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/* jslint vars: true */</div></pre></td></tr></table></figure></p>
+<p>globals: 告诉 JSHint 全局变量是在其它地方定义的。当值(value)为false(默认)时，JSHint会认为变量是只读的。通常和 undef 选项一起使用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/* global MY_LIB: false */</div></pre></td></tr></table></figure></p>
+<p>在globals配置中，也可以把全局变量加到黑名单中，以使得变量在当前文件中禁用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/* global -BAD_LIB */</div></pre></td></tr></table></figure></p>
+<p>exported: 告诉 JSHint 变量在当前文件定义但是会在其它文件中使用的指令，通常和 unused 指令一起使用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/* exported EXPORTED_LIB */</div></pre></td></tr></table></figure></p>
+<p>ignore: 告诉 JSHint 要跳过的代码块<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">// Code here will be linted with JSHint.</div><div class="line">/* jshint ignore:start */</div><div class="line">// Code here will be linted with ignored by JSHint.</div><div class="line">/* jshint ignore:end */</div></pre></td></tr></table></figure></p>
+<p>JSHint会跳过检查所有位于/<em> jshint ignore:start </em>/ 和/<em> jshint ignore:end </em>/ 间的代码。<br>也可以在行的尾部添加行注释以跳过当前行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ignoreThis(); // jshint ignore:line</div></pre></td></tr></table></figure></p>
+<h1 id="JSHint-选项"><a href="#JSHint-选项" class="headerlink" title="JSHint 选项"></a>JSHint 选项</h1><p>JSHint本身是个命令行工具，它提供了灵活了的选项设置方式。<br>JSHint 有两种选项: <code>enforcing</code> 和<code>relaxing</code><br><code>enforcing</code> 用于使JSHint的检查更加严格，而<code>relaxing</code>用于阻止一些警告。<br><a href="https://github.com/jshint/jshint/blob/master/examples/.jshintrc" target="_blank" rel="external">更多选项在jshintrc文件示例</a><br><a href="http://jshint.com/docs/options/" target="_blank" rel="external">更多选项的含义见官方文档</a></p>
+<h1 id="hacker的方式"><a href="#hacker的方式" class="headerlink" title="hacker的方式"></a>hacker的方式</h1><p>上面说的方式官方的文档都有更加详细的说明，可如果你总是想禁用掉特定的警告该怎么办呢?比方说对于以下代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">if (err) return next(err);</div></pre></td></tr></table></figure></p>
+<p>JSHint会警告<code>Expected &#39;{&#39; and instead saw &#39;return&#39;.</code>，因为我（node社区很多人也是）不喜欢在单行的返回代码前后添加大括号，但是我也不想总是在文件最上面添加注释添加一块专门的注释来禁用它。一种可行的办法是修改编辑器的代码检测插件，不过难度有点高，另一种方法就是修改JSHint 的代码，我们只需要对一个reporter文件稍做修改即可。打开文件<code>jshint/src/reporters/default.js</code>，在<code>var error = result.error;</code>下面加入两行代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var code = error.code;</div><div class="line">if (code === &apos;W116&apos;) return;</div></pre></td></tr></table></figure></p>
+<p>大功告成，保存以后再用JSHint就再也看不到那样的警告了。（当然，如果你的JSHint使用别的reporter那就另当别论了）</p>
+<p>相信通过以上方式可以帮你免除99%以上无用警告的困扰了，对于代码有洁癖同时有比较懒的人来说，这很重要。</p>
 
       
     </div>
@@ -409,9 +391,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/HEXO/" rel="tag">#HEXO</a>
-          
-            <a href="/tags/Github-Page/" rel="tag">#Github Page</a>
+            <a href="/tags/jshint/" rel="tag">#jshint</a>
           
         </div>
       
@@ -420,16 +400,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/06/30/hexo-0/" rel="next" title="Hexo搭建Github Pages博客记录">
-                <i class="fa fa-chevron-left"></i> Hexo搭建Github Pages博客记录
+              <a href="/2016/07/23/nodejs-0/" rel="next" title="Winsows上Nodejs的安装配置">
+                <i class="fa fa-chevron-left"></i> Winsows上Nodejs的安装配置
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/07/05/sublime-0/" rel="prev" title="Sublime Text3 前端插件安装与使用">
-                Sublime Text3 前端插件安装与使用 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/07/24/sublime-1/" rel="prev" title="Sublime Text3 基础篇">
+                Sublime Text3 基础篇 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -458,8 +438,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/07/01/hexo-1/"
-           data-title="Hexo使用" data-url="http://yoursite.com/2016/07/01/hexo-1/">
+      <div class="ds-thread" data-thread-key="2016/07/23/nodejs-1/"
+           data-title="JSHint" data-url="http://yoursite.com/2016/07/23/nodejs-1/">
       </div>
     
   </div>
@@ -561,7 +541,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#目录结构"><span class="nav-number">1.</span> <span class="nav-text">目录结构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Hexo上传README文件"><span class="nav-number">2.</span> <span class="nav-text">Hexo上传README文件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装插件"><span class="nav-number">3.</span> <span class="nav-text">安装插件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#RSS订阅插件"><span class="nav-number">3.1.</span> <span class="nav-text">RSS订阅插件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sitemap插件"><span class="nav-number">3.2.</span> <span class="nav-text">Sitemap插件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#统计"><span class="nav-number">4.</span> <span class="nav-text">统计</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#评论"><span class="nav-number">5.</span> <span class="nav-text">评论</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#404页面"><span class="nav-number">6.</span> <span class="nav-text">404页面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#网站图标"><span class="nav-number">7.</span> <span class="nav-text">网站图标</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#hexo更新"><span class="nav-number">8.</span> <span class="nav-text">hexo更新</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#图床"><span class="nav-number">9.</span> <span class="nav-text">图床</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#其他"><span class="nav-number">10.</span> <span class="nav-text">其他</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#安装jshint"><span class="nav-number">1.</span> <span class="nav-text">安装jshint</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#配置JSHint"><span class="nav-number">2.</span> <span class="nav-text">配置JSHint</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#内置配置"><span class="nav-number">3.</span> <span class="nav-text">内置配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#屏蔽警告"><span class="nav-number">3.1.</span> <span class="nav-text">屏蔽警告</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JSHint-指令"><span class="nav-number">4.</span> <span class="nav-text">JSHint 指令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JSHint-选项"><span class="nav-number">5.</span> <span class="nav-text">JSHint 选项</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#hacker的方式"><span class="nav-number">6.</span> <span class="nav-text">hacker的方式</span></a></li></ol></div>
             
           </div>
         </section>
