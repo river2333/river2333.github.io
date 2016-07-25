@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2016/07/24/sublime-1/</loc>
+    
+    <lastmod>2016-07-25T14:54:09.138Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2016/07/23/git-0/</loc>
     
     <lastmod>2016-07-25T14:44:39.380Z</lastmod>
@@ -26,13 +33,6 @@
     <loc>http://yoursite.com/2016/07/05/sublime-0/</loc>
     
     <lastmod>2016-07-25T14:04:07.958Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2016/07/24/sublime-1/</loc>
-    
-    <lastmod>2016-07-25T14:04:05.340Z</lastmod>
     
   </url>
   
