@@ -4,11 +4,45 @@
 
     
   <url>
-    <loc>http://yoursite.com/2016/07/23/nodejs-1/</loc>
-    <lastmod>2016-07-25T11:27:18.490Z</lastmod>
+    <loc>http://yoursite.com/2016/07/23/git-0/</loc>
+    <lastmod>2016-07-25T14:44:39.380Z</lastmod>
     <data>
         <display>
-        <title>JSHint</title>
+        <title>Git与Github</title>
+        <pubTime>2016-07-23T04:23:08.000Z</pubTime>
+        
+        <tag>NODE</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2016/07/23/nodejs-0/</loc>
+    <lastmod>2016-07-25T14:05:05.454Z</lastmod>
+    <data>
+        <display>
+        <title>Winsows上Nodejs的安装配置</title>
+        <pubTime>2016-07-23T04:23:08.000Z</pubTime>
+        
+        <tag>NODE</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2016/07/23/nodejs-1/</loc>
+    <lastmod>2016-07-25T14:04:10.927Z</lastmod>
+    <data>
+        <display>
+        <title>JSHint使用基础</title>
         <pubTime>2016-07-23T04:23:08.000Z</pubTime>
         
         <tag>jshint</tag>
@@ -22,7 +56,7 @@
     
   <url>
     <loc>http://yoursite.com/2016/07/05/sublime-0/</loc>
-    <lastmod>2016-07-25T10:12:18.815Z</lastmod>
+    <lastmod>2016-07-25T14:04:07.958Z</lastmod>
     <data>
         <display>
         <title>Sublime Text3 前端插件安装与使用</title>
@@ -38,23 +72,8 @@
 
     
   <url>
-    <loc>http://yoursite.com/2016/07/25/git-0/</loc>
-    <lastmod>2016-07-25T01:13:03.495Z</lastmod>
-    <data>
-        <display>
-        <title></title>
-        <pubTime>2016-07-25T01:13:03.495Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://yoursite.com/2016/07/24/sublime-1/</loc>
-    <lastmod>2016-07-24T16:22:47.498Z</lastmod>
+    <lastmod>2016-07-25T14:04:05.340Z</lastmod>
     <data>
         <display>
         <title>Sublime Text3 基础篇</title>
@@ -80,23 +99,6 @@
         <tag>HEXO</tag>
          
         <tag>Github Page</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2016/07/23/nodejs-0/</loc>
-    <lastmod>2016-07-23T16:18:03.691Z</lastmod>
-    <data>
-        <display>
-        <title>Winsows上Nodejs的安装配置</title>
-        <pubTime>2016-07-23T04:23:08.000Z</pubTime>
-        
-        <tag>NODE</tag>
          
          
            

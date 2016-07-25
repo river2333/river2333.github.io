@@ -85,6 +85,8 @@
 
 
 
+  
+
 
   <link rel="alternate" href="/atom.xml" title="Kongwsh" type="application/atom+xml" />
 
@@ -98,19 +100,16 @@
 
 
 
-<meta name="description" content="安装Sublime Text3Sublime Text官方网站提供了Sublime Text各系统各版本的下载，目前Sublime Text的最新版本是Sublime Text3。这里以Windows版本的SublimeText3安装为例。注意在安装时勾选Add to explorer context menu，这样在右键单击文件时就可以直接使用Sublime Text打开。
-配置环境变量使用Wi">
+<meta name="description" content="安装Sublime Text3Sublime Text官方网站提供了Sublime Text各系统各版本的下载，目前Sublime Text的最新版本是Sublime Text3。这里以Windows版本的SublimeText3安装为例。注意在安装时勾选Add to explorer context menu，这样在右键单击文件时就可以直接使用Sublime Text打开。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Sublime Text3 基础篇">
 <meta property="og:url" content="http://yoursite.com/2016/07/24/sublime-1/index.html">
 <meta property="og:site_name" content="Kongwsh">
-<meta property="og:description" content="安装Sublime Text3Sublime Text官方网站提供了Sublime Text各系统各版本的下载，目前Sublime Text的最新版本是Sublime Text3。这里以Windows版本的SublimeText3安装为例。注意在安装时勾选Add to explorer context menu，这样在右键单击文件时就可以直接使用Sublime Text打开。
-配置环境变量使用Wi">
-<meta property="og:updated_time" content="2016-07-24T16:22:47.498Z">
+<meta property="og:description" content="安装Sublime Text3Sublime Text官方网站提供了Sublime Text各系统各版本的下载，目前Sublime Text的最新版本是Sublime Text3。这里以Windows版本的SublimeText3安装为例。注意在安装时勾选Add to explorer context menu，这样在右键单击文件时就可以直接使用Sublime Text打开。">
+<meta property="og:updated_time" content="2016-07-25T14:04:05.340Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Sublime Text3 基础篇">
-<meta name="twitter:description" content="安装Sublime Text3Sublime Text官方网站提供了Sublime Text各系统各版本的下载，目前Sublime Text的最新版本是Sublime Text3。这里以Windows版本的SublimeText3安装为例。注意在安装时勾选Add to explorer context menu，这样在右键单击文件时就可以直接使用Sublime Text打开。
-配置环境变量使用Wi">
+<meta name="twitter:description" content="安装Sublime Text3Sublime Text官方网站提供了Sublime Text各系统各版本的下载，目前Sublime Text的最新版本是Sublime Text3。这里以Windows版本的SublimeText3安装为例。注意在安装时勾选Add to explorer context menu，这样在右键单击文件时就可以直接使用Sublime Text打开。">
 
 
 
@@ -328,117 +327,63 @@
       
 
       
-        <h1 id="安装Sublime-Text3"><a href="#安装Sublime-Text3" class="headerlink" title="安装Sublime Text3"></a>安装Sublime Text3</h1><p>Sublime Text<a href="http://www.sublimetext.com/" target="_blank" rel="external">官方网站</a>提供了Sublime Text各系统各版本的下载，目前Sublime Text的最新版本是<a href="http://www.sublimetext.com/3" target="_blank" rel="external">Sublime Text3</a>。这里以Windows版本的SublimeText3安装为例。注意在安装时勾选Add to explorer context menu，这样在右键单击文件时就可以直接使用Sublime Text打开。</p>
+        <h1 id="安装Sublime-Text3"><a href="#安装Sublime-Text3" class="headerlink" title="安装Sublime Text3"></a>安装Sublime Text3</h1><p>Sublime Text<a href="http://www.sublimetext.com/" target="_blank" rel="external">官方网站</a>提供了Sublime Text各系统各版本的下载，目前Sublime Text的最新版本是<a href="http://www.sublimetext.com/3" target="_blank" rel="external">Sublime Text3</a>。这里以Windows版本的SublimeText3安装为例。注意在安装时勾选Add to explorer context menu，这样在右键单击文件时就可以直接使用Sublime Text打开。<br><a id="more"></a></p>
 <h1 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h1><p>使用<code>Win + R</code>运行<code>sysdm.cpl</code>打开“系统属性”。然后在“高级”选项卡里选择“环境变量”，编辑“Path”，增加Sublime Text的安装目录（例如D:\Sublime Text 3）。<br>接下来就可以在命令行里面利用subl命令直接使用Sublime Text了：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">subl file    :: 使用Sublime Text打开file文件</div><div class="line">subl folder  :: 使用Sublime Text打开folder文件夹</div><div class="line">subl .       :: 使用Sublime Text当前文件夹</div></pre></td></tr></table></figure></p>
 <h1 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h1><p>按功能快捷键列表如下<br>通用（General）</p>
-<pre><code>Ctrl+Z: 撤销
-Ctrl+Y: 恢复撤销
-Ctrl+T：词互换
-Ctrl + U:回退，软撤销
-↑↓←→：上下左右移动光标，注意不是不是KJHL！
-Alt：调出菜单
-Ctrl + Shift + P：调出命令板（Command Palette）
-Ctrl + `：调出控制台
-Ctrl+K+B 开启/关闭侧边栏
-</code></pre><p>缩进</p>
-<pre><code>ctrl+] 增加缩进
-ctrl+[ 减少缩进
-Tab：自动缩进四个空格
-Shift+Tab： 去除缩进
-ctrl+shift+v ：粘贴时缩进
-</code></pre><p>编辑（Editing）</p>
-<pre><code>Ctrl + Enter：在当前行下面新增一行然后跳至该行
-Ctrl + Shift + Enter：在当前行上面增加一行并跳至该行
-Ctrl + ←/→：进行逐词移动
-Ctrl + Shift + ←/→:进行逐词选择
-Ctrl + ↑/↓:移动当前显示区域
-Ctrl + Shift + ↑/↓:移动当前行，与上下行互换
-Ctrl+鼠标左键：可以同时选择要编辑的多处文本
-Ctrl+Shift+D ：复制光标所在整行，插入在该行之前
-Ctrl+Shift+K ：删除整行
-Ctrl+KK ：从光标处删除至行尾
-Ctrl+K Backspace ：从光标处删除至行首
-</code></pre><p>选择（Selecting）</p>
-<pre><code>Ctrl + D：选择当前光标所在的词并高亮该词所有出现的位置，再次Ctrl + D选择该词出现的下一个位置，在多重选词的过程中，使用Ctrl + K进行跳过，使用Ctrl + U进行回退，使用Esc退出多重编辑
-Ctrl + Shift + L：将当前选中区域打散
-Ctrl+L：选择整行（按住-继续选择下行）
-Ctrl + J：把当前选中区域合并为一行
-Ctrl + M：在起始括号和结尾括号间切换，光标移动至括号内开始或结束的位置
-Ctrl + Shift + M：快速选择括号间的内容
-Ctrl + Shift + J：快速选择同缩进的内容
-Ctrl + Shift + Space：快速选择当前作用域（Scope）的内容
-Ctrl+Shift+A ：选择光标位置父标签对儿
-</code></pre><p>查找&amp;替换（Finding&amp;Replacing）</p>
-<pre><code>F3：跳至当前关键字下一个位置
-Shift+F3：跳到当前关键字上一个位置，可一次性选择全部的相同文本进行同时编辑
-Alt + F3：选中当前关键字出现的所有位置
-Ctrl + F/H：进行标准查找/替换，之后：
-    - Alt + C：切换大小写敏感（Case-sensitive）模式
-    - Alt + W：切换整字匹配（Whole matching）模式
-    - Alt + R：切换正则匹配（Regex matching）模式
-    - Ctrl + Shift + H：替换当前关键字
-    - Ctrl + Alt + Enter：替换所有关键字匹配
-Ctrl + Shift + F：多文件搜索&amp;替换
-</code></pre><p>格式</p>
-<pre><code>Ctrl+Shift+[ ： 折叠代码
-Ctrl+Shift+] ：展开代码
-Ctrl+K+U ：改为大写
-Ctrl+K+L ：改为小写
- Alt+. ：闭合当前标签
-</code></pre><p>注释</p>
-<pre><code>Ctrl+Shift+/ ：注释已选择内容
-Ctrl+/ ：注释整行（如已选择内容，同“Ctrl+Shift+/”效果）
-</code></pre><p>跳转（Jumping）</p>
-<pre><code>Ctrl + P：跳转到指定文件，输入文件名后可以：
-    @ 符号跳转：输入@symbol跳转到symbol符号所在的位置
-    # 关键字跳转：输入#keyword跳转到keyword所在的位置
-    : 行号跳转：输入:12跳转到文件的第12行。
-Ctrl + R：跳转到指定符号 快速列出/跳转到某个函数，对于Markdown，会列出其大纲
-Ctrl + G：跳转到指定行号
-</code></pre><p>窗口（Window）</p>
-<pre><code>Ctrl + Shift + N：创建一个新窗口
-Ctrl + N：在当前窗口创建一个新标签
-Ctrl + W：关闭当前标签，当窗口内没有标签时会关闭该窗口
-Ctrl + Shift + T：恢复刚刚关闭的标签
-Ctrl+Tab： 当前窗口中的标签页切换
-Ctrl+F2 ：设置/取消书签
-Shift+F2 ：上一个书签
-</code></pre><p>屏幕（Screen）</p>
-<pre><code>F11：切换普通全屏
-Shift + F11：切换无干扰全屏
-Alt+Shift+1（非小键盘）窗口分屏，恢复默认1屏
-Alt+Shift+2 左右分屏-2列
-Alt+Shift+3 左右分屏-3列
-Alt+Shift+4 左右分屏-4列
-Alt+Shift+5 等分4屏
-Alt+Shift+8 垂直分屏-2屏
-Alt+Shift+9 垂直分屏-3屏
-分屏之后，使用Ctrl + 数字键跳转到指定屏，使用Ctrl + Shift + 数字键将当前屏移动到指定屏
-</code></pre><h1 id="快捷键配置"><a href="#快捷键配置" class="headerlink" title="快捷键配置"></a>快捷键配置</h1><p><a href="http://sublime-text-unofficial-documentation.readthedocs.io/en/latest/reference/settings.html" target="_blank" rel="external">系统快捷键的默认配置</a><br>自定义快捷键配置：<br>打开<code>Preferences -&gt; Key Bindings - User</code></p>
-<h1 id="Sublime-Text内运行javascript-ES6"><a href="#Sublime-Text内运行javascript-ES6" class="headerlink" title="Sublime Text内运行javascript(ES6)"></a>Sublime Text内运行javascript(ES6)</h1><ol>
-<li>首先安装nodejs</li>
-</ol>
-<p>当然你可以使用其它诸如jsc之类的环境来运行js, 本文使用的是nodejs. 首先确保你的电脑已经安装好nodejs, 并已将其添加到环境变量中 (一般安装时自动添加或者询问是否添加)</p>
-<ol>
-<li>添加build system</li>
-</ol>
-<p>在sublime text中依次打开Tools -&gt; Build System -&gt; New Build System… 粘贴以下代码后保存(如Node.sublime-build), 然后把Build System设成Automatic<br>{ “cmd”: [“node”, “—use-strict”, “—harmony”, “$file”], “selector”: “source.js”}</p>
-<ol>
-<li>附加说明</li>
-</ol>
-<p>在以上的build文件中(Node.sublime-build), node是执行命令, —harmony和—use-strict是执行参数, $file是当前文件名, 所以一次build操作实际上相当于在命令行中执行了node —use-strict —harmony filename<br>. —harmony表示启用ES Harmony features, 而这些features目前只能在strict模式下运行, 所以需要同时添加use-strict参数(详见what-is-extended-mode).<br>如果不想启用es6的特性,把build文件更改成以下代码保存即可.<br>{ “cmd”: [“node”, “$file”], “selector”: “source.js”}</p>
-<ol>
-<li>具体使用</li>
-</ol>
-<p>在sublime test中新建一个test.js文件, 然后输入你的测试代码, 比如:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">for (let i = 0; i &lt; 3; i++) &#123;</div><div class="line">    console.log(&apos;i:&apos;, i);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>使用快捷键 <code>ctrl + b</code>, 将得到以下执行结果:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">i: 0i: 1i: 2[Finished in 0.1s]</div></pre></td></tr></table></figure></p>
 <blockquote>
-<p>温馨注解:</p>
+<p>   Ctrl+Z: 撤销<br>   Ctrl+Y: 恢复撤销<br>   Ctrl+T：词互换<br>   Ctrl + U:回退，软撤销<br>   ↑↓←→：上下左右移动光标，注意不是不是KJHL！<br>   Alt：调出菜单<br>   Ctrl + Shift + P：调出命令板（Command Palette）<br>   Ctrl + `：调出控制台<br>   Ctrl+K+B 开启/关闭侧边栏</p>
 </blockquote>
-<pre><code>(1)文件必须是存在于磁盘中的, 而不是untitled的, 否则sublime无法找到相应的文件.
-(2)Nodejs安装目录需要加入path环境变量中，否则Ctrl+B运行 会出现：[WinError 2] 系统找不到指定的文件。
-</code></pre><h1 id="正则表达式（学习中）·"><a href="#正则表达式（学习中）·" class="headerlink" title="正则表达式（学习中）·"></a>正则表达式（学习中）·</h1><p><a href="http://en.wikipedia.org/wiki/Regular_expression" target="_blank" rel="external">正则表达式</a>是非常强大的文本查找&amp;替换工具，Sublime Text中使用Alt + R切换正则匹配模式的开启/关闭。Sublime Text的使用<a href="http://www.boost.org/doc/libs/1_44_0/libs/regex/doc/html/boost_regex/syntax/perl_syntax.html" target="_blank" rel="external">Boost里的Perl正则表达式风格</a>。<br>出于篇幅原因，本文不会对正则表达式进行详细介绍，<a href="http://regex.info/" target="_blank" rel="external">Mastering Regex</a>（中译本：<a href="http://book.douban.com/subject/2154713/" target="_blank" rel="external">精通正则表达式</a>）对正则表达式的原理和各语言下的使用进行了详细介绍。此外网上有大量正则表达式的优秀教程（<a href="http://deerchao.net/tutorials/regex/regex.htm" target="_blank" rel="external">“正则表达式30分钟入门教程”</a>和<a href="http://msdn.microsoft.com/zh-cn/library/ae5bf541(v=vs.90" target="_blank" rel="external">MSDN正则表达式教程</a>)，<a href="http://www.williamlong.info/archives/433.html" target="_blank" rel="external">月光博客～常用正则表达式</a>），以及在线测试工具（<a href="http://regexpal.com/" target="_blank" rel="external">regexpal</a>和<a href="http://www.regexr.com/" target="_blank" rel="external">regexer</a>）。</p>
-<h1 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h1><p>非官方文档：<a href="http://sublime-text-unofficial-documentation.readthedocs.org/" target="_blank" rel="external">http://sublime-text-unofficial-documentation.readthedocs.org/</a><br>官方文档：<a href="http://www.sublimetext.com/docs/3/" target="_blank" rel="external">http://www.sublimetext.com/docs/3/</a><br>Package Control：<a href="https://sublime.wbond.net/" target="_blank" rel="external">https://sublime.wbond.net/</a> 大量的Sublime Text插件和主题。<br>Sublime Text 全程指南:<a href="http://zh.lucida.me/blog/sublime-text-complete-guide/" target="_blank" rel="external">http://zh.lucida.me/blog/sublime-text-complete-guide/</a><br><a href="http://www.jeffjade.com/2015/12/15/2015-04-17-toss-sublime-text/#three" target="_blank" rel="external">如何优雅地使用Sublime Text</a></p>
+<p>缩进</p>
+<blockquote>
+<p>   ctrl+] 增加缩进<br>   ctrl+[ 减少缩进<br>   Tab：自动缩进四个空格<br>   Shift+Tab： 去除缩进<br>   ctrl+shift+v ：粘贴时缩进</p>
+</blockquote>
+<p>编辑（Editing）</p>
+<blockquote>
+<p>   Ctrl + Enter：在当前行下面新增一行然后跳至该行<br>   Ctrl + Shift + Enter：在当前行上面增加一行并跳至该行<br>   Ctrl + ←/→：进行逐词移动<br>   Ctrl + Shift + ←/→:进行逐词选择<br>   Ctrl + ↑/↓:移动当前显示区域<br>   Ctrl + Shift + ↑/↓:移动当前行，与上下行互换<br>   Ctrl+鼠标左键：可以同时选择要编辑的多处文本<br>   Ctrl+Shift+D ：复制光标所在整行，插入在该行之前<br>   Ctrl+Shift+K ：删除整行<br>   Ctrl+KK ：从光标处删除至行尾<br>   Ctrl+K Backspace ：从光标处删除至行首</p>
+</blockquote>
+<p>选择（Selecting）</p>
+<blockquote>
+<p>   Ctrl + D：选择当前光标所在的词并高亮该词所有出现的位置，再次Ctrl +<br>   D选择该词出现的下一个位置，在多重选词的过程中，使用Ctrl +<br>   K进行跳过，使用Ctrl + U进行回退，使用Esc退出多重编辑<br>   Ctrl + Shift + L：将当前选中区域打散<br>   Ctrl+L：选择整行（按住-继续选择下行）<br>   Ctrl + J：把当前选中区域合并为一行<br>   Ctrl + M：在起始括号和结尾括号间切换，光标移动至括号内开始或结束的位置&gt;<br>   Ctrl + Shift + M：快速选择括号间的内容<br>   Ctrl + Shift + J：快速选择同缩进的内容<br>   Ctrl + Shift + Space：快速选择当前作用域（Scope）的内容<br>   Ctrl+Shift+A ：选择光标位置父标签对儿</p>
+</blockquote>
+<p>查找&amp;替换（Finding&amp;Replacing）</p>
+<blockquote>
+<p>   F3：跳至当前关键字下一个位置<br>   Shift+F3：跳到当前关键字上一个位置，可一次性选择全部的相同文本进行同时编辑<br>   Alt + F3：选中当前关键字出现的所有位置<br>   Ctrl + F/H：进行标准查找/替换，之后:<br>        Alt + C：切换大小写敏感（Case-sensitive）模式<br>        Alt + W：切换整字匹配（Whole matching）模式<br>        Alt + R：切换正则匹配（Regex matching）模式<br>        Ctrl + Shift + H：替换当前关键字<br>        Ctrl + Alt + Enter：替换所有关键字匹配<br>   Ctrl + Shift + F：多文件搜索&amp;替换</p>
+</blockquote>
+<p>格式</p>
+<blockquote>
+<p>  Ctrl+Shift+[ ： 折叠代码<br>  Ctrl+Shift+] ：展开代码<br>  Ctrl+K+U ：改为大写<br>  Ctrl+K+L ：改为小写<br>  Alt+. ：闭合当前标签</p>
+</blockquote>
+<p>注释</p>
+<blockquote>
+<p>   Ctrl+Shift+/ ：注释已选择内容<br>   Ctrl+/ ：注释整行（如已选择内容，同“Ctrl+Shift+/”效果）</p>
+</blockquote>
+<p>跳转（Jumping）</p>
+<blockquote>
+<p>   Ctrl + P：跳转到指定文件，输入文件名后可以：<br>     @ 符号跳转：输入@symbol跳转到symbol符号所在的位置</p>
+<pre><code># 关键字跳转：输入#keyword跳转到keyword所在的位置
+: 行号跳转：输入:12跳转到文件的第12行。
+</code></pre><p>   Ctrl + R：跳转到指定符号 快速列出/<br>   跳转到某个函数，对于Markdown，会列出其大纲<br>   Ctrl + G：跳转到指定行号</p>
+</blockquote>
+<p>窗口（Window）</p>
+<blockquote>
+<p>   Ctrl + Shift + N：创建一个新窗口<br>   Ctrl + N：在当前窗口创建一个新标签<br>   Ctrl + W：关闭当前标签，当窗口内没有标签时会关闭该窗口<br>   Ctrl + Shift + T：恢复刚刚关闭的标签<br>   Ctrl+Tab： 当前窗口中的标签页切换<br>   Ctrl+F2 ：设置/取消书签<br>  Shift+F2 ：上一个书签</p>
+</blockquote>
+<p>屏幕（Screen）</p>
+<blockquote>
+<p>   F11：切换普通全屏<br>   Shift + F11：切换无干扰全屏<br>   Alt+Shift+1:（非小键盘）窗口分屏，恢复默认1屏<br>   Alt+Shift+2:左右分屏-2列<br>   Alt+Shift+3:左右分屏-3列<br>   Alt+Shift+4: 左右分屏-4列<br>   Alt+Shift+5:等分4屏<br>   Alt+Shift+8: 垂直分屏-2屏<br>   Alt+Shift+9: 垂直分屏-3屏<br>   分屏之后，使用Ctrl + 数字键跳转到指定屏，使用Ctrl + Shift +<br>   数字键将当前屏移动到指定屏</p>
+</blockquote>
+<h1 id="快捷键配置"><a href="#快捷键配置" class="headerlink" title="快捷键配置"></a>快捷键配置</h1><p><em><a href="http://sublime-text-unofficial-documentation.readthedocs.io/en/latest/reference/settings.html" target="_blank" rel="external">系统快捷键的默认配置</a></em><br>自定义快捷键配置：<br>打开<code>Preferences -&gt; Key Bindings - User</code></p>
+<h1 id="Sublime-Text内运行javascript-ES6"><a href="#Sublime-Text内运行javascript-ES6" class="headerlink" title="Sublime Text内运行javascript(ES6)"></a>Sublime Text内运行javascript(ES6)</h1><p>1.首先安装nodejs<br>当然你可以使用其它诸如jsc之类的环境来运行js, 本文使用的是nodejs. 首先确保你的电脑已经安装好nodejs, 并已将其添加到环境变量中 (一般安装时自动添加或者询问是否添加)</p>
+<p>2.添加build system<br>在sublime text中依次打开<code>Tools -&gt; Build System -&gt; New Build System…</code>粘贴以下代码后保存(如Node.sublime-build), 然后把Build System设成Automatic<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123; “cmd”: [“node”, “—use-strict”, “—harmony”, “$file”], “selector”: “source.js”&#125;</div></pre></td></tr></table></figure></p>
+<p>3.附加说明<br>在以上的build文件中(Node.sublime-build), node是执行命令,<code>—harmony</code>和<code>—use-strict</code>是执行参数, <code>$file</code>是当前文件名, 所以一次build操作实际上相当于在命令行中执行了<code>node —use-strict —harmony filename</code>. <code>—harmony</code>表示启用ES Harmony features, 而这些features目前只能在strict模式下运行, 所以需要同时添加<code>use-strict</code>参数(详见<a href="http://stackoverflow.com/questions/17253509/what-is-extended-mode" target="_blank" rel="external">what-is-extended-mode</a>).<br>如果不想启用es6的特性,把build文件更改成以下代码保存即可.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123; “cmd”: [“node”, “$file”], “selector”: “source.js”&#125;</div></pre></td></tr></table></figure></p>
+<p>4.具体使用<br>在sublime test中新建一个test.js文件, 然后输入你的测试代码, 比如:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">for (let i = 0; i &lt; 3; i++) &#123;</div><div class="line">    console.log(&apos;i:&apos;, i);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>使用快捷键 <code>ctrl + b</code>, 将得到以下执行结果:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">i: 0i: 1i: 2[Finished in 0.1s]</div></pre></td></tr></table></figure></p>
+<p>注解:</p>
+<blockquote>
+<p>  (1)文件必须是存在于磁盘中的, 而不是untitled的,<br>  否则sublime无法找到相应的文件.<br>  (2)Nodejs安装目录需要加入path环境变量中，否则Ctrl+B运行 会出现：<br>  [WinError2] 系统找不到指定的文件。</p>
+</blockquote>
+<h1 id="正则表达式（学习中）·"><a href="#正则表达式（学习中）·" class="headerlink" title="正则表达式（学习中）·"></a>正则表达式（学习中）·</h1><p><em><a href="http://en.wikipedia.org/wiki/Regular_expression" target="_blank" rel="external">正则表达式</a></em>是非常强大的文本查找&amp;替换工具，Sublime Text中使用Alt + R切换正则匹配模式的开启/关闭。Sublime Text的使用<em><a href="http://www.boost.org/doc/libs/1_44_0/libs/regex/doc/html/boost_regex/syntax/perl_syntax.html" target="_blank" rel="external">Boost里的Perl正则表达式风格</a></em>。<br><a href="http://regex.info/" target="_blank" rel="external">Mastering Regex</a>（中译本：<a href="http://book.douban.com/subject/2154713/" target="_blank" rel="external">精通正则表达式</a>）对正则表达式的原理和各语言下的使用进行了详细介绍。<br>优秀教程：<br><a href="http://deerchao.net/tutorials/regex/regex.htm" target="_blank" rel="external">“正则表达式30分钟入门教程”</a><br><a href="http://msdn.microsoft.com/zh-cn/library/ae5bf541(v=vs.90" target="_blank" rel="external">MSDN正则表达式教程</a>)<a href="http://www.williamlong.info/archives/433.html" target="_blank" rel="external">月光博客～常用正则表达式</a>在线测试工具：<br><a href="http://regexpal.com/" target="_blank" rel="external">regexpal</a><br><a href="http://www.regexr.com/" target="_blank" rel="external">regexer</a></p>
+<h1 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h1><p><a href="http://sublime-text-unofficial-documentation.readthedocs.org/" target="_blank" rel="external">非官方文档</a><br><a href="http://www.sublimetext.com/docs/3/" target="_blank" rel="external">官方文档</a><br><a href="https://sublime.wbond.net/" target="_blank" rel="external">Package Control</a> 大量的Sublime Text插件和主题。<br><a href="http://zh.lucida.me/blog/sublime-text-complete-guide/" target="_blank" rel="external">Sublime Text 全程指南</a><br><a href="http://www.jeffjade.com/2015/12/15/2015-04-17-toss-sublime-text/#three" target="_blank" rel="external">如何优雅地使用Sublime Text</a></p>
 
       
     </div>
@@ -469,17 +414,13 @@ Alt+Shift+9 垂直分屏-3屏
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/07/23/nodejs-1/" rel="next" title="JSHint">
-                <i class="fa fa-chevron-left"></i> JSHint
+              <a href="/2016/07/23/git-0/" rel="next" title="Git与Github">
+                <i class="fa fa-chevron-left"></i> Git与Github
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/07/25/git-0/" rel="prev" title="">
-                 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
