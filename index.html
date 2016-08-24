@@ -194,6 +194,16 @@
         </li>
       
         
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
@@ -210,6 +220,16 @@
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
             标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
           </a>
         </li>
       
@@ -253,6 +273,138 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/08/22/javascript-0/" itemprop="url">
+                  JavaScript高级程序设计学习笔记（一）创建对象
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-08-22T08:31:08+08:00" content="2016-08-22">
+              2016-08-22
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/08/22/javascript-0/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/22/javascript-0/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="工厂模式"><a href="#工厂模式" class="headerlink" title="工厂模式"></a>工厂模式</h1><p>可以使用构造函数Object或对象字面量创建单个对象，但是如果使用同一接口创建很多对象会产生大量重复代码。解决办法如下：<br>用函数来封装以特定接口创建对象的细节。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">function createPerson(name,age,job)&#123;</div><div class="line">    var o = new Object();</div><div class="line">    o.name = name;</div><div class="line">    o.age=age;</div><div class="line">    o.job=job;</div><div class="line">    o.sayName=function()&#123;</div><div class="line">        alert(this.name);</div><div class="line">    &#125;;</div><div class="line">    return o;</div><div class="line">&#125;</div><div class="line"></div><div class="line">var person1=createPerson(&quot;Nicholas&quot;,29,&quot;software Engineer&quot;);</div><div class="line">var person2=createPerson(&quot;Grey&quot;,24,&quot;Doctor&quot;);</div></pre></td></tr></table></figure></p>
+<p>解决了多个相似对象的问题，没有解决对象识别问题。</p>
+<h1 id="构造函数模式"><a href="#构造函数模式" class="headerlink" title="构造函数模式"></a>构造函数模式</h1><p>创建自定义的构造函数，从而定义自定义对象类型的属性和方法。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">function Person(name,age,job)&#123;</div><div class="line">    this.name=name;</div><div class="line">    this.age=age;</div><div class="line">    this.job=job;</div><div class="line">    this.sayName = function()&#123;</div><div class="line">        alert(this.name);</div><div class="line">    &#125;;</div><div class="line">&#125;</div><div class="line"></div><div class="line">var person1 = new Person(&quot;Nocholas&quot;,29,&quot;software Engineer&quot;);</div><div class="line">var person2 = new Person(&quot;Grey&quot;,24,&quot;Doctor&quot;);</div></pre></td></tr></table></figure></p>
+<p>Person()与createPerson()不同之处：</p>
+<ul>
+<li>没有显示创建对象</li>
+<li>直接将属性方法赋给this对象</li>
+<li>没有return</li>
+</ul>
+<p>要创建Person的实例，有以下步骤：</p>
+<ol>
+<li>创建一个新对象</li>
+<li>将构造函数作用域赋给新对象（this指向新对象）</li>
+<li>执行构造函数中的代码(为这个新对象添加属性)</li>
+<li>返回新对象</li>
+</ol>
+<p>创建的person1和person2实例都有一个constructor属性，该属性指向Person。而constructor属性最初是用来表示对象类型的，这样就解决了工厂模式无法识别对象类型的问题。<br>构造函数模式也有缺点，每个方法都要在每个实例上重新创造一遍，而不同实例上的同名函数是不相等的。如何实现不同实例共享属性和方法呢，下面原型模式解决了这个问题。</p>
+<h1 id="原型模式"><a href="#原型模式" class="headerlink" title="原型模式"></a>原型模式</h1><p>##原型对象<br>我们创建的每个函数都有一个prototype属性，这个属性是一个指针，指向原型对象。原型对象的用途是包含可以由特定类型的所有实例共享的属性和方法。在默认情况下，每个原型对象都有一个constructor（构造函数）属性，这个属性也是一个指针，指向prototype属性所在函数。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">function Person()&#123;</div><div class="line">&#125;</div><div class="line">    Person.prototype.name=&quot;Nicola&quot;;</div><div class="line">    Person.prototype.age=23;</div><div class="line">    Person.prototype.job=&quot;Engineer&quot;;</div><div class="line">    Person.prototype.sayName=function()&#123;</div><div class="line">        alert(this.name);</div><div class="line">    &#125;;</div><div class="line">var person1=new Person();</div><div class="line">person1.sayName();//&quot;Nicola&quot;</div><div class="line"></div><div class="line">var person2=new Person();</div><div class="line">person2.sayName();//&quot;Nicola&quot;</div></pre></td></tr></table></figure></p>
+<p>当调用构造函数创建一个实例后，该实例的内部将包含一个指针[[prototype]]指向原型对象。原型对象<em>最初</em>只包含constructor属性，其他的方法是从Object继承而来。<br><img src="http://i1.buimg.com/567571/b30cde583c99e6b5.jpg" alt=""><br>[[prototype]]为内部属性，无法访问到。但是有两个方法：<br>1.isPrototypeOf()确定对象之间是否存在这种不正当关系。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">alert(Person.prototype.isPrototypeOf(person1));//true</div><div class="line">alert(Person.prototype.isPrototypeOf(person2));//true</div></pre></td></tr></table></figure></p>
+<p>2.Object.getPrototypeOf()获取一个对象的原型。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">alert(Object.getPrototypeOf(person1)==Person.prototype);//true</div><div class="line">alert(Object.getPrototypeOf(person1).name);//&quot;Nicola&quot;</div></pre></td></tr></table></figure></p>
+<p>每当代码读取某个对象的属性时，都会在<em>原型链</em>上搜索，目标是具有给定名字的属性。原型对象中的constructor属性也是实例共享的，可以通过对象实例访问。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">alert(person1.constructor==Person);//true</div></pre></td></tr></table></figure></p>
+<p>当为对象实例添加一个属性时，这个属性就会屏蔽原型对象中的同名属性，这样就阻止我们访问原型对象中的同名属性，但不会修改那个属性，通过delet操作可完全删除实例属性，可重新对原型对象的访问。<br>hasOwnProperty():检测一个属性是否存在于实例中，继承自Object。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">person1.name=&quot;Grey&quot;;</div><div class="line">alert(person1.name);//&quot;Grey&quot;---来自实例</div><div class="line">alert(person1.hasOwnProperty(&quot;name&quot;));//true</div><div class="line">alert(person2.name);//&quot;Nichola&quot;---来自原型</div><div class="line">alert(person2.hasOwnProperty(&quot;name&quot;));//false</div></pre></td></tr></table></figure></p>
+<p>Object.getOwnPropertyDescriptor():返回指定对象上一个<em>自有属性</em>对应的属性描述符,不能获取原型对象上的属性描述符。</p>
+<h2 id="in操作符"><a href="#in操作符" class="headerlink" title="in操作符"></a>in操作符</h2><p>in操作符只要通过对象能够访问到属性，包括原型链上的，就会返回true。hasOwnProperty()只在属性存在于实例中才会返回true。结合使用可以判断原型链上的属性。<br>1.for-in 循环遍历<br>返回所有能通过对象访问的可枚举的属性，实例属性加原型属性。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">function Person()&#123;</div><div class="line">&#125;</div><div class="line">    Person.prototype.name=&quot;Nicola&quot;;</div><div class="line">    Person.prototype.age=23;</div><div class="line">    Person.prototype.job=&quot;Engineer&quot;;</div><div class="line">    Person.prototype.sayName=function()&#123;</div><div class="line">        alert(this.name);</div><div class="line">    &#125;;</div><div class="line">var person1=new Person();</div><div class="line">for(var prop in person1)&#123;</div><div class="line">    if (prop==&quot;name&quot;)</div><div class="line">    alert(&quot;found!&quot;)</div><div class="line">&#125;;//&quot;found!&quot;</div><div class="line">console.log(prop);//&quot;sayName&quot;</div></pre></td></tr></table></figure></p>
+<p>每个不同的属性，语句都会被执行一次。每次迭代，一个不同的属性名将会赋予 prop,最后prop只存有最有一个迭代的属性名。<br>2.Object.keys()<br>该方法会返回一个由给定对象的所有可枚举<em>实例属性</em>（不包括原形链上继承来的书香）的属性名组成的数组，数组中属性名的排列顺序和使用for-in循环遍历该对象时返回的顺序一致。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">function Person()&#123;</div><div class="line">&#125;</div><div class="line">    Person.prototype.name=&quot;Nicola&quot;;</div><div class="line">    Person.prototype.age=23;</div><div class="line">    Person.prototype.job=&quot;Engineer&quot;;</div><div class="line">    Person.prototype.sayName=function()&#123;</div><div class="line">        alert(this.name);</div><div class="line">    &#125;;</div><div class="line">var person1=new Person();</div><div class="line">person1.name=&quot;Rob&quot;;</div><div class="line">person1.age=22;</div><div class="line">var person1keys=object.keys(person1);</div><div class="line">alert(person1keys);//&quot;name,age&quot;</div></pre></td></tr></table></figure></p>
+<p>3.Object.getOwnPropertyNames()<br>该方法返回一个由指定对象的所有<em>实例属性</em>的属性名（包括不可枚举属性）组成的数组。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">function Person()&#123;</div><div class="line">&#125;</div><div class="line">    Person.prototype.name=&quot;Nicola&quot;;</div><div class="line">    Person.prototype.age=23;</div><div class="line">    Person.prototype.job=&quot;Engineer&quot;;</div><div class="line">    Person.prototype.sayName=function()&#123;</div><div class="line">        alert(this.name);</div><div class="line">    &#125;;</div><div class="line">var person1=new Person();</div><div class="line">person1.name=&quot;Rob&quot;;</div><div class="line">person1.age=22;</div><div class="line">Object.defineProperty(person1, &quot;key&quot;, &#123;</div><div class="line">  enumerable: false,</div><div class="line">&#125;);//属性key不可枚举</div><div class="line"></div><div class="line">console.log(Object.getOwnPropertyNames(person1).sort());//[&quot;age&quot;, &quot;key&quot;, &quot;name&quot;]</div></pre></td></tr></table></figure></p>
+<h2 id="重写原型对象"><a href="#重写原型对象" class="headerlink" title="重写原型对象"></a>重写原型对象</h2><p>用包含所有属性的对象字面量重写原型对象，这样更简便一些，但是会断开了现有原型与任何之前已经存在的对象实例之间的联系，他们引用的仍然是最初的原型。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">function Person()&#123;</div><div class="line">&#125;</div><div class="line"> var person1 = new Person();</div><div class="line"> Person.prototype=&#123;</div><div class="line">    constructor:Person,</div><div class="line">    name:&quot;Nicola&quot;,</div><div class="line">    age:23,</div><div class="line">    job:&quot;Engineer&quot;,</div><div class="line">    sayName:function()&#123;</div><div class="line">        alert(this.name);</div><div class="line"> &#125;</div><div class="line">&#125;</div><div class="line">person1.sayName();//TypeError: person1.sayName is not a function</div></pre></td></tr></table></figure></p>
+<p>重写原型对象之后的关系<br><img src="http://i4.buimg.com/567571/c2342edc484af3ef.jpg" alt=""></p>
+<h2 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h2><p>1.由于不向构造函数传参，所有实例在默认情况下都会获得相同的属性值。<br>2.共享引用类型值得属性，牵一发动全身不是我们想要的，我们希望每个实例有属于自己的全部属性，改变其中一个的属性，不会影响其他。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">function Person()&#123;</div><div class="line">&#125;</div><div class="line"> Person.prototype=&#123;</div><div class="line">    constructor:Person,</div><div class="line">    name:&quot;Nicola&quot;,</div><div class="line">    age:23,</div><div class="line">    job:&quot;Engineer&quot;,</div><div class="line">    friends:[A,B],</div><div class="line">    sayName:function()&#123;</div><div class="line">        alert(this.name);</div><div class="line"> &#125;</div><div class="line">&#125;</div><div class="line">var person1 = new Person();</div><div class="line">var person2 = new Person();</div><div class="line"></div><div class="line">person1.friends.push(&quot;C&quot;);</div><div class="line"></div><div class="line">alert(person1.friends);//&quot;A,B,C&quot;</div><div class="line">alert(person2.friends);//&quot;A,B,C&quot;</div></pre></td></tr></table></figure></p>
+<p>给person1添加一个朋友C，由于大家引用一个数组，person2也被动的添加了一个朋友C,这是大家不希望看到的，每个实例都应该有自己隐私。</p>
+<h1 id="组合使用构造函数和原型模式"><a href="#组合使用构造函数和原型模式" class="headerlink" title="组合使用构造函数和原型模式"></a>组合使用构造函数和原型模式</h1><p>这种方式就解决了大每个实例既想要有个对象类型，有共同的属性和方法，也不出卖隐私。构造函数定义实例属性。原型对象定义共享的属性和方法。每个实例有自己的一份实例属性副本，又共享着对方法的引用。这是一种最常见的方式。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">function  Person(name,age,job)&#123;</div><div class="line">    this.name=name;</div><div class="line">    this.age=age;</div><div class="line">    this.job=job;</div><div class="line">    this.friends=[&quot;A&quot;,&quot;B&quot;];</div><div class="line">&#125;</div><div class="line">Person.prototype=&#123;</div><div class="line">    constructor:Person,</div><div class="line">    sayName: function()&#123;</div><div class="line">        alert(this.name);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">var person1=new Person(&quot;Nichola&quot;,29,&quot;Engineer&quot;);</div><div class="line">var person2=new Person(&quot;Grey&quot;,23,&quot;Doctor&quot;);</div><div class="line"></div><div class="line">person1.friends.push(&quot;C&quot;);</div><div class="line">alert(person1.friends);//&quot;A,B,C&quot;</div><div class="line">alert(person2.friends);//&quot;A,B&quot;</div><div class="line">alert(person1.sayName()==person2.sayName());//TRUE</div></pre></td></tr></table></figure></p>
+<h1 id="动态原型模式"><a href="#动态原型模式" class="headerlink" title="动态原型模式"></a>动态原型模式</h1><p>动态原型是指视情况而定使用原型模式。把所有信息封装在构造函数之中，在构造函数中初始化原型（在必要情况下），这样就可以同时使用构造函数和原型的优点。通过检查某个应该存在的方法是否有效，来决定是否初始化原型。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">function  Person(name,age,job)&#123;</div><div class="line">    this.name=name;</div><div class="line">    this.age=age;</div><div class="line">    this.job=job;</div><div class="line">    //方法</div><div class="line">    if (typeof this.sayName !=&quot;function&quot;) &#123;</div><div class="line">        Person.prototype.sayName = function()&#123;</div><div class="line">            alert(this.name);</div><div class="line">        &#125;;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">var person1 = new Person(&quot;Nichola&quot;,29,&quot;Engineer&quot;);</div><div class="line">person1.sayName();//&quot;Nichola&quot;</div></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
     
       
 
@@ -378,8 +530,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/07/23/git-0/" itemprop="url">
-                  Git与Github
+                <a class="post-title-link" href="/2016/07/23/nodejs-0/" itemprop="url">
+                  Winsows上Nodejs的安装配置
                 </a>
               
             
@@ -403,8 +555,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/07/23/git-0/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/23/git-0/" itemprop="commentsCount"></span>
+                <a href="/2016/07/23/nodejs-0/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/23/nodejs-0/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -428,9 +580,12 @@
 
       
         
-          <p>Git 是一个为了更好地管理 Linux内核开发而创立的分布式版本控制和软件配置管理软件。 国内外知名 Git 代码托管网站有：<br><a href="http://GitHub.com">github</a><br><a href="http://Coding.net">Coding</a><br><a href="http://code.csdn.net/">code.csdn</a><br>
+          <h1 id="安装Nodejs"><a href="#安装Nodejs" class="headerlink" title="安装Nodejs"></a>安装Nodejs</h1><blockquote>
+<p>系统：windows8.1</p>
+</blockquote>
+<p>最简单安装的方法，在<a href="https://nodejs.org/en/">官网</a>下载.msi格式，或者从我的百度云盘链接: <a href="http://pan.baidu.com/s/1mim4hvU">http://pan.baidu.com/s/1mim4hvU</a> 密码: scaf，默认安装会自动配置环境变量，也可以更改安装目录。我的安装目录<code>C:\Program Files\nodejs</code>。npm已经集成在nodejs，不用单独安装。在该目录下新建两个文件夹node_cache和node_global。</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2016/07/23/git-0/#more" rel="contents">
+            <a class="btn" href="/2016/07/23/nodejs-0/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -584,8 +739,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/07/23/nodejs-0/" itemprop="url">
-                  Winsows上Nodejs的安装配置
+                <a class="post-title-link" href="/2016/07/23/git-0/" itemprop="url">
+                  Git与Github
                 </a>
               
             
@@ -609,8 +764,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/07/23/nodejs-0/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/23/nodejs-0/" itemprop="commentsCount"></span>
+                <a href="/2016/07/23/git-0/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/23/git-0/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -634,12 +789,9 @@
 
       
         
-          <h1 id="安装Nodejs"><a href="#安装Nodejs" class="headerlink" title="安装Nodejs"></a>安装Nodejs</h1><blockquote>
-<p>系统：windows8.1</p>
-</blockquote>
-<p>最简单安装的方法，在<a href="https://nodejs.org/en/">官网</a>下载.msi格式，或者从我的百度云盘链接: <a href="http://pan.baidu.com/s/1mim4hvU">http://pan.baidu.com/s/1mim4hvU</a> 密码: scaf，默认安装会自动配置环境变量，也可以更改安装目录。我的安装目录<code>C:\Program Files\nodejs</code>。npm已经集成在nodejs，不用单独安装。在该目录下新建两个文件夹node_cache和node_global。</p>
+          <p>Git 是一个为了更好地管理 Linux内核开发而创立的分布式版本控制和软件配置管理软件。 国内外知名 Git 代码托管网站有：<br><a href="http://GitHub.com">github</a><br><a href="http://Coding.net">Coding</a><br><a href="http://code.csdn.net/">code.csdn</a><br>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2016/07/23/nodejs-0/#more" rel="contents">
+            <a class="btn" href="/2016/07/23/git-0/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1021,7 +1173,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-count">8</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -1031,7 +1183,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

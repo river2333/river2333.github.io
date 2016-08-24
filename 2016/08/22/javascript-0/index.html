@@ -1,0 +1,849 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="javascript," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Kongwsh" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="工厂模式可以使用构造函数Object或对象字面量创建单个对象，但是如果使用同一接口创建很多对象会产生大量重复代码。解决办法如下：用函数来封装以特定接口创建对象的细节。12345678910111213function createPerson(name,age,job)&amp;#123;    var o = new Object();    o.name = name;    o.age=age;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript高级程序设计学习笔记（一）创建对象">
+<meta property="og:url" content="http://yoursite.com/2016/08/22/javascript-0/index.html">
+<meta property="og:site_name" content="Kongwsh">
+<meta property="og:description" content="工厂模式可以使用构造函数Object或对象字面量创建单个对象，但是如果使用同一接口创建很多对象会产生大量重复代码。解决办法如下：用函数来封装以特定接口创建对象的细节。12345678910111213function createPerson(name,age,job)&amp;#123;    var o = new Object();    o.name = name;    o.age=age;">
+<meta property="og:image" content="http://i1.buimg.com/567571/b30cde583c99e6b5.jpg">
+<meta property="og:image" content="http://i4.buimg.com/567571/c2342edc484af3ef.jpg">
+<meta property="og:updated_time" content="2016-08-24T14:10:45.583Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaScript高级程序设计学习笔记（一）创建对象">
+<meta name="twitter:description" content="工厂模式可以使用构造函数Object或对象字面量创建单个对象，但是如果使用同一接口创建很多对象会产生大量重复代码。解决办法如下：用函数来封装以特定接口创建对象的细节。12345678910111213function createPerson(name,age,job)&amp;#123;    var o = new Object();    o.name = name;    o.age=age;">
+<meta name="twitter:image" content="http://i1.buimg.com/567571/b30cde583c99e6b5.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"always"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 6305729963366548000,
+      author: 'Author'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/08/22/javascript-0/"/>
+
+  <title> JavaScript高级程序设计学习笔记（一）创建对象 | Kongwsh </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Kongwsh</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="#" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                JavaScript高级程序设计学习笔记（一）创建对象
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-08-22T08:31:08+08:00" content="2016-08-22">
+              2016-08-22
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/08/22/javascript-0/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/22/javascript-0/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+              &nbsp; | &nbsp;
+              <span class="page-pv">view
+              <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>times
+              </span>
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="工厂模式"><a href="#工厂模式" class="headerlink" title="工厂模式"></a>工厂模式</h1><p>可以使用构造函数Object或对象字面量创建单个对象，但是如果使用同一接口创建很多对象会产生大量重复代码。解决办法如下：<br>用函数来封装以特定接口创建对象的细节。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">function createPerson(name,age,job)&#123;</div><div class="line">    var o = new Object();</div><div class="line">    o.name = name;</div><div class="line">    o.age=age;</div><div class="line">    o.job=job;</div><div class="line">    o.sayName=function()&#123;</div><div class="line">        alert(this.name);</div><div class="line">    &#125;;</div><div class="line">    return o;</div><div class="line">&#125;</div><div class="line"></div><div class="line">var person1=createPerson(&quot;Nicholas&quot;,29,&quot;software Engineer&quot;);</div><div class="line">var person2=createPerson(&quot;Grey&quot;,24,&quot;Doctor&quot;);</div></pre></td></tr></table></figure></p>
+<p>解决了多个相似对象的问题，没有解决对象识别问题。</p>
+<h1 id="构造函数模式"><a href="#构造函数模式" class="headerlink" title="构造函数模式"></a>构造函数模式</h1><p>创建自定义的构造函数，从而定义自定义对象类型的属性和方法。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">function Person(name,age,job)&#123;</div><div class="line">    this.name=name;</div><div class="line">    this.age=age;</div><div class="line">    this.job=job;</div><div class="line">    this.sayName = function()&#123;</div><div class="line">        alert(this.name);</div><div class="line">    &#125;;</div><div class="line">&#125;</div><div class="line"></div><div class="line">var person1 = new Person(&quot;Nocholas&quot;,29,&quot;software Engineer&quot;);</div><div class="line">var person2 = new Person(&quot;Grey&quot;,24,&quot;Doctor&quot;);</div></pre></td></tr></table></figure></p>
+<p>Person()与createPerson()不同之处：</p>
+<ul>
+<li>没有显示创建对象</li>
+<li>直接将属性方法赋给this对象</li>
+<li>没有return</li>
+</ul>
+<p>要创建Person的实例，有以下步骤：</p>
+<ol>
+<li>创建一个新对象</li>
+<li>将构造函数作用域赋给新对象（this指向新对象）</li>
+<li>执行构造函数中的代码(为这个新对象添加属性)</li>
+<li>返回新对象</li>
+</ol>
+<p>创建的person1和person2实例都有一个constructor属性，该属性指向Person。而constructor属性最初是用来表示对象类型的，这样就解决了工厂模式无法识别对象类型的问题。<br>构造函数模式也有缺点，每个方法都要在每个实例上重新创造一遍，而不同实例上的同名函数是不相等的。如何实现不同实例共享属性和方法呢，下面原型模式解决了这个问题。</p>
+<h1 id="原型模式"><a href="#原型模式" class="headerlink" title="原型模式"></a>原型模式</h1><p>##原型对象<br>我们创建的每个函数都有一个prototype属性，这个属性是一个指针，指向原型对象。原型对象的用途是包含可以由特定类型的所有实例共享的属性和方法。在默认情况下，每个原型对象都有一个constructor（构造函数）属性，这个属性也是一个指针，指向prototype属性所在函数。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">function Person()&#123;</div><div class="line">&#125;</div><div class="line">    Person.prototype.name=&quot;Nicola&quot;;</div><div class="line">    Person.prototype.age=23;</div><div class="line">    Person.prototype.job=&quot;Engineer&quot;;</div><div class="line">    Person.prototype.sayName=function()&#123;</div><div class="line">        alert(this.name);</div><div class="line">    &#125;;</div><div class="line">var person1=new Person();</div><div class="line">person1.sayName();//&quot;Nicola&quot;</div><div class="line"></div><div class="line">var person2=new Person();</div><div class="line">person2.sayName();//&quot;Nicola&quot;</div></pre></td></tr></table></figure></p>
+<p>当调用构造函数创建一个实例后，该实例的内部将包含一个指针[[prototype]]指向原型对象。原型对象<em>最初</em>只包含constructor属性，其他的方法是从Object继承而来。<br><img src="http://i1.buimg.com/567571/b30cde583c99e6b5.jpg" alt=""><br>[[prototype]]为内部属性，无法访问到。但是有两个方法：<br>1.isPrototypeOf()确定对象之间是否存在这种不正当关系。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">alert(Person.prototype.isPrototypeOf(person1));//true</div><div class="line">alert(Person.prototype.isPrototypeOf(person2));//true</div></pre></td></tr></table></figure></p>
+<p>2.Object.getPrototypeOf()获取一个对象的原型。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">alert(Object.getPrototypeOf(person1)==Person.prototype);//true</div><div class="line">alert(Object.getPrototypeOf(person1).name);//&quot;Nicola&quot;</div></pre></td></tr></table></figure></p>
+<p>每当代码读取某个对象的属性时，都会在<em>原型链</em>上搜索，目标是具有给定名字的属性。原型对象中的constructor属性也是实例共享的，可以通过对象实例访问。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">alert(person1.constructor==Person);//true</div></pre></td></tr></table></figure></p>
+<p>当为对象实例添加一个属性时，这个属性就会屏蔽原型对象中的同名属性，这样就阻止我们访问原型对象中的同名属性，但不会修改那个属性，通过delet操作可完全删除实例属性，可重新对原型对象的访问。<br>hasOwnProperty():检测一个属性是否存在于实例中，继承自Object。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">person1.name=&quot;Grey&quot;;</div><div class="line">alert(person1.name);//&quot;Grey&quot;---来自实例</div><div class="line">alert(person1.hasOwnProperty(&quot;name&quot;));//true</div><div class="line">alert(person2.name);//&quot;Nichola&quot;---来自原型</div><div class="line">alert(person2.hasOwnProperty(&quot;name&quot;));//false</div></pre></td></tr></table></figure></p>
+<p>Object.getOwnPropertyDescriptor():返回指定对象上一个<em>自有属性</em>对应的属性描述符,不能获取原型对象上的属性描述符。</p>
+<h2 id="in操作符"><a href="#in操作符" class="headerlink" title="in操作符"></a>in操作符</h2><p>in操作符只要通过对象能够访问到属性，包括原型链上的，就会返回true。hasOwnProperty()只在属性存在于实例中才会返回true。结合使用可以判断原型链上的属性。<br>1.for-in 循环遍历<br>返回所有能通过对象访问的可枚举的属性，实例属性加原型属性。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">function Person()&#123;</div><div class="line">&#125;</div><div class="line">    Person.prototype.name=&quot;Nicola&quot;;</div><div class="line">    Person.prototype.age=23;</div><div class="line">    Person.prototype.job=&quot;Engineer&quot;;</div><div class="line">    Person.prototype.sayName=function()&#123;</div><div class="line">        alert(this.name);</div><div class="line">    &#125;;</div><div class="line">var person1=new Person();</div><div class="line">for(var prop in person1)&#123;</div><div class="line">    if (prop==&quot;name&quot;)</div><div class="line">    alert(&quot;found!&quot;)</div><div class="line">&#125;;//&quot;found!&quot;</div><div class="line">console.log(prop);//&quot;sayName&quot;</div></pre></td></tr></table></figure></p>
+<p>每个不同的属性，语句都会被执行一次。每次迭代，一个不同的属性名将会赋予 prop,最后prop只存有最有一个迭代的属性名。<br>2.Object.keys()<br>该方法会返回一个由给定对象的所有可枚举<em>实例属性</em>（不包括原形链上继承来的书香）的属性名组成的数组，数组中属性名的排列顺序和使用for-in循环遍历该对象时返回的顺序一致。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">function Person()&#123;</div><div class="line">&#125;</div><div class="line">    Person.prototype.name=&quot;Nicola&quot;;</div><div class="line">    Person.prototype.age=23;</div><div class="line">    Person.prototype.job=&quot;Engineer&quot;;</div><div class="line">    Person.prototype.sayName=function()&#123;</div><div class="line">        alert(this.name);</div><div class="line">    &#125;;</div><div class="line">var person1=new Person();</div><div class="line">person1.name=&quot;Rob&quot;;</div><div class="line">person1.age=22;</div><div class="line">var person1keys=object.keys(person1);</div><div class="line">alert(person1keys);//&quot;name,age&quot;</div></pre></td></tr></table></figure></p>
+<p>3.Object.getOwnPropertyNames()<br>该方法返回一个由指定对象的所有<em>实例属性</em>的属性名（包括不可枚举属性）组成的数组。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">function Person()&#123;</div><div class="line">&#125;</div><div class="line">    Person.prototype.name=&quot;Nicola&quot;;</div><div class="line">    Person.prototype.age=23;</div><div class="line">    Person.prototype.job=&quot;Engineer&quot;;</div><div class="line">    Person.prototype.sayName=function()&#123;</div><div class="line">        alert(this.name);</div><div class="line">    &#125;;</div><div class="line">var person1=new Person();</div><div class="line">person1.name=&quot;Rob&quot;;</div><div class="line">person1.age=22;</div><div class="line">Object.defineProperty(person1, &quot;key&quot;, &#123;</div><div class="line">  enumerable: false,</div><div class="line">&#125;);//属性key不可枚举</div><div class="line"></div><div class="line">console.log(Object.getOwnPropertyNames(person1).sort());//[&quot;age&quot;, &quot;key&quot;, &quot;name&quot;]</div></pre></td></tr></table></figure></p>
+<h2 id="重写原型对象"><a href="#重写原型对象" class="headerlink" title="重写原型对象"></a>重写原型对象</h2><p>用包含所有属性的对象字面量重写原型对象，这样更简便一些，但是会断开了现有原型与任何之前已经存在的对象实例之间的联系，他们引用的仍然是最初的原型。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">function Person()&#123;</div><div class="line">&#125;</div><div class="line"> var person1 = new Person();</div><div class="line"> Person.prototype=&#123;</div><div class="line">    constructor:Person,</div><div class="line">    name:&quot;Nicola&quot;,</div><div class="line">    age:23,</div><div class="line">    job:&quot;Engineer&quot;,</div><div class="line">    sayName:function()&#123;</div><div class="line">        alert(this.name);</div><div class="line"> &#125;</div><div class="line">&#125;</div><div class="line">person1.sayName();//TypeError: person1.sayName is not a function</div></pre></td></tr></table></figure></p>
+<p>重写原型对象之后的关系<br><img src="http://i4.buimg.com/567571/c2342edc484af3ef.jpg" alt=""></p>
+<h2 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h2><p>1.由于不向构造函数传参，所有实例在默认情况下都会获得相同的属性值。<br>2.共享引用类型值得属性，牵一发动全身不是我们想要的，我们希望每个实例有属于自己的全部属性，改变其中一个的属性，不会影响其他。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">function Person()&#123;</div><div class="line">&#125;</div><div class="line"> Person.prototype=&#123;</div><div class="line">    constructor:Person,</div><div class="line">    name:&quot;Nicola&quot;,</div><div class="line">    age:23,</div><div class="line">    job:&quot;Engineer&quot;,</div><div class="line">    friends:[A,B],</div><div class="line">    sayName:function()&#123;</div><div class="line">        alert(this.name);</div><div class="line"> &#125;</div><div class="line">&#125;</div><div class="line">var person1 = new Person();</div><div class="line">var person2 = new Person();</div><div class="line"></div><div class="line">person1.friends.push(&quot;C&quot;);</div><div class="line"></div><div class="line">alert(person1.friends);//&quot;A,B,C&quot;</div><div class="line">alert(person2.friends);//&quot;A,B,C&quot;</div></pre></td></tr></table></figure></p>
+<p>给person1添加一个朋友C，由于大家引用一个数组，person2也被动的添加了一个朋友C,这是大家不希望看到的，每个实例都应该有自己隐私。</p>
+<h1 id="组合使用构造函数和原型模式"><a href="#组合使用构造函数和原型模式" class="headerlink" title="组合使用构造函数和原型模式"></a>组合使用构造函数和原型模式</h1><p>这种方式就解决了大每个实例既想要有个对象类型，有共同的属性和方法，也不出卖隐私。构造函数定义实例属性。原型对象定义共享的属性和方法。每个实例有自己的一份实例属性副本，又共享着对方法的引用。这是一种最常见的方式。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">function  Person(name,age,job)&#123;</div><div class="line">    this.name=name;</div><div class="line">    this.age=age;</div><div class="line">    this.job=job;</div><div class="line">    this.friends=[&quot;A&quot;,&quot;B&quot;];</div><div class="line">&#125;</div><div class="line">Person.prototype=&#123;</div><div class="line">    constructor:Person,</div><div class="line">    sayName: function()&#123;</div><div class="line">        alert(this.name);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">var person1=new Person(&quot;Nichola&quot;,29,&quot;Engineer&quot;);</div><div class="line">var person2=new Person(&quot;Grey&quot;,23,&quot;Doctor&quot;);</div><div class="line"></div><div class="line">person1.friends.push(&quot;C&quot;);</div><div class="line">alert(person1.friends);//&quot;A,B,C&quot;</div><div class="line">alert(person2.friends);//&quot;A,B&quot;</div><div class="line">alert(person1.sayName()==person2.sayName());//TRUE</div></pre></td></tr></table></figure></p>
+<h1 id="动态原型模式"><a href="#动态原型模式" class="headerlink" title="动态原型模式"></a>动态原型模式</h1><p>动态原型是指视情况而定使用原型模式。把所有信息封装在构造函数之中，在构造函数中初始化原型（在必要情况下），这样就可以同时使用构造函数和原型的优点。通过检查某个应该存在的方法是否有效，来决定是否初始化原型。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">function  Person(name,age,job)&#123;</div><div class="line">    this.name=name;</div><div class="line">    this.age=age;</div><div class="line">    this.job=job;</div><div class="line">    //方法</div><div class="line">    if (typeof this.sayName !=&quot;function&quot;) &#123;</div><div class="line">        Person.prototype.sayName = function()&#123;</div><div class="line">            alert(this.name);</div><div class="line">        &#125;;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">var person1 = new Person(&quot;Nichola&quot;,29,&quot;Engineer&quot;);</div><div class="line">person1.sayName();//&quot;Nichola&quot;</div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/javascript/" rel="tag">#javascript</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/07/24/sublime-1/" rel="next" title="Sublime Text3 基础篇">
+                <i class="fa fa-chevron-left"></i> Sublime Text3 基础篇
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+
+  
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/08/22/javascript-0/"
+           data-title="JavaScript高级程序设计学习笔记（一）创建对象" data-url="http://yoursite.com/2016/08/22/javascript-0/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="Kong" />
+          <p class="site-author-name" itemprop="name">Kong</p>
+          <p class="site-description motion-element" itemprop="description">Front-End</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">8</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/Kongwsh" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#工厂模式"><span class="nav-number">1.</span> <span class="nav-text">工厂模式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#构造函数模式"><span class="nav-number">2.</span> <span class="nav-text">构造函数模式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#原型模式"><span class="nav-number">3.</span> <span class="nav-text">原型模式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#in操作符"><span class="nav-number">3.1.</span> <span class="nav-text">in操作符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#重写原型对象"><span class="nav-number">3.2.</span> <span class="nav-text">重写原型对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#缺点"><span class="nav-number">3.3.</span> <span class="nav-text">缺点</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#组合使用构造函数和原型模式"><span class="nav-number">4.</span> <span class="nav-text">组合使用构造函数和原型模式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#动态原型模式"><span class="nav-number">5.</span> <span class="nav-text">动态原型模式</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Kong</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+        
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv"><i class="fa fa-user"></i><span class="busuanzi-value" id="busuanzi_value_site_uv"></span></span>
+  
+
+  
+    <span class="site-pv"><i class="fa fa-eye"></i><span class="busuanzi-value" id="busuanzi_value_site_pv"></span></span>
+  
+  
+</div>
+
+
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"Kongwsh"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+      
+      <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+      <script src="/js/src/hook-duoshuo.js"></script>
+    
+  
+
+
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+       search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            isfetched = true;
+            $('.popup').detach().appendTo('.header-inner');
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var matchcounts = 0;
+                var str='<ul class=\"search-result-list\">';                
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length > 1) {
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = true;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = data.url;
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '' && data_content != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title < 0 && index_content < 0 ){
+                                isMatch = false;
+                            } else {
+                                if (index_content < 0) {
+                                    index_content = 0;
+                                }
+                                if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            }
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        matchcounts += 1;
+                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out 100 characters
+                            var start = first_occur - 20;
+                            var end = first_occur + 80;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 50;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substring(start, end);
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                            });
+                            
+                            str += "<p class=\"search-result\">" + match_content +"...</p>"
+                        }
+                        str += "</li>";
+                    }
+                })};
+                str += "</ul>";
+                if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+                if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+                $resultContent.innerHTML = str;
+            });
+            proceedsearch();
+        }
+    });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').mousedown(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+  
+
+  
+
+  
+
+</body>
+</html>

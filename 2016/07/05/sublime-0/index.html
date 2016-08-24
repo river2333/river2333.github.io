@@ -104,7 +104,7 @@
 <meta property="og:url" content="http://yoursite.com/2016/07/05/sublime-0/index.html">
 <meta property="og:site_name" content="Kongwsh">
 <meta property="og:description" content="安装package control安装插件需要先安装package control，有两种安装package control的方法，官方安装方法">
-<meta property="og:updated_time" content="2016-07-25T14:04:07.958Z">
+<meta property="og:updated_time" content="2016-07-26T01:20:12.919Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Sublime Text3 前端插件安装与使用">
 <meta name="twitter:description" content="安装package control安装插件需要先安装package control，有两种安装package control的方法，官方安装方法">
@@ -193,6 +193,16 @@
         </li>
       
         
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
@@ -209,6 +219,16 @@
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
             标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
           </a>
         </li>
       
@@ -380,7 +400,7 @@
 </ol>
 <h2 id="html-缩写"><a href="#html-缩写" class="headerlink" title="html 缩写"></a>html 缩写</h2><p>所有未知的缩写都会转换成标签，例如，foo → <foo></foo><br>! ：生成后h5文档<br>a ：<code>&lt;a href=&quot;&quot;&gt;&lt;/a&gt;</code><br>更多查<a href="http://docs.emmet.io/cheat-sheet/" target="_blank" rel="external">速查表</a></p>
 <h1 id="SublimeLinter"><a href="#SublimeLinter" class="headerlink" title="SublimeLinter"></a>SublimeLinter</h1><p>SublimeLinter 是前端编码利器——Sublime Text 的一款插件，用于高亮提示用户编写的代码中存在的不规范和错误的写法，支持 JavaScript、CSS、HTML、Java、PHP、Python、Ruby 等十多种开发语言。如何在 Windows 中配置 SublimeLinter 进行 JS &amp; CSS 校验?</p>
-<p>##SublimeLinter-jshint<br>安装此插件之前需要确保本机安装jshint,在安装nodejs(<em>Winsows上Nodejs的安装配置</em>)下安装jshint（**）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm install -g jshint</div><div class="line">npm install -g csslint</div></pre></td></tr></table></figure></p>
+<h2 id="SublimeLinter-jshint"><a href="#SublimeLinter-jshint" class="headerlink" title="SublimeLinter-jshint"></a>SublimeLinter-jshint</h2><p>安装此插件之前需要确保本机安装jshint,在安装nodejs(<em>Winsows上Nodejs的安装配置</em>)下安装jshint（**）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm install -g jshint</div><div class="line">npm install -g csslint</div></pre></td></tr></table></figure></p>
 <p><a href="https://packagecontrol.io/packages/SublimeLinter" target="_blank" rel="external">主页</a></p>
 <h1 id="SideBarEnhancements"><a href="#SideBarEnhancements" class="headerlink" title="SideBarEnhancements"></a>SideBarEnhancements</h1><p>侧边栏加强软件:CTRL+K,CTRL+B<br>可配置打开方式,使html文件直接通过快捷键以浏览器打开<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line">//chrome</div><div class="line">  &#123; &quot;keys&quot;: [&quot;ctrl+1&quot;], &quot;command&quot;: &quot;side_bar_files_open_with&quot;,</div><div class="line">          &quot;args&quot;: &#123;</div><div class="line">              &quot;paths&quot;: [],</div><div class="line">              &quot;application&quot;: &quot;C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe&quot;,</div><div class="line">              &quot;extensions&quot;:&quot;.*&quot;</div><div class="line">          &#125;</div><div class="line">   &#125;,</div><div class="line">   //Firefox</div><div class="line">   &#123; &quot;keys&quot;: [&quot;ctrl+2&quot;], &quot;command&quot;: &quot;side_bar_files_open_with&quot;,</div><div class="line">          &quot;args&quot;: &#123;</div><div class="line">              &quot;paths&quot;: [],</div><div class="line">              &quot;application&quot;: &quot;E:\\firefox\\firefox.exe&quot;,</div><div class="line">              &quot;extensions&quot;:&quot;.*&quot;</div><div class="line">          &#125;</div><div class="line">   &#125;,</div><div class="line">   //opera</div><div class="line">    &#123; &quot;keys&quot;: [&quot;ctrl+3&quot;], &quot;command&quot;: &quot;side_bar_files_open_with&quot;,</div><div class="line">          &quot;args&quot;: &#123;</div><div class="line">              &quot;paths&quot;: [],</div><div class="line">              &quot;application&quot;: &quot;C:\\Program Files\\Opera developer\\launcher.exe&quot;,</div><div class="line">              &quot;extensions&quot;:&quot;.*&quot;</div><div class="line">          &#125;</div><div class="line">   &#125;,</div><div class="line">   //ie</div><div class="line">    &#123; &quot;keys&quot;: [&quot;ctrl+4&quot;], &quot;command&quot;: &quot;side_bar_files_open_with&quot;,</div><div class="line">          &quot;args&quot;: &#123;</div><div class="line">              &quot;paths&quot;: [],</div><div class="line">              &quot;application&quot;: &quot;C:\\Program Files (x86)\\Internet Explorer\\iexplore.exe&quot;,</div><div class="line">              &quot;extensions&quot;:&quot;.*&quot;</div><div class="line">          &#125;</div><div class="line">   &#125;,</div></pre></td></tr></table></figure></p>
 <p><a href="https://packagecontrol.io/packages/SideBarEnhancements" target="_blank" rel="external">更多</a><br><a href="https://github.com/titoBouzout/SideBarEnhancements" target="_blank" rel="external">github主页</a></p>
@@ -437,8 +457,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/07/23/nodejs-0/" rel="prev" title="Winsows上Nodejs的安装配置">
-                Winsows上Nodejs的安装配置 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/07/23/git-0/" rel="prev" title="Git与Github">
+                Git与Github <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -513,7 +533,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-count">8</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -523,7 +543,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -570,7 +590,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#安装package-control"><span class="nav-number">1.</span> <span class="nav-text">安装package control</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装插件的常用方法"><span class="nav-number">2.</span> <span class="nav-text">安装插件的常用方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Emmet"><span class="nav-number">3.</span> <span class="nav-text">Emmet</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#功能："><span class="nav-number">3.1.</span> <span class="nav-text">功能：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#语法"><span class="nav-number">3.2.</span> <span class="nav-text">语法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#元素类型"><span class="nav-number">3.3.</span> <span class="nav-text">元素类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#css缩写"><span class="nav-number">3.4.</span> <span class="nav-text">css缩写</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#html-缩写"><span class="nav-number">3.5.</span> <span class="nav-text">html 缩写</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SublimeLinter"><span class="nav-number">4.</span> <span class="nav-text">SublimeLinter</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SideBarEnhancements"><span class="nav-number">5.</span> <span class="nav-text">SideBarEnhancements</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SideBarFolders"><span class="nav-number">6.</span> <span class="nav-text">SideBarFolders</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#BracketHighlighter"><span class="nav-number">7.</span> <span class="nav-text">BracketHighlighter</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JSFormat"><span class="nav-number">8.</span> <span class="nav-text">JSFormat</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#TrailingSpaces"><span class="nav-number">9.</span> <span class="nav-text">TrailingSpaces</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Alignment"><span class="nav-number">10.</span> <span class="nav-text">Alignment</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ColorPicker"><span class="nav-number">11.</span> <span class="nav-text">ColorPicker</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#sublimeREPL"><span class="nav-number">12.</span> <span class="nav-text">sublimeREPL</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#DocBlocker"><span class="nav-number">13.</span> <span class="nav-text">DocBlocker</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CSScomb"><span class="nav-number">14.</span> <span class="nav-text">CSScomb</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Terminal"><span class="nav-number">15.</span> <span class="nav-text">Terminal</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#MarkDown-Editing"><span class="nav-number">16.</span> <span class="nav-text">MarkDown Editing</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#MarkdownPreview"><span class="nav-number">17.</span> <span class="nav-text">MarkdownPreview</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Autoprefixer"><span class="nav-number">18.</span> <span class="nav-text">Autoprefixer</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Git"><span class="nav-number">19.</span> <span class="nav-text">Git</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#安装package-control"><span class="nav-number">1.</span> <span class="nav-text">安装package control</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装插件的常用方法"><span class="nav-number">2.</span> <span class="nav-text">安装插件的常用方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Emmet"><span class="nav-number">3.</span> <span class="nav-text">Emmet</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#功能："><span class="nav-number">3.1.</span> <span class="nav-text">功能：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#语法"><span class="nav-number">3.2.</span> <span class="nav-text">语法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#元素类型"><span class="nav-number">3.3.</span> <span class="nav-text">元素类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#css缩写"><span class="nav-number">3.4.</span> <span class="nav-text">css缩写</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#html-缩写"><span class="nav-number">3.5.</span> <span class="nav-text">html 缩写</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SublimeLinter"><span class="nav-number">4.</span> <span class="nav-text">SublimeLinter</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#SublimeLinter-jshint"><span class="nav-number">4.1.</span> <span class="nav-text">SublimeLinter-jshint</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SideBarEnhancements"><span class="nav-number">5.</span> <span class="nav-text">SideBarEnhancements</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SideBarFolders"><span class="nav-number">6.</span> <span class="nav-text">SideBarFolders</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#BracketHighlighter"><span class="nav-number">7.</span> <span class="nav-text">BracketHighlighter</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JSFormat"><span class="nav-number">8.</span> <span class="nav-text">JSFormat</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#TrailingSpaces"><span class="nav-number">9.</span> <span class="nav-text">TrailingSpaces</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Alignment"><span class="nav-number">10.</span> <span class="nav-text">Alignment</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ColorPicker"><span class="nav-number">11.</span> <span class="nav-text">ColorPicker</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#sublimeREPL"><span class="nav-number">12.</span> <span class="nav-text">sublimeREPL</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#DocBlocker"><span class="nav-number">13.</span> <span class="nav-text">DocBlocker</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CSScomb"><span class="nav-number">14.</span> <span class="nav-text">CSScomb</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Terminal"><span class="nav-number">15.</span> <span class="nav-text">Terminal</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#MarkDown-Editing"><span class="nav-number">16.</span> <span class="nav-text">MarkDown Editing</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#MarkdownPreview"><span class="nav-number">17.</span> <span class="nav-text">MarkdownPreview</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Autoprefixer"><span class="nav-number">18.</span> <span class="nav-text">Autoprefixer</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Git"><span class="nav-number">19.</span> <span class="nav-text">Git</span></a></li></ol></div>
             
           </div>
         </section>
