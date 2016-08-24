@@ -2,16 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yoursite.com/2016/08/22/javascript-0/</loc>
+    <loc>http://yoursite.com/2016/07/23/nodejs-1/</loc>
     
-    <lastmod>2016-08-24T14:14:03.980Z</lastmod>
+    <lastmod>2016-08-24T14:16:49.810Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2016/08/17/Closures/</loc>
+    <loc>http://yoursite.com/2016/08/22/javascript-0/</loc>
     
-    <lastmod>2016-08-24T14:13:54.661Z</lastmod>
+    <lastmod>2016-08-24T14:14:03.980Z</lastmod>
     
   </url>
   
@@ -68,13 +68,6 @@
     <loc>http://yoursite.com/2016/07/23/nodejs-0/</loc>
     
     <lastmod>2016-07-25T14:05:05.454Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2016/07/23/nodejs-1/</loc>
-    
-    <lastmod>2016-07-25T14:04:10.927Z</lastmod>
     
   </url>
   

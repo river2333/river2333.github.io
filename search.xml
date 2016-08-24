@@ -44,16 +44,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[JavaScript学习笔记之闭包]]></title>
-      <url>http://yoursite.com/2016/08/17/Closures/</url>
-      <content type="html"><![CDATA[<h1 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h1><blockquote>
-<p>1.闭包是指有权访问另一个函数作用域中的变量的函数。–JavaScript高级程序设计<br>2.一个闭包就是一个函数和被创建的函数中的作用域对象的组合。–MDN<br>3.当内部函数以某一种方式被任何一个外部函数作用域访问时，一个闭包就产生了。–MDN<br>4.一个闭包是一个可以自己拥有独立的环境与变量的的表达式（通常是函数）。–MDN<br>5.闭包中所定义的函数会「保留」它被产生出来时的环境。–MDN<br>6.在计算机科学中，闭包（Closure）是词法闭包（Lexical Closure）的简称，是引用<br>了自由变量的表达式（通常是函数）。这些被引用的自由变量将和这个函数一同存在，<br>即使已经离开了创造它的环境也不例外。–维基百科</p>
-</blockquote>
-<p>闭包是JavaScript中最强大的特性之一。JavaScript允许函数嵌套，并且内部函数可以访问定义在外部函数中的所有变量和函数，以及外部函数能访问的所有变量和函数。但是，外部函数却不能够访问定义在内部函数中的变量和函数。这给内部函数的变量提供了一定的安全性。而且，当内部函数生存周期大于外部函数时，由于内部函数可以访问外部函数的作用域，定义在外部函数的变量和函数的生存周期就会大于外部函数本身。当内部函数以某一种方式被任何一个外部函数作用域访问时，一个闭包就产生了。</p>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[Sublime Text3 基础篇]]></title>
       <url>http://yoursite.com/2016/07/24/sublime-1/</url>
       <content type="html"><![CDATA[<h1 id="安装Sublime-Text3"><a href="#安装Sublime-Text3" class="headerlink" title="安装Sublime Text3"></a>安装Sublime Text3</h1><p>Sublime Text<a href="http://www.sublimetext.com/" target="_blank" rel="external">官方网站</a>提供了Sublime Text各系统各版本的下载，目前Sublime Text的最新版本是<a href="http://www.sublimetext.com/3" target="_blank" rel="external">Sublime Text3</a>。这里以Windows版本的SublimeText3安装为例。注意在安装时勾选Add to explorer context menu，这样在右键单击文件时就可以直接使用Sublime Text打开。<br><a id="more"></a></p>

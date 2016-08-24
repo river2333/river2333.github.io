@@ -70,31 +70,6 @@
   </entry>
   
   <entry>
-    <title>JavaScript学习笔记之闭包</title>
-    <link href="http://yoursite.com/2016/08/17/Closures/"/>
-    <id>http://yoursite.com/2016/08/17/Closures/</id>
-    <published>2016-08-17T09:30:08.000Z</published>
-    <updated>2016-08-24T14:13:54.661Z</updated>
-    
-    <content type="html">&lt;h1 id=&quot;闭包&quot;&gt;&lt;a href=&quot;#闭包&quot; class=&quot;headerlink&quot; title=&quot;闭包&quot;&gt;&lt;/a&gt;闭包&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;1.闭包是指有权访问另一个函数作用域中的变量的函数。–JavaScript高级程序设计&lt;br&gt;2.一个闭包就是一个函数和被创建的函数中的作用域对象的组合。–MDN&lt;br&gt;3.当内部函数以某一种方式被任何一个外部函数作用域访问时，一个闭包就产生了。–MDN&lt;br&gt;4.一个闭包是一个可以自己拥有独立的环境与变量的的表达式（通常是函数）。–MDN&lt;br&gt;5.闭包中所定义的函数会「保留」它被产生出来时的环境。–MDN&lt;br&gt;6.在计算机科学中，闭包（Closure）是词法闭包（Lexical Closure）的简称，是引用&lt;br&gt;了自由变量的表达式（通常是函数）。这些被引用的自由变量将和这个函数一同存在，&lt;br&gt;即使已经离开了创造它的环境也不例外。–维基百科&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;闭包是JavaScript中最强大的特性之一。JavaScript允许函数嵌套，并且内部函数可以访问定义在外部函数中的所有变量和函数，以及外部函数能访问的所有变量和函数。但是，外部函数却不能够访问定义在内部函数中的变量和函数。这给内部函数的变量提供了一定的安全性。而且，当内部函数生存周期大于外部函数时，由于内部函数可以访问外部函数的作用域，定义在外部函数的变量和函数的生存周期就会大于外部函数本身。当内部函数以某一种方式被任何一个外部函数作用域访问时，一个闭包就产生了。&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;闭包&quot;&gt;&lt;a href=&quot;#闭包&quot; class=&quot;headerlink&quot; title=&quot;闭包&quot;&gt;&lt;/a&gt;闭包&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;1.闭包是指有权访问另一个函数作用域中的变量的函数。–JavaScript高级程序设计&lt;br&gt;2.一个闭包就是一个
-    
-    </summary>
-    
-    
-      <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Sublime Text3 基础篇</title>
     <link href="http://yoursite.com/2016/07/24/sublime-1/"/>
     <id>http://yoursite.com/2016/07/24/sublime-1/</id>
@@ -224,7 +199,7 @@
     <link href="http://yoursite.com/2016/07/23/nodejs-1/"/>
     <id>http://yoursite.com/2016/07/23/nodejs-1/</id>
     <published>2016-07-23T04:23:08.000Z</published>
-    <updated>2016-07-25T14:04:10.927Z</updated>
+    <updated>2016-08-24T14:16:49.810Z</updated>
     
     <content type="html">&lt;p&gt;JSHint是一款在线的js代码验证工具，它能帮助你找出在开发中不经意犯下错误和可能存在的潜在问题。强烈建议尽可能的使用检查工具来确认你的编码风格以及设计模式的正确性。JSHint 提供在线和本地使用(基于 Node.js)。同时，还有很多插件支持VS，Eclipse，Notepad++，Sublime Text等。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;br&gt;JSHint主页：&lt;a href=&quot;http://jshint.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://jshint.com/&lt;/a&gt;&lt;br&gt;JSHint下载安装：&lt;a href=&quot;http://jshint.com/install/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://jshint.com/install/&lt;/a&gt;&lt;br&gt;JSHint官方文档：&lt;a href=&quot;http://jshint.com/docs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://jshint.com/docs/&lt;/a&gt;&lt;br&gt;Github：&lt;a href=&quot;https://github.com/jshint/jshint/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/jshint/jshint/&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://www.hyjiacan.com/javascript-jshint/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Javascript代码验证工具 JSHint&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&quot;安装jshint&quot;&gt;&lt;a href=&quot;#安装jshint&quot; class=&quot;headerlink&quot; title=&quot;安装jshint&quot;&gt;&lt;/a&gt;安装jshint&lt;/h1&gt;&lt;p&gt;在Node.js上全局安装jshint&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;npm install jshint -g&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
@@ -270,7 +245,7 @@
     </summary>
     
     
-      <category term="jshint" scheme="http://yoursite.com/tags/jshint/"/>
+      <category term="JSHint" scheme="http://yoursite.com/tags/JSHint/"/>
     
   </entry>
   
