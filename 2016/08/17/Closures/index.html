@@ -80,12 +80,10 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="JavaScript," />
 
 
 
-
-  
 
 
   <link rel="alternate" href="/atom.xml" title="Kongwsh" type="application/atom+xml" />
@@ -100,13 +98,19 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Kongwsh">
-<meta property="og:url" content="http://yoursite.com/404.html">
+<meta name="description" content="闭包
+1.闭包是指有权访问另一个函数作用域中的变量的函数。–JavaScript高级程序设计2.一个闭包就是一个函数和被创建的函数中的作用域对象的组合。–MDN3.当内部函数以某一种方式被任何一个外部函数作用域访问时，一个闭包就产生了。–MDN4.一个闭包是一个可以自己拥有独立的环境与变量的的表达式（通常是函数）。–MDN5.闭包中所定义的函数会「保留」它被产生出来时的环境。–MDN6.在计算机科">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript学习笔记之闭包">
+<meta property="og:url" content="http://yoursite.com/2016/08/17/Closures/index.html">
 <meta property="og:site_name" content="Kongwsh">
-<meta property="og:updated_time" content="2016-08-24T05:22:51.966Z">
+<meta property="og:description" content="闭包
+1.闭包是指有权访问另一个函数作用域中的变量的函数。–JavaScript高级程序设计2.一个闭包就是一个函数和被创建的函数中的作用域对象的组合。–MDN3.当内部函数以某一种方式被任何一个外部函数作用域访问时，一个闭包就产生了。–MDN4.一个闭包是一个可以自己拥有独立的环境与变量的的表达式（通常是函数）。–MDN5.闭包中所定义的函数会「保留」它被产生出来时的环境。–MDN6.在计算机科">
+<meta property="og:updated_time" content="2016-08-24T14:13:54.661Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Kongwsh">
+<meta name="twitter:title" content="JavaScript学习笔记之闭包">
+<meta name="twitter:description" content="闭包
+1.闭包是指有权访问另一个函数作用域中的变量的函数。–JavaScript高级程序设计2.一个闭包就是一个函数和被创建的函数中的作用域对象的组合。–MDN3.当内部函数以某一种方式被任何一个外部函数作用域访问时，一个闭包就产生了。–MDN4.一个闭包是一个可以自己拥有独立的环境与变量的的表达式（通常是函数）。–MDN5.闭包中所定义的函数会「保留」它被产生出来时的环境。–MDN6.在计算机科">
 
 
 
@@ -127,15 +131,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/404.html"/>
+  <link rel="canonical" href="http://yoursite.com/2016/08/17/Closures/"/>
 
-  <title>
-  
-
-  
-     | Kongwsh
-  
-</title>
+  <title> JavaScript学习笔记之闭包 | Kongwsh </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -156,7 +154,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -279,24 +277,137 @@
 
   <div id="posts" class="posts-expand">
     
-    
-      <!DOCTYPE HTML>
-<html>
-<head>
-  <meta http-equiv="content-type" content="text/html;charset=utf-8;">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="robots" content="all">
-  <meta name="robots" content="index,follow">
-</head>
-<body>
 
-<script type="text/javascript" src="http://www.qq.com/404/search_children.js" charset="utf-8" homepageurl="your site url " homepagename="回到我的主页">
-</script>
+  
+  
 
-</body>
-</html>
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                JavaScript学习笔记之闭包
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-08-17T17:30:08+08:00" content="2016-08-17">
+              2016-08-17
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/08/17/Closures/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/17/Closures/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+              &nbsp; | &nbsp;
+              <span class="page-pv">view
+              <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>times
+              </span>
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h1><blockquote>
+<p>1.闭包是指有权访问另一个函数作用域中的变量的函数。–JavaScript高级程序设计<br>2.一个闭包就是一个函数和被创建的函数中的作用域对象的组合。–MDN<br>3.当内部函数以某一种方式被任何一个外部函数作用域访问时，一个闭包就产生了。–MDN<br>4.一个闭包是一个可以自己拥有独立的环境与变量的的表达式（通常是函数）。–MDN<br>5.闭包中所定义的函数会「保留」它被产生出来时的环境。–MDN<br>6.在计算机科学中，闭包（Closure）是词法闭包（Lexical Closure）的简称，是引用<br>了自由变量的表达式（通常是函数）。这些被引用的自由变量将和这个函数一同存在，<br>即使已经离开了创造它的环境也不例外。–维基百科</p>
+</blockquote>
+<p>闭包是JavaScript中最强大的特性之一。JavaScript允许函数嵌套，并且内部函数可以访问定义在外部函数中的所有变量和函数，以及外部函数能访问的所有变量和函数。但是，外部函数却不能够访问定义在内部函数中的变量和函数。这给内部函数的变量提供了一定的安全性。而且，当内部函数生存周期大于外部函数时，由于内部函数可以访问外部函数的作用域，定义在外部函数的变量和函数的生存周期就会大于外部函数本身。当内部函数以某一种方式被任何一个外部函数作用域访问时，一个闭包就产生了。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JavaScript/" rel="tag">#JavaScript</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/07/24/sublime-1/" rel="next" title="Sublime Text3 基础篇">
+                <i class="fa fa-chevron-left"></i> Sublime Text3 基础篇
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/08/22/javascript-0/" rel="prev" title="JavaScript高级程序设计学习笔记（一）创建对象">
+                JavaScript高级程序设计学习笔记（一）创建对象 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -309,8 +420,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="404.html"
-           data-title="" data-url="http://yoursite.com/404.html">
+      <div class="ds-thread" data-thread-key="2016/08/17/Closures/"
+           data-title="JavaScript学习笔记之闭包" data-url="http://yoursite.com/2016/08/17/Closures/">
       </div>
     
   </div>
@@ -334,8 +445,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
@@ -396,6 +516,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#闭包"><span class="nav-number">1.</span> <span class="nav-text">闭包</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -509,6 +640,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 

@@ -5,13 +5,30 @@
     
   <url>
     <loc>http://yoursite.com/2016/08/22/javascript-0/</loc>
-    <lastmod>2016-08-24T14:10:45.583Z</lastmod>
+    <lastmod>2016-08-24T14:14:03.980Z</lastmod>
     <data>
         <display>
         <title>JavaScript高级程序设计学习笔记（一）创建对象</title>
         <pubTime>2016-08-22T00:31:08.000Z</pubTime>
         
-        <tag>javascript</tag>
+        <tag>JavaScript</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2016/08/17/Closures/</loc>
+    <lastmod>2016-08-24T14:13:54.661Z</lastmod>
+    <data>
+        <display>
+        <title>JavaScript学习笔记之闭包</title>
+        <pubTime>2016-08-17T09:30:08.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
          
          
            
