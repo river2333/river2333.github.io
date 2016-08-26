@@ -4,12 +4,80 @@
 
     
   <url>
+    <loc>http://yoursite.com/2016/08/25/javascript-3/</loc>
+    <lastmod>2016-08-26T10:34:27.550Z</lastmod>
+    <data>
+        <display>
+        <title>JavaScript高级程序设计学习笔记（二）继承模式</title>
+        <pubTime>2016-08-25T09:35:08.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2016/08/22/javascript-0/</loc>
-    <lastmod>2016-08-24T14:29:21.966Z</lastmod>
+    <lastmod>2016-08-26T07:41:20.993Z</lastmod>
     <data>
         <display>
         <title>JavaScript高级程序设计学习笔记（一）创建对象</title>
         <pubTime>2016-08-22T00:31:08.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2016/08/17/javascript-2/</loc>
+    <lastmod>2016-08-26T01:06:22.782Z</lastmod>
+    <data>
+        <display>
+        <title>JavaScript学习笔记之闭包</title>
+        <pubTime>2016-08-17T09:30:08.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2016/07/05/sublime-0/</loc>
+    <lastmod>2016-08-26T01:02:18.820Z</lastmod>
+    <data>
+        <display>
+        <title>Sublime Text3 前端插件安装与使用</title>
+        <pubTime>2016-07-05T04:23:08.000Z</pubTime>
+        
+        <tag>sublime text3</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2016/08/22/javascript-1/</loc>
+    <lastmod>2016-08-26T01:00:20.410Z</lastmod>
+    <data>
+        <display>
+        <title>JavaScript学习笔记之This</title>
+        <pubTime>2016-08-22T09:48:08.000Z</pubTime>
         
         <tag>JavaScript</tag>
          
@@ -39,23 +107,6 @@
     
     
     
-    
-  <url>
-    <loc>http://yoursite.com/2016/07/05/sublime-0/</loc>
-    <lastmod>2016-07-26T01:20:12.919Z</lastmod>
-    <data>
-        <display>
-        <title>Sublime Text3 前端插件安装与使用</title>
-        <pubTime>2016-07-05T04:23:08.000Z</pubTime>
-        
-        <tag>sublime text3</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
     
   <url>
     <loc>http://yoursite.com/2016/07/01/hexo-1/</loc>

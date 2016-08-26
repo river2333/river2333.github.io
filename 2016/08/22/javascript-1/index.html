@@ -80,7 +80,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="NODE," />
+  <meta name="keywords" content="JavaScript," />
 
 
 
@@ -98,16 +98,16 @@
 
 
 
-<meta name="description" content="Git 是一个为了更好地管理 Linux内核开发而创立的分布式版本控制和软件配置管理软件。 国内外知名 Git 代码托管网站有：githubCodingcode.csdn">
+<meta name="description" content="我们知道，this对象是在运行时基于函数的执行环境绑定的：在全局函数中，this等于window，当函数被作为某个对象方法调用时，this等于那个对象。匿名函数的执行环境具有全局性，因此this指向window。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Git与Github">
-<meta property="og:url" content="http://yoursite.com/2016/07/23/git-0/index.html">
+<meta property="og:title" content="JavaScript学习笔记之This">
+<meta property="og:url" content="http://yoursite.com/2016/08/22/javascript-1/index.html">
 <meta property="og:site_name" content="Kongwsh">
-<meta property="og:description" content="Git 是一个为了更好地管理 Linux内核开发而创立的分布式版本控制和软件配置管理软件。 国内外知名 Git 代码托管网站有：githubCodingcode.csdn">
-<meta property="og:updated_time" content="2016-07-25T14:44:39.380Z">
+<meta property="og:description" content="我们知道，this对象是在运行时基于函数的执行环境绑定的：在全局函数中，this等于window，当函数被作为某个对象方法调用时，this等于那个对象。匿名函数的执行环境具有全局性，因此this指向window。">
+<meta property="og:updated_time" content="2016-08-26T01:00:20.410Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Git与Github">
-<meta name="twitter:description" content="Git 是一个为了更好地管理 Linux内核开发而创立的分布式版本控制和软件配置管理软件。 国内外知名 Git 代码托管网站有：githubCodingcode.csdn">
+<meta name="twitter:title" content="JavaScript学习笔记之This">
+<meta name="twitter:description" content="我们知道，this对象是在运行时基于函数的执行环境绑定的：在全局函数中，this等于window，当函数被作为某个对象方法调用时，this等于那个对象。匿名函数的执行环境具有全局性，因此this指向window。">
 
 
 
@@ -128,9 +128,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/07/23/git-0/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/08/22/javascript-1/"/>
 
-  <title> Git与Github | Kongwsh </title>
+  <title> JavaScript学习笔记之This | Kongwsh </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -293,7 +293,7 @@
             
             
               
-                Git与Github
+                JavaScript学习笔记之This
               
             
           </h1>
@@ -305,8 +305,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-23T12:23:08+08:00" content="2016-07-23">
-              2016-07-23
+            <time itemprop="dateCreated" datetime="2016-08-22T17:48:08+08:00" content="2016-08-22">
+              2016-08-22
             </time>
           </span>
 
@@ -316,8 +316,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/07/23/git-0/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/23/git-0/" itemprop="commentsCount"></span>
+                <a href="/2016/08/22/javascript-1/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/22/javascript-1/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -345,10 +345,30 @@
       
 
       
-        <p>Git 是一个为了更好地管理 Linux内核开发而创立的分布式版本控制和软件配置管理软件。 国内外知名 Git 代码托管网站有：<br><a href="http://GitHub.com" target="_blank" rel="external">github</a><br><a href="http://Coding.net" target="_blank" rel="external">Coding</a><br><a href="http://code.csdn.net/" target="_blank" rel="external">code.csdn</a><br><a id="more"></a></p>
-<p>GitHub 使用 Git 作为版本控制系统（version control system）提供在线源码托管的服务，同时是个有社交功能的开发者社区。<br>国外类似服务：<br><a href="https://bitbucket.org/" target="_blank" rel="external">Bitbucket</a><br><a href="http://Gitlab.com" target="_blank" rel="external">Gitlab</a><br>国内类似服务：<br><a href="http://Gitcafe.com" target="_blank" rel="external">Gitcafe</a></p>
-<h1 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h1><p><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="external">Git教程 - 廖雪峰的官方网站</a><br><a href="https://git-scm.com/book/en/v2" target="_blank" rel="external">Pro Git</a><br><a href="http://rogerdudler.github.io/git-guide/index.zh.html" target="_blank" rel="external">git - 简明指南</a><br><a href="http://marklodato.github.io/visual-git-guide/index-zh-cn.html" target="_blank" rel="external">图解 Git</a><br><a href="http://www.yangzhiping.com/tech/github.html" target="_blank" rel="external">如何高效利用GitHub–阳志平</a><br><a href="http://www.worldhello.net/gotgithub/#id4" target="_blank" rel="external">worldhello</a><br><a href="help.github.com/">Github帮助文档</a><br><a href="http://www-cs-students.stanford.edu/~blynn/gitmagic/intl/zh_cn/index.html" target="_blank" rel="external">Git Magic</a></p>
-<h1 id="过后填坑···"><a href="#过后填坑···" class="headerlink" title="过后填坑···"></a>过后填坑···</h1>
+        <p>我们知道，this对象是在运行时基于函数的执行环境绑定的：在全局函数中，this等于window，当函数被作为某个对象方法调用时，this等于那个对象。匿名函数的执行环境具有全局性，因此this指向window。</p>
+<a id="more"></a>
+<h1 id="全局环境"><a href="#全局环境" class="headerlink" title="全局环境"></a>全局环境</h1><p>在全局环境中（在任何函数体外部），this指代全局对象，无论是否在严格模式下。</p>
+<h1 id="函数环境"><a href="#函数环境" class="headerlink" title="函数环境"></a>函数环境</h1><p>在函数内部，this的值取决与函数是如何被调用的。</p>
+<h2 id="直接调用"><a href="#直接调用" class="headerlink" title="直接调用"></a>直接调用</h2><ul>
+<li>非严格模式<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">function f1()&#123;</div><div class="line">  return this;</div><div class="line">&#125;</div><div class="line">f1() === window; // true</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>f1()是在全局上下文调用的，this 的值总是一个对象且默认为全局对象。</p>
+<ul>
+<li>严格模式<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">function f2()&#123;</div><div class="line">  &quot;use strict&quot;; // 这里是严格模式</div><div class="line">  return this;</div><div class="line">&#125;</div><div class="line"></div><div class="line">f2() === undefined; // true</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>在严格模式下，this 是在进入运行环境时设置的。若没有定义，this的值将维持undefined状态。</p>
+<h2 id="对象方法中"><a href="#对象方法中" class="headerlink" title="对象方法中"></a>对象方法中</h2><p>当以对象方法的方式调用时，this是调用该函数的对象，this的绑定只受最靠近的成员引用的影响。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">var o = &#123;prop: 37&#125;;</div><div class="line"></div><div class="line">function independent() &#123;</div><div class="line">  return this.prop;</div><div class="line">&#125;</div><div class="line"></div><div class="line">o.b = &#123;</div><div class="line">  g: independent,</div><div class="line">  prop: 42</div><div class="line">&#125;;</div><div class="line">console.log(o.b.g()); // logs 42</div></pre></td></tr></table></figure></p>
+<p>在原型链上，this指向是调用这个方法的对象，表现的好像这个方法存在于这个对象上一样。</p>
+<h2 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h2><p>this与即将被创建的新对象绑定。<br>当构造器返回的默认值是一个this引用的对象时，手动的设置了返回对象，与this绑定的默认对象被取消，如果返回值不是一个对象，返回this。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">function Hello1()&#123;</div><div class="line">  this.me = &quot;Kong&quot;;</div><div class="line">&#125;</div><div class="line"></div><div class="line">var f1 = new Hello1();</div><div class="line">console.log(f1.me); //Kong</div><div class="line"></div><div class="line"></div><div class="line">function Hello2()&#123;</div><div class="line">  this.he = &quot;Wang&quot;;</div><div class="line">  return &#123;she:&quot;Liu&quot;&#125;;</div><div class="line">&#125;</div><div class="line"></div><div class="line"> var f2 = new Hello2();</div><div class="line">console.log(f2.she); //Liu</div><div class="line">console.log(f2.he); // undefined</div></pre></td></tr></table></figure></p>
+<h2 id="call-apply"><a href="#call-apply" class="headerlink" title="call(),apply()"></a>call(),apply()</h2><p>this绑定到一个指定的对象，即传递给call(),apply()的第一个参数，如何这个参数不是对象，那么JavaScript 将会尝试使用内部 ToObject 操作将其转换为对象。</p>
+<h2 id="bind"><a href="#bind" class="headerlink" title="bind()"></a>bind()</h2><p> <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/bind" target="_blank" rel="external">Function.prototype.bind</a><br>调用f.bind(someObject)会创建一个与f具有相同函数体和作用域的函数，但是在这个新函数中，this将永久地被绑定到了bind的第一个参数，无论这个函数是如何被调用的。</p>
+<h2 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h2><p>下面看一个例子<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">var name = &apos;window&apos;;</div><div class="line">var obj = &#123;</div><div class="line">  name :&apos;object&apos;,</div><div class="line">  getName : function () &#123;</div><div class="line">    return this.name;</div><div class="line">  &#125;</div><div class="line">&#125;;</div><div class="line">alert(obj.getName());//object</div></pre></td></tr></table></figure></p>
+<p>不用闭包的情况下，this值为调用该方法的对象。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">var name = &apos;window&apos;;</div><div class="line">var obj = &#123;</div><div class="line">  name :&apos;object&apos;,</div><div class="line">  getName : function () &#123;</div><div class="line">    return function()&#123;</div><div class="line">    return this.name;</div><div class="line">    &#125;;</div><div class="line">  &#125;</div><div class="line">&#125;;</div><div class="line">alert(obj.getName()());//window</div></pre></td></tr></table></figure></p>
+<p>我们编写一个闭包，这时this指向了全局对象。每个函数在调用时都会自动获取两个变量：this和arguments,内部函数在搜索这个变量时，只会搜到其活动对象为止，因此永远不可能直接访问外部函数中的这两个变量，又因为前面说过匿名函数的执行环境具有全局性，其this值指向window。所以就有了上面的结果，但是，我们可以把外部作用域的this保存到内部函数可以访问到的变量里，就可以让内部函数访问this了。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">var name = &apos;window&apos;;</div><div class="line">var obj = &#123;</div><div class="line">  name :&apos;object&apos;,</div><div class="line">  getName : function () &#123;</div><div class="line">    var that =this;</div><div class="line">    return function()&#123;</div><div class="line">    return that.name;</div><div class="line">    &#125;;</div><div class="line">  &#125;</div><div class="line">&#125;;</div><div class="line">alert(obj.getName()());//object</div></pre></td></tr></table></figure></p>
+<h2 id="DOM事件处理函数"><a href="#DOM事件处理函数" class="headerlink" title="DOM事件处理函数"></a>DOM事件处理函数</h2><p>当函数被用作事件处理函数时，它的this指向触发事件的元素;<br>当代码被内联处理函数调用时，它的this指向监听器所在的DOM元素。</p>
+
       
     </div>
 
@@ -369,7 +389,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/NODE/" rel="tag">#NODE</a>
+            <a href="/tags/JavaScript/" rel="tag">#JavaScript</a>
           
         </div>
       
@@ -378,16 +398,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/07/05/sublime-0/" rel="next" title="Sublime Text3 前端插件安装与使用">
-                <i class="fa fa-chevron-left"></i> Sublime Text3 前端插件安装与使用
+              <a href="/2016/08/22/javascript-0/" rel="next" title="JavaScript高级程序设计学习笔记（一）创建对象">
+                <i class="fa fa-chevron-left"></i> JavaScript高级程序设计学习笔记（一）创建对象
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/07/23/nodejs-0/" rel="prev" title="Winsows上Nodejs的安装配置">
-                Winsows上Nodejs的安装配置 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/08/25/javascript-3/" rel="prev" title="JavaScript高级程序设计学习笔记（二）继承模式">
+                JavaScript高级程序设计学习笔记（二）继承模式 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -416,8 +436,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/07/23/git-0/"
-           data-title="Git与Github" data-url="http://yoursite.com/2016/07/23/git-0/">
+      <div class="ds-thread" data-thread-key="2016/08/22/javascript-1/"
+           data-title="JavaScript学习笔记之This" data-url="http://yoursite.com/2016/08/22/javascript-1/">
       </div>
     
   </div>
@@ -519,7 +539,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#链接"><span class="nav-number">1.</span> <span class="nav-text">链接</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#过后填坑···"><span class="nav-number">2.</span> <span class="nav-text">过后填坑···</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#全局环境"><span class="nav-number">1.</span> <span class="nav-text">全局环境</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#函数环境"><span class="nav-number">2.</span> <span class="nav-text">函数环境</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#直接调用"><span class="nav-number">2.1.</span> <span class="nav-text">直接调用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对象方法中"><span class="nav-number">2.2.</span> <span class="nav-text">对象方法中</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#构造函数"><span class="nav-number">2.3.</span> <span class="nav-text">构造函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#call-apply"><span class="nav-number">2.4.</span> <span class="nav-text">call(),apply()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#bind"><span class="nav-number">2.5.</span> <span class="nav-text">bind()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#闭包"><span class="nav-number">2.6.</span> <span class="nav-text">闭包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DOM事件处理函数"><span class="nav-number">2.7.</span> <span class="nav-text">DOM事件处理函数</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
