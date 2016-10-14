@@ -1,0 +1,861 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="canvas," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Kongwsh" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="HTML5 的 canvas 元素使用 JavaScript 在网页上绘制图像。
+创建canvas1&amp;lt;canvas id=&quot;myCanvas&quot; width=&quot;200&quot; height=&quot;100&quot;&amp;gt;&amp;lt;/canvas&amp;gt;
+Canvas是一个HTML标签，设置id和样式：width属性和height属性，不带单位，因为这样也一同决定了画布的分辨率。
+初始化JavaScript 使用">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Canvas基础">
+<meta property="og:url" content="http://yoursite.com/2016/07/28/canvas-0/index.html">
+<meta property="og:site_name" content="Kongwsh">
+<meta property="og:description" content="HTML5 的 canvas 元素使用 JavaScript 在网页上绘制图像。
+创建canvas1&amp;lt;canvas id=&quot;myCanvas&quot; width=&quot;200&quot; height=&quot;100&quot;&amp;gt;&amp;lt;/canvas&amp;gt;
+Canvas是一个HTML标签，设置id和样式：width属性和height属性，不带单位，因为这样也一同决定了画布的分辨率。
+初始化JavaScript 使用">
+<meta property="og:updated_time" content="2016-10-14T15:18:11.837Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Canvas基础">
+<meta name="twitter:description" content="HTML5 的 canvas 元素使用 JavaScript 在网页上绘制图像。
+创建canvas1&amp;lt;canvas id=&quot;myCanvas&quot; width=&quot;200&quot; height=&quot;100&quot;&amp;gt;&amp;lt;/canvas&amp;gt;
+Canvas是一个HTML标签，设置id和样式：width属性和height属性，不带单位，因为这样也一同决定了画布的分辨率。
+初始化JavaScript 使用">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"always"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 6305729963366548000,
+      author: 'Author'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/07/28/canvas-0/"/>
+
+  <title> Canvas基础 | Kongwsh </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Kongwsh</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="#" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Canvas基础
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-07-28T12:23:08+08:00" content="2016-07-28">
+              2016-07-28
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/07/28/canvas-0/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/28/canvas-0/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+              &nbsp; | &nbsp;
+              <span class="page-pv">view
+              <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>times
+              </span>
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>HTML5 的 canvas 元素使用 JavaScript 在网页上绘制图像。</p>
+<h1 id="创建canvas"><a href="#创建canvas" class="headerlink" title="创建canvas"></a>创建canvas</h1><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">canvas</span> <span class="attr">id</span>=<span class="string">"myCanvas"</span> <span class="attr">width</span>=<span class="string">"200"</span> <span class="attr">height</span>=<span class="string">"100"</span>&gt;</span><span class="tag">&lt;/<span class="name">canvas</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>Canvas是一个HTML标签，设置id和样式：width属性和height属性，不带单位，因为这样也一同决定了画布的分辨率。</p>
+<h1 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h1><p>JavaScript 使用 id 来寻找 canvas 元素：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> canvas = <span class="built_in">document</span>.getElementById(<span class="string">'canvas'</span>);</div><div class="line"><span class="comment">//context绘图上下文环境，提供绘制接口</span></div><div class="line"><span class="keyword">var</span> context = canvas.getContext(<span class="string">'2d'</span>);</div></pre></td></tr></table></figure></p>
+<p>接下来使用context绘制，<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">//指定大小</div><div class="line">canvas.width</div><div class="line">canvas.height</div></pre></td></tr></table></figure></p>
+<h1 id="Canvas基于状态绘制"><a href="#Canvas基于状态绘制" class="headerlink" title="Canvas基于状态绘制"></a>Canvas基于状态绘制</h1><p>先设置绘图状态<br>再调用具体函数绘制</p>
+<h1 id="状态函数"><a href="#状态函数" class="headerlink" title="状态函数"></a>状态函数</h1><p>context.moveTo();<br>contxt.lineTo();<br>//线段粗细<br>context.lineWidth = 5;<br>//线条颜色<br>context.strokeStyle = “blue”;<br>//填充颜色<br>context. fillStyle =”rgb(2,100,30)”;<br>//重新规划路径，清空<br>context.beginPath();<br>//自动闭合路径,对fill（）没有用<br>context.closePath();</p>
+<h1 id="绘制函数"><a href="#绘制函数" class="headerlink" title="绘制函数"></a>绘制函数</h1><p>context.stroke();<br>context.fill();</p>
+<h1 id="七巧板demo"><a href="#七巧板demo" class="headerlink" title="七巧板demo"></a>七巧板demo</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
+<p>#弧<br>context.arc(<br>centerx,centery,radius,<br>startingAngle,endingAngle,<br>anticlockwise = false//顺时针默认<br>)</p>
+<p>#倒计时<br>第(i,j)个圆的圆心位置：<br>centerX：x+j<em>2(R+1) +(R+1)<br>centerY：y+i</em>2(R+1) +(R+1)<br>时间相关的函数：<br>const endtime = new Date(2016,6,1,12,23,56);<br>//月份从零开始计，6代表7月</p>
+<h1 id="简单动画架构"><a href="#简单动画架构" class="headerlink" title="简单动画架构"></a>简单动画架构</h1><p>setInterval(<br>//匿名函数<br>function(){<br>    //绘制当前画面<br>    render();<br>    //调整数据<br>    update();<br>},<br>50<br>);</p>
+<h1 id="刷新"><a href="#刷新" class="headerlink" title="刷新"></a>刷新</h1><p>context.clearRect(x,y,width,height);</p>
+<p>#绘制封闭多边形<br>成对使用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">context.beginPath();//起始一条路径，或重置当前路径</div><div class="line">context.closePath();//  创建从当前点回到起始点的路径</div></pre></td></tr></table></figure></p>
+<p>当我们绘制一个需要描边的填充图时，应该先填充颜色，在描边，否则填充颜色会覆盖边。</p>
+<h1 id="四边形"><a href="#四边形" class="headerlink" title="四边形"></a>四边形</h1><p>context.rect(x,y,width,height)；//规划矩形路径,路径方向顺时针方向<br>context.fillRect(x,y,width,height);//直接使用当前的fillStyle，绘制出填充的矩形<br>context.strokeRect(x,y,wodth,height)；//使用当前的strokeStyle，绘制边框<br>clearRect();//在给定的矩形内清除指定的像素<br>后绘制图形会遮盖前绘制的图形</p>
+<h1 id="颜色表示方法"><a href="#颜色表示方法" class="headerlink" title="颜色表示方法"></a>颜色表示方法</h1><p>#ffffff<br>#642<br>rgb(255,128,0)<br>rgba(100,100,100,0.8)<br>hsl(20,62%,28%)<br>hsla(40,82%,33%,0.6)<br>red</p>
+<h1 id="线条的属性"><a href="#线条的属性" class="headerlink" title="线条的属性"></a>线条的属性</h1><p>lineWidth<br>线条两端，只能用于开始和结尾处，不能用于连接处,设置或返回线条的结束端点样式<br>lineCap:butt(default)<br>        round<br>        square<br>线条连接,设置或返回两条线相交时，所创建的拐角类型<br>lineJoin:miter(default)//尖角<br>         bevel//斜接<br>         round//圆角</p>
+<p>miterLimite：设置或返回最大斜接长度“当宽线条使用设置为 “miter” 的 lineJoin 属性绘制并且两条线段以锐角相交的时候，所得的斜面可能相当长。当斜面太长，就会变得不协调。miterLimit 属性为斜面的长度设置一个上限。这个属性表示斜面长度和线条长度的比值。默认是 10，意味着一个斜面的长度不应该超过线条宽度的 10 倍。如果斜面达到这个长度，它就变成斜角了。”</p>
+<h1 id="图形变换"><a href="#图形变换" class="headerlink" title="图形变换"></a>图形变换</h1><p>位移 translate(x,y)//基坐标，叠加作用<br>旋转 rotate(deg)//弧度值<br>缩放 scale(sx,sy)</p>
+<p>context.save();//保存当前的图形状态<br>context.restore();//成对出现，恢复，返回在save()所有状态</p>
+<p>缩放 scale(sx,sy);<br>副作用:坐标，边框</p>
+<h1 id="变换矩阵"><a href="#变换矩阵" class="headerlink" title="变换矩阵"></a>变换矩阵</h1><p>transform(a,b,c,d,e,f)<br>|a c e|<br>|b d f|<br>|0 0 1|<br>a水平缩放(1)<br>b水平倾斜(0)<br>c垂直倾斜(0)<br>d垂直缩放(1)<br>e水平位移(0)<br>f垂直位移(0)<br>多次级联<br>context.setTransform(a,b,c,d,e,f);//使之前的transform失效</p>
+<h1 id="样式"><a href="#样式" class="headerlink" title="样式"></a>样式</h1><p>fillStyle||strokeStyle<br>线性渐变色<br>1.var grd = context.createLinearGradient(xstart,ystart,xend,yend);<br>2.grd.addColorStop(stop,color);//stop取0~1,规定渐变对象中的颜色和停止位置<br>径向渐变 Radial Gradient<br>1.var grd = context.createRadialGradient(x0,y0,r0,x1,y1,r1);<br>2.grd.addColorStop(stop,color);//stop取0~1</p>
+<p> 使用图片/画布/video创建样式<br>createPattern(canvas/img/video,repeat-style)；//在指定的方向上重复指定的元素<br>repeat-style：no-repeat 不重复<br>              repeat-x   沿x轴重复<br>              repeat-y   沿y轴重复<br>              repeat     x，y都重复</p>
+<h1 id="曲线"><a href="#曲线" class="headerlink" title="曲线"></a>曲线</h1><p>cxt.arc(centerx,centery,radius,staertingAvgle,endingAngle,anticlockwise =flase);<br>//无论顺逆，角度不变<br>arcTo(x1,y1,x2,y2,radius)<br>控制点用moveTo指定<br>贝塞尔曲线Bazier<br>context.quadraticCurveTo(cpx,cpy,x,y);<br>context.bezierCurveTo(cp1x,cp1y,cp2x,cp2y,x,y);</p>
+<h1 id="文字渲染"><a href="#文字渲染" class="headerlink" title="文字渲染"></a>文字渲染</h1><p>fillText()  在画布上绘制“被填充的”文本<br>strokeText()    在画布上绘制文本（无填充）<br>参数：<br>text     规定在画布上输出的文本。<br>x   开始绘制文本的 x 坐标位置（相对于画布）。<br>y   开始绘制文本的 y 坐标位置（相对于画布）。<br>maxWidth    可选。允许的最大文本宽度，以像素计。<br>属性：<br>font    设置或返回文本内容的当前字体属性<br>textAlign   设置或返回文本内容的当前对齐方式<br>textBaseline    设置或返回在绘制文本时使用的当前文本基线</p>
+<h1 id="阴影"><a href="#阴影" class="headerlink" title="阴影"></a>阴影</h1><p>shadowColor:设置或返回用于阴影的颜色<br>shadowBlur:设置或返回用于阴影的模糊级别<br>shadowOffsetX:设置或返回阴影距形状的水平距离<br>shadowOffsetY:设置或返回阴影距形状的垂直距离</p>
+<h1 id="剪辑区域"><a href="#剪辑区域" class="headerlink" title="剪辑区域"></a>剪辑区域</h1><p>clip();<br>从原始画布剪切任意形状和尺寸的区域</p>
+<h1 id="路径方向"><a href="#路径方向" class="headerlink" title="路径方向"></a>路径方向</h1><p>非零环绕原则</p>
+<h1 id="交互"><a href="#交互" class="headerlink" title="交互"></a>交互</h1><p>cxt.clearRect(x,y,width,height);//自清空，用于动画<br>cxt.isPointInPath(x,y);//检测这个点是否在规划的路径中<br>canvas.addEventListener(“mouseup”,detect);<br>getBoundingClientRect获取元素位置。用于获得页面中某个元素的左，上，右和下分别相对浏览器视窗的位置。getBoundingClientRect是DOM元素到浏览器可视范围的距离（不包含文档卷起的部分）。该函数返回一个Object对象，该对象有6个属性：top,lef,right,bottom,width,height；这里的top、left和css中的理解很相似，width、height是元素自身的宽高，但是right，bottom和css中的理解有点不一样。right是指元素右边界距窗口最左边的距离，bottom是指元素下边界距窗口最上面的距离。</p>
+<h1 id="图形库"><a href="#图形库" class="headerlink" title="图形库"></a>图形库</h1><p>canvasplus<br><a href="https://code.google.com/p/canvasplus/" target="_blank" rel="external">https://code.google.com/p/canvasplus/</a></p>
+<p>artisan js<br><a href="http://artisanjs.com/" target="_blank" rel="external">http://artisanjs.com/</a></p>
+<p>Rgraph<br><a href="https://roopons.com.au/wp-content/plugins/viral-optins/js/rgraph/" target="_blank" rel="external">https://roopons.com.au/wp-content/plugins/viral-optins/js/rgraph/</a></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/canvas/" rel="tag">#canvas</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/07/24/sublime-1/" rel="next" title="Sublime Text3 基础篇">
+                <i class="fa fa-chevron-left"></i> Sublime Text3 基础篇
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/08/17/javascript-2/" rel="prev" title="JavaScript学习笔记之闭包">
+                JavaScript学习笔记之闭包 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+
+  
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/07/28/canvas-0/"
+           data-title="Canvas基础" data-url="http://yoursite.com/2016/07/28/canvas-0/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="Kong" />
+          <p class="site-author-name" itemprop="name">Kong</p>
+          <p class="site-description motion-element" itemprop="description">Front-End</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">20</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/Kongwsh" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#创建canvas"><span class="nav-number">1.</span> <span class="nav-text">创建canvas</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#初始化"><span class="nav-number">2.</span> <span class="nav-text">初始化</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Canvas基于状态绘制"><span class="nav-number">3.</span> <span class="nav-text">Canvas基于状态绘制</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#状态函数"><span class="nav-number">4.</span> <span class="nav-text">状态函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#绘制函数"><span class="nav-number">5.</span> <span class="nav-text">绘制函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#七巧板demo"><span class="nav-number">6.</span> <span class="nav-text">七巧板demo</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#简单动画架构"><span class="nav-number">7.</span> <span class="nav-text">简单动画架构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#刷新"><span class="nav-number">8.</span> <span class="nav-text">刷新</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#四边形"><span class="nav-number">9.</span> <span class="nav-text">四边形</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#颜色表示方法"><span class="nav-number">10.</span> <span class="nav-text">颜色表示方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#线条的属性"><span class="nav-number">11.</span> <span class="nav-text">线条的属性</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#图形变换"><span class="nav-number">12.</span> <span class="nav-text">图形变换</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#变换矩阵"><span class="nav-number">13.</span> <span class="nav-text">变换矩阵</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#样式"><span class="nav-number">14.</span> <span class="nav-text">样式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#曲线"><span class="nav-number">15.</span> <span class="nav-text">曲线</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#文字渲染"><span class="nav-number">16.</span> <span class="nav-text">文字渲染</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#阴影"><span class="nav-number">17.</span> <span class="nav-text">阴影</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#剪辑区域"><span class="nav-number">18.</span> <span class="nav-text">剪辑区域</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#路径方向"><span class="nav-number">19.</span> <span class="nav-text">路径方向</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#交互"><span class="nav-number">20.</span> <span class="nav-text">交互</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#图形库"><span class="nav-number">21.</span> <span class="nav-text">图形库</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Kong</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+        
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv"><i class="fa fa-user"></i><span class="busuanzi-value" id="busuanzi_value_site_uv"></span></span>
+  
+
+  
+    <span class="site-pv"><i class="fa fa-eye"></i><span class="busuanzi-value" id="busuanzi_value_site_pv"></span></span>
+  
+  
+</div>
+
+
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"Kongwsh"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+      
+      <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+      <script src="/js/src/hook-duoshuo.js"></script>
+    
+  
+
+
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+       search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            isfetched = true;
+            $('.popup').detach().appendTo('.header-inner');
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var matchcounts = 0;
+                var str='<ul class=\"search-result-list\">';                
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length > 1) {
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = true;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = data.url;
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '' && data_content != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title < 0 && index_content < 0 ){
+                                isMatch = false;
+                            } else {
+                                if (index_content < 0) {
+                                    index_content = 0;
+                                }
+                                if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            }
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        matchcounts += 1;
+                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out 100 characters
+                            var start = first_occur - 20;
+                            var end = first_occur + 80;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 50;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substring(start, end);
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                            });
+                            
+                            str += "<p class=\"search-result\">" + match_content +"...</p>"
+                        }
+                        str += "</li>";
+                    }
+                })};
+                str += "</ul>";
+                if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+                if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+                $resultContent.innerHTML = str;
+            });
+            proceedsearch();
+        }
+    });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').mousedown(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+  
+
+  
+
+  
+
+</body>
+</html>

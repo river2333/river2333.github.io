@@ -105,7 +105,7 @@
 <meta property="og:site_name" content="Kongwsh">
 <meta property="og:description" content="一个闭包就是一个函数和被创建的函数中的作用域对象的组合。–MDN">
 <meta property="og:image" content="http://yoursite.com/images/scopechain.jpg">
-<meta property="og:updated_time" content="2016-08-26T01:06:22.782Z">
+<meta property="og:updated_time" content="2016-10-10T01:14:01.530Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript学习笔记之闭包">
 <meta name="twitter:description" content="一个闭包就是一个函数和被创建的函数中的作用域对象的组合。–MDN">
@@ -361,8 +361,8 @@
 <p>作用域链本质：是一个指向变量对象的指针列表。<br>作用域链用途：是保证对执行环境有权访问的所有变量和函数的有序访问。</p>
 <p>标识符解析是沿着作用域链一级一级地搜索标识符的过程。搜索过程始终从作用域链最前端开始，然后逐级向后回溯，直到找到表示标识符为止。内部环境可以通过作用域链访问所有外部环境，反之不行，可见这些环境之间的联系是线性的，有次序的，单向的。</p>
 <p>一般来说，函数执行完毕，其对应的活动对象会被销毁。但是闭包情况下，，其外部函数在执行完毕后，其执行环境的作用域链会被销毁，但是其活动对象仍留在内存中。原因是，内部函数会将外部函数的活动对象添加到自己的作用域链中，即使外部函数执行完毕，内部函数的作用域链仍在引用其活动对象。</p>
-<h1 id="for循环中闭包问题"><a href="#for循环中闭包问题" class="headerlink" title="for循环中闭包问题"></a>for循环中闭包问题</h1><p>作用域链这种配置机制引出一个副作用，即在迭代情况下，闭包只能取得包含函数中任何变量的最后一个值。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">for (var i = 0, arr = []; i &lt;= 3; i++) &#123;</div><div class="line">    arr.push(function() &#123;</div><div class="line">        alert(i);</div><div class="line">    &#125;);</div><div class="line">&#125;</div><div class="line">arr[0](); //4</div><div class="line">arr[1](); //4</div></pre></td></tr></table></figure></p>
-<p>for循环执行四次，每次执行都向arr数组中添加一个匿名函数，但是这个匿名函数不执行，不会创建活动对象。当调用数组中的匿名函数时，for循环已经结束，i=4，所以arr中每一项执行的结果都是一样的。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">for (var i = 0, arr = []; i &lt;= 3; i++) &#123;</div><div class="line">    arr.push((function(j) &#123;</div><div class="line">            return function() &#123;</div><div class="line">                alert(j);</div><div class="line">            &#125;;</div><div class="line">        &#125;)(i)</div><div class="line">    );</div><div class="line">&#125;</div><div class="line">arr[0](); //0</div><div class="line">arr[1](); //1</div></pre></td></tr></table></figure></p>
+<h1 id="for循环中闭包问题"><a href="#for循环中闭包问题" class="headerlink" title="for循环中闭包问题"></a>for循环中闭包问题</h1><p>作用域链这种配置机制引出一个副作用，即在迭代情况下，闭包只能取得包含函数中任何变量的最后一个值。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>, arr = []; i &lt;= <span class="number">3</span>; i++) &#123;</div><div class="line">    arr.push(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        alert(i);</div><div class="line">    &#125;);</div><div class="line">&#125;</div><div class="line">arr[<span class="number">0</span>](); <span class="comment">//4</span></div><div class="line">arr[<span class="number">1</span>](); <span class="comment">//4</span></div></pre></td></tr></table></figure></p>
+<p>for循环执行四次，每次执行都向arr数组中添加一个匿名函数，但是这个匿名函数不执行，不会创建活动对象。当调用数组中的匿名函数时，for循环已经结束，i=4，所以arr中每一项执行的结果都是一样的。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>, arr = []; i &lt;= <span class="number">3</span>; i++) &#123;</div><div class="line">    arr.push((<span class="function"><span class="keyword">function</span>(<span class="params">j</span>) </span>&#123;</div><div class="line">            <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">                alert(j);</div><div class="line">            &#125;;</div><div class="line">        &#125;)(i)</div><div class="line">    );</div><div class="line">&#125;</div><div class="line">arr[<span class="number">0</span>](); <span class="comment">//0</span></div><div class="line">arr[<span class="number">1</span>](); <span class="comment">//1</span></div></pre></td></tr></table></figure></p>
 <p>闭包有一个作用保护私有变量，这里j作为外部函数的私有变量被闭包保护起来。function(j)这个外部函数是自执行匿名函数，会创建活动对象，因为闭包的存在，每次执行产生活动对象会保留下来。<br>每次循环外部匿名函数执行时的作用域链之间的关系如图：<br><img src="/images/scopechain.jpg" alt=""></p>
 <p>相关资源：<br><a href="http://www.ibm.com/developerworks/cn/linux/l-cn-closure/index.html" target="_blank" rel="external">闭包的概念、形式与应用</a><br><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Closures" target="_blank" rel="external">MDN-闭包</a></p>
 
@@ -395,8 +395,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/07/24/sublime-1/" rel="next" title="Sublime Text3 基础篇">
-                <i class="fa fa-chevron-left"></i> Sublime Text3 基础篇
+              <a href="/2016/07/28/canvas-0/" rel="next" title="Canvas基础">
+                <i class="fa fa-chevron-left"></i> Canvas基础
               </a>
             
           </div>
@@ -479,7 +479,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">11</span>
+              <span class="site-state-item-count">20</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -489,7 +489,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

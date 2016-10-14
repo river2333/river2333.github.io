@@ -2,23 +2,93 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yoursite.com/2016/08/25/javascript-3/</loc>
+    <loc>http://yoursite.com/2016/08/25/javascript-4/</loc>
     
-    <lastmod>2016-08-26T10:34:27.550Z</lastmod>
+    <lastmod>2016-10-14T16:10:47.170Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2016/08/22/javascript-0/</loc>
+    <loc>http://yoursite.com/2016/09/04/AJAX/</loc>
     
-    <lastmod>2016-08-26T07:41:20.993Z</lastmod>
+    <lastmod>2016-10-14T16:10:40.202Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2016/10/01/callback/</loc>
+    
+    <lastmod>2016-10-14T16:02:17.833Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2016/07/28/canvas-0/</loc>
+    
+    <lastmod>2016-10-14T15:18:11.837Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2016/09/25/responsiveweb-0/</loc>
+    
+    <lastmod>2016-10-14T14:33:32.136Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2016/08/25/sidebar/</loc>
+    
+    <lastmod>2016-10-12T15:04:24.639Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2016/08/25/javascript-3/</loc>
+    
+    <lastmod>2016-10-10T01:14:05.311Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://yoursite.com/2016/08/17/javascript-2/</loc>
     
-    <lastmod>2016-08-26T01:06:22.782Z</lastmod>
+    <lastmod>2016-10-10T01:14:01.530Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2016/08/22/javascript-1/</loc>
+    
+    <lastmod>2016-10-10T01:13:57.280Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2016/10/02/html-1/</loc>
+    
+    <lastmod>2016-10-10T01:13:43.140Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2016/08/22/javascript-0/</loc>
+    
+    <lastmod>2016-10-09T14:53:34.154Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2016/09/02/html-0/</loc>
+    
+    <lastmod>2016-09-22T04:49:54.057Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2016/09/21/waterfall/</loc>
+    
+    <lastmod>2016-09-21T07:35:42.137Z</lastmod>
     
   </url>
   
@@ -26,13 +96,6 @@
     <loc>http://yoursite.com/2016/07/05/sublime-0/</loc>
     
     <lastmod>2016-08-26T01:02:18.820Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2016/08/22/javascript-1/</loc>
-    
-    <lastmod>2016-08-26T01:00:20.410Z</lastmod>
     
   </url>
   
