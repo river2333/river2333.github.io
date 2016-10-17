@@ -4,14 +4,65 @@
 
     
   <url>
+    <loc>http://yoursite.com/2016/09/25/responsiveweb-0/</loc>
+    <lastmod>2016-10-17T02:12:52.279Z</lastmod>
+    <data>
+        <display>
+        <title>理解响应式布局</title>
+        <pubTime>2016-09-25T07:36:08.000Z</pubTime>
+        
+        <tag>HTML</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2016/08/25/waterfall/</loc>
-    <lastmod>2016-10-17T01:48:41.595Z</lastmod>
+    <lastmod>2016-10-17T02:04:51.678Z</lastmod>
     <data>
         <display>
         <title>瀑布流布局</title>
         <pubTime>2016-08-25T07:36:08.000Z</pubTime>
         
         <tag>HTML</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2016/08/25/javascript-4/</loc>
+    <lastmod>2016-10-17T02:04:30.333Z</lastmod>
+    <data>
+        <display>
+        <title>原生JavaScript与jQueryAPI对比</title>
+        <pubTime>2016-08-25T07:36:08.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2016/07/28/canvas-0/</loc>
+    <lastmod>2016-10-17T01:58:01.356Z</lastmod>
+    <data>
+        <display>
+        <title>Canvas基础</title>
+        <pubTime>2016-07-28T04:23:08.000Z</pubTime>
+        
+        <tag>canvas</tag>
          
          
            
@@ -29,23 +80,6 @@
         <pubTime>2016-08-25T07:36:08.000Z</pubTime>
         
         <tag>demo</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2016/08/25/javascript-4/</loc>
-    <lastmod>2016-10-15T15:27:55.572Z</lastmod>
-    <data>
-        <display>
-        <title>原生JavaScript与jQueryAPI对比</title>
-        <pubTime>2016-08-25T07:36:08.000Z</pubTime>
-        
-        <tag>JavaScript</tag>
          
          
            
@@ -106,23 +140,6 @@
 
     
   <url>
-    <loc>http://yoursite.com/2016/09/25/responsiveweb-0/</loc>
-    <lastmod>2016-10-15T13:47:00.611Z</lastmod>
-    <data>
-        <display>
-        <title>理解响应式布局</title>
-        <pubTime>2016-09-25T07:36:08.000Z</pubTime>
-        
-        <tag>HTML</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://yoursite.com/2016/09/04/AJAX/</loc>
     <lastmod>2016-10-15T13:24:20.490Z</lastmod>
     <data>
@@ -131,23 +148,6 @@
         <pubTime>2016-09-04T07:36:08.000Z</pubTime>
         
         <tag>JavaScript</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2016/07/28/canvas-0/</loc>
-    <lastmod>2016-10-14T15:18:11.837Z</lastmod>
-    <data>
-        <display>
-        <title>Canvas基础</title>
-        <pubTime>2016-07-28T04:23:08.000Z</pubTime>
-        
-        <tag>canvas</tag>
          
          
            
