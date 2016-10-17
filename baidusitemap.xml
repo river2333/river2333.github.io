@@ -3,12 +3,13 @@
 
 
     
+    
   <url>
-    <loc>http://yoursite.com/2016/09/25/responsiveweb-0/</loc>
-    <lastmod>2016-10-17T02:12:52.279Z</lastmod>
+    <loc>http://yoursite.com/2016/09/25/waterfall/</loc>
+    <lastmod>2016-10-17T02:56:48.138Z</lastmod>
     <data>
         <display>
-        <title>理解响应式布局</title>
+        <title>瀑布流布局</title>
         <pubTime>2016-09-25T07:36:08.000Z</pubTime>
         
         <tag>HTML</tag>
@@ -21,12 +22,29 @@
 
     
   <url>
-    <loc>http://yoursite.com/2016/08/25/waterfall/</loc>
-    <lastmod>2016-10-17T02:04:51.678Z</lastmod>
+    <loc>http://yoursite.com/2016/09/02/html-1/</loc>
+    <lastmod>2016-10-17T02:56:22.857Z</lastmod>
     <data>
         <display>
-        <title>瀑布流布局</title>
-        <pubTime>2016-08-25T07:36:08.000Z</pubTime>
+        <title>浏览器模式和文档模式</title>
+        <pubTime>2016-09-02T07:36:08.000Z</pubTime>
+        
+        <tag>HTML</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2016/09/25/responsiveweb-0/</loc>
+    <lastmod>2016-10-17T02:12:52.279Z</lastmod>
+    <data>
+        <display>
+        <title>理解响应式布局</title>
+        <pubTime>2016-09-25T07:36:08.000Z</pubTime>
         
         <tag>HTML</tag>
          
@@ -112,23 +130,6 @@
         <display>
         <title>offsetHeight,clientHeight,scrollHeight</title>
         <pubTime>2016-09-02T03:31:08.000Z</pubTime>
-        
-        <tag>HTML</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2016/10/02/html-1/</loc>
-    <lastmod>2016-10-15T13:50:06.085Z</lastmod>
-    <data>
-        <display>
-        <title>浏览器模式和文档模式</title>
-        <pubTime>2016-10-02T07:36:08.000Z</pubTime>
         
         <tag>HTML</tag>
          
