@@ -4,8 +4,42 @@
 
     
   <url>
+    <loc>http://yoursite.com/2016/08/25/waterfall/</loc>
+    <lastmod>2016-10-17T01:48:41.595Z</lastmod>
+    <data>
+        <display>
+        <title>瀑布流布局</title>
+        <pubTime>2016-08-25T07:36:08.000Z</pubTime>
+        
+        <tag>HTML</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2016/08/25/sidebar/</loc>
+    <lastmod>2016-10-15T15:41:55.122Z</lastmod>
+    <data>
+        <display>
+        <title>实现侧边信息栏</title>
+        <pubTime>2016-08-25T07:36:08.000Z</pubTime>
+        
+        <tag>demo</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2016/08/25/javascript-4/</loc>
-    <lastmod>2016-10-14T16:10:47.170Z</lastmod>
+    <lastmod>2016-10-15T15:27:55.572Z</lastmod>
     <data>
         <display>
         <title>原生JavaScript与jQueryAPI对比</title>
@@ -21,12 +55,12 @@
 
     
   <url>
-    <loc>http://yoursite.com/2016/09/04/AJAX/</loc>
-    <lastmod>2016-10-14T16:10:40.202Z</lastmod>
+    <loc>http://yoursite.com/2016/10/01/callback/</loc>
+    <lastmod>2016-10-15T15:07:06.236Z</lastmod>
     <data>
         <display>
-        <title>理解AJAX</title>
-        <pubTime>2016-09-04T07:36:08.000Z</pubTime>
+        <title>理解回调函数，回调地狱，Promise</title>
+        <pubTime>2016-10-01T07:36:08.000Z</pubTime>
         
         <tag>JavaScript</tag>
          
@@ -38,12 +72,63 @@
 
     
   <url>
-    <loc>http://yoursite.com/2016/10/01/callback/</loc>
-    <lastmod>2016-10-14T16:02:17.833Z</lastmod>
+    <loc>http://yoursite.com/2016/09/02/html-0/</loc>
+    <lastmod>2016-10-15T13:52:07.240Z</lastmod>
     <data>
         <display>
-        <title>理解回调函数，回调地狱，Promise</title>
-        <pubTime>2016-10-01T07:36:08.000Z</pubTime>
+        <title>offsetHeight,clientHeight,scrollHeight</title>
+        <pubTime>2016-09-02T03:31:08.000Z</pubTime>
+        
+        <tag>HTML</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2016/10/02/html-1/</loc>
+    <lastmod>2016-10-15T13:50:06.085Z</lastmod>
+    <data>
+        <display>
+        <title>浏览器模式和文档模式</title>
+        <pubTime>2016-10-02T07:36:08.000Z</pubTime>
+        
+        <tag>HTML</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2016/09/25/responsiveweb-0/</loc>
+    <lastmod>2016-10-15T13:47:00.611Z</lastmod>
+    <data>
+        <display>
+        <title>理解响应式布局</title>
+        <pubTime>2016-09-25T07:36:08.000Z</pubTime>
+        
+        <tag>HTML</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2016/09/04/AJAX/</loc>
+    <lastmod>2016-10-15T13:24:20.490Z</lastmod>
+    <data>
+        <display>
+        <title>理解AJAX</title>
+        <pubTime>2016-09-04T07:36:08.000Z</pubTime>
         
         <tag>JavaScript</tag>
          
@@ -63,40 +148,6 @@
         <pubTime>2016-07-28T04:23:08.000Z</pubTime>
         
         <tag>canvas</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2016/09/25/responsiveweb-0/</loc>
-    <lastmod>2016-10-14T14:33:32.136Z</lastmod>
-    <data>
-        <display>
-        <title>理解响应式布局</title>
-        <pubTime>2016-09-25T07:36:08.000Z</pubTime>
-        
-        <tag>HTML</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2016/08/25/sidebar/</loc>
-    <lastmod>2016-10-12T15:04:24.639Z</lastmod>
-    <data>
-        <display>
-        <title>实现侧边信息栏</title>
-        <pubTime>2016-08-25T07:36:08.000Z</pubTime>
-        
-        <tag>demo</tag>
          
          
            
@@ -157,23 +208,6 @@
 
     
   <url>
-    <loc>http://yoursite.com/2016/10/02/html-1/</loc>
-    <lastmod>2016-10-10T01:13:43.140Z</lastmod>
-    <data>
-        <display>
-        <title>浏览器模式和文档模式</title>
-        <pubTime>2016-10-02T07:36:08.000Z</pubTime>
-        
-        <tag>HTML</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://yoursite.com/2016/08/22/javascript-0/</loc>
     <lastmod>2016-10-09T14:53:34.154Z</lastmod>
     <data>
@@ -183,38 +217,6 @@
         
         <tag>JavaScript</tag>
          
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2016/09/02/html-0/</loc>
-    <lastmod>2016-09-22T04:49:54.057Z</lastmod>
-    <data>
-        <display>
-        <title>offsetHeight,clientHeight,scrollHeight</title>
-        <pubTime>2016-09-02T03:31:08.000Z</pubTime>
-        
-        <tag>HTML</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2016/09/21/waterfall/</loc>
-    <lastmod>2016-09-21T07:35:42.137Z</lastmod>
-    <data>
-        <display>
-        <title></title>
-        <pubTime>2016-09-21T07:35:42.137Z</pubTime>
-        
          
            
         </display>

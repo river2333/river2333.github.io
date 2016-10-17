@@ -104,12 +104,10 @@
 <meta property="og:url" content="http://yoursite.com/2016/09/25/responsiveweb-0/index.html">
 <meta property="og:site_name" content="Kongwsh">
 <meta property="og:description" content="响应式布局概念自适应布局：排版不变，对于分辨率和视区的变化不能很好的响应。2010年，Ethan Marrate 首次提出响应式网站是一个理念，是多项技术的综合体。">
-<meta property="og:image" content="http://editor.method.ac/">
-<meta property="og:updated_time" content="2016-10-14T14:33:32.136Z">
+<meta property="og:updated_time" content="2016-10-15T13:47:00.611Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="理解响应式布局">
 <meta name="twitter:description" content="响应式布局概念自适应布局：排版不变，对于分辨率和视区的变化不能很好的响应。2010年，Ethan Marrate 首次提出响应式网站是一个理念，是多项技术的综合体。">
-<meta name="twitter:image" content="http://editor.method.ac/">
 
 
 
@@ -353,45 +351,64 @@
 <ul>
 <li>弹性网格布局 flexible grid layout</li>
 <li>弹性图片 flexible image</li>
-<li>媒体查询 media queries<br>响应式设计使网站可以在任何的设备和任何尺寸的屏幕友好的访问，网站仅需要一个版本，可以完美适配任何尺寸的屏幕，在不同尺寸的设备中，网站展现出不同的设计风格。</li>
+<li>媒体查询 media queries</li>
 </ul>
+<p>响应式设计使网站可以在任何的设备和任何尺寸的屏幕友好的访问，网站仅需要一个版本，可以完美适配任何尺寸的屏幕，在不同尺寸的设备中，网站展现出不同的设计风格。</p>
 <p>响应式布局的优点：</p>
 <ol>
 <li>减少工作量</li>
 <li>节省时间</li>
 <li>每个设备都能得到正确的设计</li>
-<li>搜索优化<br>响应式布局的缺点:</li>
+<li>搜索优化</li>
+</ol>
+<p>响应式布局的缺点:</p>
+<ol>
 <li>加载更多的样式和脚本</li>
 <li>设计比较难精确定位和控制</li>
-<li>老版本浏览器兼容性不好<h1 id="弹性布局"><a href="#弹性布局" class="headerlink" title="弹性布局"></a>弹性布局</h1>所谓的弹性布局，说的是在创建网站的时候，采用流体网格布局方式，动态地调整网站布局宽度以此来适应各种设备屏幕大小。<br>##测量单位使用相对长度单位（em/rem）<br>因为视窗（ viewport ）的高度和宽度在不同设备之间是不断变化的。</li>
+<li>老版本浏览器兼容性不好</li>
+</ol>
+<h1 id="弹性布局"><a href="#弹性布局" class="headerlink" title="弹性布局"></a>弹性布局</h1><p>所谓的弹性布局，说的是在创建网站的时候，采用流体网格布局方式，动态地调整网站布局宽度以此来适应各种设备屏幕大小。</p>
+<h2 id="测量单位使用相对长度单位（em-rem）"><a href="#测量单位使用相对长度单位（em-rem）" class="headerlink" title="测量单位使用相对长度单位（em/rem）"></a>测量单位使用相对长度单位（em/rem）</h2><p>因为视窗（ viewport ）的高度和宽度在不同设备之间是不断变化的。</p>
+<ol>
 <li>em相对参照物为父元素font-size</li>
 <li>继承性，继续向上找祖父元素的font-size</li>
 <li>如果没有设置font-size，则使用浏览器默认的字体大小，1em = 16px</li>
 <li>缺点是容易混乱，因为祖父元素的font-size不一定一致。</li>
-<li>rem的相对参照物为跟元素html，相对参照固定不变，解决了em的缺点，当没有设置font-size时，浏览器会有一个默认的rem，1rem=16px<h2 id="flexbox"><a href="#flexbox" class="headerlink" title="flexbox"></a>flexbox</h2>CSS3 弹性盒子(Flexible Box 或 Flexbox)，是一种布局方式，当页面需要适应不同的屏幕大小以及设备类型时，它依然能确保元素拥有更恰当的排布行为。对很多应用程序来说，当不使用浮动，且弹性容器的外边距也不需要与其内容的外边距合并时，弹性盒子模型比起方框模型要好一些。<br>弹性盒子布局主要适用于应用程序的组件及小规模的布局，而（新兴的）栅格布局则针对大规模的布局。这二者都是 CSS 工作组为在不同用户代理、不同书写模式和其他灵活性要求下的网页应用程序有更好的互操作性而做出的更广泛的努力的一部分。<br>更多见：- <a href="https://www.w3.org/html/ig/zh/css-flex-1/#flex-containers" target="_blank" rel="external">W3C</a><pre><code>- [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes)
-</code></pre></li>
+<li>rem的相对参照物为跟元素html，相对参照固定不变，解决了em的缺点，当没有设置font-size时，浏览器会有一个默认的rem，1rem=16px</li>
 </ol>
-<h1 id="媒体查询"><a href="#媒体查询" class="headerlink" title="媒体查询"></a>媒体查询</h1><p>css3中的媒体查询包含了一个媒体类型和至少一个使用如宽度、高度和颜色等媒体属性来限制样式表范围的表达式。<br>IE8及以下只能实现CSS2中的部分，即只可以设置媒体类型<br>媒体查询可以被用在CSS中的@media和@import规则上,也可以被用在HTML和XML中。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">@media screen and (width:800px)&#123; … &#125;</div><div class="line">@import url(example.css) screen and (width:800px);</div><div class="line">&lt;link media=&quot;screen and (width:800px)&quot; rel=&quot;stylesheet&quot; href=&quot;example.css&quot; /&gt;</div><div class="line">&lt;?xml-stylesheet media=&quot;screen and (width:800px)&quot; rel=&quot;stylesheet&quot; href=&quot;example.css&quot; ?&gt;</div></pre></td></tr></table></figure></p>
+<h2 id="flexbox"><a href="#flexbox" class="headerlink" title="flexbox"></a>flexbox</h2><p>CSS3 弹性盒子(Flexible Box 或 Flexbox)，是一种布局方式，当页面需要适应不同的屏幕大小以及设备类型时，它依然能确保元素拥有更恰当的排布行为。对很多应用程序来说，当不使用浮动，且弹性容器的外边距也不需要与其内容的外边距合并时，弹性盒子模型比起方框模型要好一些。<br>弹性盒子布局主要适用于应用程序的组件及小规模的布局，而（新兴的）栅格布局则针对大规模的布局。这二者都是 CSS 工作组为在不同用户代理、不同书写模式和其他灵活性要求下的网页应用程序有更好的互操作性而做出的更广泛的努力的一部分。<br>更多见：</p>
+<ul>
+<li><p><a href="https://www.w3.org/html/ig/zh/css-flex-1/#flex-containers" target="_blank" rel="external">W3C</a></p>
+</li>
+<li><p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes" target="_blank" rel="external">MDN</a></p>
+</li>
+</ul>
+<h1 id="媒体查询"><a href="#媒体查询" class="headerlink" title="媒体查询"></a>媒体查询</h1><p>css3中的媒体查询包含了一个媒体类型和至少一个使用如宽度、高度和颜色等媒体属性来限制样式表范围的表达式。<br>IE8及以下只能实现CSS2中的部分，即只可以设置媒体类型<br>媒体查询可以被用在CSS中的@media和@import规则上,也可以被用在HTML和XML中。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">@media screen and (width:800px)&#123; … &#125;</div><div class="line">@import url(example.css) screen and (width:800px);</div><div class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">media</span>=<span class="string">"screen and (width:800px)"</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"example.css"</span> /&gt;</span></div><div class="line">&lt;?xml-stylesheet media="screen and (width:800px)" rel="stylesheet" href="example.css" ?&gt;</div></pre></td></tr></table></figure></p>
 <h1 id="弹性媒介"><a href="#弹性媒介" class="headerlink" title="弹性媒介"></a>弹性媒介</h1><p>图片、视频和其它媒介类型应该具备可伸缩性，能根据浏览器窗口的大小，自动调整自身尺寸，保证页面布局整齐一致。</p>
 <ol>
 <li>图片排版布局</li>
 <li>加载与用户设备相匹配的小图片，既快速，又不会影响用户体验</li>
 </ol>
-<p>如何实现响应式图片呢？<br>图片的宽度max-width：100%</p>
+<p>如何实现响应式图片呢？<br>图片的宽度max-width：100%.</p>
 <ol>
-<li>js或服务端<br>通过js来控制图片加载，跟踪risize事件，修改图片的路径；或者通过把屏幕或者设备信息写入cookie，获取图片的时候在服务器端决定返回的图片。</li>
-<li>srcset<br><img>中srcset属性,以逗号分隔的一个或多个字符串列表，字符串由图片路径 和尺寸描述符组成如<code>480w</code><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"img/480.png"</span> <span class="attr">class</span>=<span class="string">"image"</span></span></div><div class="line"><span class="attr">srcset</span>=<span class="string">"img/480.png 480w,img/800.png 800w，img/1600.png 1600w"</span>&gt;</div></pre></td></tr></table></figure>
+<li><p>js或服务端<br>通过js来控制图片加载，跟踪risize事件，修改图片的路径；或者通过把屏幕或者设备信息写入cookie，获取图片的时候在服务器端决定返回的图片。</p>
 </li>
-</ol>
-<p>3.srcset配合sizes<br><img>中还有sizes属性配合srcset使用<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">/*====100vw默认视口宽度====*/</div><div class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"img/480.png"</span> <span class="attr">class</span>=<span class="string">"image"</span></span></div><div class="line"><span class="attr">srcset</span>=<span class="string">"img/480.png 480w,img/800.png 800w，img/1600.png 1600w"</span></div><div class="line"><span class="attr">sizes</span>=<span class="string">"50vw"</span>&gt;</div><div class="line"></div><div class="line"></div><div class="line">/*媒体查询,当屏幕尺寸大于等于800px，图片的预估宽度为800px，其他情况是100vw*/</div><div class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"img/480.png"</span> <span class="attr">class</span>=<span class="string">"image"</span></span></div><div class="line"><span class="attr">srcset</span>=<span class="string">"img/480.png 480w,img/800.png 800w，img/1600.png 1600w"</span></div><div class="line"><span class="attr">sizes</span>=<span class="string">"(min-width:800px) 800px ,100vw"</span>&gt;</div></pre></td></tr></table></figure></p>
-<ol>
-<li><p><picture>标签<br>一个<picture>标签包含任意个<source>和一个<img>,浏览器会遍历source设置，哪一个满足条件就用那个，每个source设置媒体查询</picture></picture></p>
+<li><p>srcset<br><code>&lt;img&gt;</code>中srcset属性,以逗号分隔的一个或多个字符串列表，字符串由图片路径 和尺寸描述符组成如<code>480w</code></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"img/480.png"</span> <span class="attr">class</span>=<span class="string">"image"</span></span></div><div class="line"><span class="attr">srcset</span>=<span class="string">"img/480.png 480w,img/800.png 800w，img/1600.png 1600w"</span>&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>srcset配合sizes<br><code>&lt;img&gt;</code>中还有sizes属性配合srcset使用</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">/*====100vw默认视口宽度====*/</div><div class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"img/480.png"</span> <span class="attr">class</span>=<span class="string">"image"</span></span></div><div class="line"><span class="attr">srcset</span>=<span class="string">"img/480.png 480w,img/800.png 800w，img/1600.png 1600w"</span></div><div class="line"><span class="attr">sizes</span>=<span class="string">"50vw"</span>&gt;</div><div class="line"></div><div class="line">/*媒体查询,当屏幕尺寸大于等于800px，图片的预估宽度为800px，其他情况是100vw*/</div><div class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"img/480.png"</span> <span class="attr">class</span>=<span class="string">"image"</span></span></div><div class="line"><span class="attr">srcset</span>=<span class="string">"img/480.png 480w,img/800.png 800w，img/1600.png 1600w"</span></div><div class="line"><span class="attr">sizes</span>=<span class="string">"(min-width:800px) 800px ,100vw"</span>&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p><code>&lt;picture&gt;</code>标签<br>一个<code>&lt;picture&gt;</code>标签包含任意个<code>&lt;source/&gt;</code>和一个<code>&lt;img&gt;</code>,浏览器会遍历source设置，哪一个满足条件就用那个，每个source设置媒体查询</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">picture</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">source</span> <span class="attr">media</span>=<span class="string">"(max-width:36em)"</span></span></div><div class="line">            <span class="attr">srcset</span>=<span class="string">"img/123.jpg 768w"</span>&gt;</div><div class="line">    <span class="tag">&lt;<span class="name">source</span> <span class="attr">media</span>=<span class="string">"(orientation:landscape)"</span></span></div><div class="line">            <span class="attr">srcset</span>=<span class="string">"img/123.jpg 768w"</span>&gt;</div><div class="line">   <span class="tag">&lt;<span class="name">source</span> <span class="attr">type</span>=<span class="string">"image/svg+xml"</span> <span class="attr">srcset</span>=<span class="string">"logo.svg 480w "</span> &gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">source</span> <span class="attr">type</span>=<span class="string">"image/webp"</span> <span class="attr">srcset</span>=<span class="string">"logo.webp 480w "</span> &gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">source</span> <span class="attr">srcset</span>=<span class="string">"img/123.jpg 1800w"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"img/12311.jpg"</span> <span class="attr">class</span>=<span class="string">"image"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">picture</span>&gt;</span></div></pre></td></tr></table></figure>
 </li>
-<li><p>SVG格式图片<br>SVG是可缩放矢量图形，缩放不变形，失真，矢量图形不是基于像素的，基于绘制规则<br>与位图相比的缺点是很难表现色彩丰富逼真的效果，很大。<br>一般来说logo，网站图片可以svg矢量图形<br>绘制工具：AI，Sketch<br>在线绘制：- <img src="http://editor.method.ac/" alt="editor.method.ac"></p>
-<pre><code>- ![icomoon.io](https://icomoon.io)
-</code></pre></li>
+<li><p>SVG格式图片<br>SVG是可缩放矢量图形，缩放不变形，失真，矢量图形不是基于像素的，基于绘制规则<br>与位图相比的缺点是很难表现色彩丰富逼真的效果，很大。<br>一般来说logo，网站图片可以svg矢量图形<br>绘制工具：AI，Sketch<br>在线绘制：</p>
+</li>
 </ol>
+<ul>
+<li><a href="http://editor.method.ac/" target="_blank" rel="external">editor.method.ac</a></li>
+<li><a href="https://icomoon.io" target="_blank" rel="external">icomoon.io</a></li>
+</ul>
 
       
     </div>
@@ -422,8 +439,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/09/21/waterfall/" rel="next" title="">
-                <i class="fa fa-chevron-left"></i> 
+              <a href="/2016/09/04/AJAX/" rel="next" title="理解AJAX">
+                <i class="fa fa-chevron-left"></i> 理解AJAX
               </a>
             
           </div>
@@ -563,7 +580,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#响应式布局概念"><span class="nav-number">1.</span> <span class="nav-text">响应式布局概念</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#弹性布局"><span class="nav-number">2.</span> <span class="nav-text">弹性布局</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#flexbox"><span class="nav-number">2.1.</span> <span class="nav-text">flexbox</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#媒体查询"><span class="nav-number">3.</span> <span class="nav-text">媒体查询</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#弹性媒介"><span class="nav-number">4.</span> <span class="nav-text">弹性媒介</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#响应式布局概念"><span class="nav-number">1.</span> <span class="nav-text">响应式布局概念</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#弹性布局"><span class="nav-number">2.</span> <span class="nav-text">弹性布局</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#测量单位使用相对长度单位（em-rem）"><span class="nav-number">2.1.</span> <span class="nav-text">测量单位使用相对长度单位（em/rem）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#flexbox"><span class="nav-number">2.2.</span> <span class="nav-text">flexbox</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#媒体查询"><span class="nav-number">3.</span> <span class="nav-text">媒体查询</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#弹性媒介"><span class="nav-number">4.</span> <span class="nav-text">弹性媒介</span></a></li></ol></div>
             
           </div>
         </section>

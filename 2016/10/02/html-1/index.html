@@ -105,7 +105,7 @@
 <meta property="og:site_name" content="Kongwsh">
 <meta property="og:description" content="浏览器模式（Browser Mode）浏览器模式（Browser Mode），用于切换IE针对该网页的默认文档模式、对不同版本浏览器的条件注释解析、决定请求头里userAgent的值。它在浏览器发出请求之前就已经确定，网站没有办法修改这个值。它代表的是用户以何种浏览器访问网站。IE11已经改名为“用户代理字符串”，其实是用来设置navigator.userAgent和navigator.appVe">
 <meta property="og:image" content="http://yoursite.com/images/IE11.png">
-<meta property="og:updated_time" content="2016-10-10T01:13:43.140Z">
+<meta property="og:updated_time" content="2016-10-15T13:50:06.085Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="浏览器模式和文档模式">
 <meta name="twitter:description" content="浏览器模式（Browser Mode）浏览器模式（Browser Mode），用于切换IE针对该网页的默认文档模式、对不同版本浏览器的条件注释解析、决定请求头里userAgent的值。它在浏览器发出请求之前就已经确定，网站没有办法修改这个值。它代表的是用户以何种浏览器访问网站。IE11已经改名为“用户代理字符串”，其实是用来设置navigator.userAgent和navigator.appVe">
@@ -416,13 +416,13 @@
 <p>在请求消息对应的响应头加入下面代码与上一句效果一样</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">response.setHeader(<span class="string">"X-UA-Compatible"</span>,<span class="string">"IE=Edge"</span>);</div></pre></td></tr></table></figure>
 <p>页面、服务器HTTP Header都设置了X-UA-Compatible的情况，使用页面的X-UA-Compatible设置。页面无X-UA-Compatible，才使用HTTP Header设置的值。</p>
-<p>把X-UA-Compatible写在<link>或<script>标签下面，X-UA-Compatible的设置无效。</p>
+<p>把X-UA-Compatible写在<code>&lt;link&gt;</code>或<code>&lt;script&gt;</code>标签下面，否则X-UA-Compatible的设置无效。</p>
 <h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><ul>
-<li>2014年<a href="http://www.cnblogs.com/fsjohnhuang/p/3817418.html">JS魔法堂：浏览器模式和文档模式怎么玩？ </a></li>
-<li>2013年<a href="http://www.ibm.com/developerworks/cn/web/1310_shatao_quirks/index.html">怪异模式（Quirks Mode）对 HTML 页面的影响</a></li>
-<li>2012年<a href="https://imququ.com/post/browser-mode-and-document-mode-in-ie.html">关于浏览器模式和文本模式的困惑</a></li>
+<li>2014年<a href="http://www.cnblogs.com/fsjohnhuang/p/3817418.html" target="_blank" rel="external">JS魔法堂：浏览器模式和文档模式怎么玩？ </a></li>
+<li>2013年<a href="http://www.ibm.com/developerworks/cn/web/1310_shatao_quirks/index.html" target="_blank" rel="external">怪异模式（Quirks Mode）对 HTML 页面的影响</a></li>
+<li>2012年<a href="https://imququ.com/post/browser-mode-and-document-mode-in-ie.html" target="_blank" rel="external">关于浏览器模式和文本模式的困惑</a></li>
 </ul>
-</script></p>
+
       
     </div>
 
@@ -589,7 +589,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#浏览器模式（Browser-Mode）"><span class="nav-number">1.</span> <span class="nav-text">浏览器模式（Browser Mode）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#文档模式（Document-Mode）"><span class="nav-number">2.</span> <span class="nav-text">文档模式（Document Mode）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#服务器改变浏览器文档模式的方法"><span class="nav-number">3.</span> <span class="nav-text">服务器改变浏览器文档模式的方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Doctype-检测"><span class="nav-number">3.1.</span> <span class="nav-text">Doctype 检测</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#x-ua-compatible-信息"><span class="nav-number">3.2.</span> <span class="nav-text">x-ua-compatible 信息</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#浏览器模式（Browser-Mode）"><span class="nav-number">1.</span> <span class="nav-text">浏览器模式（Browser Mode）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#文档模式（Document-Mode）"><span class="nav-number">2.</span> <span class="nav-text">文档模式（Document Mode）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#服务器改变浏览器文档模式的方法"><span class="nav-number">3.</span> <span class="nav-text">服务器改变浏览器文档模式的方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Doctype-检测"><span class="nav-number">3.1.</span> <span class="nav-text">Doctype 检测</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#x-ua-compatible-信息"><span class="nav-number">3.2.</span> <span class="nav-text">x-ua-compatible 信息</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考链接"><span class="nav-number">4.</span> <span class="nav-text">参考链接</span></a></li></ol></div>
             
           </div>
         </section>
