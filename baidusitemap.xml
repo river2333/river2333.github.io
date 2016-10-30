@@ -5,13 +5,30 @@
     
   <url>
     <loc>http://yoursite.com/2016/09/28/carousel/</loc>
-    <lastmod>2016-10-28T05:55:07.640Z</lastmod>
+    <lastmod>2016-10-30T09:16:47.425Z</lastmod>
     <data>
         <display>
         <title>原生JavaScript实现轮播图</title>
         <pubTime>2016-09-28T09:35:08.000Z</pubTime>
         
         <tag>JavaScript</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2016/07/28/canvas-0/</loc>
+    <lastmod>2016-10-30T09:15:27.084Z</lastmod>
+    <data>
+        <display>
+        <title>Canvas基础</title>
+        <pubTime>2016-07-28T04:23:08.000Z</pubTime>
+        
+        <tag>canvas</tag>
          
          
            
@@ -46,57 +63,6 @@
         <pubTime>2016-09-25T07:36:08.000Z</pubTime>
         
         <tag>HTML</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2016/07/28/canvas-0/</loc>
-    <lastmod>2016-10-26T05:39:11.979Z</lastmod>
-    <data>
-        <display>
-        <title>Canvas基础</title>
-        <pubTime>2016-07-28T04:23:08.000Z</pubTime>
-        
-        <tag>canvas</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2016/10/12/minesweeper/</loc>
-    <lastmod>2016-10-23T08:31:30.451Z</lastmod>
-    <data>
-        <display>
-        <title>网页版扫雷游戏</title>
-        <pubTime>2016-10-12T09:35:08.000Z</pubTime>
-        
-        <tag>JavaScript</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2016/08/25/sidebar/</loc>
-    <lastmod>2016-10-23T08:31:26.167Z</lastmod>
-    <data>
-        <display>
-        <title>实现侧边信息栏</title>
-        <pubTime>2016-08-25T07:36:08.000Z</pubTime>
-        
-        <tag>DEMO</tag>
          
          
            
