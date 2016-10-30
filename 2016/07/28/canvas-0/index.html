@@ -108,7 +108,7 @@ Canvas是一个HTML标签，设置id和样式：width属性和height属性，不
 <meta property="og:description" content="HTML5 的 canvas 元素使用 JavaScript 在网页上绘制图像。
 创建canvas1&amp;lt;canvas id=&quot;myCanvas&quot; width=&quot;200&quot; height=&quot;100&quot;&amp;gt;&amp;lt;/canvas&amp;gt;
 Canvas是一个HTML标签，设置id和样式：width属性和height属性，不带单位，因为这样也一同决定了画布的分辨率。">
-<meta property="og:updated_time" content="2016-10-17T01:58:01.356Z">
+<meta property="og:updated_time" content="2016-10-26T05:39:11.979Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Canvas基础">
 <meta name="twitter:description" content="HTML5 的 canvas 元素使用 JavaScript 在网页上绘制图像。
@@ -238,16 +238,6 @@ Canvas是一个HTML标签，设置id和样式：width属性和height属性，不
           </a>
         </li>
       
-        
-        <li class="menu-item menu-item-resume">
-          <a href="/resume/resume.html" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-cube"></i> <br />
-            
-            个人简历
-          </a>
-        </li>
-      
 
       
         <li class="menu-item menu-item-search">
@@ -370,7 +360,6 @@ Canvas是一个HTML标签，设置id和样式：width属性和height属性，不
 <h1 id="Canvas基于状态绘制"><a href="#Canvas基于状态绘制" class="headerlink" title="Canvas基于状态绘制"></a>Canvas基于状态绘制</h1><p>先设置绘图状态<br>再调用具体函数绘制</p>
 <h1 id="状态函数"><a href="#状态函数" class="headerlink" title="状态函数"></a>状态函数</h1><p>context.moveTo();<br>contxt.lineTo();<br>//线段粗细<br>context.lineWidth = 5;<br>//线条颜色<br>context.strokeStyle = “blue”;<br>//填充颜色<br>context. fillStyle =”rgb(2,100,30)”;<br>//重新规划路径，清空<br>context.beginPath();<br>//自动闭合路径,对fill（）没有用<br>context.closePath();</p>
 <h1 id="绘制函数"><a href="#绘制函数" class="headerlink" title="绘制函数"></a>绘制函数</h1><p>context.stroke();<br>context.fill();</p>
-<h1 id="七巧板demo"><a href="#七巧板demo" class="headerlink" title="七巧板demo"></a>七巧板demo</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
 <p>#弧<br>context.arc(<br>centerx,centery,radius,<br>startingAngle,endingAngle,<br>anticlockwise = false//顺时针默认<br>)</p>
 <p>#倒计时<br>第(i,j)个圆的圆心位置：<br>centerX：x+j<em>2(R+1) +(R+1)<br>centerY：y+i</em>2(R+1) +(R+1)<br>时间相关的函数：<br>const endtime = new Date(2016,6,1,12,23,56);<br>//月份从零开始计，6代表7月</p>
 <h1 id="简单动画架构"><a href="#简单动画架构" class="headerlink" title="简单动画架构"></a>简单动画架构</h1><p>setInterval(<br>//匿名函数<br>function(){<br>    //绘制当前画面<br>    render();<br>    //调整数据<br>    update();<br>},<br>50<br>);</p>
@@ -510,7 +499,7 @@ Canvas是一个HTML标签，设置id和样式：width属性和height属性，不
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">20</span>
+              <span class="site-state-item-count">22</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -520,7 +509,7 @@ Canvas是一个HTML标签，设置id和样式：width属性和height属性，不
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -567,7 +556,7 @@ Canvas是一个HTML标签，设置id和样式：width属性和height属性，不
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#创建canvas"><span class="nav-number">1.</span> <span class="nav-text">创建canvas</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#初始化"><span class="nav-number">2.</span> <span class="nav-text">初始化</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Canvas基于状态绘制"><span class="nav-number">3.</span> <span class="nav-text">Canvas基于状态绘制</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#状态函数"><span class="nav-number">4.</span> <span class="nav-text">状态函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#绘制函数"><span class="nav-number">5.</span> <span class="nav-text">绘制函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#七巧板demo"><span class="nav-number">6.</span> <span class="nav-text">七巧板demo</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#简单动画架构"><span class="nav-number">7.</span> <span class="nav-text">简单动画架构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#刷新"><span class="nav-number">8.</span> <span class="nav-text">刷新</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#四边形"><span class="nav-number">9.</span> <span class="nav-text">四边形</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#颜色表示方法"><span class="nav-number">10.</span> <span class="nav-text">颜色表示方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#线条的属性"><span class="nav-number">11.</span> <span class="nav-text">线条的属性</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#图形变换"><span class="nav-number">12.</span> <span class="nav-text">图形变换</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#变换矩阵"><span class="nav-number">13.</span> <span class="nav-text">变换矩阵</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#样式"><span class="nav-number">14.</span> <span class="nav-text">样式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#曲线"><span class="nav-number">15.</span> <span class="nav-text">曲线</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#文字渲染"><span class="nav-number">16.</span> <span class="nav-text">文字渲染</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#阴影"><span class="nav-number">17.</span> <span class="nav-text">阴影</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#剪辑区域"><span class="nav-number">18.</span> <span class="nav-text">剪辑区域</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#路径方向"><span class="nav-number">19.</span> <span class="nav-text">路径方向</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#交互"><span class="nav-number">20.</span> <span class="nav-text">交互</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#图形库"><span class="nav-number">21.</span> <span class="nav-text">图形库</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#创建canvas"><span class="nav-number">1.</span> <span class="nav-text">创建canvas</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#初始化"><span class="nav-number">2.</span> <span class="nav-text">初始化</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Canvas基于状态绘制"><span class="nav-number">3.</span> <span class="nav-text">Canvas基于状态绘制</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#状态函数"><span class="nav-number">4.</span> <span class="nav-text">状态函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#绘制函数"><span class="nav-number">5.</span> <span class="nav-text">绘制函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#简单动画架构"><span class="nav-number">6.</span> <span class="nav-text">简单动画架构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#刷新"><span class="nav-number">7.</span> <span class="nav-text">刷新</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#四边形"><span class="nav-number">8.</span> <span class="nav-text">四边形</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#颜色表示方法"><span class="nav-number">9.</span> <span class="nav-text">颜色表示方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#线条的属性"><span class="nav-number">10.</span> <span class="nav-text">线条的属性</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#图形变换"><span class="nav-number">11.</span> <span class="nav-text">图形变换</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#变换矩阵"><span class="nav-number">12.</span> <span class="nav-text">变换矩阵</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#样式"><span class="nav-number">13.</span> <span class="nav-text">样式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#曲线"><span class="nav-number">14.</span> <span class="nav-text">曲线</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#文字渲染"><span class="nav-number">15.</span> <span class="nav-text">文字渲染</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#阴影"><span class="nav-number">16.</span> <span class="nav-text">阴影</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#剪辑区域"><span class="nav-number">17.</span> <span class="nav-text">剪辑区域</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#路径方向"><span class="nav-number">18.</span> <span class="nav-text">路径方向</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#交互"><span class="nav-number">19.</span> <span class="nav-text">交互</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#图形库"><span class="nav-number">20.</span> <span class="nav-text">图形库</span></a></li></ol></div>
             
           </div>
         </section>
