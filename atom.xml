@@ -969,29 +969,6 @@
   </entry>
   
   <entry>
-    <title>Git与Github</title>
-    <link href="http://yoursite.com/2016/07/23/git-0/"/>
-    <id>http://yoursite.com/2016/07/23/git-0/</id>
-    <published>2016-07-23T04:23:08.000Z</published>
-    <updated>2016-10-17T04:52:06.133Z</updated>
-    
-    <content type="html">&lt;p&gt;Git 是一个为了更好地管理 Linux内核开发而创立的分布式版本控制和软件配置管理软件。 国内外知名 Git 代码托管网站有：&lt;br&gt;&lt;a href=&quot;http://GitHub.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;github&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://Coding.net&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Coding&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://code.csdn.net/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;code.csdn&lt;/a&gt;&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;GitHub 使用 Git 作为版本控制系统（version control system）提供在线源码托管的服务，同时是个有社交功能的开发者社区。&lt;br&gt;国外类似服务：&lt;br&gt;&lt;a href=&quot;https://bitbucket.org/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Bitbucket&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://Gitlab.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Gitlab&lt;/a&gt;&lt;br&gt;国内类似服务：&lt;br&gt;&lt;a href=&quot;http://Gitcafe.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Gitcafe&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&quot;链接&quot;&gt;&lt;a href=&quot;#链接&quot; class=&quot;headerlink&quot; title=&quot;链接&quot;&gt;&lt;/a&gt;链接&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Git教程 - 廖雪峰的官方网站&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://git-scm.com/book/en/v2&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Pro Git&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://rogerdudler.github.io/git-guide/index.zh.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;git - 简明指南&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://marklodato.github.io/visual-git-guide/index-zh-cn.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;图解 Git&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://www.yangzhiping.com/tech/github.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;如何高效利用GitHub–阳志平&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://www.worldhello.net/gotgithub/#id4&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;worldhello&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;help.github.com/&quot;&gt;Github帮助文档&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://www-cs-students.stanford.edu/~blynn/gitmagic/intl/zh_cn/index.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Git Magic&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&quot;过后填坑···&quot;&gt;&lt;a href=&quot;#过后填坑···&quot; class=&quot;headerlink&quot; title=&quot;过后填坑···&quot;&gt;&lt;/a&gt;过后填坑···&lt;/h1&gt;</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Git 是一个为了更好地管理 Linux内核开发而创立的分布式版本控制和软件配置管理软件。 国内外知名 Git 代码托管网站有：&lt;br&gt;&lt;a href=&quot;http://GitHub.com&quot;&gt;github&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://Coding.net&quot;&gt;Coding&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://code.csdn.net/&quot;&gt;code.csdn&lt;/a&gt;&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="NODE" scheme="http://yoursite.com/tags/NODE/"/>
-    
-  </entry>
-  
-  <entry>
     <title>JSHint使用基础</title>
     <link href="http://yoursite.com/2016/07/23/nodejs-1/"/>
     <id>http://yoursite.com/2016/07/23/nodejs-1/</id>
@@ -1043,6 +1020,29 @@
     
     
       <category term="JSHint" scheme="http://yoursite.com/tags/JSHint/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Git与Github</title>
+    <link href="http://yoursite.com/2016/07/23/git-0/"/>
+    <id>http://yoursite.com/2016/07/23/git-0/</id>
+    <published>2016-07-23T04:23:08.000Z</published>
+    <updated>2016-10-17T04:52:06.133Z</updated>
+    
+    <content type="html">&lt;p&gt;Git 是一个为了更好地管理 Linux内核开发而创立的分布式版本控制和软件配置管理软件。 国内外知名 Git 代码托管网站有：&lt;br&gt;&lt;a href=&quot;http://GitHub.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;github&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://Coding.net&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Coding&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://code.csdn.net/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;code.csdn&lt;/a&gt;&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;GitHub 使用 Git 作为版本控制系统（version control system）提供在线源码托管的服务，同时是个有社交功能的开发者社区。&lt;br&gt;国外类似服务：&lt;br&gt;&lt;a href=&quot;https://bitbucket.org/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Bitbucket&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://Gitlab.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Gitlab&lt;/a&gt;&lt;br&gt;国内类似服务：&lt;br&gt;&lt;a href=&quot;http://Gitcafe.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Gitcafe&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;链接&quot;&gt;&lt;a href=&quot;#链接&quot; class=&quot;headerlink&quot; title=&quot;链接&quot;&gt;&lt;/a&gt;链接&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Git教程 - 廖雪峰的官方网站&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://git-scm.com/book/en/v2&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Pro Git&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://rogerdudler.github.io/git-guide/index.zh.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;git - 简明指南&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://marklodato.github.io/visual-git-guide/index-zh-cn.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;图解 Git&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://www.yangzhiping.com/tech/github.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;如何高效利用GitHub–阳志平&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://www.worldhello.net/gotgithub/#id4&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;worldhello&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;help.github.com/&quot;&gt;Github帮助文档&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://www-cs-students.stanford.edu/~blynn/gitmagic/intl/zh_cn/index.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Git Magic&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;过后填坑···&quot;&gt;&lt;a href=&quot;#过后填坑···&quot; class=&quot;headerlink&quot; title=&quot;过后填坑···&quot;&gt;&lt;/a&gt;过后填坑···&lt;/h1&gt;</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Git 是一个为了更好地管理 Linux内核开发而创立的分布式版本控制和软件配置管理软件。 国内外知名 Git 代码托管网站有：&lt;br&gt;&lt;a href=&quot;http://GitHub.com&quot;&gt;github&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://Coding.net&quot;&gt;Coding&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://code.csdn.net/&quot;&gt;code.csdn&lt;/a&gt;&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="NODE" scheme="http://yoursite.com/tags/NODE/"/>
     
   </entry>
   
