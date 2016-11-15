@@ -1,181 +1,351 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
     
 
-    <title>
-      原生JavaScript与jQueryAPI对比 | Kongwsh 
-    </title>
+    
+  
 
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  
+
+  
+
+  
     
-      <meta name="author" content="Kong">
-    
+      
     
 
-    <meta name="description" content="元素查找JavaScript:12345678910111213141516171819202122232425262728293031323334353637383940414243// Nodedocument.getElementById(id); // document.getElementById(&apos;test&apos;)document.querySelector(selectors);//该方">
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="JavaScript," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Kongwsh" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="元素查找JavaScript:12345678910111213141516171819202122232425262728293031323334353637383940414243// Nodedocument.getElementById(id); // document.getElementById(&apos;test&apos;)document.querySelector(selectors);//该方">
 <meta property="og:type" content="article">
-<meta property="og:title" content="原生JavaScript与jQueryAPI对比 | Kongwsh">
+<meta property="og:title" content="原生JavaScript与jQueryAPI对比">
 <meta property="og:url" content="http://yoursite.com/2016/08/25/javascript-4/index.html">
 <meta property="og:site_name" content="Kongwsh">
 <meta property="og:description" content="元素查找JavaScript:12345678910111213141516171819202122232425262728293031323334353637383940414243// Nodedocument.getElementById(id); // document.getElementById(&apos;test&apos;)document.querySelector(selectors);//该方">
 <meta property="og:updated_time" content="2016-10-20T05:31:18.088Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="原生JavaScript与jQueryAPI对比 | Kongwsh">
+<meta name="twitter:title" content="原生JavaScript与jQueryAPI对比">
 <meta name="twitter:description" content="元素查找JavaScript:12345678910111213141516171819202122232425262728293031323334353637383940414243// Nodedocument.getElementById(id); // document.getElementById(&apos;test&apos;)document.querySelector(selectors);//该方">
-    
-    
-    
-      <link rel="icon" type="image/x-icon" href="/favicon.png">
-    
-    <link rel="stylesheet" href="/css/uno.css">
-    <link rel="stylesheet" href="/css/highlight.css">
-    <link rel="stylesheet" href="/css/archive.css">
-    <link rel="stylesheet" href="/css/china-social-icon.css">
 
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"always"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 6305729963366548000,
+      author: 'Author'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/08/25/javascript-4/"/>
+
+  <title> 原生JavaScript与jQueryAPI对比 | Kongwsh </title>
 </head>
-<body>
 
-    <span class="mobile btn-mobile-menu">
-        <i class="icon icon-list btn-mobile-menu__icon"></i>
-        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
-    </span>
-
-    
-
-<header class="panel-cover panel-cover--collapsed">
-
-
-  <div class="panel-main">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
-    <div class="panel-main__inner panel-inverted">
-    <div class="panel-main__content">
 
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Kongwsh</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
         
-
-        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">Kongwsh</a></h1>
-        <hr class="panel-cover__divider" />
-
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
         
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
 
-        <div class="navigation-wrapper">
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="#" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
 
-          <nav class="cover-navigation cover-navigation--primary">
-            <ul class="navigation">
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
 
-              
-                
-                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">首页</a></li>
-              
-                
-                <li class="navigation__item"><a href="/about" title="" class="">关于</a></li>
-              
-                
-                <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
-              
-
-            </ul>
-          </nav>
-
-          <!-- ----------------------------
-To add a new social icon simply duplicate one of the list items from below
-and change the class in the <i> tag to match the desired social network
-and then add your link to the <a>. Here is a full list of social network
-classes that you can use:
-
-    icon-social-500px
-    icon-social-behance
-    icon-social-delicious
-    icon-social-designer-news
-    icon-social-deviant-art
-    icon-social-digg
-    icon-social-dribbble
-    icon-social-facebook
-    icon-social-flickr
-    icon-social-forrst
-    icon-social-foursquare
-    icon-social-github
-    icon-social-google-plus
-    icon-social-hi5
-    icon-social-instagram
-    icon-social-lastfm
-    icon-social-linkedin
-    icon-social-medium
-    icon-social-myspace
-    icon-social-path
-    icon-social-pinterest
-    icon-social-rdio
-    icon-social-reddit
-    icon-social-skype
-    icon-social-spotify
-    icon-social-stack-overflow
-    icon-social-steam
-    icon-social-stumbleupon
-    icon-social-treehouse
-    icon-social-tumblr
-    icon-social-twitter
-    icon-social-vimeo
-    icon-social-xbox
-    icon-social-yelp
-    icon-social-youtube
-    icon-social-zerply
-    icon-mail
-
--------------------------------->
-
-<!-- add social info here -->
-
-
-
-        </div>
-
-      </div>
 
     </div>
+  
+</nav>
 
-    <div class="panel-cover--overlay"></div>
-  </div>
-</header>
+ </div>
+    </header>
 
-    <div class="content-wrapper">
-        <div class="content-wrapper__inner entry">
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
             
 
-<article class="post-container post-container--single">
-
-  <header class="post-header">
-    
-    <h1 class="post-title">原生JavaScript与jQueryAPI对比</h1>
-
+  <div id="posts" class="posts-expand">
     
 
-    <div class="post-meta">
-      <time datetime="2016-08-25" class="post-meta__date date">2016-08-25</time> 
+  
+  
 
-      <span class="post-meta__tags tags">
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                原生JavaScript与jQueryAPI对比
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-08-25T15:36:08+08:00" content="2016-08-25">
+              2016-08-25
+            </time>
+          </span>
 
           
 
           
-             &#8226; 标签:
-            <font class="tags">
-              <a class="tags-link" href="/tags/JavaScript/">JavaScript</a>
-            </font>
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/08/25/javascript-4/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/25/javascript-4/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
           
 
-      </span>
-    </div>
-    
+          
+
+          
+          
+
+          
+              &nbsp; | &nbsp;
+              <span class="page-pv">view
+              <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>times
+              </span>
+          
+        </div>
+      </header>
     
 
-  </header>
 
-  <section id="post-content" class="article-content post">
-    <h1 id="元素查找"><a href="#元素查找" class="headerlink" title="元素查找"></a>元素查找</h1><p>JavaScript:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Node</span></div><div class="line"><span class="built_in">document</span>.getElementById(id); <span class="comment">// document.getElementById('test')</span></div><div class="line"><span class="built_in">document</span>.querySelector(selectors);</div><div class="line"><span class="comment">//该方法接收一个css选择符，返回与该模式匹配的第一个元素，如果没有，返回null</span></div><div class="line"><span class="comment">//Document类型调用会在文档元素内容类查找，Element类型调用会该元素后代范围内查找</span></div><div class="line"><span class="comment">// document.querySelector('#test div')</span></div><div class="line"><span class="built_in">document</span>.doctype；</div><div class="line"><span class="comment">//doctype 是一个只读属性.</span></div><div class="line"><span class="comment">//返回当前文档关联的文档类型定义(DTD).</span></div><div class="line"><span class="comment">//如果当前文档没有DTD,则该属性返回null.</span></div><div class="line"><span class="comment">//在HTML文档中,如果文档有DTD,则该属性等价于document.firstChild.</span></div><div class="line"></div><div class="line"><span class="built_in">document</span>.documentElement；</div><div class="line"><span class="comment">//document.documentElement 是一个只读属性，返回文档对象（document）的根元素（例如，HTML文档的 &lt;html&gt; 元素）。</span></div><div class="line"><span class="built_in">document</span>.head</div><div class="line"><span class="comment">//返回当前文档中的 &lt;head&gt; 元素。如果有多个 &lt;head&gt; 元素，则返回第一个。</span></div><div class="line"><span class="comment">//document.head 是个只读属性</span></div><div class="line"><span class="built_in">document</span>.title</div><div class="line"><span class="comment">//获取或设置文档的标题。</span></div><div class="line"><span class="comment">//title 是一个包含 document 标题的字符串。如果通过设置 document.title 将标题覆盖，则返回覆盖后的值</span></div><div class="line"><span class="built_in">document</span>.body</div><div class="line"><span class="comment">//返回当前文档中的&lt;body&gt;元素或者&lt;frameset&gt;元素.</span></div><div class="line"><span class="comment">//该属性是可写的,且为该属性赋的值必须是一个&lt;body&gt;元素</span></div><div class="line"></div><div class="line"><span class="comment">// NodeList</span></div><div class="line"><span class="built_in">document</span>.getElementsByClassName(names) <span class="comment">// document.getElementsByClassName('test')</span></div><div class="line"><span class="built_in">document</span>.getElementsByName(name) <span class="comment">// document.getElementsByName('demo')</span></div><div class="line"><span class="built_in">document</span>.getElementsByTagName(name) <span class="comment">// document.getElementsByTagName('div')</span></div><div class="line"><span class="built_in">document</span>.getElementsByTagNameNS(namespace, name) <span class="comment">// document.getElementsByTagNameNS('http://www.w3.org/1999/xhtml', 'div')</span></div><div class="line"><span class="built_in">document</span>.querySelectorAll(selectors) <span class="comment">// document.querySelectorAll('#test div')</span></div><div class="line"><span class="built_in">document</span>.links</div><div class="line"><span class="comment">//links 属性返回一个包含文档中所有具有 href 属性值的 &lt;area&gt; 元素 &lt;a&gt; 元素的集合</span></div><div class="line"><span class="built_in">document</span>.scripts</div><div class="line"><span class="comment">//返回一个HTMLCollection对象,包含了当前文档中所有&lt;script&gt;元素的集合.</span></div><div class="line"><span class="comment">//可以像使用数组一样通过索引来获取其中包含的&lt;script&gt;元素.</span></div><div class="line"><span class="built_in">document</span>.images</div><div class="line"><span class="comment">//document.images 返回当前文档中所有 image 元素的集合.</span></div><div class="line"><span class="built_in">document</span>.embeds</div><div class="line"><span class="comment">//返回一个HTMLCollection对象,包含了嵌入到当前文档中的所有的OBJECT对象</span></div><div class="line"><span class="built_in">document</span>.forms</div><div class="line"><span class="comment">//返回一个包含了当前文档中的所有 form 元素的集合 (一个HTMLCollection对象)</span></div><div class="line"><span class="comment">//var selectForm = document.forms[index];</span></div><div class="line"><span class="comment">//var selectFormElement = document.forms[index].elements[index];</span></div></pre></td></tr></table></figure></p>
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="元素查找"><a href="#元素查找" class="headerlink" title="元素查找"></a>元素查找</h1><p>JavaScript:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Node</span></div><div class="line"><span class="built_in">document</span>.getElementById(id); <span class="comment">// document.getElementById('test')</span></div><div class="line"><span class="built_in">document</span>.querySelector(selectors);</div><div class="line"><span class="comment">//该方法接收一个css选择符，返回与该模式匹配的第一个元素，如果没有，返回null</span></div><div class="line"><span class="comment">//Document类型调用会在文档元素内容类查找，Element类型调用会该元素后代范围内查找</span></div><div class="line"><span class="comment">// document.querySelector('#test div')</span></div><div class="line"><span class="built_in">document</span>.doctype；</div><div class="line"><span class="comment">//doctype 是一个只读属性.</span></div><div class="line"><span class="comment">//返回当前文档关联的文档类型定义(DTD).</span></div><div class="line"><span class="comment">//如果当前文档没有DTD,则该属性返回null.</span></div><div class="line"><span class="comment">//在HTML文档中,如果文档有DTD,则该属性等价于document.firstChild.</span></div><div class="line"></div><div class="line"><span class="built_in">document</span>.documentElement；</div><div class="line"><span class="comment">//document.documentElement 是一个只读属性，返回文档对象（document）的根元素（例如，HTML文档的 &lt;html&gt; 元素）。</span></div><div class="line"><span class="built_in">document</span>.head</div><div class="line"><span class="comment">//返回当前文档中的 &lt;head&gt; 元素。如果有多个 &lt;head&gt; 元素，则返回第一个。</span></div><div class="line"><span class="comment">//document.head 是个只读属性</span></div><div class="line"><span class="built_in">document</span>.title</div><div class="line"><span class="comment">//获取或设置文档的标题。</span></div><div class="line"><span class="comment">//title 是一个包含 document 标题的字符串。如果通过设置 document.title 将标题覆盖，则返回覆盖后的值</span></div><div class="line"><span class="built_in">document</span>.body</div><div class="line"><span class="comment">//返回当前文档中的&lt;body&gt;元素或者&lt;frameset&gt;元素.</span></div><div class="line"><span class="comment">//该属性是可写的,且为该属性赋的值必须是一个&lt;body&gt;元素</span></div><div class="line"></div><div class="line"><span class="comment">// NodeList</span></div><div class="line"><span class="built_in">document</span>.getElementsByClassName(names) <span class="comment">// document.getElementsByClassName('test')</span></div><div class="line"><span class="built_in">document</span>.getElementsByName(name) <span class="comment">// document.getElementsByName('demo')</span></div><div class="line"><span class="built_in">document</span>.getElementsByTagName(name) <span class="comment">// document.getElementsByTagName('div')</span></div><div class="line"><span class="built_in">document</span>.getElementsByTagNameNS(namespace, name) <span class="comment">// document.getElementsByTagNameNS('http://www.w3.org/1999/xhtml', 'div')</span></div><div class="line"><span class="built_in">document</span>.querySelectorAll(selectors) <span class="comment">// document.querySelectorAll('#test div')</span></div><div class="line"><span class="built_in">document</span>.links</div><div class="line"><span class="comment">//links 属性返回一个包含文档中所有具有 href 属性值的 &lt;area&gt; 元素 &lt;a&gt; 元素的集合</span></div><div class="line"><span class="built_in">document</span>.scripts</div><div class="line"><span class="comment">//返回一个HTMLCollection对象,包含了当前文档中所有&lt;script&gt;元素的集合.</span></div><div class="line"><span class="comment">//可以像使用数组一样通过索引来获取其中包含的&lt;script&gt;元素.</span></div><div class="line"><span class="built_in">document</span>.images</div><div class="line"><span class="comment">//document.images 返回当前文档中所有 image 元素的集合.</span></div><div class="line"><span class="built_in">document</span>.embeds</div><div class="line"><span class="comment">//返回一个HTMLCollection对象,包含了嵌入到当前文档中的所有的OBJECT对象</span></div><div class="line"><span class="built_in">document</span>.forms</div><div class="line"><span class="comment">//返回一个包含了当前文档中的所有 form 元素的集合 (一个HTMLCollection对象)</span></div><div class="line"><span class="comment">//var selectForm = document.forms[index];</span></div><div class="line"><span class="comment">//var selectFormElement = document.forms[index].elements[index];</span></div></pre></td></tr></table></figure></p>
 <a id="more"></a>
 <p>jQuery：选择器<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">$( <span class="string">"#id"</span> )<span class="comment">//id选择器</span></div><div class="line">$( <span class="string">".class"</span> )<span class="comment">//class选择器</span></div><div class="line">$( <span class="string">"element"</span> )<span class="comment">//元素选择器，根据给定（html）标记名称选择所有的元素</span></div><div class="line">$( <span class="string">"*"</span> )<span class="comment">//全选择器</span></div><div class="line">$(<span class="string">"parent &gt; child"</span>)<span class="comment">//子选择器</span></div><div class="line">$(<span class="string">"ancestor descentdant"</span>)<span class="comment">//后代选择器</span></div><div class="line">$(<span class="string">"prev + next"</span>)<span class="comment">//相邻兄弟选择器</span></div><div class="line">$(<span class="string">"prev ~ next"</span>)<span class="comment">//一般兄弟选择器</span></div><div class="line"></div><div class="line"><span class="comment">//基本筛选选择器</span></div><div class="line">$(<span class="string">":first"</span>)</div><div class="line"><span class="comment">//匹配的第一个元素，如第一个div元素为$(".div:first").css("color","#CD00CD");</span></div><div class="line">$(<span class="string">":last"</span>)</div><div class="line"><span class="comment">//匹配的最后一个元素，如最后一个div元素为$(".div:last").css("color","#CD00CD");</span></div><div class="line">$(<span class="string">":not(selector)"</span>)</div><div class="line"><span class="comment">//选择不包含括号里面的选择器元素，如 选中所有没有checked属性的input元素后的p元素，赋予颜色$("input:not(checked)+p  ").css("background-color", "#CD00CD");</span></div><div class="line">$(<span class="string">"eq(index)"</span>)</div><div class="line"><span class="comment">//在匹配的集合选择索引值等于index的元素【eq=equal,等于的意思】</span></div><div class="line">$(<span class="string">":even"</span>)</div><div class="line"><span class="comment">//选择索引值为偶数的元素，从0开始计数。【even偶数】</span></div><div class="line">$(<span class="string">":odd"</span>)</div><div class="line"><span class="comment">//选择索引值为奇数的元素，从0开始计数。【odd奇数】</span></div><div class="line">$(<span class="string">":gt(index)"</span>)</div><div class="line"><span class="comment">//选择匹配集合中，所有大于给定index(索引值)的元素。【gt=greater than(意思是大于)】</span></div><div class="line">$(<span class="string">":lt(index)"</span>)</div><div class="line"><span class="comment">//选择匹配集合中，所有小于等于给定index(索引值)的元素。【less than(意思是小于)】</span></div><div class="line">$(<span class="string">":header"</span>)</div><div class="line"><span class="comment">//选择所有标题元素，如h1,h2,h3等</span></div><div class="line">$(<span class="string">":lang(language)"</span>)</div><div class="line"><span class="comment">//选择指定语言的所有元素。</span></div><div class="line">$(<span class="string">":root"</span>)</div><div class="line"><span class="comment">//选择该文档的根元素。</span></div><div class="line">$(<span class="string">":animated"</span>)</div><div class="line"><span class="comment">//选择所有正在执行动画效果的元素</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">//内容筛选选择器</span></div><div class="line">$(<span class="string">":contains(text)"</span>)</div><div class="line"><span class="comment">//选择所有包含指定文本的元素</span></div><div class="line">$(<span class="string">":parent"</span>)</div><div class="line"><span class="comment">//选择所有含有子元素或者文本的元素</span></div><div class="line">$(<span class="string">":empty"</span>)</div><div class="line"><span class="comment">//选择所有没有子元素或者文本的元素</span></div><div class="line">$(<span class="string">":has(selector)"</span>)</div><div class="line"><span class="comment">//选择元素中至少包含指定元素的元素</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">//可见性筛选选择器</span></div><div class="line">$(<span class="string">":visible"</span>)</div><div class="line"><span class="comment">//选择所有显示的元素，如果元素任然占据空间布局时，是被浏览器认为是可见的</span></div><div class="line"><span class="comment">//所有visibility:hidden和opacity:0 仍然被认为是可见的</span></div><div class="line">$(<span class="string">":hidden"</span>)</div><div class="line"><span class="comment">//选择所有隐藏的元素</span></div><div class="line"><span class="comment">//display的值是none。</span></div><div class="line"><span class="comment">//type="hidden"的表单元素。</span></div><div class="line"><span class="comment">//宽度和高度都显式设置为0。</span></div><div class="line"><span class="comment">//一个祖先元素是隐藏的，该元素是不会在页面上显示</span></div><div class="line"><span class="comment">//visibility的值是hidden</span></div><div class="line"><span class="comment">//opacity的指是0</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">//属性筛选选择器</span></div><div class="line">$(<span class="string">"[attribute = 'value']"</span>)</div><div class="line"><span class="comment">//选择指定属性值等于给定字符串或以该字符串为前缀（该字符串后跟一个连字符"-"）的元素</span></div><div class="line">$(<span class="string">"[attribute *= 'value']"</span>)</div><div class="line"><span class="comment">//选择指定属性具有包含一个给定的子字符串的元素。（选择给定的属性是以包含某些值得元素）</span></div><div class="line">$(<span class="string">"[attribute ~= 'value']"</span>)</div><div class="line"><span class="comment">//选择指定属性用空格分隔的值中包含一个给定值得元素。</span></div><div class="line">$(<span class="string">"[attribute = 'value']"</span>)</div><div class="line"><span class="comment">// 选择指定属性是给定值得元素</span></div><div class="line">$(<span class="string">"[attribute != 'value']"</span>)</div><div class="line"><span class="comment">//选择不存在指定属性，或者指定的属性值不等于给定值得元素</span></div><div class="line">$(<span class="string">"[attribute ^= 'value']"</span>)</div><div class="line"><span class="comment">//选择指定属性是以给定字符串开始的元素</span></div><div class="line">$(<span class="string">"[attribute $= 'value']"</span>)</div><div class="line"><span class="comment">//选择指定属性是以给定值结尾的元素。这个比较是区分大小写的</span></div><div class="line">$(<span class="string">"[attribute]"</span>)</div><div class="line"><span class="comment">//选择所有具有指定属性的元素，该属性是可以是任何值</span></div><div class="line">$(<span class="string">"[attributeFilter1][attributeFilterN]"</span>)</div><div class="line"><span class="comment">//选择匹配所有指定的属性筛选器的元素</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">//子元素筛选选择器</span></div><div class="line">$(<span class="string">".fist-chill"</span>）</div><div class="line"><span class="comment">//选择所有父级元素下的第一个字元素</span></div><div class="line">$(<span class="string">".last-child"</span>)</div><div class="line"><span class="comment">//选择所要父级下的最后一个子元素</span></div><div class="line">$(<span class="string">".only-child"</span>)</div><div class="line"><span class="comment">//唯一的子元素</span></div><div class="line">$(<span class="string">".nth-child"</span>)</div><div class="line"><span class="comment">//所有父级下第n个子元素</span></div><div class="line">$(<span class="string">".nth-last-child"</span>)</div><div class="line"><span class="comment">//所有父级下倒数第n个子元素</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">//表单选择器</span></div><div class="line">$(<span class="string">":input"</span>)</div><div class="line"><span class="comment">//选择所有input、textarea、select和button元素</span></div><div class="line">$(<span class="string">"input:text"</span>)</div><div class="line"><span class="comment">//匹配所有文本框</span></div><div class="line">$(<span class="string">"input:password"</span>)</div><div class="line"><span class="comment">//匹配所有密码档</span></div><div class="line">$(<span class="string">"input:radio"</span>)</div><div class="line"><span class="comment">//匹配所有单选按钮</span></div><div class="line">$(<span class="string">"input:checkbox"</span>)</div><div class="line"><span class="comment">//匹配所有复选框</span></div><div class="line">$(<span class="string">"input:submit"</span>)</div><div class="line"><span class="comment">//匹配所有提交按钮</span></div><div class="line">$(<span class="string">"input:image"</span>)</div><div class="line"><span class="comment">//匹配所有图像域</span></div><div class="line">$(<span class="string">"input:reset"</span>)</div><div class="line"><span class="comment">//匹配所有重置按钮</span></div><div class="line">$(<span class="string">"input:button"</span>)</div><div class="line"><span class="comment">//匹配所有按钮</span></div><div class="line">$(<span class="string">"input:file"</span>)</div><div class="line"><span class="comment">//匹配所有文件域</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">//表单对象属性筛选选择器</span></div><div class="line">$(<span class="string">':enabled'</span>)<span class="comment">//所有可用的input</span></div><div class="line">$(<span class="string">':disabled'</span>)<span class="comment">//所有不可用的input</span></div><div class="line">$(<span class="string">':checked'</span>)<span class="comment">//所有被选中的选项框</span></div><div class="line">$(<span class="string">':selected'</span>)<span class="comment">//所有被选中的下拉框</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">//特殊选择器this</span></div><div class="line">$(<span class="keyword">this</span>)</div><div class="line"><span class="comment">//$(this)代表的上下文对象是一个jquery的上下文对象，可以调用jQuery的方法和属性值。</span></div><div class="line"><span class="comment">//this，表示当前的上下文对象是一个html对象，可以调用html对象所拥有的属性和方法。</span></div></pre></td></tr></table></figure></p>
 <h1 id="class-属性"><a href="#class-属性" class="headerlink" title="class 属性"></a>class 属性</h1><p>JavaScript:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// ie8</span></div><div class="line"><span class="comment">// add class</span></div><div class="line">el.className += <span class="string">' '</span> + className;</div><div class="line"></div><div class="line"><span class="comment">// has class</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">hasClass</span>(<span class="params">el,className</span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">'(^| )'</span> + className + <span class="string">'( |$)'</span>, <span class="string">'gi'</span>).test(el.className);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// toggle class</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">toggleClass</span>(<span class="params">el,className</span>)</span>&#123;</div><div class="line">  <span class="keyword">var</span> classes = el.className.split(<span class="string">' '</span>);</div><div class="line">  <span class="keyword">var</span> existingIndex = <span class="number">-1</span>;</div><div class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> i = classes.length; i--;) &#123;</div><div class="line">    <span class="keyword">if</span> (classes[i] === className)&#123;</div><div class="line">      existingIndex = i;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">if</span> (existingIndex &gt;= <span class="number">0</span>)&#123;</div><div class="line">    classes.splice(existingIndex, <span class="number">1</span>);</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">else</span>&#123;</div><div class="line">    classes.push(className);</div><div class="line">  &#125;</div><div class="line">  el.className = classes.join(<span class="string">' '</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// remove class</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">remove</span>(<span class="params">el,className</span>)</span>&#123;</div><div class="line">  el.className = el.className.replace(<span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">'(^|\\b)'</span> + className.split(<span class="string">' '</span>).join(<span class="string">'|'</span>) + <span class="string">'(\\b|$)'</span>, <span class="string">'gi'</span>), <span class="string">' '</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// ie 10</span></div><div class="line">el.classList.add(className); <span class="comment">// add class</span></div><div class="line">el.classList.remove(className); <span class="comment">// remove class</span></div><div class="line">el.classList.contains(className); <span class="comment">// has class</span></div><div class="line">el.classList.toggle(className); <span class="comment">// toggle class</span></div></pre></td></tr></table></figure></p>
@@ -203,78 +373,473 @@ classes that you can use:
 <p>jQuery:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.each()</div><div class="line"><span class="comment">//for循环的迭代器，它会迭代jQuery对象合集中的每一个DOM元素。每次回调函数执行时，会传递当前循环次数作为参数(从0开始计数）</span></div><div class="line"></div><div class="line">.add()<span class="comment">//添加元素到匹配的元素集合</span></div></pre></td></tr></table></figure></p>
 <p>参考链接：<br><a href="https://segmentfault.com/a/1190000002650240" target="_blank" rel="external">JavaScript操作DOM的那些坑</a></p>
 
-  </section>
-
-  
-  
-
-<section class="post-comments">
-
-    <div class="ds-thread" data-thread-key="2016/08/25/javascript-4/"></div>
-
-    <script type="text/javascript">
-      var duoshuoQuery = {short_name:"Kongwsh"};
-      (function() {
-        var ds = document.createElement('script');
-        ds.type = 'text/javascript';ds.async = true;
-        ds.src = '//static.duoshuo.com/embed.js';
-        ds.charset = 'UTF-8';
-        (document.getElementsByTagName('head')[0] 
-        || document.getElementsByTagName('body')[0]).appendChild(ds);
-      })();
-    </script> 
-
-</section>
-
-
-</article>
-
-
-            <footer class="footer">
-
-    <span class="footer__copyright">&copy; 2014-2015. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
-    
-</footer>
-        </div>
+      
     </div>
 
-    <!-- js files -->
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/main.js"></script>
-    <script src="/js/scale.fix.js"></script>
-    
+    <div>
+      
+        
+      
+    </div>
 
-    
+    <div>
+      
+        
 
-    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript"> 
-        $(document).ready(function(){
-            MathJax.Hub.Config({ 
-                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JavaScript/" rel="tag">#JavaScript</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/08/22/javascript-1/" rel="next" title="JavaScript学习笔记之This">
+                <i class="fa fa-chevron-left"></i> JavaScript学习笔记之This
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/08/25/javascript-3/" rel="prev" title="JavaScript高级程序设计学习笔记（二）继承模式">
+                JavaScript高级程序设计学习笔记（二）继承模式 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+
+  
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/08/25/javascript-4/"
+           data-title="原生JavaScript与jQueryAPI对比" data-url="http://yoursite.com/2016/08/25/javascript-4/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="Kong" />
+          <p class="site-author-name" itemprop="name">Kong</p>
+          <p class="site-description motion-element" itemprop="description">Front-End</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">21</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/Kongwsh" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#元素查找"><span class="nav-number">1.</span> <span class="nav-text">元素查找</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#class-属性"><span class="nav-number">2.</span> <span class="nav-text">class 属性</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Node-Element操作"><span class="nav-number">3.</span> <span class="nav-text">Node,Element操作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#属性操作"><span class="nav-number">4.</span> <span class="nav-text">属性操作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#内容操作"><span class="nav-number">5.</span> <span class="nav-text">内容操作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS操作"><span class="nav-number">6.</span> <span class="nav-text">CSS操作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#位置大小"><span class="nav-number">7.</span> <span class="nav-text">位置大小</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#事件"><span class="nav-number">8.</span> <span class="nav-text">事件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#DOM加载完毕"><span class="nav-number">9.</span> <span class="nav-text">DOM加载完毕</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#绑定上下文"><span class="nav-number">10.</span> <span class="nav-text">绑定上下文</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#去除空格"><span class="nav-number">11.</span> <span class="nav-text">去除空格</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Ajax"><span class="nav-number">12.</span> <span class="nav-text">Ajax</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JSON处理"><span class="nav-number">13.</span> <span class="nav-text">JSON处理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#节点遍历"><span class="nav-number">14.</span> <span class="nav-text">节点遍历</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Kong</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+        
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv"><i class="fa fa-user"></i><span class="busuanzi-value" id="busuanzi_value_site_uv"></span></span>
+  
+
+  
+    <span class="site-pv"><i class="fa fa-eye"></i><span class="busuanzi-value" id="busuanzi_value_site_pv"></span></span>
+  
+  
+</div>
+
+
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"Kongwsh"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+      
+      <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+      <script src="/js/src/hook-duoshuo.js"></script>
+    
+  
+
+
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+       search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            isfetched = true;
+            $('.popup').detach().appendTo('.header-inner');
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var matchcounts = 0;
+                var str='<ul class=\"search-result-list\">';                
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length > 1) {
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = true;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = data.url;
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '' && data_content != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title < 0 && index_content < 0 ){
+                                isMatch = false;
+                            } else {
+                                if (index_content < 0) {
+                                    index_content = 0;
+                                }
+                                if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            }
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        matchcounts += 1;
+                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out 100 characters
+                            var start = first_occur - 20;
+                            var end = first_occur + 80;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 50;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substring(start, end);
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                            });
+                            
+                            str += "<p class=\"search-result\">" + match_content +"...</p>"
+                        }
+                        str += "</li>";
+                    }
+                })};
+                str += "</ul>";
+                if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+                if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+                $resultContent.innerHTML = str;
             });
-        });
-    </script>
+            proceedsearch();
+        }
+    });}
 
+    // handle and trigger popup window;
+    $('.popup-trigger').mousedown(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
 
-    
+    });
 
-    <script src="/js/awesome-toc.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $.awesome_toc({
-                overlay: true,
-                contentId: "post-content",
-            });
-        });
-    </script>
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
 
+  
 
-    
-    
-    <!--kill ie6 -->
-<!--[if IE 6]>
-  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
-<![endif]-->
+  
+
+  
 
 </body>
 </html>
