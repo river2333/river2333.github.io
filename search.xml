@@ -4,77 +4,6 @@
   
     
     <entry>
-      <title><![CDATA[小菜鸟前端入坑记]]></title>
-      <url>http://yoursite.com/2016/11/15/summary-0/</url>
-      <content type="html"><![CDATA[<p>近日，开始找工作，准备面试，面试受挫，感慨太多，趁机对过去的自己做个总结吧。曾经对自己有过质疑，有过痛苦因de不了的bug，但现在仍然前行的我亲自熬制了一篇特色鸡汤，酌情品尝诸君。</p>
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="https://music.163.com/outchain/player?type=2&id=31066853&auto=0&height=66"></iframe>
-
-
-<a id="more"></a>
-<h1 id="面试小记"><a href="#面试小记" class="headerlink" title="面试小记"></a>面试小记</h1><p>简历几乎石沉大海，真是令人沮丧，去几个公司面试，还是培训结构，看来我还是太弱啊。已经毕业，技术不到家，还是个女生注定没优势，回家继续修炼，再择良辰吉日出关吧（无奈.jpg）,用厉害的demo狂甩面试官的脸（滑稽.jpg）。</p>
-<h1 id="我为什么选择前端"><a href="#我为什么选择前端" class="headerlink" title="我为什么选择前端"></a>我为什么选择前端</h1><p>  大学时期，患有非典型型青春期焦虑症的我，课余时间不是思考一些形而上的问题，就是看电影，逛豆瓣，曾想当个写作者的我却只写过日记。这样务虚不务实，直到大三才对学业重视，奈何出来混迟早是要还的，曾经落下的，早晚都得补回来，在MOOC上刷只在考前几周才认真学的专业课，进入大四，怀揣着对知识的渴望，加入考研大军，虽败了（悲伤.jpg），但是这段时间是我最快乐的时间，终于摆脱原地踏步，行为瘫痪(苦笑.jpg)。</p>
-<p>  程序员的世界是美好的，大家有资源会共享，有问题都会积极帮忙，用代码改变世界就算了，但是能改变自己。<br>  是码代码的成就感，还是对于本科计算机但没写过几行代码的我想跻身程序员之列，前端的门还好进一些，还是就业的压力让我选择前端，我想都有，不然我不会坚持这么久（其实还不到半年）。<br>  既然是我自己要跳进这个坑，就不能轻易地爬出来。</p>
-<p>  愚以为生活最好的状态是好奇，热情且独立做自己喜欢的事。我不会告诉你，我追寻的是宇宙生命及一切的终极答案，哈哈哈^_~。<br>  我不知道以后会发生什么，也许会找到更喜欢的事，但此阶段Just do it！跑起来再说。</p>
-<h1 id="学习总结"><a href="#学习总结" class="headerlink" title="学习总结"></a>学习总结</h1><p>自学难免走弯路，学习难免会枯燥。感谢对我物质支持的父母，感谢对我精神支持的朋友，感谢坚持努力的我自己。前端入门的我学了什么，</p>
-<ol>
-<li>搭建个人博客</li>
-<li>掌握JavaScript面向对象 ，CSS3，HTML5</li>
-<li>能够编写语义化HTML，模块化CSS</li>
-<li>响应式布局</li>
-<li>类库jQuery</li>
-<li>Ajax，跨域JSONP,CORS</li>
-<li>原生js实现常见交互特效，常用组件</li>
-<li>Web Audio制作音乐可视化播放web应用</li>
-<li>熟练使用谷歌火狐调试工具</li>
-<li>基本SEO</li>
-<li>git</li>
-</ol>
-<h1 id="我如何学习"><a href="#我如何学习" class="headerlink" title="我如何学习"></a>我如何学习</h1><p>  自学可以自主把握获取知识的速度和节奏。以下共勉</p>
-<ol>
-<li>搜索引擎<br>自从用了谷歌，解决问题的效率高了很多，科学上网不解释。<br>除此之外，知乎，segmentfault等上的大牛有很多学习资源，感谢大家分享精神。<ul>
-<li><a href="http://google.yubolun.com/" target="_blank" rel="external">无障碍访问谷歌</a></li>
-</ul>
-</li>
-<li>获得一手知识<br>对于获得的解决方法或者相关知识要刨根问底，不能总是拿来主义，浅尝辄止，当然时间有限，要分清什么问题要追根溯源，什么问题要一带而过。<ul>
-<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide" target="_blank" rel="external">查文档MDN</a></li>
-<li><a href="http://devdocs.io/" target="_blank" rel="external">DevDocs</a></li>
-</ul>
-</li>
-<li>不想做全栈的程序员不是好前端<br>做一个合格的前端，我认为，首先要是个合格的程序员，计算机的知识从最低层01到最高层的面向用户的应用程序，都应该了解。<ul>
-<li><a href="http://www.imooc.com/" target="_blank" rel="external">慕课网</a></li>
-<li><a href="https://www.freecodecamp.cn/map" target="_blank" rel="external">freeCodeCamp</a></li>
-</ul>
-</li>
-<li>英语要好，不然怎么看文档。<ul>
-<li><a href="https://www.shanbay.com/" target="_blank" rel="external">扇贝</a></li>
-</ul>
-</li>
-<li>快速进步捷径是模仿，不断踩坑，光说不练假把式。<ul>
-<li><a href="http://ife.baidu.com/task/all" target="_blank" rel="external">百度前端学院</a></li>
-<li><a href="https://github.com/phodal/ideabook" target="_blank" rel="external">一个全栈增长工程师的练手项目集</a></li>
-</ul>
-</li>
-</ol>
-<h1 id="学习计划"><a href="#学习计划" class="headerlink" title="学习计划"></a>学习计划</h1><p>今天开始的学习计划</p>
-<ol>
-<li>组件化，框架React + ES6</li>
-<li>构建工具gulp + webpack</li>
-<li>后端Node.js 和 python，独立搭建起Web应用的运行环境</li>
-<li>模块化，Require.js</li>
-<li>CSS预处理器SASS和后处理器autoprefixer</li>
-<li>客户端/服务器端缓存，CSS/JS代码优化一类的性能方面知识</li>
-<li>js模块开发</li>
-<li>算法知识</li>
-<li>Http和Https协议</li>
-<li>坚持更新学习笔记</li>
-</ol>
-<p>聪明伶俐，眼疾手快的我没问题，忍不住又夸自己;-)</p>
-<p>ps：如果那位前辈不慎看到这篇辣眼睛且没啥质量的文章，有什么要告诫的就留言吧，谢谢</p>
-<p>2016/11/15</p>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[CSS之总有办法居中]]></title>
       <url>http://yoursite.com/2016/11/15/css-0/</url>
       <content type="html"><![CDATA[<p>居中是布局的关键，分为水平居中，垂直居中，水平垂直居中。下面总结几种居中的办法，以及讨论其兼容性。<em>忍不住夸自己:-)</em><br>默认的HTML代码:<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"parent"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"child"</span>&gt;</span>demo<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
@@ -751,15 +680,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Git与Github]]></title>
-      <url>http://yoursite.com/2016/07/23/git-0/</url>
-      <content type="html"><![CDATA[<p>Git 是一个为了更好地管理 Linux内核开发而创立的分布式版本控制和软件配置管理软件。 国内外知名 Git 代码托管网站有：<br><a href="http://GitHub.com" target="_blank" rel="external">github</a><br><a href="http://Coding.net" target="_blank" rel="external">Coding</a><br><a href="http://code.csdn.net/" target="_blank" rel="external">code.csdn</a><br><a id="more"></a></p>
-<p>GitHub 使用 Git 作为版本控制系统（version control system）提供在线源码托管的服务，同时是个有社交功能的开发者社区。<br>国外类似服务：<br><a href="https://bitbucket.org/" target="_blank" rel="external">Bitbucket</a><br><a href="http://Gitlab.com" target="_blank" rel="external">Gitlab</a><br>国内类似服务：<br><a href="http://Gitcafe.com" target="_blank" rel="external">Gitcafe</a></p>
-<h1 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h1><p><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="external">Git教程 - 廖雪峰的官方网站</a><br><a href="https://git-scm.com/book/en/v2" target="_blank" rel="external">Pro Git</a><br><a href="http://rogerdudler.github.io/git-guide/index.zh.html" target="_blank" rel="external">git - 简明指南</a><br><a href="http://marklodato.github.io/visual-git-guide/index-zh-cn.html" target="_blank" rel="external">图解 Git</a><br><a href="http://www.yangzhiping.com/tech/github.html" target="_blank" rel="external">如何高效利用GitHub–阳志平</a><br><a href="http://www.worldhello.net/gotgithub/#id4" target="_blank" rel="external">worldhello</a><br><a href="help.github.com/">Github帮助文档</a><br><a href="http://www-cs-students.stanford.edu/~blynn/gitmagic/intl/zh_cn/index.html" target="_blank" rel="external">Git Magic</a></p>
-<h1 id="过后填坑···"><a href="#过后填坑···" class="headerlink" title="过后填坑···"></a>过后填坑···</h1>]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[Winsows上Nodejs的安装配置]]></title>
       <url>http://yoursite.com/2016/07/23/nodejs-0/</url>
       <content type="html"><![CDATA[<h1 id="安装Nodejs"><a href="#安装Nodejs" class="headerlink" title="安装Nodejs"></a>安装Nodejs</h1><blockquote>
@@ -822,6 +742,15 @@
 <p>JSHint会警告<code>Expected &#39;{&#39; and instead saw &#39;return&#39;.</code>，因为我（node社区很多人也是）不喜欢在单行的返回代码前后添加大括号，但是我也不想总是在文件最上面添加注释添加一块专门的注释来禁用它。一种可行的办法是修改编辑器的代码检测插件，不过难度有点高，另一种方法就是修改JSHint 的代码，我们只需要对一个reporter文件稍做修改即可。打开文件<code>jshint/src/reporters/default.js</code>，在<code>var error = result.error;</code>下面加入两行代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var code = error.code;</div><div class="line">if (code === &apos;W116&apos;) return;</div></pre></td></tr></table></figure></p>
 <p>大功告成，保存以后再用JSHint就再也看不到那样的警告了。（当然，如果你的JSHint使用别的reporter那就另当别论了）。</p>
 ]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Git与Github]]></title>
+      <url>http://yoursite.com/2016/07/23/git-0/</url>
+      <content type="html"><![CDATA[<p>Git 是一个为了更好地管理 Linux内核开发而创立的分布式版本控制和软件配置管理软件。 国内外知名 Git 代码托管网站有：<br><a href="http://GitHub.com" target="_blank" rel="external">github</a><br><a href="http://Coding.net" target="_blank" rel="external">Coding</a><br><a href="http://code.csdn.net/" target="_blank" rel="external">code.csdn</a><br><a id="more"></a></p>
+<p>GitHub 使用 Git 作为版本控制系统（version control system）提供在线源码托管的服务，同时是个有社交功能的开发者社区。<br>国外类似服务：<br><a href="https://bitbucket.org/" target="_blank" rel="external">Bitbucket</a><br><a href="http://Gitlab.com" target="_blank" rel="external">Gitlab</a><br>国内类似服务：<br><a href="http://Gitcafe.com" target="_blank" rel="external">Gitcafe</a></p>
+<h1 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h1><p><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="external">Git教程 - 廖雪峰的官方网站</a><br><a href="https://git-scm.com/book/en/v2" target="_blank" rel="external">Pro Git</a><br><a href="http://rogerdudler.github.io/git-guide/index.zh.html" target="_blank" rel="external">git - 简明指南</a><br><a href="http://marklodato.github.io/visual-git-guide/index-zh-cn.html" target="_blank" rel="external">图解 Git</a><br><a href="http://www.yangzhiping.com/tech/github.html" target="_blank" rel="external">如何高效利用GitHub–阳志平</a><br><a href="http://www.worldhello.net/gotgithub/#id4" target="_blank" rel="external">worldhello</a><br><a href="help.github.com/">Github帮助文档</a><br><a href="http://www-cs-students.stanford.edu/~blynn/gitmagic/intl/zh_cn/index.html" target="_blank" rel="external">Git Magic</a></p>
+<h1 id="过后填坑···"><a href="#过后填坑···" class="headerlink" title="过后填坑···"></a>过后填坑···</h1>]]></content>
     </entry>
     
     <entry>
