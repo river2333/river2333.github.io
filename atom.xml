@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-11-14T16:36:18.162Z</updated>
+  <updated>2016-11-19T11:16:37.597Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2016/11/19/javascript-5/"/>
+    <id>http://yoursite.com/2016/11/19/javascript-5/</id>
+    <published>2016-11-19T11:16:37.597Z</published>
+    <updated>2016-11-19T11:16:37.597Z</updated>
+    
+    <content type="html"><![CDATA[<p>javascript-5.md</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;javascript-5.md&lt;/p&gt;
+
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>CSS之总有办法居中</title>
@@ -928,6 +948,29 @@
   </entry>
   
   <entry>
+    <title>Git与Github</title>
+    <link href="http://yoursite.com/2016/07/23/git-0/"/>
+    <id>http://yoursite.com/2016/07/23/git-0/</id>
+    <published>2016-07-23T04:23:08.000Z</published>
+    <updated>2016-10-17T04:52:06.133Z</updated>
+    
+    <content type="html"><![CDATA[<p>Git 是一个为了更好地管理 Linux内核开发而创立的分布式版本控制和软件配置管理软件。 国内外知名 Git 代码托管网站有：<br><a href="http://GitHub.com" target="_blank" rel="external">github</a><br><a href="http://Coding.net" target="_blank" rel="external">Coding</a><br><a href="http://code.csdn.net/" target="_blank" rel="external">code.csdn</a><br><a id="more"></a></p>
+<p>GitHub 使用 Git 作为版本控制系统（version control system）提供在线源码托管的服务，同时是个有社交功能的开发者社区。<br>国外类似服务：<br><a href="https://bitbucket.org/" target="_blank" rel="external">Bitbucket</a><br><a href="http://Gitlab.com" target="_blank" rel="external">Gitlab</a><br>国内类似服务：<br><a href="http://Gitcafe.com" target="_blank" rel="external">Gitcafe</a></p>
+<h1 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h1><p><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="external">Git教程 - 廖雪峰的官方网站</a><br><a href="https://git-scm.com/book/en/v2" target="_blank" rel="external">Pro Git</a><br><a href="http://rogerdudler.github.io/git-guide/index.zh.html" target="_blank" rel="external">git - 简明指南</a><br><a href="http://marklodato.github.io/visual-git-guide/index-zh-cn.html" target="_blank" rel="external">图解 Git</a><br><a href="http://www.yangzhiping.com/tech/github.html" target="_blank" rel="external">如何高效利用GitHub–阳志平</a><br><a href="http://www.worldhello.net/gotgithub/#id4" target="_blank" rel="external">worldhello</a><br><a href="help.github.com/">Github帮助文档</a><br><a href="http://www-cs-students.stanford.edu/~blynn/gitmagic/intl/zh_cn/index.html" target="_blank" rel="external">Git Magic</a></p>
+<h1 id="过后填坑···"><a href="#过后填坑···" class="headerlink" title="过后填坑···"></a>过后填坑···</h1>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Git 是一个为了更好地管理 Linux内核开发而创立的分布式版本控制和软件配置管理软件。 国内外知名 Git 代码托管网站有：&lt;br&gt;&lt;a href=&quot;http://GitHub.com&quot;&gt;github&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://Coding.net&quot;&gt;Coding&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://code.csdn.net/&quot;&gt;code.csdn&lt;/a&gt;&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="NODE" scheme="http://yoursite.com/tags/NODE/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Winsows上Nodejs的安装配置</title>
     <link href="http://yoursite.com/2016/07/23/nodejs-0/"/>
     <id>http://yoursite.com/2016/07/23/nodejs-0/</id>
@@ -1024,29 +1067,6 @@
   </entry>
   
   <entry>
-    <title>Git与Github</title>
-    <link href="http://yoursite.com/2016/07/23/git-0/"/>
-    <id>http://yoursite.com/2016/07/23/git-0/</id>
-    <published>2016-07-23T04:23:08.000Z</published>
-    <updated>2016-10-17T04:52:06.133Z</updated>
-    
-    <content type="html"><![CDATA[<p>Git 是一个为了更好地管理 Linux内核开发而创立的分布式版本控制和软件配置管理软件。 国内外知名 Git 代码托管网站有：<br><a href="http://GitHub.com" target="_blank" rel="external">github</a><br><a href="http://Coding.net" target="_blank" rel="external">Coding</a><br><a href="http://code.csdn.net/" target="_blank" rel="external">code.csdn</a><br><a id="more"></a></p>
-<p>GitHub 使用 Git 作为版本控制系统（version control system）提供在线源码托管的服务，同时是个有社交功能的开发者社区。<br>国外类似服务：<br><a href="https://bitbucket.org/" target="_blank" rel="external">Bitbucket</a><br><a href="http://Gitlab.com" target="_blank" rel="external">Gitlab</a><br>国内类似服务：<br><a href="http://Gitcafe.com" target="_blank" rel="external">Gitcafe</a></p>
-<h1 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h1><p><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="external">Git教程 - 廖雪峰的官方网站</a><br><a href="https://git-scm.com/book/en/v2" target="_blank" rel="external">Pro Git</a><br><a href="http://rogerdudler.github.io/git-guide/index.zh.html" target="_blank" rel="external">git - 简明指南</a><br><a href="http://marklodato.github.io/visual-git-guide/index-zh-cn.html" target="_blank" rel="external">图解 Git</a><br><a href="http://www.yangzhiping.com/tech/github.html" target="_blank" rel="external">如何高效利用GitHub–阳志平</a><br><a href="http://www.worldhello.net/gotgithub/#id4" target="_blank" rel="external">worldhello</a><br><a href="help.github.com/">Github帮助文档</a><br><a href="http://www-cs-students.stanford.edu/~blynn/gitmagic/intl/zh_cn/index.html" target="_blank" rel="external">Git Magic</a></p>
-<h1 id="过后填坑···"><a href="#过后填坑···" class="headerlink" title="过后填坑···"></a>过后填坑···</h1>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Git 是一个为了更好地管理 Linux内核开发而创立的分布式版本控制和软件配置管理软件。 国内外知名 Git 代码托管网站有：&lt;br&gt;&lt;a href=&quot;http://GitHub.com&quot;&gt;github&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://Coding.net&quot;&gt;Coding&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://code.csdn.net/&quot;&gt;code.csdn&lt;/a&gt;&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="NODE" scheme="http://yoursite.com/tags/NODE/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Sublime Text3 前端插件安装与使用</title>
     <link href="http://yoursite.com/2016/07/05/sublime-0/"/>
     <id>http://yoursite.com/2016/07/05/sublime-0/</id>
@@ -1137,92 +1157,6 @@
     
     
       <category term="sublime text3" scheme="http://yoursite.com/tags/sublime-text3/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo使用</title>
-    <link href="http://yoursite.com/2016/07/01/hexo-1/"/>
-    <id>http://yoursite.com/2016/07/01/hexo-1/</id>
-    <published>2016-07-01T04:23:08.000Z</published>
-    <updated>2016-07-26T01:19:49.322Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h1><p>默认目录结构如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">.</div><div class="line">├── .deploy</div><div class="line">├── public</div><div class="line">├── scaffolds</div><div class="line">├── scripts</div><div class="line">├── source</div><div class="line">|   ├── _drafts</div><div class="line">|   └── _posts</div><div class="line">├── themes</div><div class="line">├── _config.yml</div><div class="line">└── package.json</div></pre></td></tr></table></figure></p>
-<a id="more"></a>
-<ul>
-<li>deploy：执行hexo deploy命令部署到GitHub上的内容目录</li>
-<li>public：执行hexo generate命令，输出的静态网页内容目录</li>
-<li>scaffolds：layout模板文件目录，其中的md文件可以添加编辑</li>
-<li>scripts：扩展脚本目录，这里可以自定义一些javascript脚本</li>
-<li>source：文章源码目录，该目录下的markdown和html文件均会被hexo处理。该页面对应repo的根目录，404文件、favicon.ico文件，CNAME文件等都应该放这 里，该目录下可新建页面目录。<ul>
-<li>_drafts：草稿文章</li>
-<li>_posts：发布文章</li>
-</ul>
-</li>
-<li>themes：主题文件目录</li>
-<li>_config.yml：全局配置文件，大多数的设置都在这里</li>
-<li>package.json：应用程序数据，指明hexo的版本等信息，类似于一般软件中的关于按钮</li>
-</ul>
-<h1 id="Hexo上传README文件"><a href="#Hexo上传README文件" class="headerlink" title="Hexo上传README文件"></a>Hexo上传README文件</h1><p>Hexo原理就是hexo在执行hexo generate时会在本地先把博客生成的一套静态站点放到public文件夹中，在执行hexo deploy时将其复制到.deploy文件夹中。</p>
-<p>Github的版本库通常建议同时附上README.md说明文件，但是hexo默认情况下会把所有md文件解析成html文件，所以即使你在线生成了README.md，它也会在你下一次部署时被删去。怎么解决呢？</p>
-<p>在执行hexo deploy前把在本地写好的README.md文件复制到.deploy文件夹中，再去执行hexo deploy。</p>
-<h1 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">npm install &lt;plugin-name&gt; --save # 安装插件</div><div class="line">npm update                       # 升级插件</div><div class="line">npm uninstall &lt;plugin-name&gt;      # 卸载插件</div></pre></td></tr></table></figure>
-<p>hexo插件<a href="https://github.com/hexojs/hexo/wiki/Plugins" target="_blank" rel="external">Plugins · hexojs/hexo</a></p>
-<h2 id="RSS订阅插件"><a href="#RSS订阅插件" class="headerlink" title="RSS订阅插件"></a>RSS订阅插件</h2><p>以管理员运行命令行，进入hexo目录下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-generator-feed --save</div></pre></td></tr></table></figure></p>
-<p>这个命令来自<a href="https://www.npmjs.com/package/hexo-generator-feed" target="_blank" rel="external">hexo-generator-feed</a><br>修改 Hexo 根目录下的 _config.yml<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">feed:</div><div class="line">       type: atom</div><div class="line">       path: atom.xml</div><div class="line">       limit: 20</div></pre></td></tr></table></figure></p>
-<blockquote>
-<p>注意格式，‘feed’不能缩进</p>
-</blockquote>
-<h2 id="Sitemap插件"><a href="#Sitemap插件" class="headerlink" title="Sitemap插件"></a>Sitemap插件</h2><blockquote>
-<p>Sitemap 的提交主要的目的，是要避免搜索引擎的爬虫没有完整的收录整个网页的内容，所以提交 Sitemap<br>是能够补足搜索引擎的不足，进而加速网页的收录速度，达到搜寻引擎友好的目的。</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm install hexo-generator-sitemap --save</div><div class="line">npm install hexo-generator-baidu-sitemap --save</div></pre></td></tr></table></figure>
-<p>这个命令来自<a href="https://www.npmjs.com/package/hexo-generator-sitemap" target="_blank" rel="external">hexo-generator-sitemap</a><br>对于国内用户还需要安装插件 hexo-generator-baidu-sitemap<br>修改配置文件：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">sitemap:</div><div class="line">       path: sitemap.xml</div><div class="line">baidusitemap:</div><div class="line">            path: baidusitemap.xml</div></pre></td></tr></table></figure></p>
-<h1 id="统计"><a href="#统计" class="headerlink" title="统计"></a>统计</h1><p>简单易使用<a href="http://ibruce.info/2015/04/04/busuanzi/" target="_blank" rel="external">不蒜子</a></p>
-<h1 id="评论"><a href="#评论" class="headerlink" title="评论"></a>评论</h1><p>在Hexo中，默认使用的评论是国外的Disqus,但是Disqus只支持G+ twitter等登陆，我改为国内的<a href="http://duoshuo.com/" target="_blank" rel="external">多说</a>评论系统。<br>我使用next主题，hexo 版本为3.2.2，在<code>\hexo\themes\next\layout\_partial\comment.ejs</code>中自动配置多说评论框代码，只需在hexo根目录下的配置文件中加上<code>duoshuo_shortname: Kongwsh</code></p>
-<h1 id="404页面"><a href="#404页面" class="headerlink" title="404页面"></a>404页面</h1><p>Github Pages提供制作404页面的教程：<a href="https://help.github.com/articles/creating-a-custom-404-page-for-your-github-pages-site/" target="_blank" rel="external">Creating a custom 404 page for your GitHub Pages site</a> 。不过 </p>
-<blockquote>
-<p>If you want your Project Pages site to have a custom 404 page, you must use a custom domain.</p>
-</blockquote>
-<p>直接在根目录下创建自己的404.html或者404.md就可以。但是自定义404页面仅对绑定顶级域名的项目才起作用，GitHub默认分配的二级域名是不起作用的，使用hexo server在本机调试也是不起作用的。<br>404公益是个特别好的想法，目前有以下几个：</p>
-<ul>
-<li><a href="http://www.qq.com/404/" target="_blank" rel="external">腾讯公益404</a></li>
-<li><a href="http://yibo.iyiyun.com/Index/web404" target="_blank" rel="external">404公益_益云(公益互联网)社会创新中心</a></li>
-<li><a href="http://404page.missingkids.org.tw/" target="_blank" rel="external">失蹤兒童少年資料管理中心404</a></li>
-</ul>
-<h1 id="网站图标"><a href="#网站图标" class="headerlink" title="网站图标"></a>网站图标</h1><p>将favicon.ico放到工程根目录下即可，也就是hexo\source目录。可以在Faviconer制作你的ico图标，国内有<a href="http://www.bitbug.net/" target="_blank" rel="external">比特虫</a>。</p>
-<h1 id="hexo更新"><a href="#hexo更新" class="headerlink" title="hexo更新"></a>hexo更新</h1><p>更新hexo:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm update -g hexo</div></pre></td></tr></table></figure></p>
-<p>更新主题：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd themes/你的主题</div><div class="line">git pull</div></pre></td></tr></table></figure></p>
-<p>更新插件：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm update</div></pre></td></tr></table></figure></p>
-<h1 id="图床"><a href="#图床" class="headerlink" title="图床"></a>图床</h1><p>图床专门用来存放图片，同时允许把图片对外连接。</p>
-<ul>
-<li><a href="https://portal.qiniu.com/" target="_blank" rel="external">七牛</a></li>
-<li><a href="https://maxiang.io/" target="_blank" rel="external">马克飞象</a></li>
-<li><a href="http://yotuku.cn/" target="_blank" rel="external">yotuku</a> 我用的这个，免费的。</li>
-<li><a href="http://www.tietuku.com/" target="_blank" rel="external">贴图库</a></li>
-</ul>
-<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><p>以下还没做</p>
-<ul>
-<li>绑定域名</li>
-<li>分享</li>
-<li>搜索</li>
-<li>同步 Dropbox </li>
-<li>将独立域名与GitHub Pages的空间绑定，官方教程：<a href="https://help.github.com/articles/using-a-custom-domain-with-github-pages/" target="_blank" rel="external">Using a custom domain with GitHub Pages</a></li>
-<li>迁移</li>
-<li>CDN加速</li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;目录结构&quot;&gt;&lt;a href=&quot;#目录结构&quot; class=&quot;headerlink&quot; title=&quot;目录结构&quot;&gt;&lt;/a&gt;目录结构&lt;/h1&gt;&lt;p&gt;默认目录结构如下：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;.&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;├── .deploy&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;├── public&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;├── scaffolds&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;├── scripts&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;├── source&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;|   ├── _drafts&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;|   └── _posts&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;├── themes&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;├── _config.yml&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;└── package.json&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="HEXO" scheme="http://yoursite.com/tags/HEXO/"/>
-    
-      <category term="Github Page" scheme="http://yoursite.com/tags/Github-Page/"/>
     
   </entry>
   
