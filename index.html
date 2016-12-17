@@ -296,7 +296,7 @@
               
                 
                 <a class="post-title-link" href="/2016/11/19/javascript-5/" itemprop="url">
-                  未命名
+                  各种数组去重
                 </a>
               
             
@@ -309,7 +309,7 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-11-19T19:16:37+08:00" content="2016-11-19">
+            <time itemprop="dateCreated" datetime="2016-11-19T19:17:08+08:00" content="2016-11-19">
               2016-11-19
             </time>
           </span>
@@ -346,9 +346,127 @@
       
         
           
-            <p>javascript-5.md</p>
+            <h1 id="要求："><a href="#要求：" class="headerlink" title="要求："></a>要求：</h1><ul>
+<li>1 和 “1” 是不同的元素；</li>
+<li>1 和 new Number(1) 是不同的元素；</li>
+<li>{} 和 {} 是不同的元素（引用不同）。</li>
+</ul>
+<h1 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h1><p>定义一个数组 res 保存结果，遍历需要去重的数组，如果该元素已经存在在 res 中了，则说明是重复的元素，如果没有，则放入 res 中。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">unique</span>(<span class="params">a</span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> res = [];<span class="comment">//保存结果</span></div><div class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>, len = a.length; i &lt; len; i++) &#123;</div><div class="line">    <span class="keyword">var</span> item = a[i];<span class="comment">//存当前遍历中数组中的元素</span></div><div class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> j = <span class="number">0</span>, jLen = res.length; j &lt; jLen; j++) &#123;</div><div class="line">      <span class="keyword">if</span> (res[j] === item)</div><div class="line">        <span class="keyword">break</span>;<span class="comment">//跟res[]中元素比较，存在则跳出</span></div><div class="line">    &#125;</div><div class="line">    <span class="comment">//第二个for循环中没有碰到一样的，则存入res[]</span></div><div class="line">    <span class="keyword">if</span> (j === jLen)</div><div class="line">      res.push(item);</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> res;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> a = [<span class="number">1</span>, <span class="number">1</span>, <span class="string">'1'</span>, <span class="string">'2'</span>, <span class="number">1</span>];</div><div class="line"><span class="keyword">var</span> ans = unique(a);</div><div class="line"><span class="built_in">console</span>.log(ans); <span class="comment">// =&gt; [1, "1", "2"]</span></div></pre></td></tr></table></figure></p>
+<p>两个for循环，复杂度为o(n^2)。</p>
+<h2 id="变形一"><a href="#变形一" class="headerlink" title="变形一"></a>变形一</h2><p> Array.prototype.indexOf()返回给定元素能找在数组中找到的第一个索引值，否则返回-1。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">unique</span>(<span class="params">a</span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> res = [];</div><div class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>, len = a.length; i &lt; len; i++) &#123;</div><div class="line">    <span class="keyword">var</span> item = a[i];</div><div class="line">    (res.indexOf(item) === <span class="number">-1</span>) &amp;&amp; res.push(item);</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> res;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> a = [<span class="number">1</span>, <span class="number">1</span>, <span class="string">'1'</span>, <span class="string">'2'</span>, <span class="number">1</span>];</div><div class="line"><span class="keyword">var</span> ans = unique(a);</div><div class="line"><span class="built_in">console</span>.log(ans); <span class="comment">//[1, "1", "2"]</span></div></pre></td></tr></table></figure></p>
+<h2 id="变形二"><a href="#变形二" class="headerlink" title="变形二"></a>变形二</h2><p>Array.prototype.filter() filter 为数组中的每个元素调用一次 callback 函数，并利用所有使得 callback 返回 true 或 等价于 true 的值 的元素创建一个新数组。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">unique</span>(<span class="params">a</span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> res = a.filter(<span class="function"><span class="keyword">function</span>(<span class="params">item, index, array</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> array.indexOf(item) === index;</div><div class="line">  &#125;);</div><div class="line">  <span class="keyword">return</span> res;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> a = [<span class="number">1</span>, <span class="number">1</span>, <span class="string">'1'</span>, <span class="string">'2'</span>, <span class="number">1</span>];</div><div class="line"><span class="keyword">var</span> ans = unique(a);</div><div class="line"><span class="built_in">console</span>.log(ans); <span class="comment">// =&gt; [1, "1", "2"]</span></div></pre></td></tr></table></figure></p>
+<h1 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h1><p>将原数组中重复元素的最后一个元素放入结果数组中。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">unique</span>(<span class="params">a</span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> res = [];</div><div class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>, len = a.length; i &lt; len; i++) &#123;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> j = i + <span class="number">1</span>; j &lt; len; j++) &#123;</div><div class="line">      <span class="comment">// 如果发现相同元素</span></div><div class="line">      <span class="comment">// 则 i 自增进入下一个循环比较</span></div><div class="line">      <span class="keyword">if</span> (a[i] === a[j])</div><div class="line">        j = ++i;</div><div class="line">    &#125;</div><div class="line">    res.push(a[i]);</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> res;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> a = [<span class="number">1</span>, <span class="number">1</span>, <span class="string">'1'</span>, <span class="string">'2'</span>, <span class="number">1</span>];</div><div class="line"><span class="keyword">var</span> ans = unique(a);</div><div class="line"><span class="built_in">console</span>.log(ans); <span class="comment">// =&gt; ["1", "2", 1]</span></div></pre></td></tr></table></figure></p>
+<h1 id="方法三（sort）"><a href="#方法三（sort）" class="headerlink" title="方法三（sort）"></a>方法三（sort）</h1><p>将数组用 sort 排序后相同的元素会被放在相邻的位置，那么比较前后位置的元素就可以了。1 和 “1” 会被排在一起，不同的 Object 会被排在一起，因为它们 toString() 的结果相同。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//item：元素的值</span></div><div class="line"><span class="comment">//index：元素的索引</span></div><div class="line"><span class="comment">//arr：被遍历的数组</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">unique</span>(<span class="params">a</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> a.concat().sort().filter(<span class="function"><span class="keyword">function</span>(<span class="params">item, index, arr</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> !index || item != arr[index - <span class="number">1</span>];</div><div class="line">  &#125;);</div><div class="line">&#125;</div><div class="line"><span class="comment">//以上太绕</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">unique2</span>(<span class="params">a</span>)</span>&#123;</div><div class="line">  a.sort();</div><div class="line">  <span class="keyword">var</span> res = [a[<span class="number">0</span>]];</div><div class="line">  <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">1</span>; i &lt; a.length; i++)&#123;</div><div class="line">    <span class="keyword">if</span>( a[i] !== res[res.length<span class="number">-1</span>])</div><div class="line">    &#123;</div><div class="line">      res.push(a[i]);</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> res;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> a = [<span class="number">1</span>, <span class="number">1</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">4</span>];</div><div class="line"><span class="keyword">var</span> ans = unique(a);</div><div class="line"><span class="built_in">console</span>.log(ans); <span class="comment">// =&gt; [1, 2, 3, 4]</span></div></pre></td></tr></table></figure></p>
+<h1 id="方法四-对象键值对法"><a href="#方法四-对象键值对法" class="headerlink" title="方法四(对象键值对法)"></a>方法四(对象键值对法)</h1><p>hasOwnProperty():检测一个属性是否存在于实例中，继承自Object。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">unique</span>(<span class="params">a</span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> seen = &#123;&#125;;</div><div class="line">  <span class="keyword">return</span> a.filter(<span class="function"><span class="keyword">function</span>(<span class="params">item</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> seen.hasOwnProperty(item) ? <span class="literal">false</span> : (seen[item] = <span class="literal">true</span>);</div><div class="line">  &#125;);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> a = [<span class="number">1</span>, <span class="number">1</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">4</span>];</div><div class="line"><span class="keyword">var</span> ans = unique(a);</div><div class="line"><span class="built_in">console</span>.log(ans); <span class="comment">// =&gt; [1, 3, 2, 4]</span></div></pre></td></tr></table></figure></p>
+<h2 id="变形一（-）"><a href="#变形一（-）" class="headerlink" title="变形一（*）"></a>变形一（*）</h2><p>因为 Object 的 key 值都是 String 类型，所以对于 1 和 “1” 无法分别，稍微改进下，将类型也存入 key 中。<br>for循环时，每次取出一个元素与对象进行对比，如果这个元素不重复，则把它存放到结果数组中，同时把这个元素的内容作为对象的一个属性，并赋值为1，存入到hash对象中。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">unique</span>(<span class="params">a</span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> res = [];<span class="comment">//新的数组存放结果</span></div><div class="line">  <span class="keyword">var</span> hash = &#123;&#125;;<span class="comment">//</span></div><div class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>, len = a.length; i &lt; len; i++) &#123;</div><div class="line">    <span class="keyword">var</span> item = a[i];</div><div class="line">    <span class="keyword">var</span> key = <span class="keyword">typeof</span>(item) + item;<span class="comment">//eg：number1，string2，</span></div><div class="line">    <span class="keyword">if</span> (hash[key] !== <span class="number">1</span>) &#123;</div><div class="line">      res.push(item);</div><div class="line">      hash[key] = <span class="number">1</span>;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> res;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> a = [<span class="number">1</span>, <span class="number">1</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="string">'4'</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">4</span>, <span class="string">'1'</span>];</div><div class="line"><span class="keyword">var</span> ans = unique(a);</div><div class="line"><span class="built_in">console</span>.log(ans); <span class="comment">// =&gt; [1, 3, 2, "4", 4, "1"]</span></div></pre></td></tr></table></figure></p>
+<h2 id="变形二-1"><a href="#变形二-1" class="headerlink" title="变形二"></a>变形二</h2><p>Object.keys() 方法返回一个所有元素为<strong>字符串</strong>的数组，其元素来自于从给定的对象上面可直接枚举的属性。这些属性的顺序与手动遍历该对象属性时的一致。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">distinct</span>(<span class="params">arr</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> obj = &#123;&#125;,</div><div class="line">        i = <span class="number">0</span>,</div><div class="line">        len = <span class="number">0</span>;</div><div class="line">    <span class="keyword">if</span> (<span class="built_in">Array</span>.isArray(arr) &amp;&amp; arr.length &gt; <span class="number">0</span>) &#123;</div><div class="line">        len = arr.length;</div><div class="line">        <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; len; i += <span class="number">1</span>) &#123;</div><div class="line">            obj[arr[i]] = arr[i];</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> <span class="built_in">Object</span>.keys(obj);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> [];</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h1 id="方法五（ES6）（-）"><a href="#方法五（ES6）（-）" class="headerlink" title="方法五（ES6）（*）"></a>方法五（ES6）（*）</h1><p>ES6提供了新的数据结构Set。它类似于数组，但是成员的值都是唯一的，没有重复的值。<br>Array.from() 方法可以将一个类数组对象或可遍历对象转换成真正的数组。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">unique</span>(<span class="params">a</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="built_in">Array</span>.from(<span class="keyword">new</span> <span class="built_in">Set</span>(a));</div><div class="line">&#125;</div><div class="line"><span class="comment">//或者</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">unique1</span>(<span class="params">arr</span>) </span>&#123;</div><div class="line">    <span class="keyword">const</span> seen = <span class="keyword">new</span> <span class="built_in">Map</span>()</div><div class="line">    <span class="keyword">return</span> arr.filter((a) =&gt; !seen.has(a) &amp;&amp; seen.set(a, <span class="number">1</span>))</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> a = [&#123;name: <span class="string">"hanzichi"</span>&#125;, &#123;age: <span class="number">30</span>&#125;, <span class="keyword">new</span> <span class="built_in">String</span>(<span class="number">1</span>), <span class="keyword">new</span> <span class="built_in">Number</span>(<span class="number">1</span>)];</div><div class="line"><span class="keyword">var</span> ans = unique(a);</div><div class="line"><span class="built_in">console</span>.log(ans); <span class="comment">// =&gt; [Object, Object, String, Number]</span></div></pre></td></tr></table></figure></p>
 
           
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/11/15/summary-0/" itemprop="url">
+                  萌新前端入坑记
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-11-15T16:23:08+08:00" content="2016-11-15">
+              2016-11-15
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/11/15/summary-0/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/15/summary-0/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>近日，开始找工作，准备面试，面试受挫，感慨太多，趁机对过去的自己做个总结吧。曾经对自己有过质疑，有过痛苦因de不了的bug，但现在仍然前行的我亲自熬制了一篇特色鸡汤，酌情品尝诸君。</p>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=31066853&auto=0&height=66"></iframe>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/11/15/summary-0/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -1221,109 +1339,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/08/25/javascript-3/" itemprop="url">
-                  JavaScript高级程序设计学习笔记（二）继承模式
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-08-25T17:35:08+08:00" content="2016-08-25">
-              2016-08-25
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/08/25/javascript-3/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/25/javascript-3/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h1><p>JavaScript的继承主要依靠原型链来实现的。我们知道，构造函数，原型，和实例之间的关系：每个构造函数都有一个原型对象，原型对象都包含一个指向构造函数的指针，而实例都包含一个原型对象的指针。</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/08/25/javascript-3/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1371,7 +1386,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">22</span>
+              <span class="site-state-item-count">23</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

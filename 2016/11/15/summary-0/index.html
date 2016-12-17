@@ -80,7 +80,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="JavaScript," />
+  <meta name="keywords" content="个人随笔," />
 
 
 
@@ -98,16 +98,16 @@
 
 
 
-<meta name="description" content="我们知道，this对象是在运行时基于函数的执行环境绑定的：在全局函数中，this等于window，当函数被作为某个对象方法调用时，this等于那个对象。匿名函数的执行环境具有全局性，因此this指向window。">
+<meta name="description" content="近日，开始找工作，准备面试，面试受挫，感慨太多，趁机对过去的自己做个总结吧。曾经对自己有过质疑，有过痛苦因de不了的bug，但现在仍然前行的我亲自熬制了一篇特色鸡汤，酌情品尝诸君。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JavaScript学习笔记之This">
-<meta property="og:url" content="http://yoursite.com/2016/08/22/javascript-1/index.html">
+<meta property="og:title" content="萌新前端入坑记">
+<meta property="og:url" content="http://yoursite.com/2016/11/15/summary-0/index.html">
 <meta property="og:site_name" content="Kongwsh">
-<meta property="og:description" content="我们知道，this对象是在运行时基于函数的执行环境绑定的：在全局函数中，this等于window，当函数被作为某个对象方法调用时，this等于那个对象。匿名函数的执行环境具有全局性，因此this指向window。">
-<meta property="og:updated_time" content="2016-10-10T01:13:57.280Z">
+<meta property="og:description" content="近日，开始找工作，准备面试，面试受挫，感慨太多，趁机对过去的自己做个总结吧。曾经对自己有过质疑，有过痛苦因de不了的bug，但现在仍然前行的我亲自熬制了一篇特色鸡汤，酌情品尝诸君。">
+<meta property="og:updated_time" content="2016-12-17T16:11:53.098Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JavaScript学习笔记之This">
-<meta name="twitter:description" content="我们知道，this对象是在运行时基于函数的执行环境绑定的：在全局函数中，this等于window，当函数被作为某个对象方法调用时，this等于那个对象。匿名函数的执行环境具有全局性，因此this指向window。">
+<meta name="twitter:title" content="萌新前端入坑记">
+<meta name="twitter:description" content="近日，开始找工作，准备面试，面试受挫，感慨太多，趁机对过去的自己做个总结吧。曾经对自己有过质疑，有过痛苦因de不了的bug，但现在仍然前行的我亲自熬制了一篇特色鸡汤，酌情品尝诸君。">
 
 
 
@@ -128,9 +128,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/08/22/javascript-1/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/11/15/summary-0/"/>
 
-  <title> JavaScript学习笔记之This | Kongwsh </title>
+  <title> 萌新前端入坑记 | Kongwsh </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -293,7 +293,7 @@
             
             
               
-                JavaScript学习笔记之This
+                萌新前端入坑记
               
             
           </h1>
@@ -305,8 +305,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-08-22T17:48:08+08:00" content="2016-08-22">
-              2016-08-22
+            <time itemprop="dateCreated" datetime="2016-11-15T16:23:08+08:00" content="2016-11-15">
+              2016-11-15
             </time>
           </span>
 
@@ -316,8 +316,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/08/22/javascript-1/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/22/javascript-1/" itemprop="commentsCount"></span>
+                <a href="/2016/11/15/summary-0/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/15/summary-0/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -345,29 +345,71 @@
       
 
       
-        <p>我们知道，this对象是在运行时基于函数的执行环境绑定的：在全局函数中，this等于window，当函数被作为某个对象方法调用时，this等于那个对象。匿名函数的执行环境具有全局性，因此this指向window。</p>
+        <p>近日，开始找工作，准备面试，面试受挫，感慨太多，趁机对过去的自己做个总结吧。曾经对自己有过质疑，有过痛苦因de不了的bug，但现在仍然前行的我亲自熬制了一篇特色鸡汤，酌情品尝诸君。</p>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="https://music.163.com/outchain/player?type=2&id=31066853&auto=0&height=66"></iframe>
+
+
 <a id="more"></a>
-<h1 id="全局环境"><a href="#全局环境" class="headerlink" title="全局环境"></a>全局环境</h1><p>在全局环境中（在任何函数体外部），this指代全局对象，无论是否在严格模式下。</p>
-<h1 id="函数环境"><a href="#函数环境" class="headerlink" title="函数环境"></a>函数环境</h1><p>在函数内部，this的值取决与函数是如何被调用的。</p>
-<h2 id="直接调用"><a href="#直接调用" class="headerlink" title="直接调用"></a>直接调用</h2><ul>
-<li>非严格模式<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">f1</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="keyword">this</span>;</div><div class="line">&#125;</div><div class="line">f1() === <span class="built_in">window</span>; <span class="comment">// true</span></div></pre></td></tr></table></figure>
-</li>
+<h1 id="面试小记"><a href="#面试小记" class="headerlink" title="面试小记"></a>面试小记</h1><p>简历几乎石沉大海，真是令人沮丧，去几个公司面试，还是培训结构，看来我还是太弱啊。已经毕业，技术不到家，还是个女生注定没优势，回家继续修炼，再择良辰吉日出关吧（无奈.jpg）,用厉害的demo狂甩面试官的脸（滑稽.jpg）。</p>
+<h1 id="我为什么选择前端"><a href="#我为什么选择前端" class="headerlink" title="我为什么选择前端"></a>我为什么选择前端</h1><p>  大学时期，患有非典型型青春期焦虑症的我，课余时间不是思考一些形而上的问题，就是看电影，逛豆瓣，曾想当个写作者的我却只写过日记。这样务虚不务实，直到大三才对学业重视，奈何出来混迟早是要还的，曾经落下的，早晚都得补回来，在MOOC上刷只在考前几周才认真学的专业课，进入大四，怀揣着对知识的渴望，加入考研大军，虽败了（悲伤.jpg），但是这段时间是我最快乐的时间，终于摆脱原地踏步，行为瘫痪(苦笑.jpg)。</p>
+<p>  程序员的世界是美好的，大家有资源会共享，有问题都会积极帮忙，用代码改变世界就算了，但是能改变自己。<br>  是码代码的成就感，还是对于本科计算机但没写过几行代码的我想跻身程序员之列，前端的门还好进一些，还是就业的压力让我选择前端，我想都有，不然我不会坚持这么久（其实还不到半年）。<br>  既然是我自己要跳进这个坑，就不能轻易地爬出来。</p>
+<p>  愚以为生活最好的状态是好奇，热情且独立做自己喜欢的事。我不会告诉你，我追寻的是宇宙生命及一切的终极答案，哈哈哈^_~。<br>  我不知道以后会发生什么，也许会找到更喜欢的事，但此阶段Just do it！跑起来再说。</p>
+<h1 id="学习总结"><a href="#学习总结" class="headerlink" title="学习总结"></a>学习总结</h1><p>自学难免走弯路，学习难免会枯燥。感谢对我物质支持的父母，感谢对我精神支持的朋友，感谢坚持努力的我自己。前端入门的我学了什么，我还是个萌新</p>
+<ol>
+<li>搭建个人博客</li>
+<li>掌握JavaScript面向对象 ，CSS3，HTML5</li>
+<li>能够编写语义化HTML，模块化CSS</li>
+<li>响应式布局</li>
+<li>类库jQuery</li>
+<li>Ajax，跨域JSONP,CORS</li>
+<li>原生js实现常见交互特效，常用组件</li>
+<li>Web Audio制作音乐可视化播放web应用</li>
+<li>熟练使用谷歌火狐调试工具</li>
+<li>基本SEO</li>
+<li>git</li>
+</ol>
+<h1 id="我如何学习"><a href="#我如何学习" class="headerlink" title="我如何学习"></a>我如何学习</h1><p>  自学可以自主把握获取知识的速度和节奏。共勉</p>
+<ol>
+<li>搜索引擎<br>自从用了谷歌，解决问题的效率高了很多，科学上网不解释。<br>除此之外，知乎，segmentfault等上的大牛有很多学习资源，感谢大家分享精神。<ul>
+<li><a href="http://google.yubolun.com/" target="_blank" rel="external">无障碍访问谷歌</a></li>
 </ul>
-<p>f1()是在全局上下文调用的，this 的值总是一个对象且默认为全局对象。</p>
-<ul>
-<li>严格模式<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">f2</span>(<span class="params"></span>)</span>&#123;</div><div class="line"><span class="meta">  "use strict"</span>; <span class="comment">// 这里是严格模式</span></div><div class="line">  <span class="keyword">return</span> <span class="keyword">this</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line">f2() === <span class="literal">undefined</span>; <span class="comment">// true</span></div></pre></td></tr></table></figure>
 </li>
+<li>获得一手知识<br>对于获得的解决方法或者相关知识要刨根问底，不能总是拿来主义，浅尝辄止，当然时间有限，要分清什么问题要追根溯源，什么问题要一带而过。看张鑫旭的博客他就很厉害，每一个问题都分析的很彻底，佩服。<ul>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide" target="_blank" rel="external">查文档MDN</a></li>
+<li><a href="http://devdocs.io/" target="_blank" rel="external">DevDocs</a></li>
 </ul>
-<p>在严格模式下，this 是在进入运行环境时设置的。若没有定义，this的值将维持undefined状态。</p>
-<h2 id="对象方法中"><a href="#对象方法中" class="headerlink" title="对象方法中"></a>对象方法中</h2><p>当以对象方法的方式调用时，this是调用该函数的对象，this的绑定只受最靠近的成员引用的影响。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> o = &#123;prop: <span class="number">37</span>&#125;;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">independent</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="keyword">this</span>.prop;</div><div class="line">&#125;</div><div class="line"></div><div class="line">o.b = &#123;</div><div class="line">  g: independent,</div><div class="line">  prop: <span class="number">42</span></div><div class="line">&#125;;</div><div class="line"><span class="built_in">console</span>.log(o.b.g()); <span class="comment">// logs 42</span></div></pre></td></tr></table></figure></p>
-<p>在原型链上，this指向是调用这个方法的对象，表现的好像这个方法存在于这个对象上一样。</p>
-<h2 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h2><p>this与即将被创建的新对象绑定。<br>当构造器返回的默认值是一个this引用的对象时，手动的设置了返回对象，与this绑定的默认对象被取消，如果返回值不是一个对象，返回this。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Hello1</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="keyword">this</span>.me = <span class="string">"Kong"</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> f1 = <span class="keyword">new</span> Hello1();</div><div class="line"><span class="built_in">console</span>.log(f1.me); <span class="comment">//Kong</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Hello2</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="keyword">this</span>.he = <span class="string">"Wang"</span>;</div><div class="line">  <span class="keyword">return</span> &#123;she:<span class="string">"Liu"</span>&#125;;</div><div class="line">&#125;</div><div class="line"></div><div class="line"> <span class="keyword">var</span> f2 = <span class="keyword">new</span> Hello2();</div><div class="line"><span class="built_in">console</span>.log(f2.she); <span class="comment">//Liu</span></div><div class="line"><span class="built_in">console</span>.log(f2.he); <span class="comment">// undefined</span></div></pre></td></tr></table></figure></p>
-<h2 id="call-apply"><a href="#call-apply" class="headerlink" title="call(),apply()"></a>call(),apply()</h2><p>this绑定到一个指定的对象，即传递给call(),apply()的第一个参数，如何这个参数不是对象，那么JavaScript 将会尝试使用内部 ToObject 操作将其转换为对象。</p>
-<h2 id="bind"><a href="#bind" class="headerlink" title="bind()"></a>bind()</h2><p> <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/bind" target="_blank" rel="external">Function.prototype.bind</a><br>调用f.bind(someObject)会创建一个与f具有相同函数体和作用域的函数，但是在这个新函数中，this将永久地被绑定到了bind的第一个参数，无论这个函数是如何被调用的。</p>
-<h2 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h2><p>下面看一个例子<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> name = <span class="string">'window'</span>;</div><div class="line"><span class="keyword">var</span> obj = &#123;</div><div class="line">  name :<span class="string">'object'</span>,</div><div class="line">  getName : <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.name;</div><div class="line">  &#125;</div><div class="line">&#125;;</div><div class="line">alert(obj.getName());<span class="comment">//object</span></div></pre></td></tr></table></figure></p>
-<p>不用闭包的情况下，this值为调用该方法的对象。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> name = <span class="string">'window'</span>;</div><div class="line"><span class="keyword">var</span> obj = &#123;</div><div class="line">  name :<span class="string">'object'</span>,</div><div class="line">  getName : <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.name;</div><div class="line">    &#125;;</div><div class="line">  &#125;</div><div class="line">&#125;;</div><div class="line">alert(obj.getName()());<span class="comment">//window</span></div></pre></td></tr></table></figure></p>
-<p>我们编写一个闭包，这时this指向了全局对象。每个函数在调用时都会自动获取两个变量：this和arguments,内部函数在搜索这个变量时，只会搜到其活动对象为止，因此永远不可能直接访问外部函数中的这两个变量，又因为前面说过匿名函数的执行环境具有全局性，其this值指向window。所以就有了上面的结果，但是，我们可以把外部作用域的this保存到内部函数可以访问到的变量里，就可以让内部函数访问this了。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> name = <span class="string">'window'</span>;</div><div class="line"><span class="keyword">var</span> obj = &#123;</div><div class="line">  name :<span class="string">'object'</span>,</div><div class="line">  getName : <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> that =<span class="keyword">this</span>;</div><div class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">return</span> that.name;</div><div class="line">    &#125;;</div><div class="line">  &#125;</div><div class="line">&#125;;</div><div class="line">alert(obj.getName()());<span class="comment">//object</span></div></pre></td></tr></table></figure></p>
-<h2 id="DOM事件处理函数"><a href="#DOM事件处理函数" class="headerlink" title="DOM事件处理函数"></a>DOM事件处理函数</h2><p>当函数被用作事件处理函数时，它的this指向触发事件的元素;<br>当代码被内联处理函数调用时，它的this指向监听器所在的DOM元素。</p>
+</li>
+<li>不想做全栈的程序员不是好前端<br>做一个合格的前端，我认为，首先要是个合格的程序员，计算机的知识从最低层01到最高层的面向用户的应用程序，都应该了解。<ul>
+<li><a href="http://www.imooc.com/" target="_blank" rel="external">慕课网</a></li>
+<li><a href="https://www.freecodecamp.cn/map" target="_blank" rel="external">freeCodeCamp</a></li>
+</ul>
+</li>
+<li>英语要好，不然怎么看文档。<ul>
+<li><a href="https://www.shanbay.com/" target="_blank" rel="external">扇贝</a></li>
+</ul>
+</li>
+<li>快速进步捷径是模仿，不断踩坑，光说不练假把式。<ul>
+<li><a href="http://ife.baidu.com/task/all" target="_blank" rel="external">百度前端学院</a></li>
+<li><a href="https://github.com/phodal/ideabook" target="_blank" rel="external">一个全栈增长工程师的练手项目集</a></li>
+</ul>
+</li>
+</ol>
+<h1 id="学习计划"><a href="#学习计划" class="headerlink" title="学习计划"></a>学习计划</h1><p>今天开始的学习计划</p>
+<ol>
+<li>组件化，框架React + ES6</li>
+<li>构建工具gulp + webpack</li>
+<li>后端Node.js 和 python，独立搭建起Web应用的运行环境</li>
+<li>模块化，Require.js</li>
+<li>CSS预处理器SASS和后处理器autoprefixer</li>
+<li>客户端/服务器端缓存，CSS/JS代码优化一类的性能方面知识</li>
+<li>js模块开发</li>
+<li>算法知识</li>
+<li>Http和Https协议</li>
+<li>坚持更新学习笔记</li>
+</ol>
+<p>聪明伶俐，眼疾手快的我没问题，忍不住又夸自己;-)</p>
+<p>ps：如果那位前辈不慎看到这篇辣眼睛且没啥质量的文章，有什么要告诫的就留言吧，谢谢</p>
+<p>2016/11/15</p>
 
       
     </div>
@@ -389,7 +431,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/JavaScript/" rel="tag">#JavaScript</a>
+            <a href="/tags/个人随笔/" rel="tag">#个人随笔</a>
           
         </div>
       
@@ -398,16 +440,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/08/22/javascript-0/" rel="next" title="JavaScript高级程序设计学习笔记（一）创建对象">
-                <i class="fa fa-chevron-left"></i> JavaScript高级程序设计学习笔记（一）创建对象
+              <a href="/2016/11/15/css-0/" rel="next" title="CSS之总有办法居中">
+                <i class="fa fa-chevron-left"></i> CSS之总有办法居中
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/08/25/javascript-4/" rel="prev" title="原生JavaScript与jQueryAPI对比">
-                原生JavaScript与jQueryAPI对比 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/11/19/javascript-5/" rel="prev" title="各种数组去重">
+                各种数组去重 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -436,8 +478,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/08/22/javascript-1/"
-           data-title="JavaScript学习笔记之This" data-url="http://yoursite.com/2016/08/22/javascript-1/">
+      <div class="ds-thread" data-thread-key="2016/11/15/summary-0/"
+           data-title="萌新前端入坑记" data-url="http://yoursite.com/2016/11/15/summary-0/">
       </div>
     
   </div>
@@ -539,7 +581,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#全局环境"><span class="nav-number">1.</span> <span class="nav-text">全局环境</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#函数环境"><span class="nav-number">2.</span> <span class="nav-text">函数环境</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#直接调用"><span class="nav-number">2.1.</span> <span class="nav-text">直接调用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对象方法中"><span class="nav-number">2.2.</span> <span class="nav-text">对象方法中</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#构造函数"><span class="nav-number">2.3.</span> <span class="nav-text">构造函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#call-apply"><span class="nav-number">2.4.</span> <span class="nav-text">call(),apply()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#bind"><span class="nav-number">2.5.</span> <span class="nav-text">bind()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#闭包"><span class="nav-number">2.6.</span> <span class="nav-text">闭包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DOM事件处理函数"><span class="nav-number">2.7.</span> <span class="nav-text">DOM事件处理函数</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#面试小记"><span class="nav-number">1.</span> <span class="nav-text">面试小记</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#我为什么选择前端"><span class="nav-number">2.</span> <span class="nav-text">我为什么选择前端</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#学习总结"><span class="nav-number">3.</span> <span class="nav-text">学习总结</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#我如何学习"><span class="nav-number">4.</span> <span class="nav-text">我如何学习</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#学习计划"><span class="nav-number">5.</span> <span class="nav-text">学习计划</span></a></li></ol></div>
             
           </div>
         </section>
