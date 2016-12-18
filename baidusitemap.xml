@@ -4,14 +4,14 @@
 
     
   <url>
-    <loc>http://yoursite.com/2016/11/15/summary-0/</loc>
-    <lastmod>2016-12-17T16:11:53.098Z</lastmod>
+    <loc>http://yoursite.com/2016/11/19/javascript-5/</loc>
+    <lastmod>2016-12-18T07:43:59.726Z</lastmod>
     <data>
         <display>
-        <title>萌新前端入坑记</title>
-        <pubTime>2016-11-15T08:23:08.000Z</pubTime>
+        <title>各种数组去重</title>
+        <pubTime>2016-11-19T11:17:08.000Z</pubTime>
         
-        <tag>个人随笔</tag>
+        <tag>JavaScript</tag>
          
          
            
@@ -21,14 +21,14 @@
 
     
   <url>
-    <loc>http://yoursite.com/2016/11/19/javascript-5/</loc>
-    <lastmod>2016-12-17T16:11:35.725Z</lastmod>
+    <loc>http://yoursite.com/2016/11/15/summary-0/</loc>
+    <lastmod>2016-12-17T16:11:53.098Z</lastmod>
     <data>
         <display>
-        <title>各种数组去重</title>
-        <pubTime>2016-11-19T11:17:08.000Z</pubTime>
+        <title>萌新前端入坑记</title>
+        <pubTime>2016-11-15T08:23:08.000Z</pubTime>
         
-        <tag>JavaScript</tag>
+        <tag>个人随笔</tag>
          
          
            
