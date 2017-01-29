@@ -80,7 +80,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="JQuery，javascript," />
 
 
 
@@ -98,15 +98,25 @@
 
 
 
-<meta name="description" content="Front-End">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Kongwsh">
-<meta property="og:url" content="http://yoursite.com/archives/2016/page/3/index.html">
+<meta name="description" content="jQuery.extend():将object1,objectN两个或更多对象的内容合并到第一个target对象。用法：
+
+jQuery.extend( target [, object1 ] [, objectN ] )
+jQuery.extend( true, target, object1 [, objectN ] )第一个参数如果是true，合并成为递归（又叫做深拷贝）。以下转载">
+<meta property="og:type" content="article">
+<meta property="og:title" content="$.extend()源码学习">
+<meta property="og:url" content="http://yoursite.com/2017/01/19/extend/index.html">
 <meta property="og:site_name" content="Kongwsh">
-<meta property="og:description" content="Front-End">
+<meta property="og:description" content="jQuery.extend():将object1,objectN两个或更多对象的内容合并到第一个target对象。用法：
+
+jQuery.extend( target [, object1 ] [, objectN ] )
+jQuery.extend( true, target, object1 [, objectN ] )第一个参数如果是true，合并成为递归（又叫做深拷贝）。以下转载">
+<meta property="og:updated_time" content="2017-01-29T08:26:35.083Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Kongwsh">
-<meta name="twitter:description" content="Front-End">
+<meta name="twitter:title" content="$.extend()源码学习">
+<meta name="twitter:description" content="jQuery.extend():将object1,objectN两个或更多对象的内容合并到第一个target对象。用法：
+
+jQuery.extend( target [, object1 ] [, objectN ] )
+jQuery.extend( true, target, object1 [, objectN ] )第一个参数如果是true，合并成为递归（又叫做深拷贝）。以下转载">
 
 
 
@@ -127,9 +137,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/2016/page/3/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/01/19/extend/"/>
 
-  <title> 归档 | Kongwsh </title>
+  <title> $.extend()源码学习 | Kongwsh </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -150,7 +160,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  page-archive  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -271,107 +281,139 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
-
-    <span class="archive-page-counter">
-      
-      
-      
-        
-      
-      嗯..! 目前共计 23 篇日志。 继续努力。
-    </span>
-
+  <div id="posts" class="posts-expand">
     
-
-      
-      
-      
-
-      
-        
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2016">2016</h2>
-        </div>
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/07/01/hexo-1/" itemprop="url">
-              
-                <span itemprop="name">Hexo使用</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-07-01T12:23:08+08:00"
-              content="2016-07-01" >
-          07-01
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/06/30/hexo-0/" itemprop="url">
-              
-                <span itemprop="name">Hexo搭建Github Pages博客记录</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-06-30T12:23:08+08:00"
-              content="2016-06-30" >
-          06-30
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-  </section>
 
   
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/archives/2016/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/archives/2016/">1</a><a class="page-number" href="/archives/2016/page/2/">2</a><span class="page-number current">3</span>
-  </nav>
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                $.extend()源码学习
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-01-19T19:17:08+08:00" content="2017-01-19">
+              2017-01-19
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/01/19/extend/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/19/extend/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+              &nbsp; | &nbsp;
+              <span class="page-pv">view
+              <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>times
+              </span>
+          
+        </div>
+      </header>
+    
 
 
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>jQuery.extend():将object1,objectN两个或更多对象的内容合并到第一个target对象。<br>用法：</p>
+<ol>
+<li>jQuery.extend( target [, object1 ] [, objectN ] )</li>
+<li>jQuery.extend( true, target, object1 [, objectN ] )<br>第一个参数如果是true，合并成为递归（又叫做深拷贝）。<br>以下<strong>转载</strong><a id="more"></a>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div></pre></td><td class="code"><pre><div class="line">jQuery.extend = jQuery.fn.extend = function() &#123;</div><div class="line">    /*</div><div class="line">        target: 被扩展的对象 （第一个参数）</div><div class="line">        length: 参数的数量</div><div class="line">        deep: 是否深度克隆（默认：false）</div><div class="line">        i：指向的是第一个扩展对象，默认是第二个参数</div><div class="line">    */</div><div class="line">    var options, name, src, copy, copyIsArray, clone,</div><div class="line">        target = arguments[0] || &#123;&#125;,</div><div class="line">        i = 1,</div><div class="line">        length = arguments.length,</div><div class="line">        deep = false;</div><div class="line"></div><div class="line">    /*</div><div class="line">        target作为第一个参数，如果第一个参数是Boolean类型的值，则把target复制给deep</div><div class="line">        deep表示是否深度克隆，当为true时，进行深度克隆，否则只进行第一层扩展</div><div class="line">        然后把第二个参数复制给target</div><div class="line">    */</div><div class="line">    if ( typeof target === &quot;boolean&quot; ) &#123;</div><div class="line">        deep = target;</div><div class="line"></div><div class="line">        // 将target设置为第二个参数值</div><div class="line">        target = arguments[ i ] || &#123;&#125;;</div><div class="line">        i++;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    // target既不是对象也不是函数，则把target设置设置成空对象</div><div class="line">    if ( typeof target !== &quot;object&quot; &amp;&amp; !jQuery.isFunction(target) ) &#123;</div><div class="line">        target = &#123;&#125;;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    // 如果i和参数数量相同，则把jQuery对象赋值给target，即扩展jQuery对象</div><div class="line">    if ( i === length ) &#123;</div><div class="line">        target = this;</div><div class="line">        // i减1，指向扩展对象（有deep时，i = 1; 无deep时，i = 0），target为jQuery对象</div><div class="line">        i--;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    // 开始遍历需要被扩展到target上的参数，i是从第一个扩展的对象（非target）开始</div><div class="line">    for ( ; i &lt; length; i++ ) &#123;</div><div class="line">        // 对象不为null或undefined，去除deep和target外的对象</div><div class="line">        if ( (options = arguments[ i ]) != null ) &#123;</div><div class="line">            // 遍历扩展基本对象</div><div class="line">            for ( name in options ) &#123;</div><div class="line">                // 根据扩展对象的键获得目标对象相应值，并赋给src</div><div class="line">                src = target[ name ];</div><div class="line">                // 得到扩展对象的值</div><div class="line">                copy = options[ name ];</div><div class="line"></div><div class="line">                // Prevent never-ending loop</div><div class="line">                if ( target === copy ) &#123;</div><div class="line">                    continue;</div><div class="line">                &#125;</div><div class="line"></div><div class="line">                // 深度克隆，递归合并，copy值纯对象或数组</div><div class="line">                if ( deep &amp;&amp; copy &amp;&amp; ( jQuery.isPlainObject(copy) ||</div><div class="line">                    (copyIsArray = jQuery.isArray(copy)) ) ) &#123;</div><div class="line"></div><div class="line">                    if ( copyIsArray ) &#123;</div><div class="line">                        copyIsArray = false;</div><div class="line">                        clone = src &amp;&amp; jQuery.isArray(src) ? src : [];</div><div class="line"></div><div class="line">                    &#125; else &#123;</div><div class="line">                        clone = src &amp;&amp; jQuery.isPlainObject(src) ? src : &#123;&#125;;</div><div class="line">                    &#125;</div><div class="line"></div><div class="line">                    // 递归调用$.extend()方法，继续进行深度遍历</div><div class="line">                    target[ name ] = jQuery.extend( deep, clone, copy );</div><div class="line"></div><div class="line">                // 如果不需要深度克隆，则直接赋值copy到目标对象</div><div class="line">                &#125; else if ( copy !== undefined ) &#123;</div><div class="line">                    target[ name ] = copy;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    // 原对象被改变</div><div class="line">    return target;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JQuery，javascript/" rel="tag">#JQuery，javascript</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/11/19/javascript-5/" rel="next" title="各种数组去重">
+                <i class="fa fa-chevron-left"></i> 各种数组去重
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -381,6 +423,14 @@
 
   
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/01/19/extend/"
+           data-title="$.extend()源码学习" data-url="http://yoursite.com/2017/01/19/extend/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -400,8 +450,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
@@ -462,6 +521,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -575,11 +645,9 @@
   
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
 
 
   
