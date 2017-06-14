@@ -81,11 +81,11 @@
   </entry>
   
   <entry>
-    <title>Vue1.0与2.0差异【草稿】</title>
-    <link href="http://yoursite.com/2017/02/20/vue-0/"/>
-    <id>http://yoursite.com/2017/02/20/vue-0/</id>
-    <published>2017-02-20T11:17:08.000Z</published>
-    <updated>2017-06-14T09:34:21.660Z</updated>
+    <title>Vue2.0【草稿】</title>
+    <link href="http://yoursite.com/2017/01/20/vue-0/"/>
+    <id>http://yoursite.com/2017/01/20/vue-0/</id>
+    <published>2017-01-20T11:17:08.000Z</published>
+    <updated>2017-06-14T09:39:45.711Z</updated>
     
     <content type="html"><![CDATA[<h1 id="独立构建和运行时构建的区别"><a href="#独立构建和运行时构建的区别" class="headerlink" title="独立构建和运行时构建的区别"></a>独立构建和运行时构建的区别</h1><p>Vue.js 的运行过程实际上包含两步。第一步，编译器将字符串模板（template）编译为渲染函数（render），称之为编译过程；第二步，运行时实际调用编译的渲染函数，称之为运行过程。</p>
 <p>由于 Vue.js 1.0 的编译过程需要依赖浏览器的 DOM，所以无法（或者说没有意义）将编译器和运行时分开。因此在 Vue.js 1.0 分发包中，编译器和运行时是打包在一起，都在浏览器端执行。</p>
@@ -127,11 +127,11 @@
 <p>有时候需要为router-link注册事件，对于一般的html元素，直接使用@click=”eventFun”即可，但是对于router-link，像普通html元素那样注册事件后并不管用，需要添加.native才会成功注册。</p>
 <p>事实上给组件绑定原生事件就需要.native修饰v-on，否则无法注册成功。</p>
 <ol>
-<li>利用vue-router做导航<br>在利用vue-router做导航的时候，需要用到redirect关键字的重定向功能，具体写法如下：</li>
-</ol>
-<p>const router = new VueRouter({<br>    routes : [<br>        {path:’/‘,redirect:’/ZY’},<br>        {path:’/ZY’,component:ZY}<br>    ]<br>});</p>
-<ol>
-<li>路由嵌套<br>vue-router的路由嵌套指的是子组件会在父组件中渲染出来，必须是子组件的父组件，祖先不可以实现。</li>
+<li><p>利用vue-router做导航<br>在利用vue-router做导航的时候，需要用到redirect关键字的重定向功能，具体写法如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> router = <span class="keyword">new</span> VueRouter(&#123;</div><div class="line">    routes : [</div><div class="line">        &#123;path:<span class="string">'/'</span>,redirect:<span class="string">'/ZY'</span>&#125;,</div><div class="line">        &#123;path:<span class="string">'/ZY'</span>,component:ZY&#125;</div><div class="line">    ]</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+</li>
+<li><p>路由嵌套<br>vue-router的路由嵌套指的是子组件会在父组件中渲染出来，必须是子组件的父组件，祖先不可以实现。</p>
+</li>
 <li>vue-router路由的参数由对象统一变为了数组要注意。还有则是实例化vue的el参数已经不能设置html和body了，因为在vue2中是会替换我们指定的标签</li>
 </ol>
 ]]></content>
@@ -1135,20 +1135,38 @@
   </entry>
   
   <entry>
-    <title>Git与Github</title>
-    <link href="http://yoursite.com/2016/07/23/git-0/"/>
-    <id>http://yoursite.com/2016/07/23/git-0/</id>
+    <title>Winsows上Nodejs的安装配置</title>
+    <link href="http://yoursite.com/2016/07/23/nodejs-0/"/>
+    <id>http://yoursite.com/2016/07/23/nodejs-0/</id>
     <published>2016-07-23T04:23:08.000Z</published>
-    <updated>2016-10-17T04:52:06.133Z</updated>
+    <updated>2016-07-25T14:05:05.454Z</updated>
     
-    <content type="html"><![CDATA[<p>Git 是一个为了更好地管理 Linux内核开发而创立的分布式版本控制和软件配置管理软件。 国内外知名 Git 代码托管网站有：<br><a href="http://GitHub.com" target="_blank" rel="external">github</a><br><a href="http://Coding.net" target="_blank" rel="external">Coding</a><br><a href="http://code.csdn.net/" target="_blank" rel="external">code.csdn</a><br><a id="more"></a></p>
-<p>GitHub 使用 Git 作为版本控制系统（version control system）提供在线源码托管的服务，同时是个有社交功能的开发者社区。<br>国外类似服务：<br><a href="https://bitbucket.org/" target="_blank" rel="external">Bitbucket</a><br><a href="http://Gitlab.com" target="_blank" rel="external">Gitlab</a><br>国内类似服务：<br><a href="http://Gitcafe.com" target="_blank" rel="external">Gitcafe</a></p>
-<h1 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h1><p><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="external">Git教程 - 廖雪峰的官方网站</a><br><a href="https://git-scm.com/book/en/v2" target="_blank" rel="external">Pro Git</a><br><a href="http://rogerdudler.github.io/git-guide/index.zh.html" target="_blank" rel="external">git - 简明指南</a><br><a href="http://marklodato.github.io/visual-git-guide/index-zh-cn.html" target="_blank" rel="external">图解 Git</a><br><a href="http://www.yangzhiping.com/tech/github.html" target="_blank" rel="external">如何高效利用GitHub–阳志平</a><br><a href="http://www.worldhello.net/gotgithub/#id4" target="_blank" rel="external">worldhello</a><br><a href="help.github.com/">Github帮助文档</a><br><a href="http://www-cs-students.stanford.edu/~blynn/gitmagic/intl/zh_cn/index.html" target="_blank" rel="external">Git Magic</a></p>
-<h1 id="过后填坑···"><a href="#过后填坑···" class="headerlink" title="过后填坑···"></a>过后填坑···</h1>]]></content>
+    <content type="html"><![CDATA[<h1 id="安装Nodejs"><a href="#安装Nodejs" class="headerlink" title="安装Nodejs"></a>安装Nodejs</h1><blockquote>
+<p>系统：windows8.1</p>
+</blockquote>
+<p>最简单安装的方法，在<a href="https://nodejs.org/en/" target="_blank" rel="external">官网</a>下载.msi格式，或者从我的百度云盘链接: <a href="http://pan.baidu.com/s/1mim4hvU" target="_blank" rel="external">http://pan.baidu.com/s/1mim4hvU</a> 密码: scaf，默认安装会自动配置环境变量，也可以更改安装目录。我的安装目录<code>C:\Program Files\nodejs</code>。npm已经集成在nodejs，不用单独安装。在该目录下新建两个文件夹node_cache和node_global。</p>
+<a id="more"></a>
+<p><img src="http://i1.piimg.com/567571/62c1c72771c19ca2.png" alt="nodejs目录结构"><br>node_cache是npm缓存目录，避免相同的包每次都下载。<br>node_global是全局安装的目录。</p>
+<blockquote>
+<p><code>npm install xxx -g</code>时， 模块将被下载安装到”全局目录”中。”全局目录”通过<br><code>npm config set prefix</code>“目录路径” 来设置。<br>通过 <code>npm config get prefix</code> 来获取当前设置的目录。使用全局安装方式统一安装的<br>一个目录中去,这样既方便管理、结构清晰还可以重复利用。</p>
+</blockquote>
+<p>在管理员身份下运行cmd<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm config set cache &quot;C:\Program Files\nodejs\node_cache&quot;</div><div class="line">npm config set prefix &quot;C:\Program Files\nodejs\node_global&quot;</div></pre></td></tr></table></figure></p>
+<h1 id="环境变量配置"><a href="#环境变量配置" class="headerlink" title="环境变量配置"></a>环境变量配置</h1><p>由于改变了node_modules的默认安装目录,需要重新配置环境变量,<code>计算机\&gt;系统属性\&gt;高级\&gt;环境变量</code><br>用户环境变量<br>编辑PATH:<code>C:\Program Files\nodejs\node_modules\npm;C:\Program Files\nodejs\node_global</code><br>添加NODE_PATH:<code>C:\Program Files\nodejs\node_global\node_modules</code><br>系统环境变量<br>编辑path：<code>C:\Program Files\nodejs\</code></p>
+<h1 id="Windows-系统下设置Nodejs-NPM全局路径"><a href="#Windows-系统下设置Nodejs-NPM全局路径" class="headerlink" title="Windows 系统下设置Nodejs NPM全局路径"></a>Windows 系统下设置Nodejs NPM全局路径</h1><p>在cmd下执行以下命令无效的情况下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm config set cache &quot;C:\Program Files\nodejs\node_cache&quot;</div><div class="line">npm config set prefix &quot;C:\Program Files\nodejs\node_global&quot;</div></pre></td></tr></table></figure>
+<p>在nodejs的安装目录中找到<code>node_modules\npm\.npmrc文件</code>（C:\Program Files\nodejs\node_modules\npm）</p>
+<p>修改如下即可：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">prefix=C:\Program Files\nodejs\node_global</div><div class="line">cache=C:\Program Files\nodejs\node_cache</div></pre></td></tr></table></figure></p>
+<h1 id="安装成功"><a href="#安装成功" class="headerlink" title="安装成功"></a>安装成功</h1><p>安装完成后在管理员下运行cmd<br><img src="http://7xrn7f.com1.z0.glb.clouddn.com/16-7-23/79224504.jpg" alt="安装nodejs版本号"><br>如上图所示则安装成功</p>
+<h1 id="安装相关环境"><a href="#安装相关环境" class="headerlink" title="安装相关环境"></a>安装相关环境</h1><p>切记在管理员下运行cmd<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm install -g jshint</div><div class="line">npm install -g csslint</div></pre></td></tr></table></figure></p>
+<h1 id="全局安装与本地安装"><a href="#全局安装与本地安装" class="headerlink" title="全局安装与本地安装"></a>全局安装与本地安装</h1><p><code>npm install -g ***</code>表示全局安装，这样安装的安装包都在当前用户下，在磁盘的所有其他地方都可以访问到，比较方面。否则<code>npm install ***</code>表示本地安装，安装在当前目录下，只能在当前目录下使用。<br>如果一个包是要当做命令一样的来使用，就推荐进行全局安装，而如果一个包是使用在项目里面的话，则使用本地安装，这样避免了不同项目对不同版本的包之间的相互依赖的问题。</p>
+]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;Git 是一个为了更好地管理 Linux内核开发而创立的分布式版本控制和软件配置管理软件。 国内外知名 Git 代码托管网站有：&lt;br&gt;&lt;a href=&quot;http://GitHub.com&quot;&gt;github&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://Coding.net&quot;&gt;Coding&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://code.csdn.net/&quot;&gt;code.csdn&lt;/a&gt;&lt;br&gt;
+      &lt;h1 id=&quot;安装Nodejs&quot;&gt;&lt;a href=&quot;#安装Nodejs&quot; class=&quot;headerlink&quot; title=&quot;安装Nodejs&quot;&gt;&lt;/a&gt;安装Nodejs&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;系统：windows8.1&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;最简单安装的方法，在&lt;a href=&quot;https://nodejs.org/en/&quot;&gt;官网&lt;/a&gt;下载.msi格式，或者从我的百度云盘链接: &lt;a href=&quot;http://pan.baidu.com/s/1mim4hvU&quot;&gt;http://pan.baidu.com/s/1mim4hvU&lt;/a&gt; 密码: scaf，默认安装会自动配置环境变量，也可以更改安装目录。我的安装目录&lt;code&gt;C:\Program Files\nodejs&lt;/code&gt;。npm已经集成在nodejs，不用单独安装。在该目录下新建两个文件夹node_cache和node_global。&lt;/p&gt;
     
     </summary>
     

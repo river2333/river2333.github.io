@@ -52,8 +52,8 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Vue1.0与2.0差异【草稿】]]></title>
-      <url>http://yoursite.com/2017/02/20/vue-0/</url>
+      <title><![CDATA[Vue2.0【草稿】]]></title>
+      <url>http://yoursite.com/2017/01/20/vue-0/</url>
       <content type="html"><![CDATA[<h1 id="独立构建和运行时构建的区别"><a href="#独立构建和运行时构建的区别" class="headerlink" title="独立构建和运行时构建的区别"></a>独立构建和运行时构建的区别</h1><p>Vue.js 的运行过程实际上包含两步。第一步，编译器将字符串模板（template）编译为渲染函数（render），称之为编译过程；第二步，运行时实际调用编译的渲染函数，称之为运行过程。</p>
 <p>由于 Vue.js 1.0 的编译过程需要依赖浏览器的 DOM，所以无法（或者说没有意义）将编译器和运行时分开。因此在 Vue.js 1.0 分发包中，编译器和运行时是打包在一起，都在浏览器端执行。</p>
 <p>然而到了 Vue.js 2.0，为了支持服务端渲染（server-side rendering），编译器不能依赖于 DOM，所以必须将编译器和运行时分开。这就形成了独立构建（编译器 + 运行时）和运行时构建（仅运行时）。显而易见，运行时构建要小于独立构建。</p>
@@ -94,11 +94,11 @@
 <p>有时候需要为router-link注册事件，对于一般的html元素，直接使用@click=”eventFun”即可，但是对于router-link，像普通html元素那样注册事件后并不管用，需要添加.native才会成功注册。</p>
 <p>事实上给组件绑定原生事件就需要.native修饰v-on，否则无法注册成功。</p>
 <ol>
-<li>利用vue-router做导航<br>在利用vue-router做导航的时候，需要用到redirect关键字的重定向功能，具体写法如下：</li>
-</ol>
-<p>const router = new VueRouter({<br>    routes : [<br>        {path:’/‘,redirect:’/ZY’},<br>        {path:’/ZY’,component:ZY}<br>    ]<br>});</p>
-<ol>
-<li>路由嵌套<br>vue-router的路由嵌套指的是子组件会在父组件中渲染出来，必须是子组件的父组件，祖先不可以实现。</li>
+<li><p>利用vue-router做导航<br>在利用vue-router做导航的时候，需要用到redirect关键字的重定向功能，具体写法如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> router = <span class="keyword">new</span> VueRouter(&#123;</div><div class="line">    routes : [</div><div class="line">        &#123;path:<span class="string">'/'</span>,redirect:<span class="string">'/ZY'</span>&#125;,</div><div class="line">        &#123;path:<span class="string">'/ZY'</span>,component:ZY&#125;</div><div class="line">    ]</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+</li>
+<li><p>路由嵌套<br>vue-router的路由嵌套指的是子组件会在父组件中渲染出来，必须是子组件的父组件，祖先不可以实现。</p>
+</li>
 <li>vue-router路由的参数由对象统一变为了数组要注意。还有则是实例化vue的el参数已经不能设置html和body了，因为在vue2中是会替换我们指定的标签</li>
 </ol>
 ]]></content>
@@ -816,15 +816,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Git与Github]]></title>
-      <url>http://yoursite.com/2016/07/23/git-0/</url>
-      <content type="html"><![CDATA[<p>Git 是一个为了更好地管理 Linux内核开发而创立的分布式版本控制和软件配置管理软件。 国内外知名 Git 代码托管网站有：<br><a href="http://GitHub.com" target="_blank" rel="external">github</a><br><a href="http://Coding.net" target="_blank" rel="external">Coding</a><br><a href="http://code.csdn.net/" target="_blank" rel="external">code.csdn</a><br><a id="more"></a></p>
-<p>GitHub 使用 Git 作为版本控制系统（version control system）提供在线源码托管的服务，同时是个有社交功能的开发者社区。<br>国外类似服务：<br><a href="https://bitbucket.org/" target="_blank" rel="external">Bitbucket</a><br><a href="http://Gitlab.com" target="_blank" rel="external">Gitlab</a><br>国内类似服务：<br><a href="http://Gitcafe.com" target="_blank" rel="external">Gitcafe</a></p>
-<h1 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h1><p><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="external">Git教程 - 廖雪峰的官方网站</a><br><a href="https://git-scm.com/book/en/v2" target="_blank" rel="external">Pro Git</a><br><a href="http://rogerdudler.github.io/git-guide/index.zh.html" target="_blank" rel="external">git - 简明指南</a><br><a href="http://marklodato.github.io/visual-git-guide/index-zh-cn.html" target="_blank" rel="external">图解 Git</a><br><a href="http://www.yangzhiping.com/tech/github.html" target="_blank" rel="external">如何高效利用GitHub–阳志平</a><br><a href="http://www.worldhello.net/gotgithub/#id4" target="_blank" rel="external">worldhello</a><br><a href="help.github.com/">Github帮助文档</a><br><a href="http://www-cs-students.stanford.edu/~blynn/gitmagic/intl/zh_cn/index.html" target="_blank" rel="external">Git Magic</a></p>
-<h1 id="过后填坑···"><a href="#过后填坑···" class="headerlink" title="过后填坑···"></a>过后填坑···</h1>]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[Winsows上Nodejs的安装配置]]></title>
       <url>http://yoursite.com/2016/07/23/nodejs-0/</url>
       <content type="html"><![CDATA[<h1 id="安装Nodejs"><a href="#安装Nodejs" class="headerlink" title="安装Nodejs"></a>安装Nodejs</h1><blockquote>
@@ -846,6 +837,15 @@
 <h1 id="安装相关环境"><a href="#安装相关环境" class="headerlink" title="安装相关环境"></a>安装相关环境</h1><p>切记在管理员下运行cmd<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm install -g jshint</div><div class="line">npm install -g csslint</div></pre></td></tr></table></figure></p>
 <h1 id="全局安装与本地安装"><a href="#全局安装与本地安装" class="headerlink" title="全局安装与本地安装"></a>全局安装与本地安装</h1><p><code>npm install -g ***</code>表示全局安装，这样安装的安装包都在当前用户下，在磁盘的所有其他地方都可以访问到，比较方面。否则<code>npm install ***</code>表示本地安装，安装在当前目录下，只能在当前目录下使用。<br>如果一个包是要当做命令一样的来使用，就推荐进行全局安装，而如果一个包是使用在项目里面的话，则使用本地安装，这样避免了不同项目对不同版本的包之间的相互依赖的问题。</p>
 ]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Git与Github]]></title>
+      <url>http://yoursite.com/2016/07/23/git-0/</url>
+      <content type="html"><![CDATA[<p>Git 是一个为了更好地管理 Linux内核开发而创立的分布式版本控制和软件配置管理软件。 国内外知名 Git 代码托管网站有：<br><a href="http://GitHub.com" target="_blank" rel="external">github</a><br><a href="http://Coding.net" target="_blank" rel="external">Coding</a><br><a href="http://code.csdn.net/" target="_blank" rel="external">code.csdn</a><br><a id="more"></a></p>
+<p>GitHub 使用 Git 作为版本控制系统（version control system）提供在线源码托管的服务，同时是个有社交功能的开发者社区。<br>国外类似服务：<br><a href="https://bitbucket.org/" target="_blank" rel="external">Bitbucket</a><br><a href="http://Gitlab.com" target="_blank" rel="external">Gitlab</a><br>国内类似服务：<br><a href="http://Gitcafe.com" target="_blank" rel="external">Gitcafe</a></p>
+<h1 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h1><p><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="external">Git教程 - 廖雪峰的官方网站</a><br><a href="https://git-scm.com/book/en/v2" target="_blank" rel="external">Pro Git</a><br><a href="http://rogerdudler.github.io/git-guide/index.zh.html" target="_blank" rel="external">git - 简明指南</a><br><a href="http://marklodato.github.io/visual-git-guide/index-zh-cn.html" target="_blank" rel="external">图解 Git</a><br><a href="http://www.yangzhiping.com/tech/github.html" target="_blank" rel="external">如何高效利用GitHub–阳志平</a><br><a href="http://www.worldhello.net/gotgithub/#id4" target="_blank" rel="external">worldhello</a><br><a href="help.github.com/">Github帮助文档</a><br><a href="http://www-cs-students.stanford.edu/~blynn/gitmagic/intl/zh_cn/index.html" target="_blank" rel="external">Git Magic</a></p>
+<h1 id="过后填坑···"><a href="#过后填坑···" class="headerlink" title="过后填坑···"></a>过后填坑···</h1>]]></content>
     </entry>
     
     <entry>

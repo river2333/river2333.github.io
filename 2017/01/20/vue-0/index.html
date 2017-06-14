@@ -101,14 +101,14 @@
 <meta name="description" content="独立构建和运行时构建的区别Vue.js 的运行过程实际上包含两步。第一步，编译器将字符串模板（template）编译为渲染函数（render），称之为编译过程；第二步，运行时实际调用编译的渲染函数，称之为运行过程。
 由于 Vue.js 1.0 的编译过程需要依赖浏览器的 DOM，所以无法（或者说没有意义）将编译器和运行时分开。因此在 Vue.js 1.0 分发包中，编译器和运行时是打包在一起，都在">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Vue1.0与2.0差异【草稿】">
-<meta property="og:url" content="http://yoursite.com/2017/02/20/vue-0/index.html">
+<meta property="og:title" content="Vue2.0【草稿】">
+<meta property="og:url" content="http://yoursite.com/2017/01/20/vue-0/index.html">
 <meta property="og:site_name" content="Kongwsh">
 <meta property="og:description" content="独立构建和运行时构建的区别Vue.js 的运行过程实际上包含两步。第一步，编译器将字符串模板（template）编译为渲染函数（render），称之为编译过程；第二步，运行时实际调用编译的渲染函数，称之为运行过程。
 由于 Vue.js 1.0 的编译过程需要依赖浏览器的 DOM，所以无法（或者说没有意义）将编译器和运行时分开。因此在 Vue.js 1.0 分发包中，编译器和运行时是打包在一起，都在">
-<meta property="og:updated_time" content="2017-06-14T09:34:21.660Z">
+<meta property="og:updated_time" content="2017-06-14T09:39:45.711Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Vue1.0与2.0差异【草稿】">
+<meta name="twitter:title" content="Vue2.0【草稿】">
 <meta name="twitter:description" content="独立构建和运行时构建的区别Vue.js 的运行过程实际上包含两步。第一步，编译器将字符串模板（template）编译为渲染函数（render），称之为编译过程；第二步，运行时实际调用编译的渲染函数，称之为运行过程。
 由于 Vue.js 1.0 的编译过程需要依赖浏览器的 DOM，所以无法（或者说没有意义）将编译器和运行时分开。因此在 Vue.js 1.0 分发包中，编译器和运行时是打包在一起，都在">
 
@@ -131,9 +131,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/02/20/vue-0/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/01/20/vue-0/"/>
 
-  <title> Vue1.0与2.0差异【草稿】 | Kongwsh </title>
+  <title> Vue2.0【草稿】 | Kongwsh </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -296,7 +296,7 @@
             
             
               
-                Vue1.0与2.0差异【草稿】
+                Vue2.0【草稿】
               
             
           </h1>
@@ -308,8 +308,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-02-20T19:17:08+08:00" content="2017-02-20">
-              2017-02-20
+            <time itemprop="dateCreated" datetime="2017-01-20T19:17:08+08:00" content="2017-01-20">
+              2017-01-20
             </time>
           </span>
 
@@ -319,8 +319,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2017/02/20/vue-0/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/20/vue-0/" itemprop="commentsCount"></span>
+                <a href="/2017/01/20/vue-0/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/20/vue-0/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -388,11 +388,11 @@
 <p>有时候需要为router-link注册事件，对于一般的html元素，直接使用@click=”eventFun”即可，但是对于router-link，像普通html元素那样注册事件后并不管用，需要添加.native才会成功注册。</p>
 <p>事实上给组件绑定原生事件就需要.native修饰v-on，否则无法注册成功。</p>
 <ol>
-<li>利用vue-router做导航<br>在利用vue-router做导航的时候，需要用到redirect关键字的重定向功能，具体写法如下：</li>
-</ol>
-<p>const router = new VueRouter({<br>    routes : [<br>        {path:’/‘,redirect:’/ZY’},<br>        {path:’/ZY’,component:ZY}<br>    ]<br>});</p>
-<ol>
-<li>路由嵌套<br>vue-router的路由嵌套指的是子组件会在父组件中渲染出来，必须是子组件的父组件，祖先不可以实现。</li>
+<li><p>利用vue-router做导航<br>在利用vue-router做导航的时候，需要用到redirect关键字的重定向功能，具体写法如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> router = <span class="keyword">new</span> VueRouter(&#123;</div><div class="line">    routes : [</div><div class="line">        &#123;path:<span class="string">'/'</span>,redirect:<span class="string">'/ZY'</span>&#125;,</div><div class="line">        &#123;path:<span class="string">'/ZY'</span>,component:ZY&#125;</div><div class="line">    ]</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+</li>
+<li><p>路由嵌套<br>vue-router的路由嵌套指的是子组件会在父组件中渲染出来，必须是子组件的父组件，祖先不可以实现。</p>
+</li>
 <li>vue-router路由的参数由对象统一变为了数组要注意。还有则是实例化vue的el参数已经不能设置html和body了，因为在vue2中是会替换我们指定的标签</li>
 </ol>
 
@@ -463,8 +463,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/02/20/vue-0/"
-           data-title="Vue1.0与2.0差异【草稿】" data-url="http://yoursite.com/2017/02/20/vue-0/">
+      <div class="ds-thread" data-thread-key="2017/01/20/vue-0/"
+           data-title="Vue2.0【草稿】" data-url="http://yoursite.com/2017/01/20/vue-0/">
       </div>
     
   </div>
